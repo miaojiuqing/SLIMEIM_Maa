@@ -1,0 +1,180 @@
+{
+    "每日任务之捕食战": {
+        "post_delay": 1000,
+        "roi": [
+            1021,
+            174,
+            215,
+            183
+        ],
+        "recognition": "OCR",
+        "expected": "任",
+        "action": "Click",
+        "next": [
+            "成长"
+        ],
+        "interrupt": [
+            "黑屏计数"
+        ]
+    },
+    "成长": {
+        "post_delay": 1000,
+        "roi": [
+            500,
+            41,
+            127,
+            633
+        ],
+        "recognition": "OCR",
+        "expected": "成長",
+        "action": "Click",
+        "next": "检测是否可以捕食"
+    },
+    "检测是否可以捕食": {
+        "next": [
+            "捕食机会尽了"
+        ],
+        "interrupt": "点击捕食战"
+    },
+    "点击捕食战": {
+        "roi": [
+            631,
+            69,
+            594,
+            634
+        ],
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "日常-捕食战\\捕食战.png",
+        "action": "Click",
+        "next": [
+            "选择捕食类型"
+        ]
+    },
+    "选择捕食类型": {
+        "roi": [
+            611,
+            75,
+            615,
+            616
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "轉魂強化任務",
+            "心體強化任務",
+            "堅守強化任務",
+            "猛攻強化任務"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": "捕食机会尽了",
+        "interrupt": [
+            "捕食战专属战斗"
+        ]
+    },
+    "捕食战专属战斗": {
+        "roi": [
+            989,
+            601,
+            224,
+            76
+        ],
+        "recognition": "OCR",
+        "expected": "出擊",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": "捕食战斗ing",
+        "interrupt": []
+    },
+    "捕食战战斗是否结束检测": {
+        "next": [
+            "捕食战评分界面"
+        ],
+        "interrupt": [
+            "捕食战斗ing"
+        ]
+    },
+    "捕食战斗ing": {
+        "next": "切换为自动战斗",
+        "roi": [
+            1098,
+            560,
+            99,
+            103
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-捕食战\\捕食专属战斗ing检测.png",
+        "action": "DoNothing",
+        "post_delay": 10000
+    },
+    "捕食战评分界面": {
+        "roi": [
+            525,
+            84,
+            233,
+            70
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-捕食战\\捕食战结束评分.png",
+        "post_delay": 15000,
+        "next": "捕食战_下一步"
+    },
+    "捕食战_下一步": {
+        "roi": [
+            841,
+            509,
+            354,
+            155
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-捕食战\\捕食战_下一步.png",
+        "post_delay": 500,
+        "action": "Click",
+        "next": "捕食战_再次下一步"
+    },
+    "捕食战_再次下一步": {
+        "roi": [
+            793,
+            587,
+            422,
+            115
+        ],
+        "recognition": "OCR",
+        "expected": "下一步",
+        "post_delay": 500,
+        "action": "Click",
+        "next": "选择捕食类型",
+        "interrupt": [
+            "黑屏计数",
+            "捕食战_再次下一步"
+        ]
+    },
+    "捕食战_再次战斗": {
+        "roi": [
+            793,
+            587,
+            422,
+            115
+        ],
+        "recognition": "OCR",
+        "expected": "再次戰鬥",
+        "post_delay": 5000,
+        "action": "Click",
+        "next": "捕食战_再次下一步"
+    },
+    "捕食机会尽了": {
+        "roi": [
+            621,
+            94,
+            597,
+            598
+        ],
+        "recognition": "TemplateMatch",
+        "threshold": 0.8,
+        "template": "日常-捕食战\\捕食战两次打完了.png",
+        "post_delay": 3000,
+        "next": [
+            "返回菜单"
+        ]
+    }
+}

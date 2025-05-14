@@ -17,7 +17,7 @@
         {
             "name": "官服",
             "path": [
-                "{PROJECT_DIR}/resource"
+                "{PROJECT_DIR}/assete/resource"
             ]
         },
         {
@@ -36,37 +36,46 @@
     },
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "进入游戏并打开菜单",
+            "entry": "自动进入并开始游戏"
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
+            "name": "日常-捕食战",
+            "entry": "每日任务之捕食战",
             "option": [
-                "任务选项1"
+                "捕食类型"
             ]
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "pipeline_override": {}
+            "name": "日常-建筑支援请求",
+            "entry": "日常任务之请求建筑支援"
         },
         {
-            "name": "带Custom的任务",
-            "entry": "MyTask4"
+            "name": "日常-送上礼物",
+            "entry": "每日任务之喂食角色"
+        },
+        {
+            "name": "日常-城镇对话三位",
+            "entry": "每日任务之好感度对话"
+        },
+        {
+            "name": "日常-锻造场升级装备",
+            "entry": "锻造场升级任务"
         }
     ],
     "option": {
-        "任务选项1": {
+        "捕食类型": {
             "cases": [
                 {
-                    "name": "文本1",
+                    "name": "选择捕食类型",
                     "pipeline_override": {
                         "OcrTask": {
-                            "text": "文本1"
+                            "text": [
+                                "轉魂強化任務",
+                                "心體強化任務",
+                                "堅守強化任務",
+                                "猛攻強化任務"
+                            ]
                         }
                     }
                 },

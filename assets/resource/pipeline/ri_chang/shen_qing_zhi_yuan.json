@@ -1,0 +1,210 @@
+{
+    "日常任务之请求建筑支援": {
+        "roi": [
+            1049,
+            338,
+            183,
+            182
+        ],
+        "recognition": "OCR",
+        "expected": "建國",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "点击右下角兴建",
+        "interrupt": [
+            "黑屏计数",
+            "OK"
+        ]
+    },
+    "点击右下角兴建": {
+        "roi": [
+            1076,
+            533,
+            140,
+            155
+        ],
+        "recognition": "OCR",
+        "expected": "興建",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "点击支援",
+        "interrupt": "点击右下角兴建"
+    },
+    "点击支援": {
+        "roi": [
+            252,
+            62,
+            197,
+            75
+        ],
+        "recognition": "OCR",
+        "expected": "支援",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "建筑状态检测",
+        "interrupt": []
+    },
+    "建筑状态检测": {
+        "roi": [
+            1051,
+            176,
+            515,
+            520
+        ],
+        "post_delay": 1000,
+        "next": [
+            "支援请求"
+        ],
+        "interrupt": [
+            "统一完毕",
+            "啥也没有"
+        ]
+    },
+    "支援请求": {
+        "roi": [
+            1051,
+            176,
+            515,
+            520
+        ],
+        "recognition": "OCR",
+        "expected": "支援請求",
+        "post_delay": 2000,
+        "action": "Click",
+        "next": "一并选择",
+        "interrupt": [
+            "OK",
+            "叉叉"
+        ]
+    },
+    "一并选择": {
+        "roi": [
+            710,
+            616,
+            264,
+            84
+        ],
+        "recognition": "OCR",
+        "expected": "選擇",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "送出支援"
+    },
+    "送出支援": {
+        "roi": [
+            966,
+            611,
+            270,
+            87
+        ],
+        "recognition": "OCR",
+        "expected": "送出支援",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "缩时之YES"
+    },
+    "缩时之YES": {
+        "roi": [
+            352,
+            166,
+            579,
+            387
+        ],
+        "recognition": "OCR",
+        "expected": "YES",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "缩时后OK"
+    },
+    "缩时后OK": {
+        "recognition": "OCR",
+        "expected": "OK",
+        "action": "Click",
+        "next": "返回菜单"
+    },
+    "啥也没有": {
+        "roi": [
+            473,
+            223,
+            733,
+            447
+        ],
+        "recognition": "OCR",
+        "expected": "沒有興建中的設施",
+        "action": "DoNothing",
+        "post_delay": 1000,
+        "next": "点击建筑的提升"
+    },
+    "点击建筑的提升": {
+        "roi": [
+            654,
+            81,
+            195,
+            67
+        ],
+        "recognition": "OCR",
+        "expected": "提升",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "添加设施至列表"
+    },
+    "添加设施至列表": {
+        "roi": [
+            68,
+            158,
+            279,
+            497
+        ],
+        "recognition": "OCR",
+        "expected": "提升",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "设施即将升级界面"
+    },
+    "设施即将升级界面": {
+        "roi": [
+            1001,
+            393,
+            223,
+            251
+        ],
+        "recognition": "OCR",
+        "expected": "提升",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": "设施列表满了",
+        "interrupt": "添加设施至列表"
+    },
+    "设施列表满了": {
+        "roi": [
+            472,
+            56,
+            209,
+            74
+        ],
+        "recognition": "OCR",
+        "expected": "興建狀況",
+        "action": "DoNothing",
+        "post_delay": 1000,
+        "next": [
+            "点击右下角兴建"
+        ],
+        "interrupt": "叉叉"
+    },
+    "统一完毕": {
+        "roi": [
+            1051,
+            176,
+            515,
+            520
+        ],
+        "recognition": "OCR",
+        "expected": "統一完畢",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "支援请求",
+        "interrupt": [
+            "点击右下角兴建"
+        ]
+    }
+}

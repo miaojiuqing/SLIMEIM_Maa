@@ -1,0 +1,157 @@
+{
+    "每日任务之好感度对话": {
+        "_doc": "---------------------------------------------------------------------------------------对话城镇角色任务开始",
+        "recognition": "OCR",
+        "expected": "首頁",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "进入选人对话界面"
+        ],
+        "interrupt": [
+            "黑屏计数"
+        ]
+    },
+    "进入选人对话界面": {
+        "post_delay": 10000,
+        "recognition": "TemplateMatch",
+        "template": "日常-好感度对话\\进入好感度对话and泡温泉UI.png",
+        "action": "Click",
+        "next": [
+            "无可对话对象"
+        ],
+        "interrupt": [
+            "点击对话1",
+            "点击对话2",
+            "点击对话3"
+        ]
+    },
+    "点击对话1": {
+        "post_delay": 1000,
+        "roi": [
+            65,
+            161,
+            172,
+            215
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-好感度对话\\可对话_移动.png",
+        "action": "Click",
+        "next": [
+            "对话过了"
+        ],
+        "interrupt": [
+            "过对话"
+        ]
+    },
+    "点击对话2": {
+        "post_delay": 1000,
+        "roi": [
+            230,
+            163,
+            160,
+            211
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-好感度对话\\可对话_移动.png",
+        "action": "Click",
+        "next": [
+            "对话过了"
+        ],
+        "interrupt": [
+            "过对话"
+        ]
+    },
+    "点击对话3": {
+        "post_delay": 1000,
+        "roi": [
+            392,
+            163,
+            159,
+            210
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-好感度对话\\可对话_移动.png",
+        "action": "Click",
+        "next": [
+            "对话过了"
+        ],
+        "interrupt": [
+            "过对话"
+        ]
+    },
+    "无可对话对象": {
+        "post_delay": 1000,
+        "roi": [
+            75,
+            170,
+            1130,
+            202
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-好感度对话\\不可对话对象.png",
+        "threshold": 0.8,
+        "action": "DoNothing",
+        "next": "叉叉_好感任务专用"
+    },
+    "对话过了": {
+        "recognition": "TemplateMatch",
+        "template": "日常-好感度对话\\只是聊天.png",
+        "action": "DoNothing",
+        "next": "单独打开选人对话界面"
+    },
+    "单独打开选人对话界面": {
+        "recognition": "TemplateMatch",
+        "template": "日常-好感度对话\\进入好感度对话and泡温泉UI.png",
+        "action": "Click"
+    },
+    "检测对话结束": {
+        "roi": [
+            78,
+            612,
+            68,
+            63
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-好感度对话\\左下角对话结束检测.png",
+        "action": "DoNothing",
+        "next": "空任务"
+    },
+    "过对话": {
+        "recognition": "DirectHit",
+        "post_delay": 370,
+        "action": "Click",
+        "target": [
+            73,
+            168,
+            1122,
+            204
+        ],
+        "next": [
+            "检测对话结束"
+        ],
+        "interrupt": [
+            "OK",
+            "过对话"
+        ]
+    },
+    "叉叉_好感任务专用": {
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "叉叉.png",
+        "action": "Click",
+        "next": "返回菜单_好感任务专用"
+    },
+    "返回菜单_好感任务专用": {
+        "_doc": "----------------------------------------通用node",
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": [
+            "返回菜单.png",
+            "选单.png",
+            "通用符号\\小选单.png"
+        ],
+        "action": "Click",
+        "next": "结束任务"
+    }
+}

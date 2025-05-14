@@ -1,0 +1,163 @@
+{
+    "锻造场升级任务": {
+        "_doc": "----------------------------------------------------------锻造场日常任务开始",
+        "next": [
+            "锻造场OK"
+        ],
+        "interrupt": [
+            "点击锻造场",
+            "点击装备强化"
+        ]
+    },
+    "点击锻造场": {
+        "post_delay": 200,
+        "recognition": "OCR",
+        "expected": "鍛造場",
+        "action": "Click"
+    },
+    "点击装备强化": {
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "日常-锻造场\\up强化.png",
+        "action": "Click",
+        "next": "修改排序规则",
+        "_doc": "---------------------------------------------------------------准备添加修改排序任务"
+    },
+    "修改排序规则": {
+        "post_delay": 2500,
+        "next": [
+            "检测绿色由低至高",
+            "点击确定",
+            "排序1"
+        ]
+    },
+    "排序1": {
+        "post_delay": 500,
+        "recognition": "TemplateMatch",
+        "template": "日常-锻造场\\锻造场_排序1.png",
+        "action": "Click",
+        "next": [
+            "排序选择_LV"
+        ]
+    },
+    "排序选择_LV": {
+        "post_delay": 1000,
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            999,
+            218,
+            118,
+            34
+        ],
+        "next": [
+            "排序选择_由低至高"
+        ]
+    },
+    "排序选择_由低至高": {
+        "post_delay": 1000,
+        "roi": [
+            364,
+            416,
+            617,
+            465
+        ],
+        "recognition": "OCR",
+        "expected": "由低至高",
+        "action": "Click",
+        "next": [
+            "点击确定"
+        ]
+    },
+    "检测绿色由低至高": {
+        "post_delay": 1000,
+        "roi": [
+            364,
+            416,
+            617,
+            465
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-锻造场\\绿色由低至高.png",
+        "action": "DoNothing",
+        "next": "确认排序"
+    },
+    "确认排序": {
+        "recognition": "OCR",
+        "expected": "確定",
+        "action": "Click",
+        "post_delay": 1000
+    },
+    "空任务": {},
+    "点击确定": {
+        "post_delay": 1000,
+        "recognition": "OCR",
+        "expected": "確定",
+        "action": "Click",
+        "next": [
+            "选择低等级装备",
+            "锻造场任务结束点叉叉"
+        ]
+    },
+    "选择低等级装备": {
+        "post_delay": 1000,
+        "roi": [
+            599,
+            183,
+            147,
+            143
+        ],
+        "recognition": "OCR",
+        "expected": ".",
+        "action": "Click",
+        "next": "点击LV提升"
+    },
+    "点击LV提升": {
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "日常-锻造场\\LV提升.png",
+        "action": "Click",
+        "next": "添加磨刀石"
+    },
+    "添加磨刀石": {
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "通用符号\\加号.png",
+        "action": "Click",
+        "next": "强化"
+    },
+    "强化": {
+        "recognition": "TemplateMatch",
+        "template": "日常-锻造场\\添加磨刀石之后的LV.提升.png",
+        "action": "Click",
+        "next": [
+            "锻造确认"
+        ]
+    },
+    "锻造确认": {
+        "post_delay": 1000,
+        "recognition": "OCR",
+        "expected": "YES",
+        "action": "Click"
+    },
+    "锻造场OK": {
+        "post_delay": 1000,
+        "recognition": "OCR",
+        "expected": "OK",
+        "action": "Click",
+        "next": [
+            "锻造场任务结束点叉叉",
+            "返回菜单"
+        ]
+    },
+    "锻造场任务结束点叉叉": {
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "日常-锻造场\\锻造场叉叉.png",
+        "action": "Click",
+        "next": [
+            "返回菜单"
+        ],
+        "_doc": "-----------------------------------------------------------锻造任务结束"
+    }
+}

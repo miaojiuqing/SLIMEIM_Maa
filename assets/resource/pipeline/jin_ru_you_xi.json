@@ -1,0 +1,71 @@
+{
+    "自动进入并开始游戏": {
+        "action": "StartApp",
+        "package": "com.bandainamcoent.tensuramrkww",
+        "post_delay": 20000,
+        "next": [
+            "点击選單"
+        ],
+        "interrupt": [
+            "开始游戏1",
+            "开始游戏2",
+            "正在确认更新内容",
+            "有可更新资料",
+            "黑屏计数",
+            "skip",
+            "仓库满了",
+            "叉叉",
+            "OK"
+        ]
+    },
+    "开始游戏1": {
+        "post_delay": 5000,
+        "recognition": "OCR",
+        "expected": "魔王與龍的建國譚",
+        "action": "Click",
+        "next": [
+            "开始游戏2"
+        ]
+    },
+    "开始游戏2": {
+        "post_delay": 5000,
+        "recognition": "OCR",
+        "expected": "魔王與龍的建國譚",
+        "action": "Click",
+        "next": [
+            "点击選單"
+        ]
+    },
+    "有可更新资料": {
+        "post_delay": 5000,
+        "recognition": "OCR",
+        "expected": "有可更新的資料",
+        "next": "OK"
+    },
+    "正在确认更新内容": {
+        "recognition": "OCR",
+        "expected": "正在確認更新內容",
+        "post_delay": 5000,
+        "next": "有可更新资料",
+        "interrupt": "OK"
+    },
+    "仓库满了": {
+        "post_delay": 5000,
+        "recognition": "OCR",
+        "expected": "紫苑",
+        "next": "OK"
+    },
+    "OK": {
+        "recognition": "OCR",
+        "expected": "OK",
+        "action": "Click",
+        "post_delay": 10000
+    },
+    "点击選單": {
+        "post_delay": 5000,
+        "recognition": "TemplateMatch",
+        "template": "选单.png",
+        "action": "Click",
+        "doc": "-------------------------------------------------------至此，启动游戏并打开菜单完成"
+    }
+}

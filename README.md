@@ -5,135 +5,180 @@
 
 <div align="center">
 
-# MaaPracticeBoilerplate
+# MaaFramework
+
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable-next-line MD036 -->
+_✨ 基于图像识别的自动化黑盒测试框架 ✨_
+<!-- prettier-ignore-end -->
 
 </div>
 
-本仓库为 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 所提供的项目模板，开发者可基于此模板直接创建自己的 MaaXXX 项目。
+<p align="center">
+  <img alt="license" src="https://img.shields.io/github/license/MaaXYZ/MaaFramework">
+  <img alt="C++" src="https://img.shields.io/badge/C++-20-%2300599C?logo=cplusplus">
+  <img alt="platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20Android-blueviolet">
+  <img alt="commit" src="https://img.shields.io/github/commit-activity/m/MaaXYZ/MaaFramework?color=%23ff69b4">
+  <img alt="stars" src="https://img.shields.io/github/stars/MaaXYZ/MaaFramework?style=social">
+</p>
 
-> **MaaFramework** 是基于图像识别技术、运用 [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights) 开发经验去芜存菁、完全重写的新一代自动化黑盒测试框架。
-> 低代码的同时仍拥有高扩展性，旨在打造一款丰富、领先、且实用的开源库，助力开发者轻松编写出更好的黑盒测试程序，并推广普及。
+<div align="center">
+
+[English](./README_en.md) | [简体中文](./README.md)
+
+</div>
+
+## 简介
+
+**MaaFramework** 是基于图像识别技术、运用 [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights) 开发经验去芜存菁、完全重写的新一代自动化黑盒测试框架。
+
+低代码的同时仍拥有高扩展性，旨在打造一款丰富、领先、且实用的开源库，助力开发者轻松编写出更好的黑盒测试程序，并推广普及。
 
 ## 即刻开始
 
-- [📄 快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
-- [🎞️ 视频教程](https://www.bilibili.com/video/BV1yr421E7MW)
+- [快速开始](docs/zh_cn/1.1-快速开始.md)
+- [集成文档](docs/zh_cn/2.1-集成文档.md)
+- [Pipeline 协议](docs/zh_cn/3.1-任务流水线协议.md)
 
-## 如何开发
+## 最佳实践
 
-0. 使用右上角 `Use this template` - `Create a new repository` 来基于本模板创建您自己的项目。
+### 通用 UI
 
-1. 完整克隆本项目及子项目（地址请修改为您基于本模板创建的新项目地址）。
+- [MFAWPF](https://github.com/SweetSmellFox/MFAWPF) MFA 任务管理器 ![csharp](https://img.shields.io/badge/C%23-239120?logo=csharp&logoColor=white)  
+  基于 MAA 全新架构的 通用 GUI。由 MaaFramework 强力驱动！
 
-    ```bash
-    git clone --recursive https://github.com/MaaXYZ/MaaPracticeBoilerplate.git
-    ```
+- [MFW-ELE-GUI](https://github.com/Night-stars-1/maa-gui) MFW-ELE-GUI ![Typescript](https://img.shields.io/badge/Typescript-8A2BE2?logo=typescript)  ![Electron](https://img.shields.io/badge/Electron-3776AB?logo=electron&logoColor=black)  
+  基于全新架构的 MFW-ELE-GUI。由 MaaFramework 强力驱动！
 
-    **请注意，一定要完整克隆子项目，不要漏了 `--recursive`，也不要下载 zip 包！**  
-    这步未正确操作会导致所有 OCR（文字识别）失败！
+- [MFW-PyQt6](https://github.com/overflow65537/MFW-PyQt6) MFW-PyQt6 ![python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)  
+  基于PyQt6的通用GUI。由 MaaFramework 强力驱动！
 
-2. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中。
+- [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) MFAAvalonia ![csharp](https://img.shields.io/badge/C%23-239120?logo=csharp&logoColor=white)  
+  基于 Avalonia 的 通用 GUI。由 MaaFramework 强力驱动！
 
-3. 配置资源文件。
+### 应用程序
 
-    ```bash
-    python ./configure.py
-    ```
+- [M9A](https://github.com/MaaXYZ/M9A) 1999 小助手 ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF) ![python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)  
+  基于全新架构的 亿韭韭韭 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-4. 按需求修改 `assets` 中的资源文件，请参考 MaaFramework 相关文档。
+- [MAABH3](https://github.com/MaaXYZ/MAABH3) 《崩坏3》小助手 | A one-click tool for the daily tasks of Honkai Impact. ![cpp](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white)  
+  基于全新架构的 蹦蹦蹦 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-    - 可使用 [MaaDebugger](https://github.com/MaaXYZ/MaaDebugger) 进行调试；
-    - 也可以在本地安装后测试：
+- [MAS](https://github.com/MaaXYZ/MaaAssistantSkland) 森空岛 小助手 ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 森空岛 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-        1. 执行安装脚本
+- [MSBA](https://github.com/overflow65537/MAA_SnowBreak) 尘白禁区 小助手  ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 尘白禁区 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-            ```bash
-            python ./install.py
-            ```
+- [MAA-for-Millennium-Tour](https://github.com/Ostwind23/MAA-for-Millennium-Tour) 千年之旅 小助手 ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF) ![python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)  
+  基于全新架构的 千年之旅 小助手。图像技术 + 模拟控制，解放侍主的大手！由 MaaFramework 强力驱动！
 
-        2. 执行`MaaPiCli`
+- [MET](https://github.com/shanchuan001/MET) 悠久之树 小助手 ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 悠久之树 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-            - **Windows**
+- [MaaYYs](https://github.com/TanyaShue/MaaYYs) 阴阳师小助手 ![python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![qt](https://img.shields.io/badge/Qt6-41CD52?logo=Qt&logoColor=white)  
+  基于全新架构的 阴阳师小助手。图像技术 + 模拟控制，当赛博屯屯鼠，自动日常，解放你的双手！由 MaaFramework 强力驱动！
 
-                运行 `install/MaaPiCli.exe`
+- [MaaJR](https://github.com/Saratoga-Official/MaaJR) 战舰少女R 小助手 ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 战舰少女R 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-            - **Linux/macOS**
+- [MPA](https://github.com/overflow65537/MAA_Punish) 战双 小助手  ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 战双帕弥什 小助手。图像技术 + 模拟控制，解放双手！由 玛丽的黑咖啡 2.0 强力驱动！
 
-                > 如果提示缺少启动权限，可通过 `chmod a+x install/MaaPiCli` 命令添加
+- [MaaYuan](https://github.com/syoius/MaaYuan) 代号鸢/如鸢 一键长草小助手  ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 代号鸢/如鸢 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-                运行 `install/MaaPiCli`
+- [Maa-HBR](https://github.com/KarylDAZE/Maa-HBR) 炽焰天穹/HBR 小助手  ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 炽焰天穹/HBR 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-5. 完成开发工作后，上传您的代码并发布版本。
+- [MaaGF2Exilium](https://github.com/DarkLingYun/MaaGF2Exilium) 少女前线2: 追放自动化助手 ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 少女前线2: 追放自动化助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-    ```bash
-    # 配置 git 信息（仅第一次需要，后续不用再配置）
-    git config user.name "您的 GitHub 昵称"
-    git config user.email "您的 GitHub 邮箱"
-    
-    # 提交修改
-    git add .
-    git commit -m "XX 新功能"
-    git push origin HEAD -u
-    ```
+- [MaaAshEchoes](https://github.com/moulai/MaaAshEchoes) 白荆回廊 小助手 ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 白荆回廊 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-6. 发布您的版本
+- [MaaXuexi](https://github.com/ravizhan/MaaXuexi) 学习强国 自动化助手 ![python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)  ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 学习强国 自动化助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-    需要**先**修改仓库设置 `Settings` - `Actions` - `General` - `Read and write permissions` - `Save`
+- [MACC](https://github.com/mxia9416/MACC) 无期迷途 小助手 ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 无期迷途 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
-    ```bash
-    # CI 检测到 tag 会自动进行发版
-    git tag v1.0.0
-    git push origin v1.0.0
-    ```
-
-7. 更多操作，请参考[个性化配置](./docs/zh_cn/个性化配置.md)（可选）
+- [MAA_MHXY_MG](https://github.com/gitlihang/Maa_MHXY_MG) 梦幻西游手游 小助手 ![Pipeline](https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF)  
+  基于全新架构的 梦幻西游手游 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！
 
 ## 生态共建
 
-MAA 正计划建设为一类项目，而非舟的单一软件。
+MAA 正计划建设为一类项目，而非舟的单一软件。  
 
-若您的项目依赖于 MaaFramework，我们欢迎您将它命名为 MaaXXX, MXA, MAX 等等。当然，这是许可而不是限制，您也可以自由选择其他与 MAA 无关的名字，完全取决于您自己的想法！
+若您的项目依赖于 MaaFramework ，我们欢迎您将它命名为 MaaXXX, MXA, MAX 等等。当然，这是许可而不是限制，您也可以自由选择其他与 MAA 无关的名字，完全取决于您自己的想法！  
 
-同时，我们也非常欢迎您提出 PR，在 [最佳实践列表](https://github.com/MaaXYZ/MaaFramework#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5) 中添加上您的项目！
+同时，我们也非常欢迎您提出 PR ，在上方的最佳实践列表中添加上您的项目！
 
-## FAQ
+## 许可证
 
-### 1. 我是第一次使用 Python，在命令行输入 `python ./configure.py` 或 `python -m pip install MaaFW` 之后没有反应？没有报错，也没有提示成功，什么都没有
+### MaaFramework
 
-Win10 或者 Win11 系统自带了一份 "Python"，但它其实只是一个安装器，是没法用的。  
-你需要做的是关闭它或者删除它的环境变量，然后自己去 Python 官网下载并安装一份 Python。  
-[参考方法](https://www.bilibili.com/read/cv24692025/)
+本项目采用 [`LGPL-3.0`](./LICENSE.md) 许可证进行开源。
 
-### 2. 我输入 `python ./configure.py` 后报错：`Please clone this repository completely, don’t miss "--recursive", and don’t download the zip package!`
+### DirectML
 
-![项目不完整1](https://github.com/user-attachments/assets/e1f697c0-e5b6-4853-8664-a358df7327a8)
+本项目支持 GPU 加速功能，其在 Windows 平台上依赖于 Microsoft 提供的独立组件 [DirectML](https://learn.microsoft.com/en-us/windows/ai/directml/)。DirectML 并非本项目的开源部分，也不受 LGPL-3.0 的约束。为方便用户，我们随安装包附带了一个未经修改的 DirectML.dll 文件。如果您无需 GPU 加速功能，可安全删除该 DLL 文件，软件的核心功能仍可正常运行。
 
-**请仔细阅读文档！！！**  
-就是你现在正在看的本篇文档，就在上面，“如何开发”里的第一条，都已经用粗体标出来了，再问我要骂人了！
+## 开发
 
-### 3. 使用 MaaDebugger 或 MaaPicli 时弹窗报错，应用程序错误：应用程序无法正常启动
+_请留意，仅当您准备开发 MaaFramework 本身时，才需要阅读本章节内容。若您仅希望基于 MaaFramework 开发自己的应用，则请参考 [即刻开始](#即刻开始)。_
 
-![缺少运行库](https://github.com/user-attachments/assets/942df84b-f47d-4bb5-98b5-ab5d44bc7c2a)
-
-一般是电脑缺少某些运行库，请安装一下 [vc_redist](https://aka.ms/vs/17/release/vc_redist.x64.exe) 。
-
-### 4. 我在这个仓库里提了 Issue 很久没人回复
-
-这里是《项目模板》仓库，它仅仅是一个模板，一般很少会修改，开发者也较少关注。  
-在此仓库请仅提问模板相关问题，其他问题最好前往对应的仓库提出，如果有 log，最好也带上它（`debug/maa.log` 文件）
-
-- MaaFW 本身及 MaaPiCli 的问题：[MaaFramework/issues](https://github.com/MaaXYZ/MaaFramework/issues)
-- MaaDebugger 的问题：[MaaDebugger/issues](https://github.com/MaaXYZ/MaaDebugger/issues)
-- 不知道算是哪里的、其他疑问等：[讨论区](https://github.com/MaaXYZ/MaaFramework/discussions)
-
-### 5. OCR 文字识别一直没有识别结果，报错 "Failed to load det or rec", "ocrer_ is null"
-
-你不但没有仔细阅读文档，还无视了前面步骤的报错。我不想解释了，请再把本文档仔细阅读一遍！
+- [构建指南](docs/zh_cn/4.1-构建指南.md)
+- [接口设计](docs/zh_cn/4.2-标准化接口设计.md)
 
 ## 鸣谢
 
-本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
+### 开源库
 
-感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
+- [opencv](https://github.com/opencv/opencv)  
+  Open Source Computer Vision Library
+- [fastdeploy](https://github.com/PaddlePaddle/FastDeploy)  
+  ⚡️An Easy-to-use and Fast Deep Learning Model Deployment Toolkit for ☁️Cloud 📱Mobile and 📹Edge.
+- [onnxruntime](https://github.com/microsoft/onnxruntime)  
+  ONNX Runtime: cross-platform, high performance ML inferencing and training accelerator
+- [boost](https://www.boost.org/)  
+  Boost provides free peer-reviewed portable C++ source libraries.
+- [libzmq](https://github.com/zeromq/libzmq)  
+  ZeroMQ core engine in C++, implements ZMTP/3.1
+- [cppzmq](https://github.com/zeromq/cppzmq)  
+  Header-only C++ binding for libzmq
+- [meojson](https://github.com/MistEO/meojson)  
+  ✨ Next-gen C++ JSON/JSON5 Serialization Engine | Zero Dependency | Header-Only | Unleash JSON Potential
+- [minitouch](https://github.com/DeviceFarmer/minitouch)  
+  Minimal multitouch event producer for Android.
+- [maatouch](https://github.com/MaaAssistantArknights/MaaTouch)  
+  Android native implementation of minitouch input protocol
+- [minicap](https://github.com/DeviceFarmer/minicap)  
+  Stream real-time screen capture data out of Android devices.
+- [zlib](https://github.com/madler/zlib)  
+  A massively spiffy yet delicately unobtrusive compression library.
+- [gzip-hpp](https://github.com/mapbox/gzip-hpp)  
+  Gzip header-only C++ library
+- ~~[protobuf](https://github.com/protocolbuffers/protobuf)~~  
+  ~~Protocol Buffers - Google's data interchange format~~
+- ~~[grpc](https://github.com/grpc/grpc)~~  
+  ~~The C based gRPC (C++, Python, Ruby, Objective-C, PHP, C#)~~
+- ~~[thrift](https://github.com/apache/thrift)~~  
+  ~~Apache Thrift~~
+
+### 开发者
+
+感谢以下开发者对 MaaFramework 作出的贡献：
 
 [![Contributors](https://contrib.rocks/image?repo=MaaXYZ/MaaFramework&max=1000)](https://github.com/MaaXYZ/MaaFramework/graphs/contributors)
+
+## 讨论
+
+- 集成/开发交流 QQ 群: 595990173
+
+## 赞助
+
+<!-- markdownlint-disable MD045 -->
+<a href="https://afdian.com/a/misteo">
+  <img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png">
+</a>

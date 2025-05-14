@@ -1,0 +1,131 @@
+{
+    "每日任务之喂食角色": {
+        "_doc": "--------------------------------------------------------------“喂食”角色任务开始",
+        "post_delay": 500,
+        "recognition": "OCR",
+        "expected": "交流",
+        "action": "Click",
+        "next": [
+            "喂食之YES"
+        ],
+        "interrupt": [
+            "选择角色进行投喂"
+        ]
+    },
+    "选择角色进行投喂": {
+        "post_delay": 1000,
+        "roi": [
+            1066,
+            489,
+            1157,
+            578
+        ],
+        "recognition": "OCR",
+        "expected": "情",
+        "action": "Click",
+        "next": [
+            "点击交流"
+        ]
+    },
+    "点击交流": {
+        "post_delay": 500,
+        "roi": [
+            6,
+            351,
+            625,
+            708
+        ],
+        "recognition": "OCR",
+        "expected": "交流",
+        "action": "Click",
+        "next": [
+            "点击探访礼物"
+        ]
+    },
+    "点击探访礼物": {
+        "post_delay": 500,
+        "recognition": "OCR",
+        "expected": "探訪禮物",
+        "action": "Click",
+        "next": [
+            "寻找小零食"
+        ],
+        "interrupt": [
+            "向下滑动"
+        ]
+    },
+    "向下滑动": {
+        "action": "Swipe",
+        "begin": [
+            968,
+            655,
+            10,
+            10
+        ],
+        "end": [
+            948,
+            195,
+            10,
+            10
+        ],
+        "next": "停止滑动",
+        "post_delay": 1500
+    },
+    "停止滑动": {
+        "action": "Swipe",
+        "begin": [
+            1160,
+            430,
+            10,
+            10
+        ],
+        "end": [
+            720,
+            430,
+            10,
+            10
+        ],
+        "post_delay": 500
+    },
+    "寻找小零食": {
+        "post_delay": 500,
+        "roi": [
+            700,
+            185,
+            1210,
+            673
+        ],
+        "order_by": "Score",
+        "recognition": "TemplateMatch",
+        "template": [
+            "日常-喂食角色\\新鲜水果.png",
+            "日常-喂食角色\\沙拉棒.png",
+            "日常-喂食角色\\生鱼片.png",
+            "日常-喂食角色\\肉串.png",
+            "日常-喂食角色\\饭团.png"
+        ],
+        "action": "Click",
+        "next": [
+            "添加食物"
+        ]
+    },
+    "添加食物": {
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "通用符号\\加号.png",
+        "action": "Click",
+        "next": [
+            "喂食之YES"
+        ]
+    },
+    "喂食之YES": {
+        "recognition": "OCR",
+        "expected": "YES",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "返回菜单",
+            "结束任务"
+        ]
+    }
+}

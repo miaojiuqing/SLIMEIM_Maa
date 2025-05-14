@@ -1,0 +1,49 @@
+{
+    "切换为手动战斗": {
+        "next": "检测到是手动战斗_保持不变",
+        "interrupt": "检测到是自动战斗_进行切换"
+    },
+    "检测到是手动战斗_保持不变": {
+        "roi": [
+            1073,
+            21,
+            8,
+            20
+        ],
+        "recognition": "ColorMatch",
+        "lower": [
+            15,
+            15,
+            15
+        ],
+        "upper": [
+            20,
+            18,
+            17
+        ],
+        "action": "DoNothing",
+        "post_delay": 100
+    },
+    "检测到是自动战斗_进行切换": {
+        "roi": [
+            1073,
+            21,
+            8,
+            20
+        ],
+        "recognition": "ColorMatch",
+        "lower": [
+            7,
+            44,
+            8
+        ],
+        "upper": [
+            134,
+            255,
+            122
+        ],
+        "action": "DoNothing",
+        "next": "点击切换战斗状态",
+        "post_delay": 100
+    }
+}

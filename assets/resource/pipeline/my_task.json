@@ -1,11 +1,56 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {},
-    "MyTask4": {
-        "recognition": "Custom",
-        "custom_recognition": "my_reco_222",
-        "action": "Custom",
-        "custom_action": "my_action_111"
+    "返回菜单": {
+        "_doc": "----------------------------------------通用node",
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": [
+            "返回菜单.png",
+            "通用符号\\小选单.png"
+        ],
+        "action": "Click",
+        "next": "结束任务"
+    },
+    "黑屏计数": {
+        "_doc": "------------------------------------------------------------------------黑屏检测",
+        "recognition": "ColorMatch",
+        "upper": [
+            0,
+            0,
+            0
+        ],
+        "lower": [
+            0,
+            0,
+            0
+        ],
+        "connected": true,
+        "count": 80000,
+        "post_delay": 30000
+    },
+    "skip": {
+        "roi": [
+            1168,
+            25,
+            51,
+            32
+        ],
+        "recognition": "TemplateMatch",
+        "template": "箭头.png",
+        "post_delay": 5000,
+        "action": "Click"
+    },
+    "叉叉": {
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "叉叉.png",
+        "action": "Click"
+    },
+    "结束任务": {
+        "action": "StopTask"
+    },
+    "点击": {
+        "recognition": "OCR",
+        "expected": ".",
+        "action": "Click"
     }
 }
