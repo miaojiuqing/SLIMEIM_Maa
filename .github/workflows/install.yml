@@ -93,22 +93,22 @@ jobs:
         run: |
           cp MFAWPF/MFAWPF.exe install
 
-      - name: Download MFW
-        if: ${{ matrix.os != 'win' && matrix.os != 'android' }}
+      - name: Download MFA
+        if: ${{ matrix.os != 'android' }}
         uses: robinraju/release-downloader@v1
         with:
-          repository: overflow65537/MFW-PyQt6
-          fileName: "MFW-PyQt6-${{ matrix.os }}-${{ matrix.arch }}*"
+          repository: SweetSmellFox/MFAAvalonia
+          fileName: "MFAAvalonia-*-${{ matrix.os }}-${{ matrix.arch }}*"
           latest: true
-          out-file-path: "MFW-PyQt6"
+          out-file-path: "MFAAvalonia"
           extract: true
 
-      - name: Install MFW-PyQt6
-        if: ${{ matrix.os != 'win' && matrix.os != 'android' }}
+      - name: Install MFAAvalonia
+        if: ${{ matrix.os != 'android' }}
         shell: bash
         run: |
-          rm -rf MFW-PyQt6/MFW_resource/model
-          cp -r MFW-PyQt6/* install
+          rm -rf MFAAvalonia/resource/base/model
+          cp -r MFAAvalonia/* install
 
       - uses: actions/upload-artifact@v4
         with:
