@@ -101,7 +101,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Maa夏尔智慧助手-${{ matrix.os }}-${{ matrix.arch }}
+          name: MaaSLIMEIM-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
   release:
