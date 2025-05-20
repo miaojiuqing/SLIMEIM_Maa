@@ -48,7 +48,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": "任务奖励领取\\三个任务已全部领取.png",
-        "threshold": 0.9,
+        "threshold": 0.95,
         "next": [
             "识别是否已开启菜单"
         ],

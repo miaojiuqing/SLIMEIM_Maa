@@ -46,12 +46,28 @@
         ],
         "post_delay": 1000,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食战.png",
+        "template": [
+            "日常-捕食战\\捕食战.png"
+        ],
         "action": "Click",
         "next": [
             "选择捕食类型"
         ],
-        "interrupt": "点击捕食战"
+        "interrupt": [
+            "尚有一次捕食机会",
+            "点击捕食战"
+        ]
+    },
+    "尚有一次捕食机会": {
+        "recognition": "TemplateMatch",
+        "template": "日常-捕食战\\尚有一次捕食机会.png",
+        "action": "Click",
+        "target_offset": [
+            0,
+            50,
+            0,
+            50
+        ]
     },
     "选择捕食类型": {
         "roi": [
@@ -68,7 +84,7 @@
             "猛攻強化任務"
         ],
         "action": "Click",
-        "post_delay": 2000,
+        "post_delay": 10000,
         "next": "捕食机会尽了",
         "interrupt": [
             "黑屏计数",
@@ -148,12 +164,12 @@
         ],
         "recognition": "OCR",
         "expected": "下一步",
-        "post_delay": 500,
+        "post_delay": 1000,
         "action": "Click",
         "next": "检测是否可以捕食",
         "interrupt": [
-            "黑屏计数",
             "捕食战_再次下一步",
+            "黑屏计数",
             "选择捕食类型"
         ]
     },

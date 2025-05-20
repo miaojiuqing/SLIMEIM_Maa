@@ -11,10 +11,15 @@
         "next": "结束任务"
     },
     "识别是否已开启菜单": {
-        "recognition": "OCR",
-        "expected": "關閉",
-        "action": "DoNothing",
-        "next": "结束任务"
+        "roi": [
+            1088,
+            2,
+            159,
+            116
+        ],
+        "recognition": "TemplateMatch",
+        "template": "已开启菜单的关闭.png",
+        "action": "DoNothing"
     },
     "黑屏计数": {
         "_doc": "------------------------------------------------------------------------黑屏检测",
@@ -31,7 +36,7 @@
         ],
         "connected": true,
         "count": 80000,
-        "post_delay": 30000
+        "post_delay": 15000
     },
     "skip": {
         "roi": [
@@ -76,7 +81,7 @@
         "expected": "OK",
         "action": "Click",
         "post_delay": 10000,
-        "next": "自动进入并开始游戏",
+        "next": "进入游戏并打开菜单",
         "interrupt": "发生预期外的错误_400"
     }
 }
