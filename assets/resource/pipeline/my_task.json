@@ -45,6 +45,7 @@
             51,
             32
         ],
+        "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "箭头.png",
         "post_delay": 5000,
@@ -83,5 +84,6 @@
         "post_delay": 10000,
         "next": "进入游戏并打开菜单",
         "interrupt": "发生预期外的错误_400"
-    }
+    },
+    "空任务": {}
 }

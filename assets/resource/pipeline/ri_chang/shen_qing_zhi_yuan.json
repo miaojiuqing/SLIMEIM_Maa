@@ -27,7 +27,7 @@
         "recognition": "OCR",
         "expected": "興建",
         "action": "Click",
-        "post_delay": 1000,
+        "post_delay": 3000,
         "next": "点击支援",
         "interrupt": "点击右下角兴建"
     },

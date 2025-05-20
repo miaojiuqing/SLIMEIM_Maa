@@ -1,20 +1,45 @@
 {
     "锻造场升级任务": {
         "_doc": "----------------------------------------------------------锻造场日常任务开始",
+        "roi": [
+            592,
+            542,
+            148,
+            145
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-锻造场\\锻造场进入.png",
+        "action": "Click",
+        "green_mask": true,
         "next": [
-            "锻造场OK"
+            "检查是否进入锻造场"
         ],
         "interrupt": [
-            "点击锻造场",
-            "点击装备强化",
-            "预期外错误的OK"
+            "锻造场升级任务",
+            "黑屏计数"
         ]
     },
-    "点击锻造场": {
-        "post_delay": 200,
+    "检查是否进入锻造场": {
+        "roi": [
+            838,
+            68,
+            406,
+            646
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-锻造场\\分解图标-用于锻造场界面检查.png",
+        "post_delay": 1000,
+        "next": "装备开始强化"
+    },
+    "装备开始强化": {
         "recognition": "OCR",
-        "expected": "鍛造場",
-        "action": "Click"
+        "expected": "裝",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "锻造场OK",
+        "interrupt": [
+            "点击装备强化"
+        ]
     },
     "点击装备强化": {
         "post_delay": 1000,
@@ -89,7 +114,6 @@
         "action": "Click",
         "post_delay": 1000
     },
-    "空任务": {},
     "点击确定": {
         "post_delay": 1000,
         "recognition": "OCR",
@@ -104,18 +128,11 @@
         "post_delay": 1000,
         "recognition": "DirectHit",
         "action": "Click",
-        "target": true,
-        "roi": [
-            599,
-            183,
-            147,
-            143
-        ],
-        "target_offset": [
-            0,
-            0,
-            0,
-            0
+        "target": [
+            644,
+            216,
+            58,
+            57
         ],
         "next": "点击LV提升"
     },
