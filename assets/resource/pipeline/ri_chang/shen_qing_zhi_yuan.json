@@ -71,8 +71,8 @@
             716,
             271
         ],
-        "recognition": "OCR",
-        "expected": "支援請求",
+        "recognition": "TemplateMatch",
+        "template": "日常-支援申请\\支援请求.png",
         "action": "Click",
         "next": "一并选择",
         "interrupt": [
@@ -244,8 +244,8 @@
             515,
             520
         ],
-        "recognition": "OCR",
-        "expected": "統一完畢",
+        "recognition": "TemplateMatch",
+        "template": "日常-支援申请\\统一完毕.png",
         "action": "Click",
         "post_delay": 1000,
         "next": "支援请求",
