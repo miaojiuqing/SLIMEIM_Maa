@@ -49,6 +49,7 @@
             634
         ],
         "post_delay": 1000,
+        "threshold": 0.8,
         "recognition": "TemplateMatch",
         "template": [
             "日常-捕食战\\捕食战.png"

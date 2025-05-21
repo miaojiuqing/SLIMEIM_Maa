@@ -1,0 +1,15 @@
+{
+    "每日琐事": {},
+    "统一回收总任务": {},
+    "确认统一回收": {
+        "roi": [
+            644,
+            216,
+            58,
+            57
+        ],
+        "recognition": "TemplateMatch",
+        "template": "每日琐事\\生产道具确认.png",
+        "action": "Click"
+    }
+}

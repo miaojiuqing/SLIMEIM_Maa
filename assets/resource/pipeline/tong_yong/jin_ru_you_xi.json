@@ -31,8 +31,8 @@
     },
     "有可更新资料": {
         "post_delay": 5000,
-        "recognition": "OCR",
-        "expected": "有可更新的資料",
+        "recognition": "TemplateMatch",
+        "template": "进入\\开始游戏\\有可更新的资料.png",
         "next": "OK"
     },
     "正在确认更新内容": {
