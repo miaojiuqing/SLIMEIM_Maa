@@ -32,6 +32,12 @@
         "next": "装备开始强化"
     },
     "装备开始强化": {
+        "roi": [
+            646,
+            83,
+            191,
+            209
+        ],
         "recognition": "OCR",
         "expected": "裝",
         "action": "Click",
