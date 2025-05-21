@@ -1,4 +1,22 @@
 {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "url": {
+        "title": "url",
+        "type": "string",
+        "default": [
+            "https://github.com/miaojiuqing/SLIMEIM_Maa"
+        ]
+    },
+    "properties": {
+        "name": {
+            "title": "name",
+            "type": "string",
+            "default": [
+                "MaaSLISEIM"
+            ]
+        }
+    },
     "controller": [
         {
             "name": "安卓端",
@@ -55,7 +73,7 @@
         },
         {
             "name": "日常-领取日常任务奖励",
-            "entry": "领取日常任务奖励"
+            "entry": "进入任务领取界面"
         }
     ]
 }
