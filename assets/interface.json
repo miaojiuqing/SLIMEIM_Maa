@@ -1,28 +1,6 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "properties": {
-        "url": {
-            "type": "string",
-            "title": "url",
-            "default": [
-                "https://github.com/miaojiuqing/SLIMEIM_Maa"
-            ]
-        },
-        "name": {
-            "type": "string",
-            "title": "name",
-            "default": [
-                "MaaSLIMEIM",
-                "MaaSlimeIm"
-            ]
-        }
-    },
-    "additionalProperties": false,
-    "required": [
-        "url",
-        "name"
-    ],
+    "name": "MaaSLIMEIM",
+    "url": "https://github.com/miaojiuqing/SLIMEIM_Maa",
     "controller": [
         {
             "name": "安卓端",
