@@ -109,6 +109,9 @@
         "action": "Click",
         "next": [
             "添加食物"
+        ],
+        "interrupt": [
+            "叉叉"
         ]
     },
     "添加食物": {
@@ -118,6 +121,9 @@
         "action": "Click",
         "next": [
             "喂食之YES"
+        ],
+        "interrupt": [
+            "叉叉"
         ]
     },
     "喂食之YES": {

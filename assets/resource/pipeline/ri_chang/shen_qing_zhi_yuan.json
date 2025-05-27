@@ -25,7 +25,11 @@
             155
         ],
         "recognition": "OCR",
-        "expected": "興建",
+        "expected": [
+            "興建",
+            "建",
+            "興"
+        ],
         "action": "Click",
         "post_delay": 3000,
         "next": "点击支援",
@@ -60,8 +64,10 @@
         ],
         "interrupt": [
             "统一完毕",
+            "单一完毕",
             "啥也没有",
-            "OK"
+            "OK",
+            "点击右下角兴建"
         ]
     },
     "支援请求": {
@@ -79,7 +85,8 @@
             "检测是否已经支援过了",
             "OK",
             "叉叉",
-            "支援请求"
+            "支援请求",
+            "点击右下角兴建"
         ]
     },
     "检测是否已经支援过了": {
@@ -95,7 +102,10 @@
         "next": [
             "识别是否已开启菜单"
         ],
-        "interrupt": "返回菜单"
+        "interrupt": [
+            "返回菜单",
+            "点击右下角兴建"
+        ]
     },
     "一并选择": {
         "roi": [
@@ -108,7 +118,10 @@
         "expected": "選擇",
         "action": "Click",
         "post_delay": 1000,
-        "next": "送出支援"
+        "next": "送出支援",
+        "interrupt": [
+            "点击右下角兴建"
+        ]
     },
     "送出支援": {
         "roi": [
@@ -121,7 +134,10 @@
         "expected": "送出支援",
         "action": "Click",
         "post_delay": 1000,
-        "next": "缩时之YES"
+        "next": "缩时之YES",
+        "interrupt": [
+            "点击右下角兴建"
+        ]
     },
     "缩时之YES": {
         "roi": [
@@ -134,13 +150,19 @@
         "expected": "YES",
         "action": "Click",
         "post_delay": 1000,
-        "next": "缩时后OK"
+        "next": "缩时后OK",
+        "interrupt": [
+            "点击右下角兴建"
+        ]
     },
     "缩时后OK": {
         "recognition": "OCR",
         "expected": "OK",
         "action": "Click",
-        "next": "返回菜单"
+        "next": "返回菜单",
+        "interrupt": [
+            "点击右下角兴建"
+        ]
     },
     "啥也没有": {
         "roi": [
@@ -159,7 +181,8 @@
         "post_delay": 1000,
         "next": "点击建筑的提升",
         "interrupt": [
-            "啥也没有"
+            "啥也没有",
+            "点击右下角兴建"
         ]
     },
     "点击建筑的提升": {
@@ -255,6 +278,24 @@
         ],
         "recognition": "TemplateMatch",
         "template": "日常-支援申请\\统一完毕.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "点击建筑的提升",
+        "interrupt": [
+            "保管中的设施提升完毕",
+            "OK",
+            "点击右下角兴建"
+        ]
+    },
+    "单一完毕": {
+        "roi": [
+            1051,
+            176,
+            515,
+            520
+        ],
+        "recognition": "TemplateMatch",
+        "template": "日常-支援申请\\设施状态监测-单一完毕.png",
         "action": "Click",
         "post_delay": 1000,
         "next": "支援请求",

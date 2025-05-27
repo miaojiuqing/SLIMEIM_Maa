@@ -46,7 +46,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": "任务奖励领取\\任务奖励领取-已领取完当前奖励.png",
-        "threshold": 0.8,
+        "threshold": 0.99,
         "next": [
             "识别是否已开启菜单"
         ],
@@ -64,7 +64,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": "任务奖励领取\\任务奖励_可领取状态.png",
-        "threshold": 0.98,
+        "threshold": 0.99,
         "action": "Click",
         "next": "日常任务_无可领取奖励",
         "interrupt": [
@@ -81,7 +81,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": "任务奖励领取\\任务奖励_不可领取状态.png",
-        "threshold": 0.9
+        "threshold": 0.99
     },
     "任务列表奖励领取完毕检测": {
         "roi": [
