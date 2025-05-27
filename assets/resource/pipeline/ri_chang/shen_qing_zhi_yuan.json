@@ -101,13 +101,12 @@
         "threshold": 0.2,
         "recognition": "TemplateMatch",
         "template": "日常-支援申请\\支援申请-支援请求完毕.png",
-        "post_delay": 100,
+        "post_delay": 1000,
         "next": [
             "识别是否已开启菜单"
         ],
         "interrupt": [
-            "返回菜单",
-            "点击右下角兴建"
+            "返回菜单"
         ]
     },
     "一并选择": {

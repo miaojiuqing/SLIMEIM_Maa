@@ -81,7 +81,14 @@
         ],
         "recognition": "TemplateMatch",
         "template": "任务奖励领取\\任务奖励_不可领取状态.png",
-        "threshold": 0.99
+        "threshold": 0.99,
+        "post_delay": 1000,
+        "next": [
+            "识别是否已开启菜单"
+        ],
+        "interrupt": [
+            "返回菜单"
+        ]
     },
     "任务列表奖励领取完毕检测": {
         "roi": [
