@@ -33,7 +33,9 @@
         "action": "Click",
         "post_delay": 3000,
         "next": "点击支援",
-        "interrupt": "点击右下角兴建"
+        "interrupt": [
+            "点击右下角兴建"
+        ]
     },
     "点击支援": {
         "roi": [
@@ -58,7 +60,7 @@
             515,
             520
         ],
-        "post_delay": 1000,
+        "post_delay": 100,
         "next": [
             "支援请求"
         ],
@@ -96,9 +98,9 @@
             1100,
             89
         ],
-        "recognition": "OCR",
-        "expected": "已達當日上限",
-        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "日常-支援申请\\支援申请-支援请求完毕.png",
+        "post_delay": 100,
         "next": [
             "识别是否已开启菜单"
         ],
