@@ -98,6 +98,7 @@
             1100,
             89
         ],
+        "threshold": 0.2,
         "recognition": "TemplateMatch",
         "template": "日常-支援申请\\支援申请-支援请求完毕.png",
         "post_delay": 100,
