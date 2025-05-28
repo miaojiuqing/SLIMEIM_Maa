@@ -81,7 +81,7 @@
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
 感谢以下开发者对本项目作出的贡献:
-怎么把ERR_OverFlow佬加进去（
+怎么把ERR_OverFlow佬加进去
 <a href="https://github.com/miaojiuqing/SLIMEIM_Maa/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=overflow65537/MAA_Punish&max=1000" alt="Contributors to MAA_Punish"/>
+  <img src="https://contrib.rocks/image?repo=miaojiuqing/SLIMEIM_Maa&max=1000" alt="Contributors to SLIMEIM_Maa"/>
 </a>
