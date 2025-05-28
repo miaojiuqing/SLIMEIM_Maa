@@ -5,7 +5,8 @@
         "recognition": "TemplateMatch",
         "template": [
             "返回菜单.png",
-            "通用符号\\小选单.png"
+            "通用符号\\小选单.png",
+            "选单.png"
         ],
         "action": "Click",
         "next": "结束任务"
@@ -75,7 +76,13 @@
         "recognition": "OCR",
         "expected": "OK",
         "action": "Click",
-        "post_delay": 10000
+        "post_delay": 5000
+    },
+    "YES": {
+        "recognition": "OCR",
+        "expected": "YES",
+        "action": "Click",
+        "post_delay": 5000
     },
     "预期外错误的OK": {
         "recognition": "OCR",

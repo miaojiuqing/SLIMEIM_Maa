@@ -1,6 +1,16 @@
 {
-    "分数测试": {
+    "文字识别分数测试": {
+        "roi": [
+            429,
+            291,
+            409,
+            104
+        ],
+        "recognition": "OCR",
+        "expected": "沒有可領取的物品"
+    },
+    "图片识别分数测试": {
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食战.png"
+        "template": "每日琐事\\统一领取生产资源\\生产道具确认.png"
     }
 }

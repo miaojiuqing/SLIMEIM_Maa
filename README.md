@@ -82,4 +82,6 @@
 
 感谢以下开发者对本项目作出的贡献:
 怎么把ERR_OverFlow佬加进去（
-[![Contributors]](https://github.com/miaojiuqing/SLIMEIM_Maa/graphs/contributors)
+<a href="https://github.com/miaojiuqing/SLIMEIM_Maa/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=overflow65537/MAA_Punish&max=1000" alt="Contributors to MAA_Punish"/>
+</a>

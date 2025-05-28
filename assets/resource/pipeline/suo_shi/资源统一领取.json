@@ -1,0 +1,67 @@
+{
+    "统一回收总任务": {
+        "roi": [
+            1049,
+            338,
+            183,
+            182
+        ],
+        "recognition": "OCR",
+        "expected": "建國",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "统一回收结果",
+        "interrupt": [
+            "点击统一回收",
+            "黑屏计数",
+            "确认统一回收",
+            "发生预期外的错误_400",
+            "OK"
+        ]
+    },
+    "点击统一回收": {
+        "roi": [
+            54,
+            546,
+            160,
+            145
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "統一回收",
+            "統",
+            "一",
+            "回收"
+        ],
+        "action": "Click",
+        "post_delay": 1000
+    },
+    "确认统一回收": {
+        "roi": [
+            514,
+            557,
+            254,
+            108
+        ],
+        "recognition": "TemplateMatch",
+        "template": "每日琐事\\统一领取生产资源\\生产道具确认.png",
+        "action": "Click"
+    },
+    "统一回收结果": {
+        "roi": [
+            284,
+            1,
+            764,
+            145
+        ],
+        "recognition": "TemplateMatch",
+        "template": "每日琐事\\统一领取生产资源\\琐事-资源统一回收.png",
+        "next": [
+            "识别是否已开启菜单"
+        ],
+        "interrupt": [
+            "返回菜单",
+            "OK"
+        ]
+    }
+}
