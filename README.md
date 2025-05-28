@@ -80,9 +80,10 @@
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
-怎么把ERR_OverFlow佬没pr所以不在里边，当时直接改完文件发我的()
+ERR_OverFlow佬没pr所以不在里边，当时直接改完文件发我的(),非常感谢祂！
 
 感谢以下开发者对本项目作出的贡献:
+
 <a href="https://github.com/miaojiuqing/SLIMEIM_Maa/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=miaojiuqing/SLIMEIM_Maa&max=1000" alt="Contributors to SLIMEIM_Maa"/>
 </a>
