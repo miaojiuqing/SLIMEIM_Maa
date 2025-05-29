@@ -1,0 +1,22 @@
+{
+    "文字识别测试分数": {
+        "roi": [
+            71,
+            47,
+            791,
+            73
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "請求支援一覽",
+            "支援過我方的盟友",
+            "盟主聯合成員"
+        ]
+    },
+    "图片识别测试分数": {
+        "recognition": "TemplateMatch",
+        "inverse": true,
+        "threshold": 0.98,
+        "template": "战斗状态\\战斗状态-非自动战斗.png"
+    }
+}

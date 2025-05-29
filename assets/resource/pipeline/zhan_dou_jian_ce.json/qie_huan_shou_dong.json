@@ -5,45 +5,27 @@
     },
     "检测到是手动战斗_保持不变": {
         "roi": [
-            1073,
-            21,
-            8,
-            20
+            1060,
+            0,
+            75,
+            72
         ],
-        "recognition": "ColorMatch",
-        "lower": [
-            15,
-            15,
-            15
-        ],
-        "upper": [
-            20,
-            18,
-            17
-        ],
-        "action": "DoNothing",
-        "post_delay": 100
+        "recognition": "TemplateMatch",
+        "threshold": 0.98,
+        "template": "战斗状态\\战斗状态-非自动战斗.png",
+        "next": "空任务"
     },
     "检测到是自动战斗_进行切换": {
         "roi": [
-            1073,
-            21,
-            8,
-            20
+            1060,
+            0,
+            75,
+            72
         ],
-        "recognition": "ColorMatch",
-        "lower": [
-            7,
-            44,
-            8
-        ],
-        "upper": [
-            134,
-            255,
-            122
-        ],
-        "action": "DoNothing",
-        "next": "点击切换战斗状态",
-        "post_delay": 100
+        "recognition": "TemplateMatch",
+        "inverse": true,
+        "threshold": 0.98,
+        "template": "战斗状态\\战斗状态-非自动战斗.png",
+        "next": "点击切换战斗状态"
     }
 }

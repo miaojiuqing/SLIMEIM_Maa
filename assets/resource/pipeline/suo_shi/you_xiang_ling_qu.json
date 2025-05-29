@@ -10,7 +10,7 @@
         "template": "每日琐事\\邮箱领取\\邮箱图标.png",
         "action": "Click",
         "post_delay": 1000,
-        "next": "琐事-邮箱领取-领取完毕",
+        "next": "琐事-已进入邮箱领取页并开始执行领取",
         "interrupt": [
             "OK",
             "琐事-邮箱领取-领取奖励"
@@ -62,11 +62,11 @@
             220,
             80
         ],
-        "recognition": "OCR",
-        "expected": [
-            "全部領取",
-            "全部"
+        "recognition": "TemplateMatch",
+        "template": [
+            "每日琐事\\邮箱领取\\琐事-邮箱领取-点击全部领取.png"
         ],
+        "threshold": 0.9999,
         "action": "Click",
         "post_delay": 1000
     }
