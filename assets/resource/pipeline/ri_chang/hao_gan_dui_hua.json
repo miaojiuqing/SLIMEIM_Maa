@@ -79,7 +79,8 @@
         "next": "对话结束",
         "interrupt": [
             "叉叉",
-            "过对话"
+            "过对话",
+            "取消"
         ]
     },
     "识别不到可对话对象": {
@@ -93,7 +94,7 @@
         "recognition": "TemplateMatch",
         "template": "日常-好感度对话\\可对话_移动.png",
         "inverse": true,
-        "threshold": 0.8,
+        "threshold": 0.9,
         "action": "DoNothing",
         "next": "识别是否已开启菜单",
         "interrupt": [

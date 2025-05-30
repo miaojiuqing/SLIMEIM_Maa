@@ -1,0 +1,9 @@
+{
+    "切换下一个编队": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "切换编队\\切换编队-右箭头.png",
+        "action": "Click",
+        "post_delay": 800
+    }
+}

@@ -1,6 +1,7 @@
 {
     "返回菜单": {
-        "_doc": "----------------------------------------通用node",
+        "_doc": "----------------------------------------通用node,加个准确度识别应该不会崩吧",
+        "threshold": 0.9998,
         "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": [
@@ -19,6 +20,7 @@
             116
         ],
         "recognition": "TemplateMatch",
+        "threshold": 0.99,
         "template": "已开启菜单的关闭.png",
         "action": "DoNothing"
     },
@@ -91,6 +93,27 @@
         "post_delay": 10000,
         "next": "进入游戏并打开菜单",
         "interrupt": "发生预期外的错误_400"
+    },
+    "取消": {
+        "recognition": "OCR",
+        "expected": "取消",
+        "action": "Click"
+    },
+    "乱点一下": {
+        "action": "Click",
+        "target": [
+            183,
+            211,
+            327,
+            220
+        ]
+    },
+    "确定": {
+        "recognition": "OCR",
+        "expected": [
+            "確定"
+        ],
+        "action": "Click"
     },
     "空任务": {}
 }
