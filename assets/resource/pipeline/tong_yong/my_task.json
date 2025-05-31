@@ -44,10 +44,10 @@
     },
     "skip": {
         "roi": [
-            1168,
-            25,
-            51,
-            32
+            950,
+            0,
+            329,
+            230
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
@@ -79,7 +79,7 @@
         "recognition": "OCR",
         "expected": "OK",
         "action": "Click",
-        "post_delay": 5000
+        "post_delay": 1500
     },
     "YES": {
         "recognition": "OCR",

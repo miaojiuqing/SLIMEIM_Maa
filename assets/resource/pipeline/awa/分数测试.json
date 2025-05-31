@@ -17,17 +17,12 @@
         ]
     },
     "图片识别测试分数": {
-        "roi": [
-            1117,
-            0,
-            114,
-            89
-        ],
         "recognition": "TemplateMatch",
         "inverse": false,
-        "threshold": 0.99,
+        "threshold": 0.999,
+        "green_mask": true,
         "template": [
-            "返回菜单.png"
+            "活动期间\\翻牌\\翻牌-有票.png"
         ]
     }
 }

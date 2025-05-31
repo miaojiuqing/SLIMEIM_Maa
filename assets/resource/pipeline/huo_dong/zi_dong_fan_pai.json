@@ -1,0 +1,132 @@
+{
+    "活动限定-自动翻牌总任务": {
+        "roi": [
+            108,
+            19,
+            243,
+            216
+        ],
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": "活动期间\\翻牌\\点击翻牌.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "翻牌-界面检查",
+        "interrupt": [
+            "活动限定-自动翻牌总任务"
+        ]
+    },
+    "翻牌-界面检查": {
+        "recognition": "TemplateMatch",
+        "template": "活动期间\\翻牌\\翻牌-界面检查.png",
+        "next": "翻牌-无翻牌次数",
+        "interrupt": [
+            "翻牌-有翻牌次数"
+        ]
+    },
+    "翻牌-无翻牌次数": {
+        "threshold": 0.999,
+        "recognition": "TemplateMatch",
+        "template": "活动期间\\翻牌\\翻牌-没票了.png",
+        "next": "识别失败再返回菜单-识别层",
+        "interrupt": [
+            "识别失败再返回菜单-点击菜单层"
+        ]
+    },
+    "翻牌-有翻牌次数": {
+        "threshold": 0.999,
+        "recognition": "TemplateMatch",
+        "template": "活动期间\\翻牌\\翻牌-有票.png",
+        "action": "Click",
+        "next": "OK",
+        "interrupt": [
+            "翻牌-选择奖励",
+            "翻牌-点击执行一次",
+            "翻牌-YES",
+            "点击下一步",
+            "翻牌-有翻牌次数",
+            "skip",
+            "翻牌-点击牌面",
+            "叉叉",
+            "翻牌-滑动"
+        ]
+    },
+    "翻牌-点击牌面": {
+        "roi": [
+            567,
+            529,
+            712,
+            190
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "點擊畫面",
+            "畫面",
+            "點擊"
+        ],
+        "action": "Click"
+    },
+    "翻牌-选择奖励": {
+        "threshold": 0.99,
+        "recognition": "TemplateMatch",
+        "template": [
+            "活动期间\\翻牌\\翻牌奖励选择-抽奖卷.png",
+            "活动期间\\翻牌\\翻牌奖励选择-当期觉醒石.png",
+            "活动期间\\翻牌\\翻牌奖励选择-八星徽章.png",
+            "活动期间\\翻牌\\翻牌奖励选择-体力药.png",
+            "活动期间\\翻牌\\翻牌奖励选择-觉醒石-绿.png",
+            "活动期间\\翻牌\\翻牌奖励选择-觉醒石-红.png",
+            "活动期间\\翻牌\\翻牌奖励选择-觉醒石-蓝.png",
+            "活动期间\\翻牌\\翻牌奖励选择-觉醒石-黄.png",
+            "活动期间\\翻牌\\翻牌奖励选择-极解石块.png",
+            "活动期间\\翻牌\\翻牌奖励选择-当期兑换石.png",
+            "活动期间\\翻牌\\翻牌奖励选择-蓝石头.png"
+        ],
+        "action": "Click",
+        "post_delay": 500
+    },
+    "翻牌-滑动": {
+        "action": "Swipe",
+        "begin": [
+            817,
+            513,
+            10,
+            10
+        ],
+        "end": [
+            817,
+            215,
+            10,
+            10
+        ],
+        "post_delay": 1500
+    },
+    "翻牌-YES": {
+        "roi": [
+            653,
+            567,
+            242,
+            112
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "YES"
+        ],
+        "action": "Click",
+        "post_delay": 500
+    },
+    "翻牌-点击执行一次": {
+        "roi": [
+            639,
+            474,
+            264,
+            129
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "执行1次",
+            "1次"
+        ],
+        "action": "Click"
+    }
+}
