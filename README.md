@@ -33,17 +33,29 @@
 - [x] 每日城镇角色对话（仅对话当前所在城镇的角色）
 - [x] 锻造场升级任务
 - [x] 建筑设施申请支援任务
-- [x] 捕食战（不稳定）
+- [x] 捕食战(选择捕食类型功能将于未来v1.0.0之后添加)
   - [x] 心体
   - [x] 猛攻
   - [x] 坚守
   - [x] 转魂
 - [x] 领取日常奖励
+- [x] 生产资源统一领取
+- [x] 泡温泉领取体力
+- [x] 进联盟签到and领取奖励
+- [x] 领取邮箱、一并支援等奖励
+- [x] 版本活动期间每日的20次并列演算(默认切换至第七编队再进行演算)
+- 请注意!!!以上任务的运行基本都基于菜单界面才能开始运行，等功能写完了稳定了才会考虑优化（希望游戏能活到那个时候）
 - 其余任务（如镜塔和英桀杯战斗正在开发中）
 
 1. 点击链接下载最新[Release](https://github.com/miaojiuqing/SLIMEIM_Maa/releases)包
+2.安装运行环境
+Windows
+对于Windows需要在运行前安装运行库。
 
-2. 解压后双击`MFAAvalonia.exe`即可运行
+需要 VCRedist x64 (cli与gui都需要) 和 .NET 8 (仅使用gui时需要)。 点击 vc_redist.x64 下载安装 VCRedist x64，点击 dotnet-sdk-8.0.5-win-x64.exe 下载安装.NET 8。 也可以右键开始按钮打开终端
+                                winget install Microsoft.VCRedist.2017.x64 Microsoft.DotNet.DesktopRuntime.8
+在终端内粘贴以上命令回车以进行安装。
+3. 解压后双击`MFAAvalonia.exe`即可运行
     可以通过创建快捷方式之后，右键该快捷方式,点击属性自行更改图标
 
 ### Windows

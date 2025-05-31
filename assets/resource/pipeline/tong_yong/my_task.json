@@ -1,7 +1,8 @@
 {
     "返回菜单": {
         "_doc": "----------------------------------------通用node,加个准确度识别应该不会崩吧",
-        "threshold": 0.9998,
+        "threshold": 0.995,
+        "green_mask": true,
         "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": [
@@ -113,6 +114,39 @@
         "expected": [
             "確定"
         ],
+        "action": "Click"
+    },
+    "点击下一步": {
+        "recognition": "OCR",
+        "expected": [
+            "下一步"
+        ],
+        "action": "Click"
+    },
+    "识别失败再返回菜单": {
+        "next": [
+            "识别失败再返回菜单-识别层"
+        ],
+        "interrupt": [
+            "识别失败再返回菜单-点击菜单层"
+        ]
+    },
+    "识别失败再返回菜单-识别层": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "菜单返回检测-世界地图.png",
+            "已开启菜单的关闭.png"
+        ]
+    },
+    "识别失败再返回菜单-点击菜单层": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "返回菜单.png",
+            "选单.png",
+            "通用符号\\小选单.png"
+        ],
+        "green_mask": true,
+        "threshold": 0.99,
         "action": "Click"
     },
     "空任务": {}
