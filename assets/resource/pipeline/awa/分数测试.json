@@ -1,28 +1,23 @@
 {
     "文字识别测试分数": {
         "roi": [
-            616,
-            110,
-            615,
-            137
+            40,
+            423,
+            418,
+            172
         ],
         "recognition": "OCR",
         "expected": [
-            "本日已達次數上限",
-            "次數上限",
-            "尚有0次",
-            "上限",
-            "次數",
-            "本日"
+            "舞台效果"
         ]
     },
     "图片识别测试分数": {
         "recognition": "TemplateMatch",
         "inverse": false,
-        "threshold": 0.999,
+        "threshold": 0.70,
         "green_mask": true,
         "template": [
-            "活动期间\\翻牌\\翻牌-有票.png"
+            "英桀杯\\PVP-选择敌人界面检测.png"
         ]
     }
 }

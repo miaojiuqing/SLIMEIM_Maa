@@ -48,9 +48,10 @@
         "inverse": true,
         "recognition": "OCR",
         "expected": "領取",
-        "next": "识别是否已开启菜单",
+        "next": "识别失败再返回菜单-识别层",
         "interrupt": [
-            "返回菜单"
+            "OK",
+            "识别失败再返回菜单-点击菜单层"
         ]
     },
     "联盟_有可领取奖励": {

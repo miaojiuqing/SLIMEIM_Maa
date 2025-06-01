@@ -1,0 +1,54 @@
+{
+    "点击进入英桀杯": {
+        "roi": [
+            655,
+            173,
+            166,
+            172
+        ],
+        "recognition": "TemplateMatch",
+        "template": "英桀杯\\进入英桀杯.png",
+        "action": "Click",
+        "next": [
+            "PVP-检查是否进入界面"
+        ],
+        "interrupt": [
+            "点击进入英桀杯"
+        ]
+    },
+    "PVP-检查是否进入界面": {
+        "recognition": "TemplateMatch",
+        "inverse": false,
+        "threshold": 0.90,
+        "green_mask": true,
+        "template": [
+            "英桀杯\\PVP-选择敌人界面检测.png"
+        ],
+        "next": [
+            "英桀杯-无挑战卷"
+        ],
+        "interrupt": []
+    },
+    "英桀杯-无挑战卷": {},
+    "PVP-选择对手进行挑战": {
+        "recognition": "TemplateMatch",
+        "template": "英桀杯\\PVP-小奖杯.png",
+        "action": "Click",
+        "next": [],
+        "interrupt": []
+    },
+    "英桀杯-准备出击检查并点击": {
+        "roi": [
+            964,
+            592,
+            278,
+            94
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "出擊"
+        ],
+        "action": "Click"
+    },
+    "英桀杯-进入战斗": {}
+}
