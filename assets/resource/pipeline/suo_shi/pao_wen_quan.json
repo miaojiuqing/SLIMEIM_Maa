@@ -103,11 +103,11 @@
         "recognition": "TemplateMatch",
         "template": "每日琐事\\琐事-泡温泉\\琐事-泡温泉界面检查.png",
         "action": "Click",
+        "post_delay": 800,
         "next": "不可以再泡温泉了",
         "interrupt": [
             "开始泡温泉检测",
             "识别是否已进入温泉门口",
-            "OK",
             "YES"
         ]
     },
@@ -174,10 +174,10 @@
             "识别是否已开启菜单"
         ],
         "interrupt": [
-            "返回菜单",
             "OK",
+            "叉叉",
             "YES",
-            "叉叉"
+            "返回菜单"
         ]
     }
 }

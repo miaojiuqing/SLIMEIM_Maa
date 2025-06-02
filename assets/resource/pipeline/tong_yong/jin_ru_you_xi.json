@@ -57,6 +57,7 @@
     },
     "点击選單": {
         "post_delay": 5000,
+        "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "选单.png",
         "action": "Click",
