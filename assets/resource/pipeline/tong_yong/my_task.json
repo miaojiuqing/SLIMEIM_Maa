@@ -43,12 +43,6 @@
         "post_delay": 15000
     },
     "skip": {
-        "roi": [
-            950,
-            0,
-            329,
-            230
-        ],
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "箭头.png",
@@ -123,6 +117,12 @@
         ],
         "action": "Click"
     },
+    "点击NO": {
+        "recognition": "OCR",
+        "expected": [
+            "NO"
+        ]
+    },
     "识别失败再返回菜单": {
         "next": [
             "识别失败再返回菜单-识别层"
@@ -132,6 +132,7 @@
         ]
     },
     "识别失败再返回菜单-识别层": {
+        "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
             "菜单返回检测-世界地图.png",

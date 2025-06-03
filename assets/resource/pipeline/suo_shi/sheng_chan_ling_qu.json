@@ -13,8 +13,8 @@
         "next": "统一回收结果",
         "interrupt": [
             "黑屏计数",
-            "确认统一回收",
             "点击统一回收",
+            "确认统一回收",
             "发生预期外的错误_400",
             "OK"
         ]
@@ -26,12 +26,10 @@
             160,
             145
         ],
-        "recognition": "OCR",
-        "expected": [
-            "統一回收",
-            "統",
-            "一",
-            "回收"
+        "threshold": 0.999,
+        "recognition": "TemplateMatch",
+        "template": [
+            "每日琐事\\统一领取生产资源\\琐事-统一回收图标.png"
         ],
         "action": "Click",
         "post_delay": 1000

@@ -1,10 +1,10 @@
 {
     "文字识别测试分数": {
         "roi": [
-            472,
-            56,
-            209,
-            74
+            403,
+            142,
+            503,
+            306
         ],
         "recognition": "OCR",
         "expected": [
@@ -14,12 +14,22 @@
         ]
     },
     "图片识别测试分数": {
-        "recognition": "TemplateMatch",
         "inverse": false,
         "threshold": 0.70,
         "green_mask": true,
+        "recognition": "TemplateMatch",
         "template": [
-            "英桀杯\\PVP-选择敌人界面检测.png"
+            "英桀杯\\英桀杯-更换角色界面识别.png"
         ]
+    },
+    "滑动函数": {
+        "duration": 2000
+    },
+    "启动绿色掩码": {
+        "green_mask": true
+    },
+    "反选和准确度": {
+        "inverse": true,
+        "threshold": 0.90
     }
 }

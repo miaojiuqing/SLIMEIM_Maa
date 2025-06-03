@@ -1,0 +1,32 @@
+{
+    "英桀杯-公式化战斗逻辑-第一回合使用技能": {
+        "next": "英桀杯-公式化战斗逻辑-第一回合-防御技能选择-已选择",
+        "interrupt": [
+            "英桀杯-公式化战斗逻辑-第一回合-防御技能选择-未选择"
+        ]
+    },
+    "英桀杯-公式化战斗逻辑-第一回合-防御技能选择-未选择": {
+        "threshold": 0.80,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "英桀杯\\公式化战斗逻辑\\光静防御技能-未选择状态.png"
+        ],
+        "action": "Click"
+    },
+    "英桀杯-公式化战斗逻辑-第一回合-防御技能选择-已选择": {
+        "threshold": 0.80,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "英桀杯\\公式化战斗逻辑\\光静防御技能-已选择状态.png"
+        ],
+        "post_delay": 1000,
+        "next": [
+            "英桀杯-识别是否已发动技能"
+        ],
+        "interrupt": [
+            "英桀杯-点击发动"
+        ]
+    }
+}

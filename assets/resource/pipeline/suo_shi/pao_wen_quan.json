@@ -99,6 +99,7 @@
             836,
             507
         ],
+        "threshold": 0.90,
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "每日琐事\\琐事-泡温泉\\琐事-泡温泉界面检查.png",
@@ -171,13 +172,55 @@
             "只能利用1次"
         ],
         "next": [
-            "识别是否已开启菜单"
+            "泡温泉-是否已关闭OK"
         ],
         "interrupt": [
-            "OK",
+            "泡温泉-OK",
+            "识别失败再返回菜单-点击菜单层",
             "叉叉",
             "YES",
             "返回菜单"
         ]
+    },
+    "泡温泉-OK": {
+        "recognition": "OCR",
+        "expected": [
+            "OK"
+        ],
+        "action": "Click",
+        "post_delay": 1000
+    },
+    "泡温泉-是否已关闭OK": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "日常-好感度对话\\进入好感度对话and泡温泉UI.png"
+        ],
+        "next": [
+            "泡温泉-识别失败再返回菜单-识别层"
+        ],
+        "interrupt": [
+            "泡温泉-识别失败再返回菜单-点击菜单层"
+        ]
+    },
+    "泡温泉-识别失败再返回菜单-识别层": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "已开启菜单的关闭.png"
+        ],
+        "next": [
+            "结束任务"
+        ]
+    },
+    "泡温泉-识别失败再返回菜单-点击菜单层": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "返回菜单.png",
+            "选单.png",
+            "通用符号\\小选单.png"
+        ],
+        "green_mask": true,
+        "threshold": 0.99,
+        "action": "Click"
     }
 }
