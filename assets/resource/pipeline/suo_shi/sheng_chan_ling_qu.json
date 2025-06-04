@@ -26,7 +26,7 @@
             160,
             145
         ],
-        "threshold": 0.999,
+        "threshold": 0.99,
         "recognition": "TemplateMatch",
         "template": [
             "每日琐事\\统一领取生产资源\\琐事-统一回收图标.png"
