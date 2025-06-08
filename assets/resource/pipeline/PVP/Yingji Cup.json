@@ -1,0 +1,322 @@
+{
+    "点击进入英桀杯": {
+        "roi": [
+            655,
+            173,
+            166,
+            172
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯\\进入英桀杯.png",
+        "action": "Click",
+        "next": [
+            "PVP-检查是否进入界面"
+        ],
+        "interrupt": [
+            "英桀杯-连接失败-点击重连",
+            "黑屏计数",
+            "英桀杯-进入一般战",
+            "英桀杯-正处于排名战",
+            "点击进入英桀杯",
+            "空任务"
+        ]
+    },
+    "PVP-检查是否进入界面": {
+        "recognition": "TemplateMatch",
+        "inverse": false,
+        "threshold": 0.99,
+        "green_mask": true,
+        "template": [
+            "英桀杯\\PVP-选择敌人界面检测.png"
+        ],
+        "post_delay": 800,
+        "next": [
+            "英桀杯_出击"
+        ],
+        "interrupt": [
+            "PVP-选择对手进行挑战-点击小奖杯"
+        ]
+    },
+    "英桀杯-进入一般战": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "英桀杯\\PVP-一般战.png"
+        ],
+        "action": "Click"
+    },
+    "英桀杯_出击": {
+        "roi": [
+            992,
+            601,
+            218,
+            75
+        ],
+        "recognition": "OCR",
+        "expected": "出擊",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "英桀杯-挑战卷不足"
+        ],
+        "doc": "------------------------------------------战斗开始了,开始进行战中逻辑",
+        "interrupt": [
+            "黑屏计数",
+            "PVP-选择对手进行挑战-点击小奖杯",
+            "英桀杯-有挑战卷-检查是否已进入战斗-如是则开始进行公式化战斗逻辑",
+            "空任务"
+        ]
+    },
+    "英桀杯-挑战卷不足": {
+        "roi": [
+            379,
+            163,
+            507,
+            271
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "挑戰權(英傑盃)不足",
+            "参加所需的挑戰權(英傑盃)不足",
+            "是否进行回复",
+            "不足挑戰權",
+            "不足"
+        ],
+        "next": "识别失败再返回菜单-识别层",
+        "interrupt": [
+            "叉叉",
+            "返回菜单"
+        ]
+    },
+    "英桀杯-有挑战卷-检查是否已进入战斗-如是则开始进行公式化战斗逻辑": {
+        "recognition": "OCR",
+        "expected": [
+            "英傑盃效果",
+            "領域效果",
+            "更换角色"
+        ],
+        "post_delay": 2000,
+        "next": [
+            "英桀杯-公式化战斗逻辑-总任务层"
+        ],
+        "interrupt": [
+            "OK",
+            "skip",
+            "英桀杯-已进入战斗",
+            "黑屏计数"
+        ]
+    },
+    "PVP-选择对手进行挑战-点击小奖杯": {
+        "roi": [
+            477,
+            205,
+            761,
+            128
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯\\PVP-小奖杯.png",
+        "action": "Click"
+    },
+    "英桀杯-准备出击检查并点击": {
+        "roi": [
+            964,
+            592,
+            278,
+            94
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "出擊"
+        ],
+        "action": "Click"
+    },
+    "英桀杯-进入战斗": {
+        "next": [
+            "切换为手动战斗"
+        ]
+    },
+    "英桀杯-已进入战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "英傑盃效果",
+            "領域效果",
+            "更换角色"
+        ],
+        "next": "切换为手动战斗",
+        "interrupt": [
+            "空任务"
+        ]
+    },
+    "英桀杯-公式化战斗逻辑": {},
+    "英桀杯-点击发动": {
+        "roi": [
+            1074,
+            540,
+            158,
+            149
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "發動"
+        ],
+        "action": "Click",
+        "post_delay": 3000
+    },
+    "英桀杯-公式化战斗逻辑-打开技能列表": {
+        "roi": [
+            44,
+            522,
+            213,
+            187
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "英桀杯\\英桀杯-左下角技能.png"
+        ],
+        "action": "Click",
+        "next": [
+            "英桀杯-公式化战斗逻辑-检查是否打开技能列表"
+        ],
+        "interrupt": [
+            "英桀杯-公式化战斗逻辑-打开技能列表"
+        ]
+    },
+    "英桀杯-公式化战斗逻辑-检查是否打开技能列表": {
+        "recognition": "OCR",
+        "expected": [
+            "技能點數"
+        ]
+    },
+    "英桀杯-战斗结束": {
+        "roi": [
+            648,
+            8,
+            519,
+            104
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "WIN",
+            "LOSE"
+        ],
+        "next": [
+            "英桀杯-挑战卷不足"
+        ],
+        "interrupt": [
+            "英桀杯-回合数-1",
+            "英桀杯-准备出击检查并点击",
+            "PVP-选择对手进行挑战-点击小奖杯",
+            "黑屏计数",
+            "点击下一步",
+            "叉叉",
+            "OK",
+            "空任务"
+        ]
+    },
+    "英桀杯-识别是否已发动技能": {
+        "roi": [
+            37,
+            48,
+            1212,
+            178
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "領域效果",
+            "英傑盃效果"
+        ]
+    },
+    "英桀杯-切换角色-第一回合发动技能后": {
+        "roi": [
+            1014,
+            46,
+            230,
+            127
+        ],
+        "recognition": "TemplateMatch",
+        "template": "英桀杯\\英桀杯-更换角色.png",
+        "action": "Click",
+        "next": [
+            "英桀杯-切换角色-识别是否已打开切换角色界面"
+        ]
+    },
+    "英桀杯-切换角色-识别是否已打开切换角色界面": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "英桀杯\\英桀杯-更换角色界面识别.png"
+        ]
+    },
+    "英桀杯-正处于排名战": {
+        "roi": [
+            38,
+            373,
+            228,
+            228
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "英桀杯\\PVP-排名战ing界面检测.png"
+        ],
+        "next": "PVP-检查是否进入界面",
+        "interrupt": [
+            "英桀杯-正处于排名战-点击切换为一般战"
+        ]
+    },
+    "英桀杯-正处于排名战-点击切换为一般战": {
+        "roi": [
+            38,
+            373,
+            228,
+            228
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "英桀杯\\PVP-排名战ing界面检测-点击切换为一般战.png"
+        ],
+        "action": "Click",
+        "post_delay": 1000
+    },
+    "英桀杯-对方正在攻击中": {
+        "recognition": "OCR",
+        "expected": [
+            "自動模式",
+            "模式"
+        ],
+        "post_delay": 3000
+    },
+    "英桀杯-是否已准备发动普攻": {
+        "roi": [
+            1060,
+            405,
+            182,
+            133
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "COMBO",
+            "BONUS"
+        ]
+    },
+    "英桀杯-尝试回到战场": {
+        "target": [
+            1231,
+            591,
+            40,
+            115
+        ],
+        "action": "Click"
+    },
+    "英桀杯-连接失败-点击重连": {
+        "recognition": "OCR",
+        "expected": [
+            "YES"
+        ],
+        "action": "Click"
+    }
+}
