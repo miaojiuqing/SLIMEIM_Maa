@@ -1,0 +1,117 @@
+{
+    "活动期间捕食战-总任务层": {
+        "next": [],
+        "interrupt": []
+    },
+    "进入活动捕食战入口": {
+        "roi": [
+            698,
+            185,
+            249,
+            213
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "活动期间\\每期活动的捕食战\\活动捕食战-入口.png",
+        "action": "Click"
+    },
+    "首页那边点击进入任务": {
+        "roi": [
+            1047,
+            154,
+            190,
+            198
+        ],
+        "recognition": "TemplateMatch",
+        "template": "活动期间\\每天20次并列演算\\进入任务.png",
+        "action": "Click"
+    },
+    "点击期间限定活动-活动捕食战专享": {
+        "roi": [
+            464,
+            285,
+            187,
+            178
+        ],
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": "活动期间\\每天20次并列演算\\期间活动限定.png",
+        "action": "Click"
+    },
+    "点击进入当期活动-活动捕食战专享": {
+        "recognition": "TemplateMatch",
+        "template": "活动期间\\每天20次并列演算\\活动20次并列演算-进入活动.png",
+        "action": "Click"
+    },
+    "滑动寻找当期活动-活动捕食战专享": {
+        "action": "Swipe",
+        "begin": [
+            929,
+            567,
+            10,
+            10
+        ],
+        "end": [
+            929,
+            408,
+            10,
+            10
+        ],
+        "post_delay": 3000
+    },
+    "活动捕食-准备战斗界面检查": {
+        "roi": [
+            0,
+            0,
+            635,
+            679
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "活动期间\\每期活动的捕食战\\活动捕食战-准备战斗界面检查.png"
+    },
+    "活动捕食战-捕食次数没有了": {
+        "roi": [
+            610,
+            100,
+            615,
+            286
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "本日已達次數上限"
+        ],
+        "next": [
+            "识别失败再返回菜单-识别层"
+        ],
+        "interrupt": [
+            "识别失败再返回菜单-点击菜单层"
+        ]
+    },
+    "活动捕食战-还有捕食次数": {
+        "roi": [
+            610,
+            100,
+            615,
+            286
+        ],
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": [
+            "本日已達次數上限"
+        ]
+    },
+    "活动捕食战-还有捕食次数-点击进入捕食战准备出击": {
+        "roi": [
+            617,
+            98,
+            596,
+            151
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "黑暗蜘蛛"
+        ],
+        "action": "Click"
+    }
+}
