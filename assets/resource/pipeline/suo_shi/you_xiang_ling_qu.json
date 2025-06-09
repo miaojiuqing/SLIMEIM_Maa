@@ -6,7 +6,7 @@
             104,
             83
         ],
-        "threshold": 0.90,
+        "threshold": 0.80,
         "recognition": "TemplateMatch",
         "template": "每日琐事\\邮箱领取\\邮箱图标.png",
         "action": "Click",
