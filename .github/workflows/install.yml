@@ -113,7 +113,8 @@ jobs:
           name: MaaSLIMEIM-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 #公告开始
-  changelog:
+  changelog: #生成公告
+    needs: [install, meta]
     name: Generate changelog
     runs-on: ubuntu-latest
     outputs:
@@ -136,7 +137,7 @@ jobs:
 #公告结束,抄的山山子大人
 
 
-  release:
+  release: #创建发行版
     if: ${{ needs.meta.outputs.is_release == 'true' }}
     needs: [install, meta,changelog]
     runs-on: ubuntu-latest
