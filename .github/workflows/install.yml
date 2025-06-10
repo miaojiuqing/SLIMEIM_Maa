@@ -112,22 +112,6 @@ jobs:
         with:
           name: MaaSLIMEIM-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
-
-  release:
-    if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [install, meta]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          path: assets
-
-      - run: |
-          cd assets
-          for f in *; do
-            (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
-          done
-
 #公告开始
   changelog:
     name: Generate changelog
@@ -151,6 +135,21 @@ jobs:
           GITHUB_REPO: ${{ github.repository }}
 #公告结束,抄的山山子大人
 
+
+  release:
+    if: ${{ needs.meta.outputs.is_release == 'true' }}
+    needs: [install, meta,changelog]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: assets
+
+      - run: |
+          cd assets
+          for f in *; do
+            (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
+          done
       - uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631
       #原本的131行:- uses: softprops/action-gh-release@v2
         with:
