@@ -128,9 +128,34 @@ jobs:
             (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
           done
 
+#公告开始
+  changelog:
+    name: Generate changelog
+    runs-on: ubuntu-latest
+    outputs:
+      release_body: ${{ steps.git-cliff.outputs.content }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate a changelog
+        uses: orhun/git-cliff-action@v4
+        id: git-cliff
+        with:
+          config: .github/cliff.toml
+          args: -vv --latest --strip header
+        env:
+          OUTPUT: CHANGES.md
+          GITHUB_REPO: ${{ github.repository }}
+#公告结束,抄的山山子大人
+
       - uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631
       #原本的131行:- uses: softprops/action-gh-release@v2
         with:
           files: assets/*
           tag_name: ${{ needs.meta.outputs.tag }}
+          body: ${{ needs.changelog.outputs.release_body }}
+          #上面这行用于调用公告功能,抄的mmloe
           generate_release_notes: true
