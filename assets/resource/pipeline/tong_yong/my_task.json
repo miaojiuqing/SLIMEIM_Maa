@@ -46,7 +46,7 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "箭头.png",
-        "post_delay": 5000,
+        "post_delay": 1000,
         "action": "Click"
     },
     "叉叉": {
@@ -58,11 +58,6 @@
     "结束任务": {
         "action": "StopTask"
     },
-    "点击": {
-        "recognition": "OCR",
-        "expected": ".",
-        "action": "Click"
-    },
     "发生预期外的错误_400": {
         "recognition": "OCR",
         "expected": "發生預期外的錯誤",
@@ -73,13 +68,13 @@
         "recognition": "OCR",
         "expected": "OK",
         "action": "Click",
-        "post_delay": 1500
+        "post_delay": 1000
     },
     "YES": {
         "recognition": "OCR",
         "expected": "YES",
         "action": "Click",
-        "post_delay": 5000
+        "post_delay": 1000
     },
     "预期外错误的OK": {
         "recognition": "OCR",
@@ -121,7 +116,8 @@
         "recognition": "OCR",
         "expected": [
             "NO"
-        ]
+        ],
+        "action": "Click"
     },
     "识别失败再返回菜单": {
         "next": [
@@ -139,6 +135,17 @@
             "已开启菜单的关闭.png"
         ]
     },
+    "识别失败再返回菜单-识别层-结束任务": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "菜单返回检测-世界地图.png",
+            "已开启菜单的关闭.png"
+        ],
+        "next": [
+            "结束任务"
+        ]
+    },
     "识别失败再返回菜单-点击菜单层": {
         "recognition": "TemplateMatch",
         "template": [
@@ -152,10 +159,37 @@
     },
     "空任务": {},
     "永恒等待": {
-        "post_delay": 5000,
-        "pre_delay": 5000,
+        "post_delay": 2500,
+        "pre_delay": 2500,
         "on_error": [
             "永恒等待"
+        ]
+    },
+    "触发剧情-跳过": {
+        "roi": [
+            813,
+            0,
+            466,
+            367
+        ],
+        "recognition": "TemplateMatch",
+        "template": "进入\\触发剧情\\触发剧情了.png",
+        "next": [
+            "触发剧情-点击跳过"
+        ]
+    },
+    "触发剧情-点击跳过": {
+        "roi": [
+            813,
+            0,
+            466,
+            367
+        ],
+        "recognition": "TemplateMatch",
+        "template": "进入\\触发剧情\\触发剧情-跳过剧情键.png",
+        "action": "Click",
+        "next": [
+            "YES"
         ]
     }
 }

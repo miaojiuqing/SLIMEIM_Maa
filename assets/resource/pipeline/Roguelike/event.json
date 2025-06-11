@@ -1,0 +1,86 @@
+{
+    "事件-奖励宝箱": {
+        "green_mask": true,
+        "threshold": 0.5,
+        "recognition": "TemplateMatch",
+        "template": [
+            "梦幻镜魔塔\\奖励事件\\镜塔-中间镜子-宝箱.png",
+            "梦幻镜魔塔\\奖励事件\\福袋.png"
+        ],
+        "action": "Click"
+    },
+    "事件-buff集合选择": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "梦幻镜魔塔\\buff事件\\岩攻击力加成.png",
+            "梦幻镜魔塔\\buff事件\\水攻击力加成.png",
+            "梦幻镜魔塔\\buff事件\\空间攻击力加成.png",
+            "梦幻镜魔塔\\buff事件\\通用白球加成.png"
+        ],
+        "action": "Click"
+    },
+    "事件-战斗": {
+        "green_mask": true,
+        "threshold": 0.5,
+        "recognition": "TemplateMatch",
+        "template": [
+            "梦幻镜魔塔\\战斗事件\\镜塔-左边镜子-粉级.png",
+            "梦幻镜魔塔\\战斗事件\\镜塔-右边镜子-蓝级.png"
+        ],
+        "action": "Click"
+    },
+    "无事件": {
+        "threshold": 0.5,
+        "green_mask": true,
+        "inverse": true,
+        "recognition": "TemplateMatch",
+        "doc": "---------------------------------------------记得添加所有事件",
+        "template": [
+            "梦幻镜魔塔\\奖励事件\\镜塔-中间镜子-宝箱.png",
+            "梦幻镜魔塔\\奖励事件\\福袋.png",
+            "梦幻镜魔塔\\buff事件\\岩攻击力加成.png",
+            "梦幻镜魔塔\\buff事件\\水攻击力加成.png",
+            "梦幻镜魔塔\\buff事件\\空间攻击力加成.png",
+            "梦幻镜魔塔\\buff事件\\通用白球加成.png",
+            "梦幻镜魔塔\\战斗事件\\镜塔-左边镜子-粉级.png",
+            "梦幻镜魔塔\\战斗事件\\镜塔-右边镜子-蓝级.png"
+        ],
+        "next": [
+            "镜塔-有体力-前进",
+            "镜塔-没体力了-返回菜单"
+        ],
+        "interrupt": [
+            "无事件-开始乱选-左边",
+            "无事件-开始乱选-中间",
+            "无事件-开始乱选-右边"
+        ]
+    },
+    "无事件-开始乱选-左边": {
+        "action": "Click",
+        "target": [
+            198,
+            331,
+            77,
+            50
+        ]
+    },
+    "无事件-开始乱选-中间": {
+        "action": "Click",
+        "target": [
+            573,
+            312,
+            112,
+            100
+        ]
+    },
+    "无事件-开始乱选-右边": {
+        "action": "Click",
+        "target": [
+            984,
+            334,
+            103,
+            60
+        ]
+    }
+}
