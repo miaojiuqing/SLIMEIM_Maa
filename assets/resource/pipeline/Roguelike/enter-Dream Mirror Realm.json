@@ -1,5 +1,6 @@
 {
     "点击梦幻镜魔境入口": {
+        "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "梦幻镜魔塔\\梦幻镜魔境-入口.png",
         "action": "Click"

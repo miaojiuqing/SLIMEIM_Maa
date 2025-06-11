@@ -148,7 +148,7 @@ Windows
 ## 鸣谢
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
-ERR_OverFlow佬没pr所以不在里边，当时直接改完文件发我的(),非常感谢祂！
+ERR_OverFlow佬pr了为什么不在里边，非常感谢祂！
 还有开发群里的各位都很感谢
 
 感谢以下开发者对本项目作出的贡献:
