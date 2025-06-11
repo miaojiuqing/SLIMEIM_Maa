@@ -74,7 +74,6 @@
         "inverse": true,
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "on_error": "英桀杯-公式化战斗逻辑-第二回合-阴阳萌使用全转技能-点击技能层",
         "template": [
             "英桀杯\\技能图标\\自转全能技能.png"
         ],
