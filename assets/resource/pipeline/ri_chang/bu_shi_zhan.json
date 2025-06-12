@@ -34,6 +34,7 @@
     "检测是否可以捕食": {
         "next": "无捕食次数",
         "interrupt": [
+            "叉叉",
             "捕食战_出击",
             "捕食战_战斗ing",
             "捕食战_下一步_第一次",
@@ -150,6 +151,7 @@
             1237,
             256
         ],
+        "threshold": 0.9,
         "recognition": "TemplateMatch",
         "template": "日常-捕食战\\捕食战-出击.png",
         "action": "Click",
