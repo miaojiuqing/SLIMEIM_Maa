@@ -9,21 +9,36 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [win, macos, linux]
-        arch: [aarch64, x86_64]
-        exclude:
-          - os: win
-            arch: aarch64
+        os: [win]
+        arch: [x86_64]
     steps:
-      - uses: MirrorChyan/uploading-action@v1
+      - id: uploading
+        uses: MirrorChyan/uploading-action@v1
         with:
           filetype: latest-release
           filename: "MaaSLIMEIM-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
           mirrorchyan_rid: SLIMEIM_Maa
 
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           owner: miaojiuqing
           repo: SLIMEIM_Maa
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           upload_token: ${{ secrets.MirrorChyanUploadToken }}
           os: ${{ matrix.os }}
           arch: ${{ matrix.arch }}
+
+  mirrorchyan_res:
+    runs-on: macos-latest
+    steps:
+      - id: uploading
+        uses: MirrorChyan/uploading-action@v1
+        with:
+          filetype: latest-release
+          filename: "MaaSLIMEIM-win-x86_64-*.zip"
+          pick_files: '["resource", "interface.json"]'
+          exclude_files: '["resource/model/ocr/**"]'
+          mirrorchyan_rid: SLIMEIM_Maa
+
+          owner: miaojiuqing
+          repo: SLIMEIM_Maa
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          upload_token: ${{ secrets.MirrorChyanUploadToken }}
