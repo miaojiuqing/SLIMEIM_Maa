@@ -159,3 +159,10 @@ jobs:
           body: ${{ needs.changelog.outputs.release_body }}
           #上面这行用于调用公告功能,抄的mmloe
           generate_release_notes: true
+
+      - name: Trigger MirrorChyanUploading
+        run: |
+          gh workflow run --repo $GITHUB_REPOSITORY mirrorchyan
+          gh workflow run --repo $GITHUB_REPOSITORY mirrorchyan_release_note
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
