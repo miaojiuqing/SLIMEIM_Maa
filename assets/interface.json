@@ -2,7 +2,7 @@
     "name": "Maa_SLIMEIM",
     "url": "https://github.com/miaojiuqing/SLIMEIM_Maa",
     "mirrorchyan_rid": "SLIMEIM_Maa",
-    "mirrorchyan_multiplatform": true,
+    "mirrorchyan_multiplatform": false,
     "controller": [
         {
             "name": "安卓端",
