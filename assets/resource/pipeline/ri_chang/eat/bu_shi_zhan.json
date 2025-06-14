@@ -135,10 +135,7 @@
         ],
         "recognition": "OCR",
         "expected": [
-            "轉魂強化任務",
-            "心體強化任務",
-            "堅守強化任務",
-            "猛攻強化任務"
+            "轉魂強化任務"
         ],
         "action": "Click",
         "post_delay": 10000,
