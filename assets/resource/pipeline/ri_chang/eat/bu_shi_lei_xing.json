@@ -1,0 +1,58 @@
+{
+    "轉魂強化任務": {
+        "roi": [
+            611,
+            75,
+            615,
+            616
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "轉魂強化任務"
+        ],
+        "action": "Click",
+        "post_delay": 3000
+    },
+    "心體強化任務": {
+        "roi": [
+            611,
+            75,
+            615,
+            616
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "心體強化任務"
+        ],
+        "action": "Click",
+        "post_delay": 3000
+    },
+    "堅守強化任務": {
+        "roi": [
+            611,
+            75,
+            615,
+            616
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "堅守強化任務"
+        ],
+        "action": "Click",
+        "post_delay": 3000
+    },
+    "猛攻強化任務": {
+        "roi": [
+            611,
+            75,
+            615,
+            616
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "猛攻強化任務"
+        ],
+        "action": "Click",
+        "post_delay": 3000
+    }
+}
