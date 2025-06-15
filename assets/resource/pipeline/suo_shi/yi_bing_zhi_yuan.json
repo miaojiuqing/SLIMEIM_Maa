@@ -45,9 +45,9 @@
             466
         ],
         "inverse": true,
-        "recognition": "TemplateMatch",
-        "template": [
-            "每日琐事\\一并支援\\琐事-一并支援-界面检查.png"
+        "recognition": "OCR",
+        "expected": [
+            "沒有盟友送來的支援"
         ],
         "post_delay": 1000,
         "next": "识别失败再返回菜单-识别层",
