@@ -72,8 +72,8 @@
 ### 英杰盃
 
 - [x] 自动一般战（目前仅支持自动化战斗逻辑，战斗状态检测可能有问题使用前请自行修改战斗状态为手动模式
-      **公式化战斗逻辑所需阵容**
-      (<https://s21.ax1x.com/2025/06/15/pVAIVrq.png>)
+      **公式化战斗逻辑所需阵容**\n
+      ![公式化战斗逻辑配队思路](<https://s21.ax1x.com/2025/06/15/pVAIVrq.png>)
       -(请提前配好阵容并切换为手动战斗模式)：
                           -任意前三回合能每回合给30技能点的加护（技能描述有：“第2回合以後，每回合開始時技能數30UP”的
                               -如：妖狐化紫鬼·紫菀/优雅幻魔·维尔萨泽/ 赤焰八星魔王·金·克林姆兹...........等
@@ -153,10 +153,9 @@ Windows
 ## 鸣谢
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
-ERR_OverFlow佬pr了为什么不在里边，非常感谢祂！
-还有开发群里的各位都很感谢
 
 感谢以下开发者对本项目作出的贡献:
+还有开发群里的各位都很感谢
 
 <a href="https://github.com/miaojiuqing/SLIMEIM_Maa/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=miaojiuqing/SLIMEIM_Maa&max=1000" alt="Contributors to SLIMEIM_Maa"/>
