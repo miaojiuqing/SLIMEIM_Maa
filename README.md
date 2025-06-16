@@ -119,7 +119,7 @@
 
 -需要 VCRedist x64 (cli与gui都需要) 和 .NET 8 (仅使用gui时需要)。 点击 vc_redist.x64 下载安装 VCRedist x64，点击 dotnet-sdk-8.0.5-win-x64.exe 下载安装.NET 8。 也可以右键开始按钮打开终端
 
-winget install Microsoft.VCRedist.2017.x64 Microsoft.DotNet.DesktopRuntime.8
+    winget install Microsoft.VCRedist.2017.x64 Microsoft.DotNet.DesktopRuntime.8
 
 在终端内粘贴以上命令回车以进行安装。
 3. 解压后双击`MFAAvalonia.exe`即可运行
