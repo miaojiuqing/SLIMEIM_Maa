@@ -191,5 +191,17 @@
         "next": [
             "YES"
         ]
+    },
+    "点击左上角返回箭头": {
+        "roi": [
+            21,
+            0,
+            147,
+            100
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "日常-捕食战\\捕食战-返回箭头.png",
+        "action": "Click"
     }
 }
