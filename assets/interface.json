@@ -23,13 +23,6 @@
             "path": [
                 "{PROJECT_DIR}/resource/"
             ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource/",
-                "{PROJECT_DIR}/resource/bilibili"
-            ]
         }
     ],
     "task": [
@@ -66,7 +59,7 @@
         {
             "name": "日常-领取日常任务奖励",
             "entry": "进入任务领取界面",
-            "doc": "把这个任务添加三遍好像可以领取三个界面的任务）？"
+            "doc": "✨把这个任务添加三遍好像可以领取三个界面的任务）？"
         },
         {
             "name": "活动-并列演算20次",
