@@ -12,7 +12,7 @@
         ],
         "recognition": "TemplateMatch",
         "threshold": 0.98,
-        "template": "战斗状态\\战斗状态-非自动战斗.png",
+        "template": "战斗状态//战斗状态-非自动战斗.png",
         "next": "点击切换战斗状态"
     },
     "检测到是自动战斗_保持不动": {
@@ -25,7 +25,7 @@
         "recognition": "TemplateMatch",
         "inverse": true,
         "threshold": 0.98,
-        "template": "战斗状态\\战斗状态-非自动战斗.png",
+        "template": "战斗状态//战斗状态-非自动战斗.png",
         "next": "空任务"
     },
     "点击切换战斗状态": {

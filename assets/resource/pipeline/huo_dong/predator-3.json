@@ -20,7 +20,7 @@
             198
         ],
         "recognition": "TemplateMatch",
-        "template": "活动期间\\每天20次并列演算\\进入任务.png",
+        "template": "活动期间//每天20次并列演算//进入任务.png",
         "action": "Click",
         "next": [
             "点击期间限定活动-活动捕食战专享"
@@ -39,12 +39,12 @@
         "threshold": 0.85,
         "recognition": "TemplateMatch",
         "green_mask": true,
-        "template": "活动期间\\每天20次并列演算\\期间活动限定.png",
+        "template": "活动期间//每天20次并列演算//期间活动限定.png",
         "action": "Click"
     },
     "点击进入当期活动-活动捕食战专享": {
         "recognition": "TemplateMatch",
-        "template": "活动期间\\每天20次并列演算\\活动20次并列演算-进入活动.png",
+        "template": "活动期间//每天20次并列演算//活动20次并列演算-进入活动.png",
         "action": "Click"
     },
     "任务列表中点击活动列中的活动行-之后点击进入捕食战界面": {
@@ -56,7 +56,7 @@
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "活动期间\\每期活动的捕食战\\活动捕食战-入口.png",
+        "template": "活动期间//每期活动的捕食战//活动捕食战-入口.png",
         "action": "Click"
     },
     "滑动寻找当期活动-活动捕食战专享": {
@@ -84,7 +84,7 @@
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "活动期间\\每期活动的捕食战\\活动捕食战-准备战斗界面检查.png",
+        "template": "活动期间//每期活动的捕食战//活动捕食战-准备战斗界面检查.png",
         "next": "活动捕食战-战斗列表加载出来了",
         "interrupt": "空任务"
     },
@@ -183,7 +183,6 @@
             "点击下一步",
             "skip",
             "活动捕食战-还有捕食次数-点击进入捕食战准备出击",
-            "叉叉",
             "活动捕食战-乱点一下"
         ]
     },

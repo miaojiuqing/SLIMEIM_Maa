@@ -101,11 +101,11 @@
         "order_by": "Score",
         "recognition": "TemplateMatch",
         "template": [
-            "日常-喂食角色\\新鲜水果.png",
-            "日常-喂食角色\\沙拉棒.png",
-            "日常-喂食角色\\生鱼片.png",
-            "日常-喂食角色\\肉串.png",
-            "日常-喂食角色\\饭团.png"
+            "日常-喂食角色//新鲜水果.png",
+            "日常-喂食角色//沙拉棒.png",
+            "日常-喂食角色//生鱼片.png",
+            "日常-喂食角色//肉串.png",
+            "日常-喂食角色//饭团.png"
         ],
         "action": "Click",
         "next": [
@@ -118,7 +118,7 @@
     "添加食物": {
         "post_delay": 1000,
         "recognition": "TemplateMatch",
-        "template": "通用符号\\加号.png",
+        "template": "通用符号//加号.png",
         "action": "Click",
         "next": [
             "喂食之YES"

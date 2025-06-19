@@ -22,7 +22,7 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "英桀杯\\技能图标\\三转技能-未选择状态.png"
+            "英桀杯//技能图标//三转技能-未选择状态.png"
         ],
         "action": "Click",
         "post_delay": 1000
@@ -32,7 +32,7 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "英桀杯\\技能图标\\三转技能-已选择状态.png"
+            "英桀杯//技能图标//三转技能-已选择状态.png"
         ],
         "post_delay": 1000,
         "next": [

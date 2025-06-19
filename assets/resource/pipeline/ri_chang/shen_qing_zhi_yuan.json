@@ -82,7 +82,7 @@
             271
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-支援申请\\支援请求.png",
+        "template": "日常-支援申请//支援请求.png",
         "action": "Click",
         "next": "一并选择",
         "interrupt": [
@@ -102,7 +102,7 @@
         ],
         "threshold": 0.2,
         "recognition": "TemplateMatch",
-        "template": "日常-支援申请\\支援申请-支援请求完毕.png",
+        "template": "日常-支援申请//支援申请-支援请求完毕.png",
         "post_delay": 1000,
         "next": [
             "识别是否已开启菜单"
@@ -177,8 +177,8 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "日常-支援申请\\支援请求.png",
-            "日常-支援申请\\统一完毕.png"
+            "日常-支援申请//支援请求.png",
+            "日常-支援申请//统一完毕.png"
         ],
         "inverse": true,
         "action": "DoNothing",
@@ -290,7 +290,7 @@
             520
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-支援申请\\统一完毕.png",
+        "template": "日常-支援申请//统一完毕.png",
         "action": "Click",
         "post_delay": 1000,
         "next": "点击建筑的提升",
@@ -308,7 +308,7 @@
             520
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-支援申请\\设施状态监测-单一完毕.png",
+        "template": "日常-支援申请//设施状态监测-单一完毕.png",
         "action": "Click",
         "post_delay": 1000,
         "next": "支援请求",

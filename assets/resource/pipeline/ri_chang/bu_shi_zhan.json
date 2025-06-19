@@ -8,7 +8,7 @@
             198
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\进入任务.png",
+        "template": "日常-捕食战//进入任务.png",
         "action": "Click",
         "next": [
             "点击成长"
@@ -88,7 +88,7 @@
         ],
         "threshold": 0.96,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食战无挑战次数.png",
+        "template": "日常-捕食战//捕食战无挑战次数.png",
         "next": "返回菜单"
     },
     "检测到有捕食次数_开始捕食": {
@@ -102,7 +102,7 @@
         "threshold": 0.96,
         "recognition": "TemplateMatch",
         "template": [
-            "日常-捕食战\\捕食战有挑战次数.png"
+            "日常-捕食战//捕食战有挑战次数.png"
         ],
         "action": "Click",
         "next": [
@@ -121,7 +121,7 @@
         ],
         "threshold": 0.98,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食类型选择界面.png",
+        "template": "日常-捕食战//捕食类型选择界面.png",
         "post_delay": 2500,
         "next": "选择捕食类型",
         "doc": "---------------------------------------------------------------开始运行捕食任务"
@@ -150,7 +150,7 @@
         ],
         "threshold": 0.9,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食战-出击.png",
+        "template": "日常-捕食战//捕食战-出击.png",
         "action": "Click",
         "post_delay": 1000
     },
@@ -162,7 +162,7 @@
             103
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食专属战斗ing检测.png",
+        "template": "日常-捕食战//捕食专属战斗ing检测.png",
         "action": "DoNothing",
         "post_delay": 10000,
         "next": [
@@ -176,7 +176,7 @@
     "捕食战_检测到捕食图标则切换为自动战斗": {
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食战_检测用捕食按钮.png",
+        "template": "日常-捕食战//捕食战_检测用捕食按钮.png",
         "next": "点击切换战斗状态"
     },
     "捕食战评分界面": {
@@ -187,7 +187,7 @@
             70
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食战结束评分.png",
+        "template": "日常-捕食战//捕食战结束评分.png",
         "post_delay": 8000,
         "next": "捕食战_下一步_第一次"
     },
@@ -236,7 +236,7 @@
             630
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食战-故事界面检查.png"
+        "template": "日常-捕食战//捕食战-故事界面检查.png"
     },
     "捕食战_检测不到尚有一次捕食机会": {
         "roi": [
@@ -283,7 +283,7 @@
     "捕食战-返回箭头": {
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食战-返回箭头.png",
+        "template": "日常-捕食战//捕食战-返回箭头.png",
         "action": "Click"
     }
 }

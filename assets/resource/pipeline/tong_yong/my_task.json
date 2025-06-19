@@ -7,7 +7,7 @@
         "recognition": "TemplateMatch",
         "template": [
             "返回菜单.png",
-            "通用符号\\小选单.png",
+            "通用符号//小选单.png",
             "选单.png"
         ],
         "action": "Click",
@@ -151,7 +151,7 @@
         "template": [
             "返回菜单.png",
             "选单.png",
-            "通用符号\\小选单.png"
+            "通用符号//小选单.png"
         ],
         "green_mask": true,
         "threshold": 0.99,
@@ -173,7 +173,7 @@
             367
         ],
         "recognition": "TemplateMatch",
-        "template": "进入\\触发剧情\\触发剧情了.png",
+        "template": "进入//触发剧情//触发剧情了.png",
         "next": [
             "触发剧情-点击跳过"
         ]
@@ -186,7 +186,7 @@
             367
         ],
         "recognition": "TemplateMatch",
-        "template": "进入\\触发剧情\\触发剧情-跳过剧情键.png",
+        "template": "进入//触发剧情//触发剧情-跳过剧情键.png",
         "action": "Click",
         "next": [
             "YES"
@@ -201,7 +201,7 @@
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战\\捕食战-返回箭头.png",
+        "template": "日常-捕食战//捕食战-返回箭头.png",
         "action": "Click"
     }
 }

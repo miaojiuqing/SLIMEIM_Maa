@@ -8,7 +8,7 @@
         ],
         "threshold": 0.80,
         "recognition": "TemplateMatch",
-        "template": "每日琐事\\邮箱领取\\邮箱图标.png",
+        "template": "每日琐事//邮箱领取//邮箱图标.png",
         "action": "Click",
         "post_delay": 1000,
         "next": "琐事-已进入邮箱领取页并开始执行领取",
@@ -49,7 +49,7 @@
         "inverse": true,
         "recognition": "TemplateMatch",
         "template": [
-            "每日琐事\\邮箱领取\\琐事-邮箱领取-检查是否领取完毕.png"
+            "每日琐事//邮箱领取//琐事-邮箱领取-检查是否领取完毕.png"
         ],
         "post_delay": 1000,
         "next": "识别失败再返回菜单-识别层-结束任务",
@@ -68,7 +68,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "每日琐事\\邮箱领取\\琐事-邮箱领取-点击全部领取.png"
+            "每日琐事//邮箱领取//琐事-邮箱领取-点击全部领取.png"
         ],
         "threshold": 0.9998,
         "action": "Click",

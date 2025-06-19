@@ -8,7 +8,7 @@
         ],
         "recognition": "TemplateMatch",
         "_doc": "---------------------------------------------------------------------------------------借用一下",
-        "template": "日常-好感度对话\\进入首页按钮(好感度对话用).png",
+        "template": "日常-好感度对话//进入首页按钮(好感度对话用).png",
         "action": "Click",
         "post_delay": 5000,
         "next": [
@@ -33,7 +33,7 @@
             175
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话\\进入好感度对话and泡温泉UI.png",
+        "template": "日常-好感度对话//进入好感度对话and泡温泉UI.png",
         "action": "Click",
         "next": "检查是否进入设施一览",
         "interrupt": [
@@ -108,7 +108,7 @@
         "threshold": 0.90,
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "每日琐事\\琐事-泡温泉\\琐事-泡温泉界面检查.png",
+        "template": "每日琐事//琐事-泡温泉//琐事-泡温泉界面检查.png",
         "action": "Click",
         "post_delay": 800,
         "next": "不可以再泡温泉了",
@@ -211,7 +211,7 @@
     "泡温泉-是否已关闭OK": {
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话\\进入好感度对话and泡温泉UI.png"
+            "日常-好感度对话//进入好感度对话and泡温泉UI.png"
         ],
         "next": [
             "泡温泉-识别失败再返回菜单-识别层"
@@ -235,7 +235,7 @@
         "template": [
             "返回菜单.png",
             "选单.png",
-            "通用符号\\小选单.png"
+            "通用符号//小选单.png"
         ],
         "green_mask": true,
         "threshold": 0.99,

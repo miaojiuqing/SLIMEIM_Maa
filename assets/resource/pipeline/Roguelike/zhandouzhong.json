@@ -31,7 +31,7 @@
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "梦幻镜魔塔\\战斗事件\\肉鸽-战斗结束.png",
+        "template": "梦幻镜魔塔//战斗事件//肉鸽-战斗结束.png",
         "next": [
             "肉鸽-路线选择界面检测"
         ],

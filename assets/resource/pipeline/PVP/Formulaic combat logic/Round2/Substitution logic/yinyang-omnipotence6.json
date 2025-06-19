@@ -12,9 +12,9 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "英桀杯\\公式化战斗逻辑\\阴阳萌所有普攻\\阴阳萌-绿卡普攻图标.png",
-            "英桀杯\\公式化战斗逻辑\\阴阳萌所有普攻\\阴阳萌-黄卡普攻图标.png",
-            "英桀杯\\公式化战斗逻辑\\阴阳萌所有普攻\\阴阳萌-蓝卡普攻图标.png"
+            "英桀杯//公式化战斗逻辑//阴阳萌所有普攻//阴阳萌-绿卡普攻图标.png",
+            "英桀杯//公式化战斗逻辑//阴阳萌所有普攻//阴阳萌-黄卡普攻图标.png",
+            "英桀杯//公式化战斗逻辑//阴阳萌所有普攻//阴阳萌-蓝卡普攻图标.png"
         ],
         "post_delay": 1200,
         "next": [
@@ -36,7 +36,7 @@
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "英桀杯\\公式化战斗逻辑\\阴阳萌所有普攻\\阴阳萌-已完成六连全能转换.png",
+        "template": "英桀杯//公式化战斗逻辑//阴阳萌所有普攻//阴阳萌-已完成六连全能转换.png",
         "post_delay": 3000,
         "next": [
             "英桀杯-公式化战斗逻辑-第二回合-阴阳萌是否已处于后台-中间层"
@@ -57,7 +57,7 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "英桀杯\\技能图标\\自转全能技能.png"
+            "英桀杯//技能图标//自转全能技能.png"
         ],
         "action": "Click"
     },
@@ -75,7 +75,7 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "英桀杯\\技能图标\\自转全能技能.png"
+            "英桀杯//技能图标//自转全能技能.png"
         ],
         "next": [
             "英桀杯-点击发动"
@@ -112,7 +112,7 @@
             134
         ],
         "recognition": "TemplateMatch",
-        "template": "英桀杯\\技能图标\\三转技能图标-已发动-阴阳萌上场依据.png",
+        "template": "英桀杯//技能图标//三转技能图标-已发动-阴阳萌上场依据.png",
         "green_mask": true,
         "next": [
             "英桀杯-公式化战斗逻辑-第二回合-寻找已发动三转的工具人-第一行-选择"
@@ -126,7 +126,7 @@
             125
         ],
         "recognition": "TemplateMatch",
-        "template": "英桀杯\\技能图标\\三转技能图标-已发动-阴阳萌上场依据.png",
+        "template": "英桀杯//技能图标//三转技能图标-已发动-阴阳萌上场依据.png",
         "green_mask": true,
         "next": [
             "英桀杯-公式化战斗逻辑-第二回合-寻找已发动三转的工具人-第二行-选择"
@@ -140,7 +140,7 @@
             123
         ],
         "recognition": "TemplateMatch",
-        "template": "英桀杯\\技能图标\\三转技能图标-已发动-阴阳萌上场依据.png",
+        "template": "英桀杯//技能图标//三转技能图标-已发动-阴阳萌上场依据.png",
         "green_mask": true,
         "next": [
             "英桀杯-公式化战斗逻辑-第二回合-寻找已发动三转的工具人-第三行-选择"
