@@ -9,9 +9,12 @@
 ## SLIMEIM_Maa
 
 基于MAA框架制作的魔王与龙的建国谭小助手。图像技术 + 模拟控制，解放双手！
+
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
+
 小助手交流Q群：855795905
-更多功能敬请期待
+
+更多功能敬请期待（提iss什么的那个，我开中文插件了懒得切回去看）
 
 </div>
 <p align="center">
