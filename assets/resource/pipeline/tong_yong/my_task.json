@@ -68,7 +68,8 @@
         "recognition": "OCR",
         "expected": "OK",
         "action": "Click",
-        "post_delay": 1000
+        "post_delay": 1000,
+        "pre_delay": 0
     },
     "YES": {
         "recognition": "OCR",
@@ -110,7 +111,9 @@
         "expected": [
             "下一步"
         ],
-        "action": "Click"
+        "action": "Click",
+        "pre_delay": 0,
+        "post_delay": 0
     },
     "点击NO": {
         "recognition": "OCR",
@@ -154,7 +157,7 @@
             "通用符号//小选单.png"
         ],
         "green_mask": true,
-        "threshold": 0.99,
+        "threshold": 0.999,
         "action": "Click"
     },
     "空任务": {},
@@ -202,6 +205,7 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "日常-捕食战//捕食战-返回箭头.png",
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 3000
     }
 }

@@ -38,6 +38,7 @@
     "寻找当期活动并点击": {
         "next": "检查是否进入当期活动-准备并列演算",
         "interrupt": [
+            "误触-进入活动捕食战了",
             "点击进入当期活动",
             "OK",
             "版本活动限定-每日并列演算",
@@ -45,6 +46,20 @@
             "滑动寻找当期活动",
             "点击期间限定活动"
         ]
+    },
+    "误触-进入活动捕食战了": {
+        "threshold": 0.9,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "活动期间/每期活动的捕食战/活动捕食战-准备战斗界面检查.png",
+        "next": [
+            "点击左上角返回箭头"
+        ],
+        "interrupt": [
+            "寻找当期活动并点击"
+        ],
+        "pre_delay": 3000,
+        "post_delay": 3000
     },
     "滑动寻找当期活动": {
         "recognition": "TemplateMatch",
@@ -66,7 +81,8 @@
         "post_delay": 3000,
         "next": [
             "点击期间限定活动"
-        ]
+        ],
+        "timeout": 2000
     },
     "点击进入当期活动": {
         "recognition": "TemplateMatch",
@@ -152,9 +168,9 @@
             "次數",
             "本日"
         ],
-        "next": "识别是否已开启菜单",
+        "next": "识别失败再返回菜单-识别层-结束任务",
         "post_delay": 1000,
-        "interrupt": "返回菜单"
+        "interrupt": "识别失败再返回菜单-点击菜单层"
     },
     "切换至第七队": {
         "next": "已切换至第七编队",
@@ -178,6 +194,7 @@
         ],
         "next": "并列演算-无更多体力添加",
         "interrupt": [
+            "并列演算-点击加号添加挑战次数",
             "OK",
             "点击下一步",
             "开始演算",
@@ -207,7 +224,9 @@
             "列演算",
             "演算"
         ],
-        "action": "Click"
+        "action": "Click",
+        "pre_delay": 0,
+        "post_delay": 0
     },
     "开始演算": {
         "roi": [
@@ -221,23 +240,23 @@
         "expected": [
             "MAX"
         ],
-        "action": "Click"
+        "action": "Click",
+        "pre_delay": 0
     },
     "并列演算-无更多体力添加": {
         "roi": [
-            642,
-            368,
-            511,
-            92
+            63,
+            284,
+            1143,
+            163
         ],
-        "recognition": "TemplateMatch",
-        "threshold": 0.9998,
-        "template": [
-            "活动期间//每天20次并列演算//并列演算-没有更多体力添加了.png",
-            "活动期间/每天20次并列演算/并列演算20次-暗淡MAX.png",
-            "活动期间/每天20次并列演算/并列演算20次-光亮减号.png"
+        "recognition": "OCR",
+        "expected": [
+            "已達使用上限",
+            "因此無法設定"
         ],
-        "post_delay": 800,
+        "pre_delay": 0,
+        "post_delay": 0,
         "next": "识别失败再返回菜单-识别层-结束任务",
         "interrupt": [
             "活动20次并列演算-体力不足",
@@ -245,6 +264,25 @@
             "确定",
             "识别失败再返回菜单-点击菜单层"
         ]
+    },
+    "并列演算-点击加号添加挑战次数": {
+        "roi": [
+            860,
+            353,
+            115,
+            129
+        ],
+        "recognition": "TemplateMatch",
+        "template": "通用符号/加号.png",
+        "action": "Click",
+        "target": [
+            902,
+            401,
+            22,
+            25
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
     },
     "活动20次并列演算-体力不足": {
         "recognition": "OCR",
@@ -259,6 +297,17 @@
         "interrupt": [
             "叉叉",
             "识别失败再返回菜单-点击菜单层"
+        ]
+    },
+    "并列演算专用-识别无更多体力后返回菜单": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "菜单返回检测-世界地图.png",
+            "已开启菜单的关闭.png"
+        ],
+        "next": [
+            "结束任务"
         ]
     }
 }
