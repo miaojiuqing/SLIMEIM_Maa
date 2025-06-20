@@ -50,7 +50,7 @@
         "inverse": true,
         "recognition": "OCR",
         "expected": "領取",
-        "next": "识别失败再返回菜单-识别层",
+        "next": "识别失败再返回菜单-识别层-结束任务",
         "interrupt": [
             "OK",
             "盟主联合-识别失败再返回菜单-点击菜单层"
@@ -108,9 +108,6 @@
         "green_mask": true,
         "threshold": 0.99,
         "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "结束任务"
-        ]
+        "post_delay": 1000
     }
 }
