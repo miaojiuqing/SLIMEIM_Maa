@@ -222,7 +222,12 @@
             497
         ],
         "recognition": "OCR",
-        "expected": "提升",
+        "expected": [
+            "提升",
+            "LV",
+            "小时"
+        ],
+        "pre_delay": 2100,
         "action": "Click",
         "post_delay": 1000,
         "next": "设施即将升级界面",
