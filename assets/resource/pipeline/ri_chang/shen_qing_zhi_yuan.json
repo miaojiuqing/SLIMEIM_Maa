@@ -31,7 +31,7 @@
             "興"
         ],
         "action": "Click",
-        "post_delay": 3000,
+        "post_delay": 1000,
         "next": "点击支援",
         "interrupt": [
             "OK",
@@ -87,10 +87,9 @@
         "next": "一并选择",
         "interrupt": [
             "检测是否已经支援过了",
-            "OK",
-            "叉叉",
-            "支援请求",
-            "点击右下角兴建"
+            "无延迟-点击OK",
+            "无延迟-点击叉叉",
+            "无延迟-点击右下角兴建"
         ],
         "post_delay": 0,
         "pre_delay": 0
@@ -202,8 +201,9 @@
         "recognition": "OCR",
         "expected": [
             "提升",
-            "LV",
-            "小时"
+            "小时",
+            "分鐘",
+            "秒"
         ],
         "pre_delay": 2100,
         "action": "Click",
@@ -224,11 +224,10 @@
             279,
             497
         ],
-        "recognition": "OCR",
-        "expected": [
-            "提升",
-            "LV",
-            "小时"
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "日常-支援申请/建筑支援-添加设施至列表.png"
         ],
         "pre_delay": 2100,
         "action": "Click",
