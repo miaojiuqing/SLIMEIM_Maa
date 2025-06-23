@@ -1,0 +1,67 @@
+{
+    "自动主线-情况等待-战斗途中": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "战斗逻辑//战时检测-左上角波次.png",
+            "战斗逻辑//战时检测-左下角技能.png",
+            "战斗逻辑//战时检测-左上角剩余回合数.png",
+            "战斗逻辑//战时检测-左上角已用回合数.png",
+            "战斗逻辑//战时检测-捕食战血条.png"
+        ],
+        "next": [
+            "自动主线-战斗结束"
+        ],
+        "interrupt": [
+            "skip",
+            "黑屏计数",
+            "战斗中"
+        ]
+    },
+    "自动主线-超绝优化发力等待": {
+        "roi": [
+            138,
+            0,
+            414,
+            65
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "報酬",
+            "居民數"
+        ]
+    },
+    "自动主线-战斗结束": {
+        "roi": [
+            967,
+            17,
+            298,
+            246
+        ],
+        "green_mask": true,
+        "recognition": "FeatureMatch",
+        "template": "自动主线/主线-该节点已完成.png"
+    },
+    "自动主线-出击": {
+        "recognition": "OCR",
+        "expected": [
+            "出擊"
+        ],
+        "action": "Click",
+        "next": [
+            "自动主线-战斗结束"
+        ],
+        "interrupt": [
+            "无延迟-点击YES",
+            "点击下一步",
+            "自动主线-剧情跳过",
+            "skip",
+            "黑屏计数",
+            "战斗中"
+        ]
+    },
+    "自动主线-剧情跳过": {
+        "recognition": "TemplateMatch",
+        "template": "进入/触发剧情/触发剧情-跳过剧情键.png",
+        "action": "Click"
+    }
+}

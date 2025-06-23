@@ -108,6 +108,13 @@
             "name": "梦幻镜魔境-单层刷直到没体力",
             "entry": "梦幻镜魔境-任务总层",
             "doc": "此任务暂时只会在一个层里一直刷下去直到没体力,不考虑切换队伍和战斗失败的情况,有问题跟作者说作者改\n\n 未来考虑增加一个专门刷55层土豆精的高效率资源模式 \n\n[size:20][color:blue]非老登/摆子不建议勾选，最好手动领宝箱[/color][/size]"
+        },
+        {
+            "name": "建议单独运行任务-自动主线",
+            "entry": "自动主线-点击故事后-寻找指定章节",
+            "option": [
+                "选择你要打的章节(不考虑战斗失败情况)"
+            ]
         }
     ],
     "option": {
@@ -270,6 +277,251 @@
                 }
             ],
             "default_case": "第七编队"
+        },
+        "选择你要打的章节(不考虑战斗失败情况)": {
+            "cases": [
+                {
+                    "name": "第01章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第01章"
+                        }
+                    }
+                },
+                {
+                    "name": "第02章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第02章"
+                        }
+                    }
+                },
+                {
+                    "name": "第03章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第03章"
+                        }
+                    }
+                },
+                {
+                    "name": "第04章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第04章"
+                        }
+                    }
+                },
+                {
+                    "name": "第05章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第05章"
+                        }
+                    }
+                },
+                {
+                    "name": "第06章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第06章"
+                        }
+                    }
+                },
+                {
+                    "name": "第07章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第07章"
+                        }
+                    }
+                },
+                {
+                    "name": "第08章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第08章"
+                        }
+                    }
+                },
+                {
+                    "name": "第09章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第09章"
+                        }
+                    }
+                },
+                {
+                    "name": "第10章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第10章"
+                        }
+                    }
+                },
+                {
+                    "name": "第11章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第11章"
+                        }
+                    }
+                },
+                {
+                    "name": "第12章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第12章"
+                        }
+                    }
+                },
+                {
+                    "name": "第13章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第13章"
+                        }
+                    }
+                },
+                {
+                    "name": "第14章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第14章"
+                        }
+                    }
+                },
+                {
+                    "name": "第15章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第15章"
+                        }
+                    }
+                },
+                {
+                    "name": "第16章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第16章"
+                        }
+                    }
+                },
+                {
+                    "name": "第17章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第17章"
+                        }
+                    }
+                },
+                {
+                    "name": "第18章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第18章"
+                        }
+                    }
+                },
+                {
+                    "name": "第19章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第19章"
+                        }
+                    }
+                },
+                {
+                    "name": "第20章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第20章"
+                        }
+                    }
+                },
+                {
+                    "name": "第21章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第21章"
+                        }
+                    }
+                },
+                {
+                    "name": "第22章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第22章"
+                        }
+                    }
+                },
+                {
+                    "name": "第23章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第23章"
+                        }
+                    }
+                },
+                {
+                    "name": "第24章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第24章"
+                        }
+                    }
+                },
+                {
+                    "name": "第25章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第25章"
+                        }
+                    }
+                },
+                {
+                    "name": "第26章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第26章"
+                        }
+                    }
+                },
+                {
+                    "name": "第27章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第27章"
+                        }
+                    }
+                },
+                {
+                    "name": "第28章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第28章"
+                        }
+                    }
+                },
+                {
+                    "name": "第29章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第29章"
+                        }
+                    }
+                },
+                {
+                    "name": "第30章",
+                    "pipeline_override": {
+                        "自动主线-点击进入指定章节": {
+                            "expected": "第30章"
+                        }
+                    }
+                }
+            ],
+            "default_case": "第01章"
         }
     }
 }

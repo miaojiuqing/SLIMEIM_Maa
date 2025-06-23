@@ -31,5 +31,14 @@
         "action": "Click",
         "pre_delay": 0,
         "post_delay": 0
+    },
+    "无延迟-点击YES": {
+        "recognition": "OCR",
+        "expected": [
+            "YES"
+        ],
+        "action": "Click",
+        "pre_delay": 0,
+        "post_delay": 0
     }
 }

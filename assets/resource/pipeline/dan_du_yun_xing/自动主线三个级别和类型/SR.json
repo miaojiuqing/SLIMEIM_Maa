@@ -1,0 +1,87 @@
+{
+    "自动主线-切换至中级难度": {
+        "roi": [
+            757,
+            106,
+            468,
+            77
+        ],
+        "recognition": "OCR",
+        "expected": "中級",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "自动主线-分类讨论-节点类型-中级大类"
+        ]
+    },
+    "自动主线-中级-检查最上面的节点是否已经完成": {
+        "roi": [
+            623,
+            204,
+            592,
+            122
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "自动主线/主线-该节点已完成.png",
+        "next": [
+            "自动主线-切换至上级难度"
+        ]
+    },
+    "自动主线-分类讨论-节点类型-中级大类": {
+        "next": [
+            "自动主线-中级-检查最上面的节点是否已经完成"
+        ],
+        "interrupt": [
+            "YES",
+            "自动主线-剧情跳过",
+            "点击下一步",
+            "自动主线-中级-战斗节点",
+            "自动主线-中级-剧情节点",
+            "自动主线-中级-捕食节点",
+            "自动主线-切换至中级难度"
+        ]
+    },
+    "自动主线-中级-战斗节点": {
+        "roi": [
+            623,
+            204,
+            592,
+            122
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "自动主线/主线-战斗类节点.png",
+        "action": "Click",
+        "next": [
+            "自动主线-出击"
+        ],
+        "interrupt": [
+            "自动主线-超绝优化发力等待"
+        ]
+    },
+    "自动主线-中级-剧情节点": {
+        "roi": [
+            623,
+            204,
+            592,
+            122
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "自动主线/主线-战斗类节点.png",
+        "action": "Click"
+    },
+    "自动主线-中级-捕食节点": {
+        "roi": [
+            623,
+            204,
+            592,
+            122
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "自动主线/主线-战斗类节点.png",
+        "action": "Click"
+    }
+}
