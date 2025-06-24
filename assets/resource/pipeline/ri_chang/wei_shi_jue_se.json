@@ -145,7 +145,18 @@
         ],
         "interrupt": [
             "叉叉",
-            "识别失败再返回菜单-点击菜单层"
+            "喂食角色-识别失败再返回菜单-点击菜单层"
         ]
+    },
+    "喂食角色-识别失败再返回菜单-点击菜单层": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "返回菜单.png",
+            "选单.png",
+            "通用符号//小选单.png"
+        ],
+        "green_mask": true,
+        "threshold": 0.9,
+        "action": "Click"
     }
 }
