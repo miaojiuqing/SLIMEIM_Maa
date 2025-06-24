@@ -20,7 +20,8 @@
         "recognition": "OCR",
         "expected": [
             "出擊"
-        ]
+        ],
+        "action": "Click"
     },
     "单本复刷-再次战斗": {
         "roi": [
