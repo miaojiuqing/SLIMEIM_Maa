@@ -12,7 +12,7 @@
 
 [点击申请加入小助手交流群](https://qm.qq.com/q/2I8BNwfZQA)）
 
-更多功能敬请期待（提iss什么的那个，我开中文插件了懒得切回去看）
+更多功能敬请期待（提issus）
 
 </div>
 <p align="center">
