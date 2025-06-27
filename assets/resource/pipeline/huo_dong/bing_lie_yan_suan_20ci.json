@@ -91,10 +91,10 @@
     },
     "检查是否进入当期活动-准备并列演算": {
         "roi": [
-            926,
-            8,
-            308,
-            314
+            656,
+            70,
+            555,
+            514
         ],
         "recognition": "TemplateMatch",
         "green_mask": true,
