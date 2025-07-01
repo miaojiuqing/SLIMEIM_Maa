@@ -12,6 +12,8 @@
 
 [点击申请加入小助手交流群](https://qm.qq.com/q/2I8BNwfZQA)）
 
+[国内在线文档](https://docs.qq.com/doc/p/2e3559f6b8ad6eb9c9beebe638426d8055307153?nlc=1)
+
 更多功能敬请期待（提issus）
 
 </div>
