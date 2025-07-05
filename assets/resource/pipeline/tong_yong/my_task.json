@@ -154,7 +154,8 @@
         "template": [
             "返回菜单.png",
             "选单.png",
-            "通用符号//小选单.png"
+            "通用符号//小选单.png",
+            "返回菜单/返回菜单4.png"
         ],
         "green_mask": true,
         "threshold": 0.999,
