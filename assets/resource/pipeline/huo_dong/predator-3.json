@@ -338,7 +338,9 @@
         ],
         "recognition": "OCR",
         "expected": [
-            "邪惡蜈蚣"
+            "邪惡蜈蚣",
+            "超級",
+            "10回合極限戰"
         ],
         "action": "Click"
     }
