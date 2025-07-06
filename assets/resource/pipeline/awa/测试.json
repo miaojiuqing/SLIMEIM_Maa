@@ -39,12 +39,22 @@
         ]
     },
     "测试用点击": {
+        "roi": [
+            387,
+            431,
+            224,
+            97
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "1dasd"
+        ],
         "action": "Click",
         "target": [
-            902,
-            401,
-            22,
-            25
+            387,
+            431,
+            224,
+            97
         ],
         "pre_delay": 0,
         "post_delay": 0
