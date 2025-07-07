@@ -10,7 +10,7 @@
 
 基于MAA框架制作的魔王与龙的建国谭小助手。图像技术 + 模拟控制，解放双手！由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
-[点击申请加入小助手交流群](https://qm.qq.com/q/2I8BNwfZQA)）
+[点击申请加入小助手交流群](https://qm.qq.com/q/2I8BNwfZQA)
 
 [国内在线文档](https://docs.qq.com/doc/p/2e3559f6b8ad6eb9c9beebe638426d8055307153?nlc=1)
 
