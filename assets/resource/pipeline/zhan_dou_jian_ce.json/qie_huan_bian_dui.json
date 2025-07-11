@@ -5,5 +5,26 @@
         "template": "切换编队//切换编队-右箭头.png",
         "action": "Click",
         "post_delay": 800
+    },
+    "当前非选中编队-点击固定位置进行切换": {
+        "roi": [
+            60,
+            44,
+            197,
+            132
+        ],
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": [
+            "第七編隊",
+            "七"
+        ],
+        "action": "Click",
+        "target": [
+            1178,
+            312,
+            69,
+            101
+        ]
     }
 }
