@@ -158,7 +158,7 @@
             "返回菜单/返回菜单4.png"
         ],
         "green_mask": true,
-        "threshold": 0.999,
+        "threshold": 0.99,
         "action": "Click"
     },
     "空任务": {},
