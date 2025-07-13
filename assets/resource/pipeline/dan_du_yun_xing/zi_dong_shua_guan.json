@@ -1,0 +1,107 @@
+{
+    "通用-刷关逻辑": {
+        "recognition": "OCR",
+        "expected": [
+            "戰",
+            "COMPLE",
+            "敵方",
+            "建議"
+        ],
+        "post_delay": 5000,
+        "next": "检查关卡列表最上方关卡是否已完成-否"
+    },
+    "检查关卡列表最上方关卡是否已完成-否": {
+        "roi": [
+            1028,
+            102,
+            215,
+            154
+        ],
+        "inverse": true,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "自动主线/主线-该节点已完成.png",
+        "next": [
+            "检查节点类型"
+        ]
+    },
+    "检查关卡列表最上方关卡是否已完成-是": {
+        "roi": [
+            1028,
+            102,
+            215,
+            154
+        ],
+        "inverse": false,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "自动主线/主线-该节点已完成.png",
+        "next": [
+            "识别失败再返回菜单-识别层"
+        ],
+        "interrupt": [
+            "识别失败再返回菜单-点击菜单层"
+        ]
+    },
+    "检查节点类型": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "自动主线/主线-剧情类节点.png",
+            "自动主线/主线-战斗类节点.png",
+            "自动主线/主线-捕食类节点.png"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "检查关卡列表最上方关卡是否已完成-是"
+        ],
+        "interrupt": [
+            "刷关专用-体力不足如何处理",
+            "skip",
+            "点击出击",
+            "OK",
+            "YES",
+            "点击下一步",
+            "点击确定",
+            "检查节点类型",
+            "战斗中",
+            "自动主线-剧情跳过",
+            "无延迟-黑屏计数"
+        ]
+    },
+    "刷关专用-体力不足如何处理": {
+        "roi": [
+            495,
+            260,
+            281,
+            174
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "體力不足",
+            "是否進行回復",
+            "不足體力"
+        ],
+        "next": [
+            "识别失败再返回菜单-识别层-结束任务"
+        ],
+        "interrupt": [
+            "叉叉",
+            "识别失败再返回菜单-点击菜单层"
+        ]
+    },
+    "刷关逻辑专用-出击-用于切换节点": {
+        "roi": [
+            977,
+            584,
+            265,
+            103
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "出擊"
+        ],
+        "action": "Click"
+    }
+}
