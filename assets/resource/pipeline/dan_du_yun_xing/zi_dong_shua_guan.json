@@ -5,7 +5,9 @@
             "戰",
             "COMPLE",
             "敵方",
-            "建議"
+            "建議",
+            "劇情",
+            "GET"
         ],
         "post_delay": 5000,
         "next": "检查关卡列表最上方关卡是否已完成-否"
@@ -20,7 +22,10 @@
         "inverse": true,
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "自动主线/主线-该节点已完成.png",
+        "template": [
+            "自动主线/主线-该节点已完成.png",
+            "活动期间/翻牌/魔晶.png"
+        ],
         "next": [
             "检查节点类型"
         ]
@@ -49,7 +54,8 @@
         "template": [
             "自动主线/主线-剧情类节点.png",
             "自动主线/主线-战斗类节点.png",
-            "自动主线/主线-捕食类节点.png"
+            "自动主线/主线-捕食类节点.png",
+            "自动主线/节点类型-剧情节点.png"
         ],
         "action": "Click",
         "post_delay": 5000,

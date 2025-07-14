@@ -15,15 +15,21 @@
         "post_delay": 0
     },
     "图片识别测试分数": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "返回菜单.png",
-            "选单.png",
-            "通用符号//小选单.png",
-            "返回菜单/返回菜单4.png"
+        "roi": [
+            613,
+            112,
+            123,
+            107
         ],
         "green_mask": true,
-        "threshold": 0.99
+        "recognition": "TemplateMatch",
+        "template": [
+            "自动主线/主线-剧情类节点.png",
+            "自动主线/节点类型-剧情节点.png",
+            "自动主线/主线-剧情类节点.png",
+            "自动主线/主线-战斗类节点.png",
+            "自动主线/主线-捕食类节点.png"
+        ]
     },
     "无条件纯任务测试": {
         "next": [
