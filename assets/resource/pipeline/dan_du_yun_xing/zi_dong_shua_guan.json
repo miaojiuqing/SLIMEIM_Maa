@@ -43,7 +43,7 @@
         "recognition": "TemplateMatch",
         "template": "自动主线/主线-该节点已完成.png",
         "next": [
-            "识别失败再返回菜单-识别层"
+            "识别失败再返回菜单-识别层-结束任务"
         ],
         "interrupt": [
             "识别失败再返回菜单-点击菜单层"
