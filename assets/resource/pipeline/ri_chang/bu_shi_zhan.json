@@ -83,6 +83,12 @@
         "timeout": 5000
     },
     "滑动寻找捕食战": {
+        "inverse": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "日常-捕食战/捕食战有挑战次数.png",
+            "日常-捕食战/捕食战无挑战次数.png"
+        ],
         "action": "Swipe",
         "begin": [
             929,
