@@ -140,7 +140,7 @@
             187,
             178
         ],
-        "threshold": 0.85,
+        "threshold": 0.75,
         "recognition": "TemplateMatch",
         "green_mask": true,
         "template": "活动期间//每天20次并列演算//期间活动限定.png",
