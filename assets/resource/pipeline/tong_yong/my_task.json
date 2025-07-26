@@ -109,7 +109,9 @@
     "点击下一步": {
         "recognition": "OCR",
         "expected": [
-            "下一步"
+            "下一步",
+            "步",
+            "下"
         ],
         "action": "Click",
         "pre_delay": 0,
