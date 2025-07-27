@@ -63,6 +63,19 @@
             "乱点一下"
         ]
     },
+    "检查到误触到别的成长任务时点击左上角箭头": {
+        "recognition": "OCR",
+        "expected": [
+            "金幣",
+            "魔素",
+            "才能石"
+        ],
+        "post_delay": 5000,
+        "pre_delay": 5000,
+        "next": [
+            "点击左上角返回箭头"
+        ]
+    },
     "检查到列表不属于成长的时候点击一下成长": {
         "green_mask": true,
         "recognition": "TemplateMatch",
