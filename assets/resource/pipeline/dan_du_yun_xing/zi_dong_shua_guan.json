@@ -54,6 +54,12 @@
         ]
     },
     "检查节点类型": {
+        "roi": [
+            600,
+            107,
+            615,
+            132
+        ],
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
