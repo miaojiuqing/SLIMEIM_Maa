@@ -79,5 +79,15 @@
         "doc": "---------------------------------------------检测到正处于战斗状态,等待五秒",
         "post_delay": 0,
         "pre_delay": 0
+    },
+    "无延迟-点击下一步": {
+        "recognition": "OCR",
+        "expected": [
+            "下一步"
+        ],
+        "threshold": 0.7,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "action": "Click"
     }
 }
