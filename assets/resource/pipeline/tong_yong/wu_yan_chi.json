@@ -87,11 +87,9 @@
             81,
             61
         ],
-        "threshold": 0.6,
-        "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "英桀杯/战斗时右上角选单.png"
+            "战斗状态/右上角设置-检测用.png"
         ],
         "doc": "---------------------------------------------检测到正处于战斗状态,等待五秒",
         "post_delay": 0,
