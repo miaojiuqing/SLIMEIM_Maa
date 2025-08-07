@@ -80,6 +80,23 @@
         "post_delay": 0,
         "pre_delay": 0
     },
+    "无延迟-战斗中-快速识别": {
+        "roi": [
+            1135,
+            8,
+            81,
+            61
+        ],
+        "threshold": 0.6,
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "英桀杯/战斗时右上角选单.png"
+        ],
+        "doc": "---------------------------------------------检测到正处于战斗状态,等待五秒",
+        "post_delay": 0,
+        "pre_delay": 0
+    },
     "无延迟-点击下一步": {
         "roi": [
             906,
