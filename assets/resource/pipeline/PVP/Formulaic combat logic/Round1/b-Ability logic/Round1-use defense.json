@@ -31,7 +31,8 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "英桀杯//公式化战斗逻辑//光静防御技能-未选择状态.png"
+            "英桀杯/技能图标/生存类/光静防御技能-未选择状态.png",
+            "英桀杯/技能图标/生存类/生存技能-防御-未选中.png"
         ],
         "action": "Click",
         "post_delay": 1000
@@ -41,7 +42,8 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "英桀杯//公式化战斗逻辑//光静防御技能-已选择状态.png"
+            "英桀杯/技能图标/生存类/光静防御技能-已选择状态.png",
+            "英桀杯/技能图标/生存类/生存技能-防御-已选中.png"
         ],
         "post_delay": 1000,
         "next": [
