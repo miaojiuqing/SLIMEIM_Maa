@@ -1,0 +1,98 @@
+{
+    "英桀杯-公式化战斗逻辑-第三回合技能选择-物理自增伤": {
+        "roi": [
+            207,
+            509,
+            879,
+            197
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯/技能图标/增伤buff类/物理增伤技能.png",
+        "action": "Click"
+    },
+    "英桀杯-公式化战斗逻辑-第三回合技能选择-奥义减抗": {
+        "roi": [
+            207,
+            509,
+            879,
+            197
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯/技能图标/增伤buff类/奥义减抗.png",
+        "action": "Click"
+    },
+    "英桀杯-公式化战斗逻辑-第三回合技能选择-奥义增伤": {
+        "roi": [
+            207,
+            509,
+            879,
+            197
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯/技能图标/增伤buff类/奥义增伤.png",
+        "action": "Click"
+    },
+    "英桀杯-公式化战斗逻辑-第三回合技能选择-攻击力加成": {
+        "roi": [
+            207,
+            509,
+            879,
+            197
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯/技能图标/增伤buff类/攻击力加成.png",
+        "action": "Click"
+    },
+    "英桀杯-公式化战斗逻辑-第三回合技能选择-会心减抗": {
+        "roi": [
+            207,
+            509,
+            879,
+            197
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯/技能图标/增伤buff类/会心减抗.png",
+        "action": "Click"
+    },
+    "英桀杯-公式化战斗逻辑-第三回合技能选择-会心buff": {
+        "roi": [
+            207,
+            509,
+            879,
+            197
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯/技能图标/增伤buff类/会心buff.png",
+        "action": "Click"
+    },
+    "英桀杯-公式化战斗逻辑-第三回合技能选择-魔攻加成": {
+        "roi": [
+            207,
+            509,
+            879,
+            197
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯/技能图标/增伤buff类/魔攻加成.png",
+        "action": "Click"
+    },
+    "英桀杯-公式化战斗逻辑-第三回合技能选择-协心增伤": {
+        "roi": [
+            207,
+            509,
+            879,
+            197
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "英桀杯/技能图标/增伤buff类/协心增伤技能.png",
+        "action": "Click"
+    }
+}
