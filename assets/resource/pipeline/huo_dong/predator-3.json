@@ -75,6 +75,7 @@
             621,
             656
         ],
+        "threshold": 0.8,
         "recognition": "TemplateMatch",
         "template": [
             "活动期间/滑到底了/活动捕食战.png"
@@ -92,7 +93,8 @@
             10,
             10
         ],
-        "post_delay": 3000
+        "post_delay": 3000,
+        "enabled": false
     },
     "首页那边点击进入任务-活动捕食战专享": {
         "roi": [
@@ -155,10 +157,10 @@
     },
     "任务列表中点击活动列中的活动行-之后点击进入捕食战界面": {
         "roi": [
-            931,
-            340,
-            311,
-            298
+            693,
+            176,
+            257,
+            228
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
@@ -167,10 +169,10 @@
     },
     "滑动寻找当期活动-活动捕食战专享": {
         "roi": [
-            1047,
-            154,
-            190,
-            198
+            623,
+            67,
+            596,
+            627
         ],
         "recognition": "TemplateMatch",
         "template": "活动期间//每天20次并列演算//活动20次并列演算-进入活动.png",
@@ -472,7 +474,7 @@
         "recognition": "OCR",
         "expected": [
             "10回合極限戰",
-            "邪惡蜈蚣",
+            "天空龍",
             "超級"
         ],
         "action": "Click"
