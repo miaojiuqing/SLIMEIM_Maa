@@ -116,10 +116,10 @@
     },
     "PVP-选择对手进行挑战-点击小奖杯": {
         "roi": [
-            477,
-            205,
-            761,
-            128
+            559,
+            209,
+            137,
+            360
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
