@@ -64,6 +64,16 @@
             "乱点一下"
         ]
     },
+    "日常捕食战-检查到正处于首页-重新回到任务列表进行检查": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "菜单返回检测-世界地图.png"
+        ],
+        "next": [
+            "每日任务之捕食战-开始任务层"
+        ]
+    },
     "日常捕食战-点击指定位置跳过": {
         "recognition": "OCR",
         "expected": [
