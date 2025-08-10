@@ -298,7 +298,8 @@
     "魔国祭典-祭典结束": {
         "recognition": "OCR",
         "expected": [
-            "祭典結束"
+            "祭典結束",
+            "更新最高分"
         ],
         "action": "Click"
     },
