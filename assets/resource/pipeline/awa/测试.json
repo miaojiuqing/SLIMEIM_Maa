@@ -1,14 +1,14 @@
 {
     "文字识别测试分数": {
         "roi": [
-            571,
-            75,
-            96,
-            78
+            23,
+            612,
+            58,
+            63
         ],
         "recognition": "OCR",
         "expected": [
-            "ALL"
+            "世界"
         ],
         "pre_delay": 0,
         "post_delay": 0
