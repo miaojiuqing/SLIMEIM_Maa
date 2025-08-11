@@ -8,6 +8,12 @@
         ]
     },
     "活动期间捕食战-总任务层": {
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": [
+            "已开启菜单的关闭.png",
+            "菜单返回检测-世界地图.png"
+        ],
         "next": [
             "活动捕食-准备战斗界面检查"
         ],
