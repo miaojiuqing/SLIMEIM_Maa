@@ -348,7 +348,7 @@
         "recognition": "OCR",
         "expected": [
             "祭典結束",
-            "更新最高分"
+            "更新最高積分"
         ],
         "action": "Click"
     },
