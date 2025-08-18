@@ -87,7 +87,7 @@
         "recognition": "TemplateMatch",
         "template": "英桀杯//加护量表大于等于100%.png",
         "green_mask": true,
-        "threshold": 0.99999,
+        "threshold": 0.8,
         "action": "Click",
         "post_delay": 3000,
         "next": [
