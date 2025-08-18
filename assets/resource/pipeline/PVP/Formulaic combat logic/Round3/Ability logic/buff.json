@@ -15,8 +15,7 @@
         "recognition": "TemplateMatch",
         "template": [
             "英桀杯//技能图标//增伤buff类//露米自增伤buff.png",
-            "英桀杯//技能图标//增伤buff类//奥义增伤.png",
-            "英桀杯//技能图标//三转技能-未选择状态.png"
+            "英桀杯//技能图标//增伤buff类//奥义增伤.png"
         ],
         "action": "Click"
     },
@@ -28,8 +27,7 @@
         "inverse": true,
         "template": [
             "英桀杯//技能图标//增伤buff类//露米自增伤buff.png",
-            "英桀杯//技能图标//增伤buff类//奥义增伤.png",
-            "英桀杯//技能图标//三转技能-未选择状态.png"
+            "英桀杯//技能图标//增伤buff类//奥义增伤.png"
         ],
         "post_delay": 1200,
         "next": [
