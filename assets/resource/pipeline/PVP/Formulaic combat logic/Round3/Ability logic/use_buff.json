@@ -1,0 +1,104 @@
+{
+    "英桀杯-第三回合-buff使用-1": {
+        "roi": [
+            43,
+            503,
+            1084,
+            204
+        ],
+        "green_mask": true,
+        "threshold": 0.85,
+        "recognition": "TemplateMatch",
+        "template": [],
+        "post_delay": 2000,
+        "next": [
+            "英桀杯-第三回合-buff使用-2"
+        ],
+        "action": "Click"
+    },
+    "英桀杯-第三回合-buff使用-2": {
+        "roi": [
+            43,
+            503,
+            1084,
+            204
+        ],
+        "green_mask": true,
+        "threshold": 0.85,
+        "recognition": "TemplateMatch",
+        "template": [],
+        "post_delay": 2000,
+        "next": [
+            "英桀杯-第三回合-buff使用-3"
+        ],
+        "action": "Click"
+    },
+    "英桀杯-第三回合-buff使用-3": {
+        "roi": [
+            43,
+            503,
+            1084,
+            204
+        ],
+        "green_mask": true,
+        "threshold": 0.85,
+        "recognition": "TemplateMatch",
+        "template": [],
+        "post_delay": 2000,
+        "next": [
+            "英桀杯-第三回合-buff使用-4"
+        ],
+        "action": "Click"
+    },
+    "英桀杯-第三回合-buff使用-4": {
+        "roi": [
+            43,
+            503,
+            1084,
+            204
+        ],
+        "green_mask": true,
+        "threshold": 0.85,
+        "recognition": "TemplateMatch",
+        "template": [],
+        "post_delay": 2000,
+        "next": [
+            "英桀杯-第三回合-buff使用-5"
+        ],
+        "action": "Click"
+    },
+    "英桀杯-第三回合-buff使用-5": {
+        "roi": [
+            43,
+            503,
+            1084,
+            204
+        ],
+        "green_mask": true,
+        "threshold": 0.85,
+        "recognition": "TemplateMatch",
+        "template": [],
+        "post_delay": 2000,
+        "next": [
+            "英桀杯-第三回合-buff使用-6"
+        ],
+        "action": "Click"
+    },
+    "英桀杯-第三回合-buff使用-6": {
+        "roi": [
+            43,
+            503,
+            1084,
+            204
+        ],
+        "green_mask": true,
+        "threshold": 0.85,
+        "recognition": "TemplateMatch",
+        "template": [],
+        "post_delay": 2000,
+        "next": [
+            "英桀杯-点击发动-第三回合-上完buff"
+        ],
+        "action": "Click"
+    }
+}
