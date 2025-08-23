@@ -1248,6 +1248,16 @@
                     }
                 },
                 {
+                    "name": "贯穿",
+                    "pipeline_override": {
+                        "英桀杯-第三回合-buff使用-1": {
+                            "template": [
+                                "英桀杯/技能图标/增伤buff类/贯穿.png"
+                            ]
+                        }
+                    }
+                },
+                {
                     "name": "魔法攻击力加成",
                     "pipeline_override": {
                         "英桀杯-第三回合-buff使用-1": {
@@ -1336,6 +1346,16 @@
                         "英桀杯-第三回合-buff使用-2": {
                             "template": [
                                 "英桀杯/技能图标/增伤buff类/会心减抗.png"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "贯穿",
+                    "pipeline_override": {
+                        "英桀杯-第三回合-buff使用-2": {
+                            "template": [
+                                "英桀杯/技能图标/增伤buff类/贯穿.png"
                             ]
                         }
                     }
@@ -1434,6 +1454,16 @@
                     }
                 },
                 {
+                    "name": "贯穿",
+                    "pipeline_override": {
+                        "英桀杯-第三回合-buff使用-3": {
+                            "template": [
+                                "英桀杯/技能图标/增伤buff类/贯穿.png"
+                            ]
+                        }
+                    }
+                },
+                {
                     "name": "魔法攻击力加成",
                     "pipeline_override": {
                         "英桀杯-第三回合-buff使用-3": {
@@ -1522,6 +1552,16 @@
                         "英桀杯-第三回合-buff使用-4": {
                             "template": [
                                 "英桀杯/技能图标/增伤buff类/会心减抗.png"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "贯穿",
+                    "pipeline_override": {
+                        "英桀杯-第三回合-buff使用-4": {
+                            "template": [
+                                "英桀杯/技能图标/增伤buff类/贯穿.png"
                             ]
                         }
                     }
@@ -1620,6 +1660,16 @@
                     }
                 },
                 {
+                    "name": "贯穿",
+                    "pipeline_override": {
+                        "英桀杯-第三回合-buff使用-5": {
+                            "template": [
+                                "英桀杯/技能图标/增伤buff类/贯穿.png"
+                            ]
+                        }
+                    }
+                },
+                {
                     "name": "魔法攻击力加成",
                     "pipeline_override": {
                         "英桀杯-第三回合-buff使用-5": {
@@ -1708,6 +1758,16 @@
                         "英桀杯-第三回合-buff使用-6": {
                             "template": [
                                 "英桀杯/技能图标/增伤buff类/会心减抗.png"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "贯穿",
+                    "pipeline_override": {
+                        "英桀杯-第三回合-buff使用-6": {
+                            "template": [
+                                "英桀杯/技能图标/增伤buff类/贯穿.png"
                             ]
                         }
                     }
