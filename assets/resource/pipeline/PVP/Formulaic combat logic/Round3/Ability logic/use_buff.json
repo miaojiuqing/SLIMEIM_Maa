@@ -12,7 +12,9 @@
         "template": [],
         "post_delay": 2000,
         "next": [
-            "英桀杯-第三回合-buff使用-2"
+            "英桀杯-第三回合-buff使用-2",
+            "英桀杯-第三回合-buff使用-3",
+            "英桀杯-第三回合-buff使用-4"
         ],
         "action": "Click"
     },
@@ -29,7 +31,9 @@
         "template": [],
         "post_delay": 2000,
         "next": [
-            "英桀杯-第三回合-buff使用-3"
+            "英桀杯-第三回合-buff使用-3",
+            "英桀杯-第三回合-buff使用-4",
+            "英桀杯-第三回合-buff使用-5"
         ],
         "action": "Click"
     },
@@ -46,7 +50,9 @@
         "template": [],
         "post_delay": 2000,
         "next": [
-            "英桀杯-第三回合-buff使用-4"
+            "英桀杯-第三回合-buff使用-4",
+            "英桀杯-第三回合-buff使用-5",
+            "英桀杯-第三回合-buff使用-6"
         ],
         "action": "Click"
     },
@@ -63,7 +69,9 @@
         "template": [],
         "post_delay": 2000,
         "next": [
-            "英桀杯-第三回合-buff使用-5"
+            "英桀杯-第三回合-buff使用-5",
+            "英桀杯-第三回合-buff使用-6",
+            "英桀杯-点击发动-第三回合-上完buff"
         ],
         "action": "Click"
     },
@@ -80,7 +88,8 @@
         "template": [],
         "post_delay": 2000,
         "next": [
-            "英桀杯-第三回合-buff使用-6"
+            "英桀杯-第三回合-buff使用-6",
+            "英桀杯-点击发动-第三回合-上完buff"
         ],
         "action": "Click"
     },
