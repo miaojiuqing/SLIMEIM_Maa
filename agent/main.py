@@ -3,6 +3,9 @@ import sys
 from maa.agent.agent_server import AgentServer
 from maa.toolkit import Toolkit
 
+# 以下为custom定义
+from custom.highlighter import HighlightedIconRecognizer
+
 import my_action
 import my_reco
 
