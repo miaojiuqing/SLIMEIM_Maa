@@ -1206,10 +1206,20 @@
                     "name": "无生存位",
                     "pipeline_override": {
                         "英桀杯-公式化战斗逻辑-第一回合-防御技能选择-未选择": {
-                            "template": []
+                            "inverse": true,
+                            "template": [
+                                "活动期间/魔国祭典/魔国祭典.png"
+                            ],
+                            "post_delay": 0,
+                            "pre_delay": 0
                         },
                         "英桀杯-公式化战斗逻辑-第一回合-防御技能选择-已选择": {
-                            "template": []
+                            "inverse": true,
+                            "template": [
+                                "活动期间/魔国祭典/魔国祭典.png"
+                            ],
+                            "post_delay": 0,
+                            "pre_delay": 0
                         }
                     }
                 }
