@@ -15,16 +15,15 @@
     },
     "图片识别测试分数": {
         "roi": [
-            592,
-            520,
-            162,
-            180
+            215,
+            522,
+            770,
+            181
         ],
         "recognition": "TemplateMatch",
-        "template": "英桀杯//普攻图标//普攻类型-黄卡.png",
+        "template": "英桀杯//奥义图标//奥义类型-范围极奥.png",
         "green_mask": true,
-        "threshold": 1,
-        "method": 5
+        "threshold": 0.95
     },
     "色块识别测试分数": {
         "roi": [
