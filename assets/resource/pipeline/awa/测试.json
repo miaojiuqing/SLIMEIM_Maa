@@ -15,15 +15,16 @@
     },
     "图片识别测试分数": {
         "roi": [
-            58,
-            385,
-            182,
-            157
+            592,
+            520,
+            162,
+            180
         ],
         "recognition": "TemplateMatch",
-        "template": "英桀杯//加护量表大于等于100%.png",
+        "template": "英桀杯//普攻图标//普攻类型-黄卡.png",
         "green_mask": true,
-        "threshold": 0.80
+        "threshold": 1,
+        "method": 5
     },
     "色块识别测试分数": {
         "roi": [
