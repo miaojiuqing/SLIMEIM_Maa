@@ -5,6 +5,7 @@ from maa.toolkit import Toolkit
 
 # 以下为custom定义
 from custom.highlighter import HighlightedIconRecognizer
+from custom.k import RecognitionResult
 
 import my_action
 import my_reco

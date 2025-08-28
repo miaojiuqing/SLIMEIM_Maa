@@ -14,7 +14,60 @@
         "post_delay": 0
     },
     "1": {
-        "recognition": "DirectHit"
+        "roi_offset": [
+            215,
+            522,
+            770,
+            181
+        ],
+        "custom_recognition": "highlightediconrecognition",
+        "custom_recognition_param": {
+            "hsv_low": [
+                40,
+                40,
+                40
+            ],
+            "hsv_high": [
+                80,
+                255,
+                255
+            ],
+            "recognition": "ColorMatch",
+            "green_mask": true,
+            "template": [
+                "英桀杯/普攻图标/普攻类型-黄卡.png",
+                "英桀杯/普攻图标/普攻类型-蓝卡.png",
+                "英桀杯/普攻图标/普攻类型-绿卡.png"
+            ]
+        }
+    },
+    "2": {
+        "roi_offset": [
+            215,
+            522,
+            770,
+            181
+        ],
+        "custom_recognition": "RecognitionResult",
+        "custom_recognition_param": {
+            "hsv_low": [
+                40,
+                40,
+                40
+            ],
+            "hsv_high": [
+                80,
+                255,
+                255
+            ],
+            "recognition": "ColorMatch",
+            "green_mask": true,
+            "template": [
+                "英桀杯/普攻图标/普攻类型-黄卡.png",
+                "英桀杯/普攻图标/普攻类型-蓝卡.png",
+                "英桀杯/普攻图标/普攻类型-绿卡.png"
+            ]
+        }
     },
     "图片识别测试分数": {
         "roi": [
