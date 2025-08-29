@@ -1,0 +1,53 @@
+{
+    "黄卡-光暗": {
+        "roi": [
+            850,
+            541,
+            129,
+            152
+        ],
+        "recognition": "ColorMatch",
+        "method": 6,
+        "upper": [
+            171
+        ],
+        "lower": [
+            124
+        ],
+        "count": 2000
+    },
+    "绿卡-光暗": {
+        "roi": [
+            850,
+            541,
+            129,
+            152
+        ],
+        "recognition": "ColorMatch",
+        "method": 6,
+        "upper": [
+            171
+        ],
+        "lower": [
+            124
+        ],
+        "count": 2000
+    },
+    "蓝卡-光暗": {
+        "roi": [
+            850,
+            541,
+            129,
+            152
+        ],
+        "recognition": "ColorMatch",
+        "method": 6,
+        "upper": [
+            171
+        ],
+        "lower": [
+            124
+        ],
+        "count": 2000
+    }
+}

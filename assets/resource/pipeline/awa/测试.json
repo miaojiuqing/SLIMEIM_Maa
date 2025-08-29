@@ -71,15 +71,16 @@
     },
     "图片识别测试分数": {
         "roi": [
-            215,
-            522,
-            770,
-            181
+            482,
+            541,
+            133,
+            147
         ],
         "recognition": "TemplateMatch",
-        "template": "英桀杯//奥义图标//奥义类型-范围极奥.png",
+        "template": "英桀杯/普攻图标/普攻类型-绿卡.png",
         "green_mask": true,
-        "threshold": 0.95
+        "threshold": 0.95,
+        "method": 1
     },
     "色块识别测试分数": {
         "roi": [
