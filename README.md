@@ -112,7 +112,7 @@
       
 
       **关于第三回合技能自选**
-      (<https://s21.ax1x.com/2025/08/23/pVrSsu8.png>)
+    (<https://s21.ax1x.com/2025/08/23/pVrSsu8.png>)
 
 - [x] 投降速刷逻辑
 
