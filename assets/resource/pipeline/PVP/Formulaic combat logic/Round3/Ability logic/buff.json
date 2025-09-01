@@ -9,16 +9,6 @@
             "英桀杯-尝试回到战场"
         ]
     },
-    "英桀杯-公式化战斗逻辑-第三回合-增伤Buff-未选择状态": {
-        "green_mask": true,
-        "threshold": 0.85,
-        "recognition": "TemplateMatch",
-        "template": [
-            "英桀杯//技能图标//增伤buff类//露米自增伤buff.png",
-            "英桀杯//技能图标//增伤buff类//奥义增伤.png"
-        ],
-        "action": "Click"
-    },
     "英桀杯-公式化战斗逻辑-第三回合-使用增伤buff总任务层": {
         "roi": [
             55,
