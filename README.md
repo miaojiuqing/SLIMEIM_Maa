@@ -37,6 +37,8 @@
 
 **对了：** Google playdate也是个模拟器，但是没adb，要用的话得用UI提供的win32开全屏食用，但是我还是建议你下mumu
 
+[视频链接](https://www.bilibili.com/video/BV1gPjiz5EbQ/?spm_id_from=333.1387.homepage.video_card.click&vd_source=49383a2ec38e99b49eb1e3f17c256fb9)
+
 ---
 
 ## 主要功能
