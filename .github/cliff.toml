@@ -55,6 +55,11 @@ body = """
 # 尾部
 footer = """
 
+对于绝大部分用户，请下载 MaaSLIMEIM-win-x86_64.zip
+请注意！Windows 的电脑几乎全都是 x86_64 的，可能占 99.999%，除非你非常确定自己是 arm，否则别下这个！_
+解压后运行 MFAAvalonia.exe（图形化界面，推荐使用，老版本UI为MFAWPF.exe）或 MaaPiCli.exe（命令行）即可
+
+
 [已有 Mirror酱 CDK？点击前往高速下载](https://mirrorchyan.com/zh/projects?rid=SLIMEIM_Maa&source=SLIMEIM_Maa-gh-release)
 <!--本软件完全免费，若您有付费购买请立即退款并举报！
 
