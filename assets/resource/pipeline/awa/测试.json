@@ -71,16 +71,20 @@
     },
     "图片识别测试分数": {
         "roi": [
-            482,
-            541,
-            133,
-            147
+            215,
+            522,
+            770,
+            181
         ],
         "recognition": "TemplateMatch",
-        "template": "英桀杯/普攻图标/普攻类型-绿卡.png",
+        "template": [
+            "英桀杯//奥义图标//奥义类型-范围普奥.png"
+        ],
+        "threshold": 0.65,
         "green_mask": true,
-        "threshold": 0.95,
-        "method": 1
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
     },
     "色块识别测试分数": {
         "roi": [
@@ -104,10 +108,12 @@
     },
     "无条件纯任务测试": {
         "next": [
-            "活动捕食战-已切换至指定编队"
+            "YES",
+            "英桀杯-战斗结束"
         ],
         "interrupt": [
-            "当前非选中编队-点击固定位置进行切换"
+            "skip",
+            "OK"
         ]
     },
     "测试用点击": {
