@@ -60,7 +60,8 @@
         "expected": [
             "出擊"
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 1000
     },
     "单本复刷-再次战斗": {
         "roi": [
