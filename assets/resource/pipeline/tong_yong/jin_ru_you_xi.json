@@ -4,6 +4,7 @@
         "package": "com.bandainamcoent.tensuramrkww",
         "next": "识别是否已开启菜单",
         "interrupt": [
+            "游戏版本需要从应用商店更新",
             "开始游戏1",
             "开始游戏2",
             "黑屏计数",
@@ -29,6 +30,22 @@
         "action": "StartApp",
         "package": "com.bandainamcoent.tensuramrkww"
     },
+    "游戏版本需要从应用商店更新": {
+        "roi": [
+            437,
+            204,
+            395,
+            219
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "版本更新公告",
+            "目前有新的版本可使用",
+            "請從應用程式商店進行更新"
+        ]
+    },
+    "关闭游戏后停止所有任务链接": {},
+    "停止所有任务链": {},
     "开始游戏1": {
         "post_delay": 5000,
         "recognition": "TemplateMatch",

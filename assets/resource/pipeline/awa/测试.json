@@ -13,6 +13,11 @@
         "pre_delay": 0,
         "post_delay": 0
     },
+    "测试": {
+        "focus": {
+            "start": "任务开始"
+        }
+    },
     "1": {
         "roi_offset": [
             215,
