@@ -4,6 +4,7 @@
         "package": "com.bandainamcoent.tensuramrkww",
         "next": "识别是否已开启菜单",
         "interrupt": [
+            "点击下一步",
             "游戏版本需要从应用商店更新",
             "开始游戏1",
             "开始游戏2",
