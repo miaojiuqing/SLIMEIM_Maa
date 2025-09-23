@@ -13,7 +13,20 @@
         "pre_delay": 0,
         "post_delay": 0
     },
+    "拓展用-测试任务(开发者选项)": {
+        "next": [
+            "测试"
+        ]
+    },
     "测试": {
+        "focus": {
+            "start": "任务开始",
+            "succeeded": "任务成功",
+            "failed": "任务失败",
+            "toast": "弹窗测试"
+        }
+    },
+    "弹窗测试": {
         "focus": {
             "start": "任务开始",
             "succeeded": "任务成功",
