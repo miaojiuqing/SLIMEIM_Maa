@@ -408,7 +408,8 @@
         "recognition": "OCR",
         "pre_delay": 1200,
         "expected": [
-            "出擊"
+            "出",
+            "擊"
         ],
         "action": "Click",
         "next": [
