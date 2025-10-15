@@ -6,6 +6,8 @@
 
 <div align="center">
 
+# 沟槽的万代你怎么突然改UI了
+
 ## SLIMEIM_Maa
 
 基于MAA框架制作的魔王与龙的建国谭小助手。图像技术 + 模拟控制，解放双手！由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
