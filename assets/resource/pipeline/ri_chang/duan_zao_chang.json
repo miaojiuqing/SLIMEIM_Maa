@@ -11,30 +11,11 @@
         "action": "Click",
         "green_mask": true,
         "next": [
-            "检查是否进入锻造场"
+            "装备开始强化"
         ],
         "interrupt": [
             "锻造场升级任务",
             "黑屏计数"
-        ]
-    },
-    "检查是否进入锻造场": {
-        "roi": [
-            857,
-            34,
-            405,
-            667
-        ],
-        "recognition": "TemplateMatch",
-        "template": [
-            "日常-锻造场//分解图标-用于锻造场界面检查.png",
-            "日常-锻造场//分解图标2-用于锻造场界面检查.png",
-            "日常-锻造场//一览图标-用于锻造场界面检查.png"
-        ],
-        "post_delay": 3000,
-        "next": "装备开始强化",
-        "interrupt": [
-            "空任务"
         ]
     },
     "装备开始强化": {
@@ -46,6 +27,7 @@
         ],
         "recognition": "OCR",
         "expected": "裝",
+        "pre_delay": 3000,
         "post_delay": 1000,
         "next": "锻造场OK",
         "interrupt": [
