@@ -206,9 +206,8 @@
                     "name": "捕食类型-转魂",
                     "pipeline_override": {
                         "选择捕食类型": {
-                            "expected": [
-                                "轉魂強化任務",
-                                "轉魂"
+                            "template": [
+                                "日常-捕食战/捕食类型-转魂.png"
                             ]
                         }
                     }
@@ -217,9 +216,8 @@
                     "name": "捕食类型-心体",
                     "pipeline_override": {
                         "选择捕食类型": {
-                            "expected": [
-                                "心體強化任務",
-                                "心體"
+                            "template": [
+                                "日常-捕食战/捕食类型-心体.png"
                             ]
                         }
                     }
@@ -228,9 +226,8 @@
                     "name": "捕食类型-坚守",
                     "pipeline_override": {
                         "选择捕食类型": {
-                            "expected": [
-                                "堅守強化任務",
-                                "堅守"
+                            "template": [
+                                "日常-捕食战/捕食类型-坚守.png"
                             ]
                         }
                     }
@@ -239,9 +236,8 @@
                     "name": "捕食类型-猛攻",
                     "pipeline_override": {
                         "选择捕食类型": {
-                            "expected": [
-                                "猛攻強化任務",
-                                "猛攻"
+                            "template": [
+                                "日常-捕食战/捕食类型-猛攻.png"
                             ]
                         }
                     }

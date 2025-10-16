@@ -14,15 +14,13 @@
         "next": "结束任务"
     },
     "识别是否已开启菜单": {
-        "roi": [
-            1088,
-            2,
-            159,
-            116
-        ],
         "recognition": "TemplateMatch",
-        "threshold": 0.99,
-        "template": "已开启菜单的关闭.png",
+        "threshold": 0.9,
+        "green_mask": true,
+        "template": [
+            "返回菜单/已返回菜单.png",
+            "返回菜单/已返回菜单2.png"
+        ],
         "action": "DoNothing"
     },
     "黑屏计数": {
@@ -135,16 +133,16 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "菜单返回检测-世界地图.png",
-            "已开启菜单的关闭.png"
+            "返回菜单/已返回菜单.png",
+            "返回菜单/已返回菜单2.png"
         ]
     },
     "识别失败再返回菜单-识别层-结束任务": {
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "菜单返回检测-世界地图.png",
-            "已开启菜单的关闭.png"
+            "返回菜单/已返回菜单.png",
+            "返回菜单/已返回菜单2.png"
         ],
         "next": [
             "结束任务"

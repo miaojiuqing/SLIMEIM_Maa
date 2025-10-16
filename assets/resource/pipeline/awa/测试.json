@@ -92,21 +92,22 @@
     },
     "图片识别测试分数": {
         "roi": [
-            552,
-            76,
-            383,
-            643
+            1010,
+            174,
+            245,
+            534
         ],
+        "pre_delay": 3000,
         "recognition": "TemplateMatch",
         "template": [
-            "没打过的关卡.png"
+            "日常-捕食战/捕食类型-坚守.png"
         ],
-        "green_mask": true,
+        "threshold": 0.85,
         "action": "Click",
         "target_offset": [
-            100,
-            30,
+            -400,
             0,
+            200,
             0
         ]
     },

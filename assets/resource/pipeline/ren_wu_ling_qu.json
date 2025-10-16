@@ -12,10 +12,10 @@
     },
     "进入任务领取界面": {
         "roi": [
-            56,
-            256,
-            118,
-            107
+            98,
+            238,
+            115,
+            118
         ],
         "recognition": "TemplateMatch",
         "template": "任务奖励领取//菜单页进入任务奖励领取.png",
@@ -62,14 +62,14 @@
         ],
         "recognition": "ColorMatch",
         "upper": [
-            41,
-            99,
-            44
+            16,
+            130,
+            131
         ],
         "lower": [
-            7,
-            52,
-            13
+            1,
+            69,
+            62
         ],
         "count": 6000,
         "action": "Click",
@@ -90,14 +90,14 @@
         ],
         "recognition": "ColorMatch",
         "upper": [
-            29,
-            29,
-            28
+            31,
+            32,
+            32
         ],
         "lower": [
-            21,
-            20,
-            21
+            2,
+            2,
+            4
         ],
         "count": 6000,
         "next": [

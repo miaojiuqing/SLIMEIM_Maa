@@ -34,21 +34,6 @@
         "expected": "情",
         "action": "Click",
         "next": [
-            "点击交流"
-        ]
-    },
-    "点击交流": {
-        "post_delay": 500,
-        "roi": [
-            6,
-            351,
-            625,
-            708
-        ],
-        "recognition": "OCR",
-        "expected": "交流",
-        "action": "Click",
-        "next": [
             "点击探访礼物"
         ]
     },

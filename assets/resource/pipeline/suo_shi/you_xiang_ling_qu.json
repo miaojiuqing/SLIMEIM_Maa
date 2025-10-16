@@ -10,10 +10,10 @@
     },
     "邮箱领取": {
         "roi": [
-            60,
-            180,
-            104,
-            83
+            46,
+            140,
+            193,
+            149
         ],
         "threshold": 0.75,
         "recognition": "TemplateMatch",
@@ -57,9 +57,16 @@
             515
         ],
         "inverse": true,
-        "recognition": "TemplateMatch",
-        "template": [
-            "每日琐事//邮箱领取//琐事-邮箱领取-检查是否领取完毕.png"
+        "recognition": "ColorMatch",
+        "upper": [
+            23,
+            78,
+            81
+        ],
+        "lower": [
+            5,
+            59,
+            55
         ],
         "post_delay": 1000,
         "next": "识别失败再返回菜单-识别层-结束任务",
@@ -71,16 +78,23 @@
     },
     "琐事-邮箱领取-领取奖励": {
         "roi": [
-            991,
-            603,
-            220,
-            80
+            979,
+            589,
+            245,
+            106
         ],
-        "recognition": "TemplateMatch",
-        "template": [
-            "每日琐事//邮箱领取//琐事-邮箱领取-点击全部领取.png"
+        "recognition": "ColorMatch",
+        "upper": [
+            24,
+            135,
+            136
         ],
-        "threshold": 0.9998,
+        "lower": [
+            6,
+            114,
+            108
+        ],
+        "count": 2500,
         "action": "Click",
         "post_delay": 1000
     }

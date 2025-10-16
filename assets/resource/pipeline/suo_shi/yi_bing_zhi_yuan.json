@@ -9,10 +9,10 @@
     },
     "一并支援奖励领取": {
         "roi": [
-            51,
-            431,
-            126,
-            100
+            81,
+            427,
+            128,
+            104
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
