@@ -28,17 +28,17 @@
         ],
         "recognition": "ColorMatch",
         "upper": [
-            136,
-            255,
-            125
+            60,
+            158,
+            124
         ],
         "lower": [
-            12,
-            57,
-            15
+            17,
+            85,
+            72
         ],
         "method": 4,
-        "count": 4000,
+        "count": 850,
         "action": "Click",
         "post_delay": 1000
     },
