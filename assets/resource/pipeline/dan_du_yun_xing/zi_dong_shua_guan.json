@@ -27,9 +27,9 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "自动主线/主线-该节点已完成.png",
+            "自动主线/该节点已完成.png",
             "活动期间/翻牌/魔晶.png",
-            "自动主线/节点类型-剧情节点.png"
+            "自动主线/剧情节点.png"
         ],
         "next": [
             "检查节点类型"
