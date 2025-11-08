@@ -6,7 +6,7 @@
 
 <div align="center">
 
-# 沟槽的万代你怎么突然改UI了
+# 中文名：辛西娅小助手
 
 ## SLIMEIM_Maa
 
