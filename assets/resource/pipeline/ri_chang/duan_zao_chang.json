@@ -234,16 +234,16 @@
         ],
         "recognition": "ColorMatch",
         "upper": [
-            21,
-            34,
-            19
+            37,
+            85,
+            69
         ],
         "lower": [
-            7,
-            22,
-            6
+            29,
+            69,
+            51
         ],
-        "count": 3000,
+        "count": 2500,
         "action": "Click",
         "target": [
             571,
