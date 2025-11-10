@@ -206,7 +206,7 @@
             924,
             474
         ],
-        "threshold": 0.96,
+        "threshold": 0.9,
         "recognition": "TemplateMatch",
         "template": "日常-捕食战//捕食战无挑战次数.png",
         "next": "识别失败再返回菜单-识别层-结束任务",
