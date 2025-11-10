@@ -15,7 +15,10 @@
             "原創故事"
         ],
         "post_delay": 5000,
-        "next": "检查关卡列表最上方关卡是否已完成-否",
+        "next": [
+            "检查关卡列表最上方关卡是否已完成-否",
+            "检查关卡列表最上方关卡是否已完成-是"
+        ],
         "interrupt": [
             "检查节点类型"
         ]
@@ -49,7 +52,7 @@
         "inverse": false,
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "自动主线/主线-该节点已完成.png",
+        "template": "自动主线/该节点已完成.png",
         "next": [
             "识别失败再返回菜单-识别层-结束任务"
         ],
