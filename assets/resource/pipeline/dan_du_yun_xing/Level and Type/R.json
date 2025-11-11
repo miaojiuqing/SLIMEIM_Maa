@@ -1,10 +1,10 @@
 {
     "自动主线-切换至初级难度": {
         "roi": [
-            753,
-            90,
-            501,
-            110
+            658,
+            64,
+            533,
+            96
         ],
         "recognition": "OCR",
         "expected": "初級",
@@ -13,10 +13,10 @@
     },
     "自动主线-初级-检查最上面的节点是否已经完成": {
         "roi": [
-            623,
-            204,
-            592,
-            122
+            1063,
+            149,
+            158,
+            154
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
@@ -26,6 +26,24 @@
         ]
     },
     "自动主线-分类讨论-节点类型-初级大类": {
+        "recognition": "ColorMatch",
+        "roi": [
+            664,
+            71,
+            183,
+            82
+        ],
+        "upper": [
+            244,
+            245,
+            231
+        ],
+        "lower": [
+            241,
+            243,
+            227
+        ],
+        "count": 500,
         "next": [
             "自动主线-初级-检查最上面的节点是否已经完成"
         ],
@@ -38,6 +56,19 @@
             "自动主线-初级-捕食节点",
             "自动主线-切换至初级难度"
         ]
+    },
+    "自动主线-点击选择初级": {
+        "roi": [
+            664,
+            71,
+            183,
+            82
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "初級"
+        ],
+        "action": "Click"
     },
     "自动主线-初级-战斗节点": {
         "roi": [
@@ -68,7 +99,7 @@
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "自动主线/主线-战斗类节点.png",
+        "template": "自动主线/主线-剧情类节点.png",
         "action": "Click"
     },
     "自动主线-初级-捕食节点": {
@@ -80,7 +111,7 @@
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "自动主线/主线-战斗类节点.png",
+        "template": "自动主线/主线-捕食类节点.png",
         "action": "Click"
     }
 }
