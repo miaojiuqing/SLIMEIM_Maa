@@ -39,7 +39,17 @@
         ],
         "green_mask": true,
         "recognition": "FeatureMatch",
-        "template": "自动主线/主线-该节点已完成.png"
+        "template": "自动主线/主线战斗节点已完成.png",
+        "next": [
+            "自动主线-已进入选择的主线章节"
+        ],
+        "interrupt": [
+            "无延迟-点击叉叉",
+            "OK",
+            "YES",
+            "点击下一步",
+            "黑屏计数"
+        ]
     },
     "自动主线-出击": {
         "recognition": "OCR",
