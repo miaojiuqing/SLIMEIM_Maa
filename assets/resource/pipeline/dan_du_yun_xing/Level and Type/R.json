@@ -72,10 +72,10 @@
     },
     "自动主线-初级-战斗节点": {
         "roi": [
-            623,
-            204,
-            592,
-            122
+            617,
+            135,
+            622,
+            155
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
@@ -92,10 +92,10 @@
     },
     "自动主线-初级-剧情节点": {
         "roi": [
-            623,
-            204,
-            592,
-            122
+            617,
+            135,
+            622,
+            155
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
@@ -104,10 +104,10 @@
     },
     "自动主线-初级-捕食节点": {
         "roi": [
-            623,
-            204,
-            592,
-            122
+            617,
+            135,
+            622,
+            155
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
