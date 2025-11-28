@@ -24,7 +24,10 @@
     "files.exclude": {
         "__pycache__": true
     },
-    "[json]": {
+    "files.associations": {
+        "**/assets/**/*.*": "jsonc"
+    },
+    "[json][jsonc]": {
         "editor.formatOnSave": true,
         "editor.insertSpaces": true,
         "editor.tabSize": 4,
