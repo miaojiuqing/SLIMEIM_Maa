@@ -11,26 +11,26 @@
         "template": "活动期间//翻牌//点击翻牌.png",
         "action": "Click",
         "post_delay": 1000,
-        "next": "翻牌-界面检查",
-        "interrupt": [
-            "活动限定-自动翻牌总任务"
+        "next": [
+            "翻牌-界面检查",
+            "[JumpBack]活动限定-自动翻牌总任务"
         ]
     },
     "翻牌-界面检查": {
         "recognition": "TemplateMatch",
         "template": "活动期间//翻牌//翻牌-界面检查.png",
-        "next": "翻牌-无翻牌次数",
-        "interrupt": [
-            "翻牌-有翻牌次数"
+        "next": [
+            "翻牌-无翻牌次数",
+            "[JumpBack]翻牌-有翻牌次数"
         ]
     },
     "翻牌-无翻牌次数": {
         "threshold": 0.999,
         "recognition": "TemplateMatch",
         "template": "活动期间//翻牌//翻牌-没票了.png",
-        "next": "识别失败再返回菜单-识别层",
-        "interrupt": [
-            "识别失败再返回菜单-点击菜单层"
+        "next": [
+            "识别失败再返回菜单-识别层",
+            "[JumpBack]识别失败再返回菜单-点击菜单层"
         ]
     },
     "翻牌-有翻牌次数": {
@@ -38,17 +38,17 @@
         "recognition": "TemplateMatch",
         "template": "活动期间//翻牌//翻牌-有票.png",
         "action": "Click",
-        "next": "OK",
-        "interrupt": [
-            "翻牌-选择奖励",
-            "翻牌-点击执行一次",
-            "翻牌-YES",
-            "点击下一步",
-            "翻牌-有翻牌次数",
-            "skip",
-            "翻牌-点击牌面",
-            "叉叉",
-            "翻牌-滑动"
+        "next": [
+            "OK",
+            "[JumpBack]翻牌-选择奖励",
+            "[JumpBack]翻牌-点击执行一次",
+            "[JumpBack]翻牌-YES",
+            "[JumpBack]点击下一步",
+            "[JumpBack]翻牌-有翻牌次数",
+            "[JumpBack]skip",
+            "[JumpBack]翻牌-点击牌面",
+            "[JumpBack]叉叉",
+            "[JumpBack]翻牌-滑动"
         ]
     },
     "翻牌-点击牌面": {

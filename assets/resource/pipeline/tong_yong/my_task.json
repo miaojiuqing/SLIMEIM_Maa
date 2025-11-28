@@ -11,7 +11,9 @@
             "选单.png"
         ],
         "action": "Click",
-        "next": "结束任务"
+        "next": [
+            "结束任务"
+        ]
     },
     "识别是否已开启菜单": {
         "recognition": "TemplateMatch",
@@ -60,7 +62,9 @@
         "recognition": "OCR",
         "expected": "發生預期外的錯誤",
         "action": "Click",
-        "next": "预期外错误的OK"
+        "next": [
+            "预期外错误的OK"
+        ]
     },
     "OK": {
         "recognition": "OCR",
@@ -80,8 +84,10 @@
         "expected": "OK",
         "action": "Click",
         "post_delay": 10000,
-        "next": "进入游戏并打开菜单",
-        "interrupt": "发生预期外的错误_400"
+        "next": [
+            "进入游戏并打开菜单",
+            "[JumpBack]发生预期外的错误_400"
+        ]
     },
     "取消": {
         "recognition": "OCR",
@@ -124,10 +130,8 @@
     },
     "识别失败再返回菜单": {
         "next": [
-            "识别失败再返回菜单-识别层"
-        ],
-        "interrupt": [
-            "识别失败再返回菜单-点击菜单层"
+            "识别失败再返回菜单-识别层",
+            "[JumpBack]识别失败再返回菜单-点击菜单层"
         ]
     },
     "识别失败再返回菜单-识别层": {

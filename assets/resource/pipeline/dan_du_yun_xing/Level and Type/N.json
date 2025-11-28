@@ -9,12 +9,10 @@
             "战斗逻辑//战时检测-捕食战血条.png"
         ],
         "next": [
-            "自动主线-战斗结束"
-        ],
-        "interrupt": [
-            "skip",
-            "黑屏计数",
-            "战斗中"
+            "自动主线-战斗结束",
+            "[JumpBack]skip",
+            "[JumpBack]黑屏计数",
+            "[JumpBack]战斗中"
         ]
     },
     "自动主线-超绝优化发力等待": {
@@ -41,14 +39,12 @@
         "recognition": "FeatureMatch",
         "template": "自动主线/主线战斗节点已完成.png",
         "next": [
-            "自动主线-已进入选择的主线章节"
-        ],
-        "interrupt": [
-            "无延迟-点击叉叉",
-            "OK",
-            "YES",
-            "点击下一步",
-            "黑屏计数"
+            "自动主线-已进入选择的主线章节",
+            "[JumpBack]无延迟-点击叉叉",
+            "[JumpBack]OK",
+            "[JumpBack]YES",
+            "[JumpBack]点击下一步",
+            "[JumpBack]黑屏计数"
         ]
     },
     "自动主线-出击": {
@@ -58,15 +54,13 @@
         ],
         "action": "Click",
         "next": [
-            "自动主线-战斗结束"
-        ],
-        "interrupt": [
-            "无延迟-点击YES",
-            "点击下一步",
-            "自动主线-剧情跳过",
-            "skip",
-            "黑屏计数",
-            "战斗中"
+            "自动主线-战斗结束",
+            "[JumpBack]无延迟-点击YES",
+            "[JumpBack]点击下一步",
+            "[JumpBack]自动主线-剧情跳过",
+            "[JumpBack]skip",
+            "[JumpBack]黑屏计数",
+            "[JumpBack]战斗中"
         ]
     },
     "自动主线-剧情跳过": {

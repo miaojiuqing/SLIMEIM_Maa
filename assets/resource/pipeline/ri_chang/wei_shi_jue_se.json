@@ -1,11 +1,6 @@
 {
     "每日任务之喂食角色-开始任务层": {
-        "next": [
-            "每日任务之喂食角色"
-        ],
-        "interrupt": [
-            "进入游戏并打开菜单"
-        ]
+        "next": ["每日任务之喂食角色", "[JumpBack]进入游戏并打开菜单"],
     },
     "每日任务之喂食角色": {
         "_doc": "--------------------------------------------------------------“喂食”角色任务开始",
@@ -14,13 +9,11 @@
         "expected": "交流",
         "action": "Click",
         "next": [
-            "喂食之YES"
+            "喂食之YES",
+            "[JumpBack]选择角色进行投喂",
+            "[JumpBack]黑屏计数",
+            "[JumpBack]预期外错误的OK"
         ],
-        "interrupt": [
-            "选择角色进行投喂",
-            "黑屏计数",
-            "预期外错误的OK"
-        ]
     },
     "选择角色进行投喂": {
         "post_delay": 1000,
@@ -43,12 +36,10 @@
         "expected": "探訪禮物",
         "action": "Click",
         "next": [
-            "寻找小零食"
+            "寻找小零食",
+            "[JumpBack]向下滑动",
+            "[JumpBack]叉叉"
         ],
-        "interrupt": [
-            "向下滑动",
-            "叉叉"
-        ]
     },
     "向下滑动": {
         "action": "Swipe",
@@ -64,7 +55,7 @@
             10,
             10
         ],
-        "next": "停止滑动",
+        "next": ["停止滑动"],
         "post_delay": 1500
     },
     "停止滑动": {
@@ -101,24 +92,14 @@
             "日常-喂食角色//饭团.png"
         ],
         "action": "Click",
-        "next": [
-            "添加食物"
-        ],
-        "interrupt": [
-            "叉叉"
-        ]
+        "next": ["添加食物", "[JumpBack]叉叉"],
     },
     "添加食物": {
         "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": "通用符号//加号.png",
         "action": "Click",
-        "next": [
-            "喂食之YES"
-        ],
-        "interrupt": [
-            "叉叉"
-        ]
+        "next": ["喂食之YES", "[JumpBack]叉叉"],
     },
     "喂食之YES": {
         "recognition": "OCR",
@@ -126,12 +107,10 @@
         "action": "Click",
         "post_delay": 5000,
         "next": [
-            "识别失败再返回菜单-识别层-结束任务"
+            "识别失败再返回菜单-识别层-结束任务",
+            "[JumpBack]叉叉",
+            "[JumpBack]喂食角色-识别失败再返回菜单-点击菜单层"
         ],
-        "interrupt": [
-            "叉叉",
-            "喂食角色-识别失败再返回菜单-点击菜单层"
-        ]
     },
     "喂食角色-识别失败再返回菜单-点击菜单层": {
         "recognition": "TemplateMatch",

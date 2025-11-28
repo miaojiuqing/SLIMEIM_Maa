@@ -4,28 +4,26 @@
         "package": "com.bandainamcoent.tensuramrkww",
         "next": [
             "识别是否已开启菜单",
-            "游戏版本需要从应用商店更新"
-        ],
-        "interrupt": [
-            "点击下一步",
-            "开始游戏1",
-            "开始游戏2",
-            "黑屏计数",
-            "白屏计数",
-            "正在确认更新内容",
-            "有可更新资料",
-            "预期外错误的OK",
-            "skip",
-            "YES",
-            "仓库满了",
-            "OK",
-            "叉叉",
-            "触发剧情-跳过",
-            "识别失败再返回菜单-点击菜单层",
-            "点击選單",
-            "点击左上角返回箭头",
-            "喂食角色-识别失败再返回菜单-点击菜单层",
-            "乱点一下"
+            "游戏版本需要从应用商店更新",
+            "[JumpBack]点击下一步",
+            "[JumpBack]开始游戏1",
+            "[JumpBack]开始游戏2",
+            "[JumpBack]黑屏计数",
+            "[JumpBack]白屏计数",
+            "[JumpBack]正在确认更新内容",
+            "[JumpBack]有可更新资料",
+            "[JumpBack]预期外错误的OK",
+            "[JumpBack]skip",
+            "[JumpBack]YES",
+            "[JumpBack]仓库满了",
+            "[JumpBack]OK",
+            "[JumpBack]叉叉",
+            "[JumpBack]触发剧情-跳过",
+            "[JumpBack]识别失败再返回菜单-点击菜单层",
+            "[JumpBack]点击選單",
+            "[JumpBack]点击左上角返回箭头",
+            "[JumpBack]喂食角色-识别失败再返回菜单-点击菜单层",
+            "[JumpBack]乱点一下"
         ]
     },
     "启动游戏": {
@@ -73,14 +71,18 @@
         "post_delay": 5000,
         "recognition": "TemplateMatch",
         "template": "进入//开始游戏//有可更新的资料.png",
-        "next": "OK"
+        "next": [
+            "OK"
+        ]
     },
     "正在确认更新内容": {
         "recognition": "OCR",
         "expected": "正在確認更新內容",
         "post_delay": 5000,
-        "next": "有可更新资料",
-        "interrupt": "OK"
+        "next": [
+            "有可更新资料",
+            "[JumpBack]OK"
+        ]
     },
     "仓库满了": {
         "post_delay": 5000,
@@ -100,9 +102,9 @@
         "template": "选单.png",
         "action": "Click",
         "next": [
-            "识别是否已开启菜单"
+            "识别是否已开启菜单",
+            "[JumpBack]点击選單"
         ],
-        "interrupt": "点击選單",
         "doc": "-------------------------------------------------------至此，启动游戏并打开菜单完成"
     },
     "白屏计数": {

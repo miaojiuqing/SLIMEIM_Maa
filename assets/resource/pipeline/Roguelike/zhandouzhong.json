@@ -9,15 +9,13 @@
             "战斗逻辑//战时检测-捕食战血条.png"
         ],
         "next": [
-            "镜塔-战斗已经结束"
+            "镜塔-战斗已经结束",
+            "[JumpBack]OK",
+            "[JumpBack]skip",
+            "[JumpBack]战斗中",
+            "[JumpBack]选择路线",
+            "[JumpBack]切换为自动战斗"
         ],
-        "interrupt": [
-            "OK",
-            "skip",
-            "战斗中",
-            "选择路线",
-            "切换为自动战斗"
-        ]
     },
     "镜塔-出击": {
         "roi": [
@@ -43,17 +41,15 @@
         "recognition": "TemplateMatch",
         "template": "梦幻镜魔塔//战斗事件//肉鸽-战斗结束.png",
         "next": [
-            "肉鸽-路线选择界面检测"
+            "肉鸽-路线选择界面检测",
+            "[JumpBack]OK",
+            "[JumpBack]镜塔-点击开始",
+            "[JumpBack]黑屏计数",
+            "[JumpBack]点击下一步",
+            "[JumpBack]点击梦幻镜魔境入口",
+            "[JumpBack]肉鸽-开始/重启此层",
+            "[JumpBack]空任务"
         ],
-        "interrupt": [
-            "OK",
-            "镜塔-点击开始",
-            "黑屏计数",
-            "点击下一步",
-            "点击梦幻镜魔境入口",
-            "肉鸽-开始/重启此层",
-            "空任务"
-        ]
     },
     "镜塔-误触": {
         "recognition": "TemplateMatch",
