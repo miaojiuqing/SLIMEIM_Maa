@@ -10,7 +10,7 @@
             "[JumpBack]PVP-选择对手进行挑战-点击小奖杯",
             "[JumpBack]英桀杯-已进入战斗",
             "[JumpBack]空任务"
-        ],
+        ]
     },
     "英桀杯-自动化战斗逻辑-有挑战卷-检查是否已进入战斗-如是等待战斗结束": {
         "recognition": "OCR",
@@ -27,7 +27,7 @@
             "[JumpBack]skip",
             "[JumpBack]英桀杯-已进入战斗",
             "[JumpBack]黑屏计数"
-        ],
+        ]
     },
     "英桀杯-自动化战斗逻辑-进去先切换为自动战斗模式": {
         "roi": [
@@ -38,17 +38,17 @@
         ],
         "recognition": "ColorMatch",
         "upper": [
-            34,
-            39,
-            34
+            40,
+            40,
+            41
         ],
         "lower": [
-            21,
-            25,
-            21
+            15,
+            14,
+            15
         ],
         "method": 4,
-        "count": 1000,
+        "count": 280,
         "action": "Click",
         "post_delay": 400
     }

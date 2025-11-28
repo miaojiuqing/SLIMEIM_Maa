@@ -153,10 +153,10 @@
             "[JumpBack]点击下一步",
             "[JumpBack]点击确定",
             "[JumpBack]检查节点类型",
-            "[JumpBack]英桀杯-自动化战斗逻辑-进去先切换为自动战斗模式",
-            "[JumpBack]战斗中",
             "[JumpBack]自动主线-剧情跳过",
-            "[JumpBack]无延迟-黑屏计数"
+            "[JumpBack]无延迟-黑屏计数",
+            "[JumpBack]战斗中",
+            "[JumpBack]英桀杯-自动化战斗逻辑-进去先切换为自动战斗模式"
         ]
     },
     "检查不到有未挑战关卡": {
@@ -196,8 +196,10 @@
         "next": [
             "刷关逻辑-准备出击",
             "[JumpBack]刷关专用-体力不足如何处理",
+            "[JumpBack]叉叉",
             "[JumpBack]skip",
             "[JumpBack]OK",
+            "[JumpBack]自动刷关-剧情纪要",
             "[JumpBack]点击出击",
             "[JumpBack]YES",
             "[JumpBack]点击下一步",
@@ -209,6 +211,21 @@
             "[JumpBack]无延迟-黑屏计数"
         ]
     },
+    "自动刷关-剧情纪要": {
+        "threshold": 0.8,
+        "roi": [
+            463,
+            567,
+            360,
+            137
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "結束",
+            ".*跳過"
+        ],
+        "action": "Click"
+    },
     "自动刷关-进去先切换为自动战斗模式": {
         "roi": [
             1060,
@@ -218,14 +235,14 @@
         ],
         "recognition": "ColorMatch",
         "upper": [
-            33,
-            41,
-            51
+            40,
+            40,
+            41
         ],
         "lower": [
-            11,
-            16,
-            24
+            15,
+            14,
+            15
         ],
         "method": 4,
         "count": 750,
@@ -245,6 +262,7 @@
             "[JumpBack]OK",
             "[JumpBack]点击出击",
             "[JumpBack]YES",
+            "[JumpBack]自动刷关-剧情纪要",
             "[JumpBack]点击下一步",
             "[JumpBack]点击确定",
             "[JumpBack]检查节点类型",
