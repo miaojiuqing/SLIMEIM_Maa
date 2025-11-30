@@ -181,6 +181,7 @@
             505
         ],
         "recognition": "TemplateMatch",
+        "threshold": 0.85,
         "template": "活动期间/奖励任务/每日一关/无法进入魔王与龙的激战谭.png",
         "post_delay": 1000,
         "next": [
