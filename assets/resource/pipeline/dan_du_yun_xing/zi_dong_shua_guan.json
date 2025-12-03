@@ -196,12 +196,12 @@
         "next": [
             "刷关逻辑-准备出击",
             "[JumpBack]刷关专用-体力不足如何处理",
+            "[JumpBack]YES",
             "[JumpBack]叉叉",
             "[JumpBack]skip",
             "[JumpBack]OK",
             "[JumpBack]自动刷关-剧情纪要",
             "[JumpBack]点击出击",
-            "[JumpBack]YES",
             "[JumpBack]点击下一步",
             "[JumpBack]点击确定",
             "[JumpBack]检查节点类型",
