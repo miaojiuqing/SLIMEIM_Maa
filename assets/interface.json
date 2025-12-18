@@ -47,7 +47,10 @@
         },
         {
             "name": "日常-建筑支援请求",
-            "entry": "日常任务之请求建筑支援"
+            "entry": "日常任务之请求建筑支援",
+            "option": [
+                "申请支援前切换地区"
+            ]
         },
         {
             "name": "日常-锻造场升级装备",
@@ -220,6 +223,84 @@
                 }
             ],
             "default_case": "NO"
+        },
+        "申请支援前切换地区": {
+            "description": "主要用于兼容官方的bug",
+            "type": "select",
+            "cases": [
+                {
+                    "name": "不进行切换",
+                    "pipeline_override": {
+                        "日常任务-建筑支援申请-地区检查": {
+                            "focus": {
+                                "Node.Recognition.Failed": "当前非选中地区，正在进行切换",
+                                "Node.Recognition.Succeeded": "未选择地区切换，将不进行切换"
+                            },
+                            "recognition": "DirectHit"
+                        }
+                    }
+                },
+                {
+                    "name": "中央地区",
+                    "pipeline_override": {
+                        "日常任务-建筑支援申请-地区检查": {
+                            "focus": {
+                                "Node.Recognition.Failed": "当前非选中地区，正在进行切换",
+                                "Node.Recognition.Succeeded": "成功进入所选地区：中央地区"
+                            },
+                            "expected": [
+                                "中央.*"
+                            ]
+                        },
+                        "日常任务-建筑支援申请-地区检查-点击切换所选地区": {
+                            "expected": [
+                                "中央.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "竹林地区",
+                    "pipeline_override": {
+                        "日常任务-建筑支援申请-地区检查": {
+                            "focus": {
+                                "Node.Recognition.Failed": "当前非选中地区，正在进行切换",
+                                "Node.Recognition.Succeeded": "成功进入所选地区：中央地区"
+                            },
+                            "expected": [
+                                "竹林.*"
+                            ]
+                        },
+                        "日常任务-建筑支援申请-地区检查-点击切换所选地区": {
+                            "expected": [
+                                "竹林.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "猶拉瑟尼亞",
+                    "pipeline_override": {
+                        "日常任务-建筑支援申请-地区检查": {
+                            "focus": {
+                                "Node.Recognition.Failed": "当前非选中地区，正在进行切换",
+                                "Node.Recognition.Succeeded": "成功进入所选地区：中央地区"
+                            },
+                            "expected": [
+                                "猶拉.*",
+                                "瑟尼亞"
+                            ]
+                        },
+                        "日常任务-建筑支援申请-地区检查-点击切换所选地区": {
+                            "expected": [
+                                "猶拉.*",
+                                "瑟尼亞"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "default_case": "中央地区"
         },
         "是否启用自动排序装备": {
             "type": "select",
