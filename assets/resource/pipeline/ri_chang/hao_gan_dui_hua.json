@@ -5,9 +5,9 @@
             "[JumpBack]喂食角色-识别失败再返回菜单-点击菜单层",
             "[JumpBack]进入游戏并打开菜单"
         ],
+        "max_hit": 3
     },
     "每日任务之好感度对话": {
-        "_doc": "---------------------------------------------------------------------------------------对话城镇角色任务开始",
         "roi": [
             948,
             557,
@@ -15,7 +15,9 @@
             161
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//进入首页按钮(好感度对话用).png",
+        "template": [
+            "日常-好感度对话//进入首页按钮(好感度对话用).png"
+        ],
         "action": "Click",
         "post_delay": 5000,
         "next": [
@@ -28,7 +30,7 @@
             "[JumpBack]城镇对话—只需等待",
             "[JumpBack]skip",
             "[JumpBack]乱点一下"
-        ],
+        ]
     },
     "点击进入选人对话界面": {
         "post_delay": 2000,
@@ -39,9 +41,10 @@
             175
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//进入好感度对话and泡温泉UI.png",
+        "template": [
+            "日常-好感度对话//进入好感度对话and泡温泉UI.png"
+        ],
         "action": "Click",
-        "_doc": "-----------------------------------------------------检测是否有可对话对象",
         "next": [
             "识别是否已进入选择对话界面",
             "[JumpBack]仓库满了",
@@ -51,32 +54,42 @@
             "[JumpBack]有可更新资料",
             "[JumpBack]发生预期外的错误_400"
         ],
+        "on_error": [
+            "每日任务之好感度对话-开始任务层"
+        ]
     },
     "识别是否已进入选择对话界面": {
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//不可对话前提识别限制-伙伴一览.png",
-        "next": ["正式开始好感度对话任务"]
+        "template": [
+            "日常-好感度对话//不可对话前提识别限制-伙伴一览.png"
+        ],
+        "next": [
+            "正式开始好感度对话任务"
+        ]
     },
     "正式开始好感度对话任务": {
-        "_doc": "---------------------------一定要在上一步已经检查并确认进入了对话界面,之后再去检查此是是否可以对话",
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//不可对话前提识别限制-伙伴一览.png",
+        "template": [
+            "日常-好感度对话//不可对话前提识别限制-伙伴一览.png"
+        ],
         "next": [
             "有可对话对象-第一行",
             "有可对话对象-第二行",
             "识别不到可对话对象",
             "[JumpBack]有可对话对象",
             "[JumpBack]点击进入选人对话界面"
-        ],
+        ]
     },
     "识别不到可对话对象中间层": {
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//不可对话前提识别限制-伙伴一览.png",
+        "template": [
+            "日常-好感度对话//不可对话前提识别限制-伙伴一览.png"
+        ],
         "next": [
             "识别不到可对话对象",
             "[JumpBack]有可对话对象",
             "[JumpBack]点击进入选人对话界面"
-        ],
+        ]
     },
     "有可对话对象": {
         "roi": [
@@ -86,7 +99,9 @@
             573
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//可对话_移动.png",
+        "template": [
+            "日常-好感度对话//可对话_移动.png"
+        ],
         "threshold": 0.9,
         "action": "Click",
         "post_delay": 500,
@@ -96,7 +111,7 @@
             "[JumpBack]叉叉",
             "[JumpBack]取消",
             "[JumpBack]过对话"
-        ],
+        ]
     },
     "有可对话对象-第一行": {
         "roi": [
@@ -106,7 +121,9 @@
             302
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//可对话_移动.png",
+        "template": [
+            "日常-好感度对话//可对话_移动.png"
+        ],
         "threshold": 0.9,
         "action": "Click",
         "post_delay": 500,
@@ -117,7 +134,7 @@
             "[JumpBack]取消",
             "[JumpBack]OK",
             "[JumpBack]过对话"
-        ],
+        ]
     },
     "有可对话对象-第二行": {
         "roi": [
@@ -127,7 +144,9 @@
             255
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//可对话_移动.png",
+        "template": [
+            "日常-好感度对话//可对话_移动.png"
+        ],
         "threshold": 0.9,
         "action": "Click",
         "post_delay": 500,
@@ -138,7 +157,7 @@
             "[JumpBack]取消",
             "[JumpBack]OK",
             "[JumpBack]过对话"
-        ],
+        ]
     },
     "日常对话-城市切换弹窗": {
         "roi": [
@@ -179,7 +198,9 @@
             573
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//可对话_移动.png",
+        "template": [
+            "日常-好感度对话//可对话_移动.png"
+        ],
         "inverse": true,
         "threshold": 0.9,
         "action": "DoNothing",
@@ -189,7 +210,7 @@
             "[JumpBack]叉叉",
             "[JumpBack]点击選單",
             "[JumpBack]乱点一下"
-        ],
+        ]
     },
     "对话过了": {
         "recognition": "TemplateMatch",
@@ -204,15 +225,16 @@
             "[JumpBack]叉叉",
             "[JumpBack]单独打开选人对话界面",
             "[JumpBack]过对话"
-        ],
+        ]
     },
     "单独打开选人对话界面": {
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//进入好感度对话and泡温泉UI.png",
+        "template": [
+            "日常-好感度对话//进入好感度对话and泡温泉UI.png"
+        ],
         "action": "Click"
     },
     "过对话": {
-        "_doc": "------------------------------------------------------一个单纯的点击动作",
         "recognition": "DirectHit",
         "post_delay": 370,
         "action": "Click",
@@ -243,10 +265,9 @@
             "[JumpBack]无延迟-点击OK",
             "[JumpBack]黑屏计数",
             "[JumpBack]过对话"
-        ],
+        ]
     },
     "返回菜单_好感任务专用": {
-        "_doc": "----------------------------------------通用node",
         "post_delay": 1000,
         "green_mask": true,
         "recognition": "TemplateMatch",
@@ -262,7 +283,7 @@
             "[JumpBack]叉叉",
             "[JumpBack]点击選單",
             "[JumpBack]乱点一下"
-        ],
+        ]
     },
     "城镇对话—只需等待": {
         "green_mask": true,
