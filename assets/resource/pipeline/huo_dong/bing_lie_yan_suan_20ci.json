@@ -45,6 +45,7 @@
             "进入并列演算关卡",
             "检查是否进入当期活动-准备并列演算",
             "[JumpBack]OK",
+            "[JumpBack]活动并列演算-小入口",
             "[JumpBack]误触-进入活动捕食战了",
             "[JumpBack]点击进入当期活动",
             "[JumpBack]版本活动限定-每日并列演算",
@@ -54,6 +55,20 @@
             "[JumpBack]活动期间捕食战-活动期间限定任务滑到底了-随时更新",
             "[JumpBack]点击期间限定活动"
         ]
+    },
+    "活动并列演算-小入口": {
+        "roi": [
+            710,
+            121,
+            268,
+            279
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "活动期间/每期活动的捕食战/活动演算小入口.png"
+        ],
+        "action": "Click",
+        "post_delay": 1000
     },
     "并列演算-任务列表滑到底了": {
         "roi": [
@@ -128,15 +143,21 @@
     },
     "检查是否进入当期活动-准备并列演算": {
         "roi": [
-            656,
-            70,
-            555,
-            514
+            674,
+            145,
+            328,
+            197
         ],
-        "recognition": "TemplateMatch",
-        "green_mask": true,
-        "template": "活动期间//每天20次并列演算//活动20次并列演算-进入战斗准备并列演算.png",
-        "action": "Click",
+        "recognition": "OCR",
+        "expected": [
+            // "劍士與魔王",
+            "魔王",
+            "劍士"
+        ],
+        // "recognition": "TemplateMatch",
+        // "green_mask": true,
+        // "template": "活动期间//每天20次并列演算//活动20次并列演算-进入战斗准备并列演算.png",
+        // "action": "Click",
         "next": [
             "进入并列演算关卡",
             "[JumpBack]OK",
@@ -183,6 +204,7 @@
         ],
         "action": "Click",
         "next": [
+            "[JumpBack]本日并列演算次数已达上限",
             "切换至第七队",
             "[JumpBack]点击并列演算",
             "[JumpBack]进入并列演算关卡",
@@ -191,10 +213,10 @@
     },
     "本日并列演算次数已达上限": {
         "roi": [
-            821,
-            189,
-            189,
-            28
+            721,
+            138,
+            443,
+            135
         ],
         "recognition": "OCR",
         "expected": [
