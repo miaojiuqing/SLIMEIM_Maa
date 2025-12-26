@@ -99,7 +99,12 @@
         "post_delay": 5000,
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "选单.png",
+        "template": [
+            "选单.png",
+            "返回菜单.png",
+            "返回菜单/返回菜单4.png",
+            "通用符号//小选单.png"
+        ],
         "action": "Click",
         "next": [
             "识别是否已开启菜单",
