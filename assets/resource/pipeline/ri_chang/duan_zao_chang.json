@@ -7,14 +7,17 @@
             152
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-锻造场//锻造场进入.png",
+        "template": [
+            "日常-锻造场//锻造场进入.png"
+        ],
         "action": "Click",
         "green_mask": true,
         "next": [
             "装备开始强化",
             "[JumpBack]锻造场升级任务",
-            "[JumpBack]黑屏计数"
-        ],
+            "[JumpBack]黑屏计数",
+            "[JumpBack]进入游戏并打开菜单"
+        ]
     },
     "装备开始强化": {
         "roi": [
@@ -36,15 +39,18 @@
             "锻造场OK",
             "[JumpBack]点击装备强化",
             "[JumpBack]装备开始强化"
-        ],
+        ]
     },
     "点击装备强化": {
         "post_delay": 1000,
         "recognition": "TemplateMatch",
-        "template": "日常-锻造场//up强化.png",
+        "template": [
+            "日常-锻造场//up强化.png"
+        ],
         "action": "Click",
-        "next": ["修改排序规则"],
-        "_doc": "---------------------------------------------------------------准备添加修改排序任务"
+        "next": [
+            "修改排序规则"
+        ]
     },
     "修改排序规则": {
         "post_delay": 2500,
@@ -57,7 +63,9 @@
     "排序1": {
         "post_delay": 500,
         "recognition": "TemplateMatch",
-        "template": "日常-锻造场//锻造场_排序1.png",
+        "template": [
+            "日常-锻造场//锻造场_排序1.png"
+        ],
         "action": "Click",
         "next": [
             "排序选择_LV"
@@ -101,9 +109,13 @@
             465
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-锻造场//绿色由低至高.png",
+        "template": [
+            "日常-锻造场//绿色由低至高.png"
+        ],
         "action": "DoNothing",
-        "next": ["确认排序"]
+        "next": [
+            "确认排序"
+        ]
     },
     "确认排序": {
         "recognition": "OCR",
@@ -135,7 +147,7 @@
             "日常-锻造任务-该种类最低等级装备无法强化-点击ALL",
             "点击LV提升",
             "[JumpBack]选择低等级装备"
-        ],
+        ]
     },
     "选择低等级装备-点击ALL之后再筛一次": {
         "post_delay": 1000,
@@ -154,20 +166,30 @@
     "点击LV提升": {
         "post_delay": 1000,
         "recognition": "TemplateMatch",
-        "template": "日常-锻造场//LV提升.png",
+        "template": [
+            "日常-锻造场//LV提升.png"
+        ],
         "action": "Click",
-        "next": ["添加磨刀石"]
+        "next": [
+            "添加磨刀石"
+        ]
     },
     "添加磨刀石": {
         "post_delay": 1000,
         "recognition": "TemplateMatch",
-        "template": "通用符号//加号.png",
+        "template": [
+            "通用符号//加号.png"
+        ],
         "action": "Click",
-        "next": ["强化"]
+        "next": [
+            "强化"
+        ]
     },
     "强化": {
         "recognition": "TemplateMatch",
-        "template": "日常-锻造场//添加磨刀石之后的LV.提升.png",
+        "template": [
+            "日常-锻造场//添加磨刀石之后的LV.提升.png"
+        ],
         "action": "Click",
         "next": [
             "锻造确认"
@@ -188,17 +210,18 @@
             "识别失败再返回菜单-识别层-结束任务",
             "[JumpBack]锻造场任务结束点叉叉",
             "[JumpBack]识别失败再返回菜单-点击菜单层"
-        ],
+        ]
     },
     "锻造场任务结束点叉叉": {
         "post_delay": 1000,
         "recognition": "TemplateMatch",
-        "template": "日常-锻造场//锻造场叉叉.png",
+        "template": [
+            "日常-锻造场//锻造场叉叉.png"
+        ],
         "action": "Click",
         "next": [
             "返回菜单-锻造场"
-        ],
-        "_doc": "-----------------------------------------------------------锻造任务结束"
+        ]
     },
     "返回菜单-锻造场": {
         "roi": [
@@ -217,7 +240,9 @@
             "选单.png"
         ],
         "action": "Click",
-        "next": ["结束任务"]
+        "next": [
+            "结束任务"
+        ]
     },
     "日常-锻造任务-该种类最低等级装备无法强化-点击ALL": {
         "roi": [
