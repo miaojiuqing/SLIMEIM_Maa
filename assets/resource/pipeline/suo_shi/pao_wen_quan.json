@@ -70,7 +70,8 @@
             "[JumpBack]琐事_泡温泉_移动到温泉区域",
             "[JumpBack]OK",
             "[JumpBack]YES",
-            "[JumpBack]不可以再泡温泉了"
+            "[JumpBack]不可以再泡温泉了",
+            "[JumpBack]过对话-温泉"
         ]
     },
     "点击进入设施一览": {
