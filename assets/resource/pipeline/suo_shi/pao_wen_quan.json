@@ -6,7 +6,7 @@
             "[JumpBack]点击左上角返回箭头",
             "[JumpBack]叉叉",
             "[JumpBack]进入游戏并打开菜单"
-        ],
+        ]
     },
     "泡温泉领体力": {
         "roi": [
@@ -16,8 +16,9 @@
             154
         ],
         "recognition": "TemplateMatch",
-        "_doc": "---------------------------------------------------------------------------------------借用一下",
-        "template": "日常-好感度对话//进入首页按钮(好感度对话用).png",
+        "template": [
+            "日常-好感度对话//进入首页按钮(好感度对话用).png"
+        ],
         "action": "Click",
         "post_delay": 5000,
         "next": [
@@ -29,7 +30,7 @@
             "[JumpBack]skip",
             "[JumpBack]识别是否已进入温泉门口-识别层",
             "[JumpBack]过对话-温泉"
-        ],
+        ]
     },
     "点击进入泡温泉界面": {
         "post_delay": 2000,
@@ -40,14 +41,16 @@
             175
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-好感度对话//进入好感度对话and泡温泉UI.png",
+        "template": [
+            "日常-好感度对话//进入好感度对话and泡温泉UI.png"
+        ],
         "action": "Click",
         "next": [
             "检查是否进入设施一览",
             "[JumpBack]点击进入设施一览",
             "[JumpBack]点击进入泡温泉界面",
             "[JumpBack]不可以再泡温泉了"
-        ],
+        ]
     },
     "检查是否进入设施一览": {
         "roi": [
@@ -68,7 +71,7 @@
             "[JumpBack]OK",
             "[JumpBack]YES",
             "[JumpBack]不可以再泡温泉了"
-        ],
+        ]
     },
     "点击进入设施一览": {
         "roi": [
@@ -105,8 +108,9 @@
             "[JumpBack]OK",
             "[JumpBack]YES",
             "[JumpBack]不可以再泡温泉了",
-            "[JumpBack]黑屏计数"
-        ],
+            "[JumpBack]黑屏计数",
+            "[JumpBack]过对话-温泉"
+        ]
     },
     "识别是否已进入温泉门口-识别层": {
         "roi": [
@@ -115,17 +119,19 @@
             836,
             507
         ],
-        "threshold": 0.90,
+        "threshold": 0.9,
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "每日琐事//琐事-泡温泉//琐事-泡温泉界面检查.png",
+        "template": [
+            "每日琐事//琐事-泡温泉//琐事-泡温泉界面检查.png"
+        ],
         "post_delay": 800,
         "next": [
             "不可以再泡温泉了",
             "[JumpBack]开始泡温泉检测",
             "[JumpBack]识别是否已进入温泉门口-点击层",
             "[JumpBack]YES"
-        ],
+        ]
     },
     "识别是否已进入温泉门口-点击层": {
         "roi": [
@@ -134,10 +140,12 @@
             836,
             507
         ],
-        "threshold": 0.90,
+        "threshold": 0.9,
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "每日琐事//琐事-泡温泉//琐事-泡温泉界面检查.png",
+        "template": [
+            "每日琐事//琐事-泡温泉//琐事-泡温泉界面检查.png"
+        ],
         "action": "Click",
         "post_delay": 800
     },
@@ -152,10 +160,13 @@
             "[JumpBack]OK",
             "[JumpBack]不可以再泡温泉了",
             "[JumpBack]过对话-温泉"
-        ],
+        ]
     },
     "正在泡温泉": {
-        "next": ["温泉结算界面", "[JumpBack]过对话-温泉"],
+        "next": [
+            "温泉结算界面",
+            "[JumpBack]过对话-温泉"
+        ]
     },
     "温泉结算界面": {
         "roi": [
@@ -176,7 +187,7 @@
             "[JumpBack]识别是否已进入温泉门口-识别层",
             "[JumpBack]OK",
             "[JumpBack]过对话-温泉"
-        ],
+        ]
     },
     "过对话-温泉": {
         "action": "Click",
@@ -208,7 +219,7 @@
             "[JumpBack]叉叉",
             "[JumpBack]YES",
             "[JumpBack]返回菜单"
-        ],
+        ]
     },
     "不可以再泡温泉了-开始返回菜单": {
         "next": [
@@ -218,7 +229,7 @@
             "[JumpBack]叉叉",
             "[JumpBack]YES",
             "[JumpBack]过对话-温泉"
-        ],
+        ]
     },
     "泡温泉-OK": {
         "recognition": "OCR",
@@ -233,7 +244,10 @@
         "template": [
             "日常-好感度对话//进入好感度对话and泡温泉UI.png"
         ],
-        "next": ["泡温泉-识别失败再返回菜单-识别层", "[JumpBack]泡温泉-识别失败再返回菜单-点击菜单层"],
+        "next": [
+            "泡温泉-识别失败再返回菜单-识别层",
+            "[JumpBack]泡温泉-识别失败再返回菜单-点击菜单层"
+        ]
     },
     "泡温泉-识别失败再返回菜单-识别层": {
         "green_mask": true,
