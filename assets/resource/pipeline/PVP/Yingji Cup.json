@@ -84,6 +84,35 @@
         ],
         "doc": "------------------------------------------战斗开始了,开始进行战中逻辑"
     },
+    "英桀杯-战斗结束": {
+        "roi": [
+            648,
+            8,
+            519,
+            104
+        ],
+        "recognition": "OCR",
+        "expected": [
+            "WIN",
+            "LOSE"
+        ],
+        "focus": {
+            "succeeded": "打完一把"
+        },
+        "next": [
+            "英桀杯-挑战卷不足",
+            "英桀杯_出击",
+            "[JumpBack]英桀杯-回合数-1",
+            "[JumpBack]黑屏计数",
+            "[JumpBack]点击下一步",
+            "[JumpBack]叉叉",
+            "[JumpBack]OK",
+            "[JumpBack]PVP-选择对手进行挑战-点击小奖杯",
+            "[JumpBack]英桀杯-误触-进入了切换角色界面",
+            "[JumpBack]英桀杯-准备出击检查并点击",
+            "[JumpBack]英桀杯-乱点一下"
+        ]
+    },
     "英桀杯-挑战卷不足": {
         "roi": [
             379,
@@ -200,35 +229,6 @@
         "recognition": "OCR",
         "expected": [
             "技能點數"
-        ]
-    },
-    "英桀杯-战斗结束": {
-        "roi": [
-            648,
-            8,
-            519,
-            104
-        ],
-        "recognition": "OCR",
-        "expected": [
-            "WIN",
-            "LOSE"
-        ],
-        "focus": {
-            "succeeded": "打完一把"
-        },
-        "next": [
-            "英桀杯-挑战卷不足",
-            "英桀杯_出击",
-            "[JumpBack]英桀杯-回合数-1",
-            "[JumpBack]黑屏计数",
-            "[JumpBack]点击下一步",
-            "[JumpBack]叉叉",
-            "[JumpBack]OK",
-            "[JumpBack]PVP-选择对手进行挑战-点击小奖杯",
-            "[JumpBack]英桀杯-误触-进入了切换角色界面",
-            "[JumpBack]英桀杯-准备出击检查并点击",
-            "[JumpBack]英桀杯-乱点一下"
         ]
     },
     "英桀杯-点击确定": {
