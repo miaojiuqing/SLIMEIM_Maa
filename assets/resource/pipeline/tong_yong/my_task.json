@@ -161,6 +161,7 @@
             "返回菜单/返回菜单4.png"
         ],
         "green_mask": true,
+        "post_delay": 3000,
         "threshold": 0.99,
         "action": "Click"
     },

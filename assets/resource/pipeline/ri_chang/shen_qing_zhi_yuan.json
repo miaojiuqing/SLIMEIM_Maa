@@ -137,8 +137,8 @@
             "点击支援",
             "[JumpBack]OK",
             "[JumpBack]叉叉",
-            "[JumpBack]点击右下角兴建",
-            "[JumpBack]识别失败再返回菜单-点击菜单层"
+            "[JumpBack]点击右下角兴建"
+            // "[JumpBack]识别失败再返回菜单-点击菜单层"
         ],
         "on_error": [
             "日常任务-建筑支援申请-任务开始层"
