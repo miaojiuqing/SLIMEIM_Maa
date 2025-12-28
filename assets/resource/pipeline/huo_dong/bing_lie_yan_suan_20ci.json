@@ -52,6 +52,7 @@
             "[JumpBack]黑屏计数",
             "[JumpBack]并列演算-任务列表滑到底了",
             "[JumpBack]滑动寻找当期活动",
+            "[JumpBack]反向滑动寻找当期活动",
             "[JumpBack]活动期间捕食战-活动期间限定任务滑到底了-随时更新",
             "[JumpBack]点击期间限定活动"
         ]
@@ -131,6 +132,27 @@
             929,
             408,
             0,
+            0
+        ],
+        "post_delay": 3000,
+        "timeout": 2000,
+        "max_hit": 25
+    },
+    "反向滑动寻找当期活动": {
+        "recognition": "TemplateMatch",
+        "template": "活动期间//每天20次并列演算//活动20次并列演算-进入活动.png",
+        "inverse": true,
+        "action": "Swipe",
+        "begin": [
+            929,
+            408,
+            0,
+            0
+        ],
+        "end": [
+            929,
+            408,
+            300,
             0
         ],
         "post_delay": 3000,
