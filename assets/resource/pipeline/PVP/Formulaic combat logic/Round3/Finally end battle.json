@@ -14,7 +14,7 @@
             "英桀杯//普攻图标//普攻类型-黄卡.png",
             "英桀杯//普攻图标//普攻类型-全能卡.png"
         ],
-        "threshold": 0.95,
+        "threshold": 0.75,
         "green_mask": true,
         "action": "Click",
         "pre_delay": 500,
@@ -91,7 +91,9 @@
             "英桀杯//奥义图标//奥义类型-范围普奥.png",
             "英桀杯//奥义图标//奥义类型-范围极奥.png"
         ],
-        "threshold": 0.95,
+        "threshold": 0.7,
+        // "threshold": 0.85,
+        "post_delay": 500,
         "next": [
             "英桀杯-点击发动-第三回合-点好普攻和奥义之后",
             "[JumpBack]skip"

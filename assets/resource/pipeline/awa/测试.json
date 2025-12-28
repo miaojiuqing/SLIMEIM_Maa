@@ -92,23 +92,15 @@
     },
     "图片识别测试分数": {
         "roi": [
-            1010,
-            174,
-            245,
-            534
+            136,
+            460,
+            1021,
+            260
         ],
-        "pre_delay": 3000,
         "recognition": "TemplateMatch",
+        "green_mask": true,
         "template": [
-            "日常-捕食战/捕食类型-坚守.png"
-        ],
-        "threshold": 0.85,
-        "action": "Click",
-        "target_offset": [
-            -400,
-            0,
-            200,
-            0
+            "英桀杯/技能图标/三转技能-未选择状态.png"
         ]
     },
     "色块识别测试分数": {
