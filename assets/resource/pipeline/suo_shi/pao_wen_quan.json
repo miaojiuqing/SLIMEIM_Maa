@@ -70,6 +70,7 @@
             "[JumpBack]琐事_泡温泉_移动到温泉区域",
             "[JumpBack]OK",
             "[JumpBack]YES",
+            "[JumpBack]点击进入泡温泉界面",
             "[JumpBack]不可以再泡温泉了",
             "[JumpBack]过对话-温泉"
         ]
@@ -110,6 +111,7 @@
             "[JumpBack]YES",
             "[JumpBack]不可以再泡温泉了",
             "[JumpBack]黑屏计数",
+            "[JumpBack]点击进入泡温泉界面",
             "[JumpBack]过对话-温泉"
         ]
     },
@@ -160,12 +162,14 @@
             "温泉结算界面",
             "[JumpBack]OK",
             "[JumpBack]不可以再泡温泉了",
+            "[JumpBack]点击进入泡温泉界面",
             "[JumpBack]过对话-温泉"
         ]
     },
     "正在泡温泉": {
         "next": [
             "温泉结算界面",
+            "[JumpBack]点击进入泡温泉界面",
             "[JumpBack]过对话-温泉"
         ]
     },
