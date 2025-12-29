@@ -180,7 +180,8 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "活动期间//每期活动的捕食战//活动捕食战-入口.png",
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 2000
     },
     "滑动寻找当期活动-活动捕食战专享": {
         "roi": [

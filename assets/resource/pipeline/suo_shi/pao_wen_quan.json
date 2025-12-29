@@ -49,6 +49,9 @@
             "检查是否进入设施一览",
             "[JumpBack]点击进入设施一览",
             "[JumpBack]点击进入泡温泉界面",
+            "[JumpBack]黑屏计数",
+            "[JumpBack]OK",
+            "[JumpBack]YES",
             "[JumpBack]不可以再泡温泉了"
         ]
     },
