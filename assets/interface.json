@@ -1479,6 +1479,7 @@
                                 "[JumpBack]PVP-选择对手进行挑战-点击小奖杯",
                                 "[JumpBack]英桀杯-有挑战卷-检查是否已进入战斗-如是则开始进行公式化战斗逻辑",
                                 "[JumpBack]英桀杯-已进入战斗",
+                                "[JumpBack]英桀杯-进入一般战",
                                 "[JumpBack]英桀杯-误触-进入了切换角色界面",
                                 "[JumpBack]空任务"
                             ]
@@ -1511,6 +1512,7 @@
                                 "[JumpBack]英桀杯-已进入战斗",
                                 "[JumpBack]英桀杯-误触-进入了切换角色界面",
                                 "[JumpBack]英桀杯_出击",
+                                "[JumpBack]英桀杯-进入一般战",
                                 "[JumpBack]空任务"
                             ]
                         },
@@ -1524,6 +1526,7 @@
                                 "[JumpBack]叉叉",
                                 "[JumpBack]OK",
                                 "[JumpBack]PVP-选择对手进行挑战-点击小奖杯",
+                                "[JumpBack]英桀杯-进入一般战",
                                 "[JumpBack]英桀杯-误触-进入了切换角色界面",
                                 "[JumpBack]英桀杯-准备出击检查并点击",
                                 "[JumpBack]英桀杯-乱点一下"
@@ -1542,6 +1545,7 @@
                                 "[JumpBack]skip",
                                 "英桀杯_出击",
                                 "[JumpBack]无延迟-黑屏计数",
+                                "[JumpBack]英桀杯-进入一般战",
                                 "[JumpBack]PVP-选择对手进行挑战-点击小奖杯",
                                 "[JumpBack]英桀杯-自动化战斗逻辑-有挑战卷-检查是否已进入战斗-如是等待战斗结束",
                                 "[JumpBack]英桀杯-已进入战斗",
@@ -1558,6 +1562,7 @@
                                 "[JumpBack]黑屏计数",
                                 "[JumpBack]叉叉",
                                 "[JumpBack]OK",
+                                "[JumpBack]英桀杯-进入一般战",
                                 "[JumpBack]PVP-选择对手进行挑战-点击小奖杯",
                                 "[JumpBack]英桀杯-误触-进入了切换角色界面",
                                 "[JumpBack]英桀杯-准备出击检查并点击",
