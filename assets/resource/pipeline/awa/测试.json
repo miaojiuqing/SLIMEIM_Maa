@@ -1,17 +1,29 @@
 {
     "文字识别测试分数": {
-        "roi": [
-            23,
-            612,
-            58,
-            63
-        ],
-        "recognition": "OCR",
-        "expected": [
-            "世界"
-        ],
-        "pre_delay": 0,
-        "post_delay": 0
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    322,
+                    78,
+                    626,
+                    174
+                ],
+                "expected": "秘闻挑战开启"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    977,
+                    155,
+                    109,
+                    70
+                ]
+            }
+        },
+        "post_delay": 500
     },
     "拓展用-测试任务(开发者选项)": {
         "next": [
