@@ -68,7 +68,7 @@
         ],
         "recognition": "OCR",
         "expected": [
-            "再次戰鬥"
+            "再次戰.*"
         ],
         "action": "Click"
     },
