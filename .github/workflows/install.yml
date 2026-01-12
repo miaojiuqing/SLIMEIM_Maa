@@ -91,7 +91,7 @@ jobs:
           rm -f "${ARCHIVE_FILE_PATH}"
           echo "Archive cleanup command executed for MFAAvalonia."
 
-            # ===========================================================================
+      # ===========================================================================
       # ✅ Set Windows EXE icon using logo.ico via Wine + rcedit (works on Ubuntu Runner)
       #     Auto-installs wine if missing
       # ===========================================================================
