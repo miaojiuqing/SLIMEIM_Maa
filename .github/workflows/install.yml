@@ -113,8 +113,13 @@ jobs:
           # Install wine if not present
           if ! command -v wine &> /dev/null; then
             echo "📦 Installing wine..."
-            sudo apt-get update
-            sudo apt-get install -y wine
+            # Use 'apt' instead of 'apt-get' for better compatibility
+            if ! command -v apt &> /dev/null; then
+              echo "❌ ERROR: 'apt' command not found. Cannot install wine."
+              exit 1
+            fi
+            sudo apt update
+            sudo apt install -y wine
           fi
 
           # Make it executable and run via wine
