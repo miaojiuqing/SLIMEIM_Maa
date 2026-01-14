@@ -29,6 +29,7 @@
             "[JumpBack]点击进入当期活动-活动捕食战专享",
             "[JumpBack]首页那边点击进入任务-活动捕食战专享",
             "[JumpBack]活动捕食战-误触-进入了切换角色界面",
+            "[JumpBack]活动期间捕食战-误触进入其他级别捕食战",
             "[JumpBack]点击进入当期活动",
             "[JumpBack]滑动寻找当期活动",
             "[JumpBack]反向滑动寻找当期活动",
@@ -37,6 +38,37 @@
             "[JumpBack]空任务"
         ],
         "post_delay": 2000
+    },
+    "活动期间捕食战-误触进入其他级别捕食战": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    982,
+                    63,
+                    152,
+                    92
+                ],
+                "expected": [
+                    "180,000",
+                    "180-000",
+                    "180.000"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    80,
+                    25,
+                    32,
+                    25
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "post_delay": 5000
     },
     "活动期间捕食战-回到主菜单检查-重新开始任务": {
         "recognition": "TemplateMatch",
