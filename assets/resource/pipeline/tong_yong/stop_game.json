@@ -1,0 +1,10 @@
+{
+    "关闭游戏": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.bandainamcoent.tensuramrkww"
+            }
+        }
+    }
+}
