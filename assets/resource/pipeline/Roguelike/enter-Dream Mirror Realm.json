@@ -6,6 +6,12 @@
         ]
     },
     "梦幻镜魔境-任务总层": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "返回菜单/已返回菜单.png",
+            "返回菜单/已返回菜单2.png"
+        ],
         "next": [
             "镜塔-没体力了-返回菜单",
             "[JumpBack]OK",
