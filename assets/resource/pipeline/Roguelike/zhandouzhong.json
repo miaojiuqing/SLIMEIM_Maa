@@ -15,7 +15,7 @@
             "[JumpBack]战斗中",
             "[JumpBack]选择路线",
             "[JumpBack]切换为自动战斗"
-        ],
+        ]
     },
     "镜塔-出击": {
         "roi": [
@@ -49,7 +49,7 @@
             "[JumpBack]点击梦幻镜魔境入口",
             "[JumpBack]肉鸽-开始/重启此层",
             "[JumpBack]空任务"
-        ],
+        ]
     },
     "镜塔-误触": {
         "recognition": "TemplateMatch",
