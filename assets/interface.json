@@ -2,7 +2,7 @@
     "interface_version": 2,
     "name": "Maa_SLIMEIM",
     "url": "https://github.com/miaojiuqing/SLIMEIM_Maa",
-    "icon": "./resource/image/辛西娅logo.png",
+    "icon": ".\\resource\\image\\logo.ico",
     "mirrorchyan_rid": "SLIMEIM_Maa",
     "mirrorchyan_multiplatform": false,
     "controller": [
