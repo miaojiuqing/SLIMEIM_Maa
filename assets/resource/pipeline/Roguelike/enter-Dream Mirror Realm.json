@@ -19,12 +19,12 @@
             "[JumpBack]镜塔-点击开始",
             "[JumpBack]黑屏计数",
             "[JumpBack]点击梦幻镜魔境入口",
-            "[JumpBack]肉鸽-开始/重启此层",
             "[JumpBack]肉鸽-路线选择界面检测",
             "[JumpBack]skip",
             "[JumpBack]镜塔-出击",
             "[JumpBack]镜塔-编队出击",
             "[JumpBack]镜塔-正处于战斗状态-等待战斗结束",
+            "[JumpBack]肉鸽-开始/重启此层",
             "[JumpBack]无事件"
         ]
     },
@@ -86,6 +86,7 @@
             "[JumpBack]事件-奖励宝箱",
             "[JumpBack]事件-buff集合选择",
             "[JumpBack]事件-战斗",
+            "[JumpBack]事件-传送阵",
             "[JumpBack]镜塔-误触",
             "[JumpBack]镜塔-正处于战斗状态-等待战斗结束"
         ]

@@ -31,6 +31,33 @@
         ],
         "action": "Click"
     },
+    "事件-传送阵": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    53,
+                    111,
+                    1172,
+                    192
+                ],
+                "expected": [
+                    ".*同色魔法陣"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    200,
+                    0,
+                    0
+                ]
+            }
+        }
+    },
     "无事件": {
         "threshold": 0.5,
         "green_mask": true,
@@ -53,7 +80,7 @@
             "[JumpBack]无事件-开始乱选-左边",
             "[JumpBack]无事件-开始乱选-中间",
             "[JumpBack]无事件-开始乱选-右边"
-        ],
+        ]
     },
     "无事件-开始乱选-左边": {
         "action": "Click",
