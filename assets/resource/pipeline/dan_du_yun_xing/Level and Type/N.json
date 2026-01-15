@@ -44,7 +44,8 @@
             "[JumpBack]OK",
             "[JumpBack]YES",
             "[JumpBack]点击下一步",
-            "[JumpBack]黑屏计数"
+            "[JumpBack]黑屏计数",
+            "[JumpBack]自动主线-剧情跳过"
         ]
     },
     "自动主线-出击": {
@@ -61,8 +62,39 @@
             "[JumpBack]skip",
             "[JumpBack]黑屏计数",
             "[JumpBack]战斗中",
-            "[JumpBack]OK"
+            "[JumpBack]OK",
+            "[JumpBack]自动主线-误触进入角色选择界面",
+            "[JumpBack]自动主线-超绝优化发力等待"
         ]
+    },
+    "自动主线-误触进入角色选择界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    328,
+                    67,
+                    237,
+                    254
+                ],
+                "expected": [
+                    "卸除",
+                    "勢力確認"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    82,
+                    19,
+                    28,
+                    34
+                ]
+            }
+        },
+        "post_delay": 3000
     },
     "自动主线-剧情跳过": {
         "recognition": "TemplateMatch",

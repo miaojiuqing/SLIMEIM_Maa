@@ -185,7 +185,9 @@
         "post_delay": 3000,
         "next": [
             "自动主线-分类讨论-节点类型-初级大类",
-            "[JumpBack]自动主线-点击选择初级"
+            "[JumpBack]自动主线-点击选择初级",
+            "[JumpBack]YES",
+            "[JumpBack]自动主线-剧情跳过"
         ]
     },
     "自动主线-误触进入其他章节": {
@@ -206,5 +208,33 @@
             29,
             17
         ]
+    },
+    "自动主线-疑似进入剧情-尝试点击过对话": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    52,
+                    472,
+                    539,
+                    164
+                ],
+                "expected": []
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    193,
+                    346,
+                    118,
+                    104
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "疑似进入剧情，正在尝试点击过对话"
+        }
     }
 }
