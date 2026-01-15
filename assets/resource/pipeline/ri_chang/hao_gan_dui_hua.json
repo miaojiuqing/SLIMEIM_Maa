@@ -237,13 +237,30 @@
     "过对话": {
         "recognition": "DirectHit",
         "post_delay": 370,
-        "action": "Click",
-        "target": [
-            73,
-            168,
-            1122,
-            204
-        ]
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "end": [
+                    1223,
+                    362,
+                    1,
+                    1
+                ],
+                "begin": [
+                    1023,
+                    362,
+                    1,
+                    1
+                ]
+            }
+        }
+        // "action": "Click",
+        // "target": [
+        //     73,
+        //     168,
+        //     1122,
+        //     204
+        // ]
     },
     "对话结束": {
         "roi": [
