@@ -43,6 +43,8 @@
         "next": [
             "肉鸽-路线选择界面检测",
             "[JumpBack]OK",
+            "[JumpBack]YES",
+            "[JumpBack]自动主线-剧情跳过",
             "[JumpBack]镜塔-点击开始",
             "[JumpBack]黑屏计数",
             "[JumpBack]点击下一步",
