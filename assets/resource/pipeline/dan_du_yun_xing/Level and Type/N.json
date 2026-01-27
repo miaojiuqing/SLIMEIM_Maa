@@ -99,6 +99,7 @@
     "自动主线-剧情跳过": {
         "recognition": "TemplateMatch",
         "template": "进入/触发剧情/触发剧情-跳过剧情键.png",
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 500
     }
 }
