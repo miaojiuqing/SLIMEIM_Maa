@@ -5,7 +5,7 @@
             "[JumpBack]叉叉",
             "[JumpBack]识别失败再返回菜单-点击菜单层",
             "[JumpBack]进入游戏并打开菜单"
-        ],
+        ]
     },
     "每日任务之捕食战": {
         "post_delay": 1000,
@@ -21,7 +21,10 @@
             "培育"
         ],
         "action": "Click",
-        "next": ["点击成长", "[JumpBack]黑屏计数"],
+        "next": [
+            "点击成长",
+            "[JumpBack]黑屏计数"
+        ]
     },
     "点击成长": {
         "pre_delay": 1200,
@@ -38,7 +41,10 @@
             "日常-捕食战/成长-已选择.png"
         ],
         "action": "Click",
-        "next": ["检测是否可以捕食", "[JumpBack]点击成长"],
+        "next": [
+            "检测是否可以捕食",
+            "[JumpBack]点击成长"
+        ]
     },
     "检测是否可以捕食": {
         "next": [
@@ -62,7 +68,7 @@
             "[JumpBack]滑动寻找捕食战",
             "[JumpBack]捕食战-返回箭头",
             "[JumpBack]乱点一下"
-        ],
+        ]
     },
     "日常捕食战-检查到正处于首页-重新回到任务列表进行检查": {
         "green_mask": true,
@@ -162,7 +168,10 @@
             "日常-捕食战/成长-未选择.png"
         ],
         "action": "Click",
-        "next": ["检测是否可以捕食", "[JumpBack]点击成长"],
+        "next": [
+            "检测是否可以捕食",
+            "[JumpBack]点击成长"
+        ]
     },
     "反方向滑动寻找捕食战": {
         "roi": [
@@ -197,12 +206,12 @@
         ],
         "threshold": 0.9,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战//捕食战无挑战次数.png",
+        "template": "日常-捕食战/捕食战无挑战次数.png",
         "next": [
             "识别失败再返回菜单-识别层-结束任务",
             "[JumpBack]喂食角色-识别失败再返回菜单-点击菜单层",
             "[JumpBack]识别失败再返回菜单-点击菜单层"
-        ],
+        ]
     },
     "检测到有捕食次数_开始捕食": {
         "roi": [
@@ -215,21 +224,23 @@
         "threshold": 0.96,
         "recognition": "TemplateMatch",
         "template": [
-            "日常-捕食战//捕食战有挑战次数.png"
+            "日常-捕食战/捕食战有挑战次数.png"
         ],
         "action": "Click",
         "next": [
             "检测是否正处于捕食类型选择界面",
             "[JumpBack]skip",
             "[JumpBack]检测到有捕食次数_开始捕食"
-        ],
+        ]
     },
     "检测是否正处于捕食类型选择界面": {
         "threshold": 0.9,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战//捕食类型选择界面.png",
+        "template": "日常-捕食战/捕食类型选择界面.png",
         "post_delay": 2500,
-        "next": ["选择捕食类型"],
+        "next": [
+            "选择捕食类型"
+        ],
         "doc": "---------------------------------------------------------------开始运行捕食任务"
     },
     "选择捕食类型": {
@@ -261,7 +272,7 @@
             "[JumpBack]叉叉",
             "[JumpBack]选择捕食类型",
             "[JumpBack]日常捕食战-当前非选中编队-点击固定位置进行切换"
-        ],
+        ]
     },
     "捕食战_出击": {
         "roi": [
@@ -272,7 +283,7 @@
         ],
         "threshold": 0.8,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战//捕食战-出击.png",
+        "template": "日常-捕食战/捕食战-出击.png",
         "action": "Click",
         "post_delay": 1000
     },
@@ -328,7 +339,7 @@
             "捕食战_出击",
             "[JumpBack]YES",
             "[JumpBack]点击左上角返回箭头"
-        ],
+        ]
     },
     "捕食战_战斗ing": {
         "roi": [
@@ -338,7 +349,7 @@
             103
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战//捕食专属战斗ing检测.png",
+        "template": "日常-捕食战/捕食专属战斗ing检测.png",
         "action": "DoNothing",
         "post_delay": 10000,
         "next": [
@@ -346,13 +357,15 @@
             "[JumpBack]skip",
             "[JumpBack]捕食战_检测到捕食图标则切换为自动战斗",
             "[JumpBack]战斗中"
-        ],
+        ]
     },
     "捕食战_检测到捕食图标则切换为自动战斗": {
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战//捕食战_检测用捕食按钮.png",
-        "next": ["点击切换战斗状态"]
+        "template": "日常-捕食战/捕食战_检测用捕食按钮.png",
+        "next": [
+            "点击切换战斗状态"
+        ]
     },
     "捕食战评分界面": {
         "roi": [
@@ -362,9 +375,11 @@
             70
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战//捕食战结束评分.png",
+        "template": "日常-捕食战/捕食战结束评分.png",
         "post_delay": 8000,
-        "next": ["捕食战_下一步_第一次"]
+        "next": [
+            "捕食战_下一步_第一次"
+        ]
     },
     "捕食战_下一步_第一次": {
         "roi": [
@@ -384,7 +399,7 @@
             "[JumpBack]捕食战_下一步_第二次",
             "[JumpBack]捕食战-返回箭头",
             "[JumpBack]乱点一下"
-        ],
+        ]
     },
     "捕食战_下一步_第二次": {
         "roi": [
@@ -402,7 +417,7 @@
             "[JumpBack]捕食战_下一步_第二次",
             "[JumpBack]捕食战-返回箭头",
             "[JumpBack]乱点一下"
-        ],
+        ]
     },
     "捕食战_是否回到任务界面": {
         "roi": [
@@ -412,7 +427,7 @@
             630
         ],
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战//捕食战-故事界面检查.png"
+        "template": "日常-捕食战/捕食战-故事界面检查.png"
     },
     "捕食战_检测不到尚有一次捕食机会": {
         "roi": [
@@ -425,7 +440,9 @@
         "expected": "尚有1次",
         "inverse": true,
         "post_delay": 1000,
-        "next": ["检测是否可以捕食"]
+        "next": [
+            "检测是否可以捕食"
+        ]
     },
     "捕食战_尚有一次捕食机会": {
         "roi": [
@@ -437,7 +454,9 @@
         "recognition": "OCR",
         "expected": "尚有1次",
         "post_delay": 1000,
-        "next": ["捕食战_点击再次战斗"]
+        "next": [
+            "捕食战_点击再次战斗"
+        ]
     },
     "捕食战_点击再次战斗": {
         "roi": [
@@ -459,7 +478,7 @@
     "捕食战-返回箭头": {
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "日常-捕食战//捕食战-返回箭头.png",
+        "template": "日常-捕食战/捕食战-返回箭头.png",
         "action": "Click"
     }
 }

@@ -33,7 +33,7 @@
         ],
         "recognition": "TemplateMatch",
         "green_mask": true,
-        "template": "活动期间//每天20次并列演算//期间活动限定.png",
+        "template": "活动期间/每天20次并列演算/期间活动限定.png",
         "action": "Click",
         "timeout": 5000,
         "on_error": [
@@ -119,7 +119,7 @@
     },
     "滑动寻找当期活动": {
         "recognition": "TemplateMatch",
-        "template": "活动期间//每天20次并列演算//活动20次并列演算-进入活动.png",
+        "template": "活动期间/每天20次并列演算/活动20次并列演算-进入活动.png",
         "inverse": true,
         "action": "Swipe",
         "begin": [
@@ -140,7 +140,7 @@
     },
     "反向滑动寻找当期活动": {
         "recognition": "TemplateMatch",
-        "template": "活动期间//每天20次并列演算//活动20次并列演算-进入活动.png",
+        "template": "活动期间/每天20次并列演算/活动20次并列演算-进入活动.png",
         "inverse": true,
         "action": "Swipe",
         "begin": [
@@ -160,7 +160,7 @@
     },
     "点击进入当期活动": {
         "recognition": "TemplateMatch",
-        "template": "活动期间//每天20次并列演算//活动20次并列演算-进入活动.png",
+        "template": "活动期间/每天20次并列演算/活动20次并列演算-进入活动.png",
         "action": "Click"
     },
     "检查是否进入当期活动-准备并列演算": {
@@ -178,8 +178,8 @@
         ],
         // "recognition": "TemplateMatch",
         // "green_mask": true,
-        // "template": "活动期间//每天20次并列演算//活动20次并列演算-进入战斗准备并列演算.png",
-        // "action": "Click",
+        // "template": "活动期间/每天20次并列演算/活动20次并列演算-进入战斗准备并列演算.png",
+        //"action": "Click",
         "next": [
             "进入并列演算关卡",
             "[JumpBack]OK",
@@ -197,7 +197,7 @@
             198
         ],
         "recognition": "TemplateMatch",
-        "template": "活动期间//每天20次并列演算//进入任务.png",
+        "template": "活动期间/每天20次并列演算/进入任务.png",
         "action": "Click",
         "next": [
             "点击期间限定活动",
@@ -328,7 +328,7 @@
     "已进入并列演算界面-开始演算": {
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "活动期间//每天20次并列演算//并列演算.png",
+        "template": "活动期间/每天20次并列演算/并列演算.png",
         "next": [
             "开始演算",
             "[JumpBack]切换至第七队",

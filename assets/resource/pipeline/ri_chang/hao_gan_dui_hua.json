@@ -16,7 +16,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//进入首页按钮(好感度对话用).png"
+            "日常-好感度对话/进入首页按钮(好感度对话用).png"
         ],
         "action": "Click",
         "post_delay": 5000,
@@ -42,7 +42,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//进入好感度对话and泡温泉UI.png"
+            "日常-好感度对话/进入好感度对话and泡温泉UI.png"
         ],
         "action": "Click",
         "next": [
@@ -61,7 +61,7 @@
     "识别是否已进入选择对话界面": {
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//不可对话前提识别限制-伙伴一览.png"
+            "日常-好感度对话/不可对话前提识别限制-伙伴一览.png"
         ],
         "next": [
             "正式开始好感度对话任务"
@@ -70,7 +70,7 @@
     "正式开始好感度对话任务": {
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//不可对话前提识别限制-伙伴一览.png"
+            "日常-好感度对话/不可对话前提识别限制-伙伴一览.png"
         ],
         "next": [
             "有可对话对象-第一行",
@@ -83,7 +83,7 @@
     "识别不到可对话对象中间层": {
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//不可对话前提识别限制-伙伴一览.png"
+            "日常-好感度对话/不可对话前提识别限制-伙伴一览.png"
         ],
         "next": [
             "识别不到可对话对象",
@@ -100,7 +100,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//可对话_移动.png"
+            "日常-好感度对话/可对话_移动.png"
         ],
         "threshold": 0.9,
         "action": "Click",
@@ -122,7 +122,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//可对话_移动.png"
+            "日常-好感度对话/可对话_移动.png"
         ],
         "threshold": 0.9,
         "action": "Click",
@@ -145,7 +145,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//可对话_移动.png"
+            "日常-好感度对话/可对话_移动.png"
         ],
         "threshold": 0.9,
         "action": "Click",
@@ -199,7 +199,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//可对话_移动.png"
+            "日常-好感度对话/可对话_移动.png"
         ],
         "inverse": true,
         "threshold": 0.9,
@@ -215,7 +215,7 @@
     "对话过了": {
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//只是聊天.png"
+            "日常-好感度对话/只是聊天.png"
         ],
         "action": "DoNothing",
         "next": [
@@ -230,7 +230,7 @@
     "单独打开选人对话界面": {
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//进入好感度对话and泡温泉UI.png"
+            "日常-好感度对话/进入好感度对话and泡温泉UI.png"
         ],
         "action": "Click"
     },
@@ -260,7 +260,8 @@
         //     168,
         //     1122,
         //     204
-        // ]
+        //
+        //]
     },
     "对话结束": {
         "roi": [
@@ -273,8 +274,8 @@
         "recognition": "TemplateMatch",
         "green_mask": true,
         "template": [
-            "日常-好感度对话//对话结束检查.png",
-            "日常-好感度对话//左下角对话结束检测.png"
+            "日常-好感度对话/对话结束检查.png",
+            "日常-好感度对话/左下角对话结束检测.png"
         ],
         "action": "DoNothing",
         "next": [
@@ -291,7 +292,7 @@
         "template": [
             "返回菜单.png",
             "选单.png",
-            "通用符号//小选单.png"
+            "通用符号/小选单.png"
         ],
         "action": "Click",
         "next": [
@@ -306,8 +307,8 @@
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "日常-好感度对话//只需等待-报酬图标.png",
-            "日常-好感度对话//只需等待-放大图标.png"
+            "日常-好感度对话/只需等待-报酬图标.png",
+            "日常-好感度对话/只需等待-放大图标.png"
         ],
         "post_delay": 5000
     }

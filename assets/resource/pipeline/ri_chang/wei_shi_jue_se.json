@@ -1,6 +1,9 @@
 {
     "每日任务之喂食角色-开始任务层": {
-        "next": ["每日任务之喂食角色", "[JumpBack]进入游戏并打开菜单"],
+        "next": [
+            "每日任务之喂食角色",
+            "[JumpBack]进入游戏并打开菜单"
+        ]
     },
     "每日任务之喂食角色": {
         "_doc": "--------------------------------------------------------------“喂食”角色任务开始",
@@ -13,7 +16,7 @@
             "[JumpBack]选择角色进行投喂",
             "[JumpBack]黑屏计数",
             "[JumpBack]预期外错误的OK"
-        ],
+        ]
     },
     "选择角色进行投喂": {
         "post_delay": 1000,
@@ -39,7 +42,7 @@
             "寻找小零食",
             "[JumpBack]向下滑动",
             "[JumpBack]叉叉"
-        ],
+        ]
     },
     "向下滑动": {
         "action": "Swipe",
@@ -55,7 +58,9 @@
             10,
             10
         ],
-        "next": ["停止滑动"],
+        "next": [
+            "停止滑动"
+        ],
         "post_delay": 1500
     },
     "停止滑动": {
@@ -85,21 +90,27 @@
         "order_by": "Score",
         "recognition": "TemplateMatch",
         "template": [
-            "日常-喂食角色//新鲜水果.png",
-            "日常-喂食角色//沙拉棒.png",
-            "日常-喂食角色//生鱼片.png",
-            "日常-喂食角色//肉串.png",
-            "日常-喂食角色//饭团.png"
+            "日常-喂食角色/新鲜水果.png",
+            "日常-喂食角色/沙拉棒.png",
+            "日常-喂食角色/生鱼片.png",
+            "日常-喂食角色/肉串.png",
+            "日常-喂食角色/饭团.png"
         ],
         "action": "Click",
-        "next": ["添加食物", "[JumpBack]叉叉"],
+        "next": [
+            "添加食物",
+            "[JumpBack]叉叉"
+        ]
     },
     "添加食物": {
         "post_delay": 1000,
         "recognition": "TemplateMatch",
-        "template": "通用符号//加号.png",
+        "template": "通用符号/加号.png",
         "action": "Click",
-        "next": ["喂食之YES", "[JumpBack]叉叉"],
+        "next": [
+            "喂食之YES",
+            "[JumpBack]叉叉"
+        ]
     },
     "喂食之YES": {
         "recognition": "OCR",
@@ -110,14 +121,14 @@
             "识别失败再返回菜单-识别层-结束任务",
             "[JumpBack]叉叉",
             "[JumpBack]喂食角色-识别失败再返回菜单-点击菜单层"
-        ],
+        ]
     },
     "喂食角色-识别失败再返回菜单-点击菜单层": {
         "recognition": "TemplateMatch",
         "template": [
             "返回菜单.png",
             "选单.png",
-            "通用符号//小选单.png"
+            "通用符号/小选单.png"
         ],
         "green_mask": true,
         "threshold": 0.9,

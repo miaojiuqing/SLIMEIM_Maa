@@ -58,19 +58,19 @@
     "开始游戏1": {
         "post_delay": 5000,
         "recognition": "TemplateMatch",
-        "template": "进入//开始游戏//进入游戏前提示.png",
+        "template": "进入/开始游戏/进入游戏前提示.png",
         "action": "Click"
     },
     "开始游戏2": {
         "post_delay": 5000,
         "recognition": "TemplateMatch",
-        "template": "进入//开始游戏//正式开始游戏.png",
+        "template": "进入/开始游戏/正式开始游戏.png",
         "action": "Click"
     },
     "有可更新资料": {
         "post_delay": 5000,
         "recognition": "TemplateMatch",
-        "template": "进入//开始游戏//有可更新的资料.png",
+        "template": "进入/开始游戏/有可更新的资料.png",
         "next": [
             "OK"
         ]
@@ -103,7 +103,7 @@
             "选单.png",
             "返回菜单.png",
             "返回菜单/返回菜单4.png",
-            "通用符号//小选单.png"
+            "通用符号/小选单.png"
         ],
         "action": "Click",
         "next": [

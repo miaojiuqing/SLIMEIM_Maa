@@ -56,7 +56,7 @@
         "threshold": 0.99,
         "recognition": "TemplateMatch",
         "template": [
-            "每日琐事//统一领取生产资源//琐事-统一回收图标.png"
+            "每日琐事/统一领取生产资源/琐事-统一回收图标.png"
         ],
         "action": "Click",
         "post_delay": 1000
@@ -69,7 +69,7 @@
             108
         ],
         "recognition": "TemplateMatch",
-        "template": "每日琐事//统一领取生产资源//生产道具确认.png",
+        "template": "每日琐事/统一领取生产资源/生产道具确认.png",
         "action": "Click"
     },
     "统一回收结果": {
@@ -80,7 +80,7 @@
             145
         ],
         "recognition": "TemplateMatch",
-        "template": "每日琐事//统一领取生产资源//琐事-资源统一回收.png",
+        "template": "每日琐事/统一领取生产资源/琐事-资源统一回收.png",
         "next": [
             "识别是否已开启菜单",
             "[JumpBack]返回菜单",

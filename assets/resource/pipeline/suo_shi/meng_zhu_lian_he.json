@@ -13,7 +13,7 @@
             139
         ],
         "recognition": "TemplateMatch",
-        "template": "每日琐事//盟主联合//盟主联合图标.png",
+        "template": "每日琐事/盟主联合/盟主联合图标.png",
         "action": "Click",
         "next": [
             "每日点一下盟主联合",
@@ -106,7 +106,7 @@
         "template": [
             "返回菜单.png",
             "选单.png",
-            "通用符号//小选单.png"
+            "通用符号/小选单.png"
         ],
         "green_mask": true,
         "threshold": 0.99,

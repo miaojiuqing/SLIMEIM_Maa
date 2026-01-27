@@ -8,7 +8,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "日常-锻造场//锻造场进入.png"
+            "日常-锻造场/锻造场进入.png"
         ],
         "action": "Click",
         "green_mask": true,
@@ -45,7 +45,7 @@
         "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": [
-            "日常-锻造场//up强化.png"
+            "日常-锻造场/up强化.png"
         ],
         "action": "Click",
         "next": [
@@ -64,7 +64,7 @@
         "post_delay": 500,
         "recognition": "TemplateMatch",
         "template": [
-            "日常-锻造场//锻造场_排序1.png"
+            "日常-锻造场/锻造场_排序1.png"
         ],
         "action": "Click",
         "next": [
@@ -110,7 +110,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "日常-锻造场//绿色由低至高.png"
+            "日常-锻造场/绿色由低至高.png"
         ],
         "action": "DoNothing",
         "next": [
@@ -167,7 +167,7 @@
         "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": [
-            "日常-锻造场//LV提升.png"
+            "日常-锻造场/LV提升.png"
         ],
         "action": "Click",
         "next": [
@@ -178,7 +178,7 @@
         "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": [
-            "通用符号//加号.png"
+            "通用符号/加号.png"
         ],
         "action": "Click",
         "next": [
@@ -188,7 +188,7 @@
     "强化": {
         "recognition": "TemplateMatch",
         "template": [
-            "日常-锻造场//添加磨刀石之后的LV.提升.png"
+            "日常-锻造场/添加磨刀石之后的LV.提升.png"
         ],
         "action": "Click",
         "next": [
@@ -216,7 +216,7 @@
         "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": [
-            "日常-锻造场//锻造场叉叉.png"
+            "日常-锻造场/锻造场叉叉.png"
         ],
         "action": "Click",
         "next": [
@@ -236,7 +236,7 @@
         "recognition": "TemplateMatch",
         "template": [
             "返回菜单.png",
-            "通用符号//小选单.png",
+            "通用符号/小选单.png",
             "选单.png"
         ],
         "action": "Click",

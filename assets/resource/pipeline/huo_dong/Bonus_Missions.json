@@ -19,7 +19,7 @@
             198
         ],
         "recognition": "TemplateMatch",
-        "template": "活动期间//每天20次并列演算//进入任务.png",
+        "template": "活动期间/每天20次并列演算/进入任务.png",
         "action": "Click",
         "pre_delay": 3000,
         "post_delay": 3000,

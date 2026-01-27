@@ -4,7 +4,7 @@
             "邮箱领取",
             "[JumpBack]喂食角色-识别失败再返回菜单-点击菜单层",
             "[JumpBack]进入游戏并打开菜单"
-        ],
+        ]
     },
     "邮箱领取": {
         "roi": [
@@ -15,7 +15,7 @@
         ],
         "threshold": 0.75,
         "recognition": "TemplateMatch",
-        "template": "每日琐事//邮箱领取//邮箱图标.png",
+        "template": "每日琐事/邮箱领取/邮箱图标.png",
         "action": "Click",
         "post_delay": 1000,
         "next": [
@@ -24,7 +24,7 @@
             "[JumpBack]琐事-邮箱领取-领取奖励",
             "[JumpBack]叉叉",
             "[JumpBack]邮箱领取"
-        ],
+        ]
     },
     "琐事-已进入邮箱领取页并开始执行领取": {
         "roi": [
@@ -47,7 +47,7 @@
             "[JumpBack]YES",
             "[JumpBack]邮箱领取"
         ],
-        "post_delay": 1000,
+        "post_delay": 1000
     },
     "琐事-邮箱领取-领取完毕": {
         "roi": [
@@ -67,7 +67,7 @@
             "[JumpBack]OK",
             "[JumpBack]叉叉",
             "[JumpBack]识别失败再返回菜单-点击菜单层"
-        ],
+        ]
     },
     "琐事-邮箱领取-领取奖励": {
         "roi": [

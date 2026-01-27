@@ -93,7 +93,7 @@
             157
         ],
         "recognition": "TemplateMatch",
-        "template": "英桀杯//加护量表大于等于100%.png",
+        "template": "英桀杯/加护量表大于等于100%.png",
         "green_mask": true,
         "threshold": 0.8,
         "action": "Click",
@@ -109,7 +109,7 @@
     "英桀杯-公式化战斗逻辑-第三回合-加护被封": {
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "英桀杯//英桀杯-加护被封.png",
+        "template": "英桀杯/英桀杯-加护被封.png",
         "next": [
             "英桀杯-公式化战斗逻辑-第三回合-识别不到可点击普攻-中间层-加护被封,不再尝试点击加护"
         ]

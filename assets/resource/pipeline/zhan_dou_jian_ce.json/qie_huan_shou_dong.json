@@ -1,6 +1,9 @@
 {
     "切换为手动战斗": {
-        "next": ["检测到是手动战斗_保持不变", "[JumpBack]检测到是自动战斗_进行切换"],
+        "next": [
+            "检测到是手动战斗_保持不变",
+            "[JumpBack]检测到是自动战斗_进行切换"
+        ]
     },
     "检测到是手动战斗_保持不变": {
         "roi": [
@@ -11,8 +14,10 @@
         ],
         "recognition": "TemplateMatch",
         "threshold": 0.98,
-        "template": "战斗状态//战斗状态-非自动战斗.png",
-        "next": ["空任务"]
+        "template": "战斗状态/战斗状态-非自动战斗.png",
+        "next": [
+            "空任务"
+        ]
     },
     "检测到是自动战斗_进行切换": {
         "roi": [
@@ -24,7 +29,9 @@
         "recognition": "TemplateMatch",
         "inverse": true,
         "threshold": 0.98,
-        "template": "战斗状态//战斗状态-非自动战斗.png",
-        "next": ["点击切换战斗状态"]
+        "template": "战斗状态/战斗状态-非自动战斗.png",
+        "next": [
+            "点击切换战斗状态"
+        ]
     }
 }

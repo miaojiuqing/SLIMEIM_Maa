@@ -37,7 +37,7 @@
         ],
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "梦幻镜魔塔//梦幻镜魔境-入口.png",
+        "template": "梦幻镜魔塔/梦幻镜魔境-入口.png",
         "action": "Click"
     },
     "肉鸽-路线选择界面检测": {

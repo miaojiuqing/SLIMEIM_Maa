@@ -6,7 +6,7 @@
             "[JumpBack]叉叉",
             "[JumpBack]点击左上角返回箭头",
             "[JumpBack]进入游戏并打开菜单"
-        ],
+        ]
     },
     "进入任务领取界面": {
         "roi": [
@@ -16,7 +16,7 @@
             118
         ],
         "recognition": "TemplateMatch",
-        "template": "任务奖励领取//菜单页进入任务奖励领取.png",
+        "template": "任务奖励领取/菜单页进入任务奖励领取.png",
         "action": "Click",
         "next": [
             "检测是否进入奖励领取界面",
@@ -24,7 +24,7 @@
             "[JumpBack]黑屏计数",
             "[JumpBack]发生预期外的错误_400",
             "[JumpBack]任务领取-等待"
-        ],
+        ]
     },
     "检测是否进入奖励领取界面": {
         "roi": [
@@ -45,7 +45,7 @@
             "任务领取-不可领取",
             "[JumpBack]黑屏计数",
             "[JumpBack]发生预期外的错误_400"
-        ],
+        ]
     },
     "任务领取-可领取": {
         "roi": [
@@ -71,7 +71,7 @@
             "任务领取-不可领取",
             "[JumpBack]OK",
             "[JumpBack]识别失败再返回菜单-点击菜单层"
-        ],
+        ]
     },
     "任务领取-不可领取": {
         "roi": [
@@ -96,7 +96,7 @@
             "识别失败再返回菜单-识别层-结束任务",
             "[JumpBack]OK",
             "[JumpBack]识别失败再返回菜单-点击菜单层"
-        ],
+        ]
     },
     "任务领取-等待": {
         "green_mask": true,
@@ -111,7 +111,7 @@
             "日常任务_无可领取奖励",
             "[JumpBack]OK",
             "[JumpBack]领取任务奖励_日常"
-        ],
+        ]
     },
     "日常任务已领取完毕": {
         "roi": [
@@ -121,13 +121,13 @@
             68
         ],
         "recognition": "TemplateMatch",
-        "template": "任务奖励领取//任务奖励领取-已领取完当前奖励.png",
+        "template": "任务奖励领取/任务奖励领取-已领取完当前奖励.png",
         "threshold": 0.99,
         "next": [
             "识别是否已开启菜单",
             "[JumpBack]OK",
             "[JumpBack]返回菜单"
-        ],
+        ]
     },
     "领取任务奖励_日常": {
         "roi": [
@@ -137,14 +137,14 @@
             60
         ],
         "recognition": "TemplateMatch",
-        "template": "任务奖励领取//任务奖励_可领取状态.png",
+        "template": "任务奖励领取/任务奖励_可领取状态.png",
         "threshold": 0.99,
         "action": "Click",
         "next": [
             "日常任务_无可领取奖励",
             "[JumpBack]OK",
             "[JumpBack]领取任务奖励_日常"
-        ],
+        ]
     },
     "日常任务_无可领取奖励": {
         "roi": [
@@ -154,14 +154,14 @@
             60
         ],
         "recognition": "TemplateMatch",
-        "template": "任务奖励领取//任务奖励_不可领取状态.png",
+        "template": "任务奖励领取/任务奖励_不可领取状态.png",
         "threshold": 0.99,
         "post_delay": 1000,
         "next": [
             "识别失败再返回菜单-识别层-结束任务",
             "[JumpBack]识别失败再返回菜单-点击菜单层",
             "[JumpBack]喂食角色-识别失败再返回菜单-点击菜单层"
-        ],
+        ]
     },
     "任务列表奖励领取完毕检测": {
         "roi": [
@@ -170,7 +170,9 @@
             373,
             73
         ],
-        "next": ["OK"]
+        "next": [
+            "OK"
+        ]
     },
     "当前界面奖励领取完了": {}
 }
