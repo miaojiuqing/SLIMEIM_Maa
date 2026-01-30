@@ -23,6 +23,21 @@
             "[JumpBack]黑屏计数"
         ]
     },
+    "未选中故事-点击": {
+        "roi": [
+            660,
+            580,
+            125,
+            122
+        ],
+        "threshold": 0.75,
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": [
+            "活动期间/每天20次并列演算/故事-未选中.png"
+        ],
+        "action": "Click"
+    },
     "点击期间限定活动": {
         "post_delay": 1000,
         "roi": [
@@ -42,6 +57,7 @@
     },
     "寻找当期活动并点击": {
         "next": [
+            "[JumpBack]未选中故事-点击",
             "进入并列演算关卡",
             "检查是否进入当期活动-准备并列演算",
             "[JumpBack]OK",
