@@ -43,6 +43,12 @@
         "post_delay": 5000
     },
     "skip": {
+        "roi": [
+            976,
+            0,
+            304,
+            140
+        ],
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "箭头.png",
