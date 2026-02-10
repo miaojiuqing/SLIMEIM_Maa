@@ -1786,7 +1786,8 @@
                         "英桀杯-第三回合-buff使用-1": {
                             "recognition": "DirectHit",
                             "post_delay": 0,
-                            "pre_delay": 0
+                            "pre_delay": 0,
+                            "action": "DoNothing"
                         }
                     }
                 }
@@ -1903,7 +1904,8 @@
                         "英桀杯-第三回合-buff使用-2": {
                             "recognition": "DirectHit",
                             "post_delay": 0,
-                            "pre_delay": 0
+                            "pre_delay": 0,
+                            "action": "DoNothing"
                         }
                     }
                 }
@@ -2020,7 +2022,8 @@
                         "英桀杯-第三回合-buff使用-3": {
                             "recognition": "DirectHit",
                             "post_delay": 0,
-                            "pre_delay": 0
+                            "pre_delay": 0,
+                            "action": "DoNothing"
                         }
                     }
                 }
@@ -2137,7 +2140,8 @@
                         "英桀杯-第三回合-buff使用-4": {
                             "recognition": "DirectHit",
                             "post_delay": 0,
-                            "pre_delay": 0
+                            "pre_delay": 0,
+                            "action": "DoNothing"
                         }
                     }
                 }
@@ -2254,7 +2258,8 @@
                         "英桀杯-第三回合-buff使用-5": {
                             "recognition": "DirectHit",
                             "post_delay": 0,
-                            "pre_delay": 0
+                            "pre_delay": 0,
+                            "action": "DoNothing"
                         }
                     }
                 }
@@ -2371,7 +2376,8 @@
                         "英桀杯-第三回合-buff使用-6": {
                             "recognition": "DirectHit",
                             "post_delay": 0,
-                            "pre_delay": 0
+                            "pre_delay": 0,
+                            "action": "DoNothing"
                         }
                     }
                 }
