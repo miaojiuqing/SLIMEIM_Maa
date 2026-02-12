@@ -111,7 +111,7 @@
         ],
         "recognition": "OCR",
         "expected": [
-            "下一步"
+            "下.*步"
         ],
         "threshold": 0.7,
         "pre_delay": 0,

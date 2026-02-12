@@ -389,7 +389,7 @@
             72
         ],
         "recognition": "OCR",
-        "expected": "下一步",
+        "expected": "下.*步",
         "action": "Click",
         "post_delay": 25000,
         "next": [
@@ -409,7 +409,7 @@
             69
         ],
         "recognition": "OCR",
-        "expected": "下一步",
+        "expected": "下.*步",
         "post_delay": 1000,
         "action": "Click",
         "next": [
