@@ -11,7 +11,7 @@
                 ],
                 "expected": "秘闻挑战开启"
             }
-        },
+        }, //
         "action": {
             "type": "Click",
             "param": {
