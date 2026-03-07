@@ -252,9 +252,6 @@
         "expected": [
             "捕食戰"
         ],
-        // "green_mask": true,
-        // "recognition": "TemplateMatch",
-        // "template": "活动期间/每期活动的捕食战/活动捕食战-准备战斗界面检查.png",
         "next": [
             "活动捕食战-战斗列表加载出来了",
             "任务列表中点击活动列中的活动行-之后点击进入捕食战界面",
