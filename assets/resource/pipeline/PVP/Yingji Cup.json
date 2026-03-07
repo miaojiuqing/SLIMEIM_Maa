@@ -32,6 +32,26 @@
             "[JumpBack]空任务"
         ]
     },
+    "英桀杯-当前无法挑战英桀杯": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    379,
+                    306,
+                    536,
+                    107
+                ],
+                "template": [
+                    "英桀杯/英桀杯维护中.png"
+                ]
+            }
+        },
+        "action": "StopTask",
+        "focus": {
+            "succeeded": "英桀杯维护中无法参加，终止任务"
+        }
+    },
     "PVP-检查是否进入界面": {
         "roi": [
             34,
