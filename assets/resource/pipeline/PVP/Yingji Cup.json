@@ -18,7 +18,9 @@
         "recognition": "TemplateMatch",
         "template": "英桀杯/进入英桀杯.png",
         "action": "Click",
+        "post_delay": 500,
         "next": [
+            "英桀杯-当前无法挑战英桀杯",
             "PVP-检查是否进入界面",
             "[JumpBack]OK",
             "[JumpBack]英桀杯-连接失败-点击重连",
