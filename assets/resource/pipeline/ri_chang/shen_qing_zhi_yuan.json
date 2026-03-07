@@ -348,7 +348,10 @@
         "next": [
             "点击建筑的提升",
             "[JumpBack]啥也没有",
-            "[JumpBack]点击右下角兴建"
+            "[JumpBack]点击右下角兴建",
+            "[JumpBack]OK",
+            "[JumpBack]YES",
+            "[JumpBack]叉叉"
         ]
     },
     "点击建筑的提升": {
