@@ -14,6 +14,7 @@
         ],
         "next": [
             "镜塔-没体力了-返回菜单",
+            "[JumpBack]自动刷关-剧情纪要",
             "[JumpBack]OK",
             "[JumpBack]YES",
             "[JumpBack]镜塔-点击开始",
@@ -25,6 +26,8 @@
             "[JumpBack]镜塔-编队出击",
             "[JumpBack]镜塔-正处于战斗状态-等待战斗结束",
             "[JumpBack]肉鸽-开始/重启此层",
+            "[JumpBack]自动主线-剧情跳过",
+            "[JumpBack]叉叉",
             "[JumpBack]无事件"
         ]
     },
