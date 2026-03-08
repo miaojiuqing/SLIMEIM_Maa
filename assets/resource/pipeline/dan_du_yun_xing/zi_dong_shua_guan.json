@@ -196,6 +196,7 @@
         "post_delay": 5000,
         "next": [
             "刷关逻辑-准备出击",
+            "自动刷关-副本挑战次数已达上限",
             "[JumpBack]刷关专用-体力不足如何处理",
             "[JumpBack]YES",
             "[JumpBack]自动主线-剧情跳过",
@@ -210,6 +211,34 @@
             "[JumpBack]自动刷关-进去先切换为自动战斗模式",
             "[JumpBack]战斗中",
             "[JumpBack]黑屏计数"
+        ]
+    },
+    "自动刷关-副本挑战次数已达上限": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    774,
+                    173,
+                    331,
+                    72
+                ],
+                "expected": [
+                    ".*次數上限"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "挑战次数上限了"
+        },
+        "next": [
+            "识别失败再返回菜单-识别层-结束任务",
+            "[JumpBack]识别失败再返回菜单-点击菜单层",
+            "[JumpBack]点击叉叉",
+            "[JumpBack]OK",
+            "[JumpBack]YES",
+            "[JumpBack]点击下一步",
+            "[JumpBack]点击确定"
         ]
     },
     "自动刷关-剧情纪要": {
