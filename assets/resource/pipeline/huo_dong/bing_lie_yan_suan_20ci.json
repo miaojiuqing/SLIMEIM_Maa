@@ -127,6 +127,17 @@
             "点击左上角返回箭头",
             "[JumpBack]寻找当期活动并点击"
         ],
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    83,
+                    18,
+                    29,
+                    36
+                ]
+            }
+        },
         "pre_delay": 3000,
         "post_delay": 3000
     },
