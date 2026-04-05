@@ -66,9 +66,9 @@
             "[JumpBack]点击进入当期活动",
             "[JumpBack]版本活动限定-每日并列演算",
             "[JumpBack]黑屏计数",
-            "[JumpBack]并列演算-任务列表滑到底了",
-            "[JumpBack]滑动寻找当期活动",
-            "[JumpBack]反向滑动寻找当期活动",
+            // "[JumpBack]并列演算-任务列表滑到底了",
+            // "[JumpBack]滑动寻找当期活动",
+            // "[JumpBack]反向滑动寻找当期活动",
             "[JumpBack]活动期间捕食战-活动期间限定任务滑到底了-随时更新",
             "[JumpBack]点击期间限定活动"
         ]
@@ -87,42 +87,23 @@
         "action": "Click",
         "post_delay": 1000
     },
-    "并列演算-任务列表滑到底了": {
-        "roi": [
-            640,
-            123,
-            461,
-            551
-        ],
-        "recognition": "OCR",
-        "expected": [
-            "生命之火",
-            "美食與謎題",
-            "盜墓者",
-            "惡魔的瘴氣",
-            "徒有虛表的魔王",
-            "魔獸和活祭品",
-            "名為思念的貢品"
-        ],
-        "action": "Swipe",
-        "begin": [
-            884,
-            256,
-            106,
-            15
-        ],
-        "end": [
-            884,
-            256,
-            106,
-            300
-        ]
-    },
     "误触-进入活动捕食战了": {
-        "threshold": 0.9,
-        "green_mask": true,
-        "recognition": "TemplateMatch",
-        "template": "活动期间/每期活动的捕食战/活动捕食战-准备战斗界面检查.png",
+        // "threshold": 0.9,
+        // "green_mask": true,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    623,
+                    85,
+                    158,
+                    75
+                ],
+                "expected": [
+                    "捕食戰"
+                ]
+            }
+        },
         "next": [
             "点击左上角返回箭头",
             "[JumpBack]寻找当期活动并点击"
@@ -140,47 +121,6 @@
         },
         "pre_delay": 3000,
         "post_delay": 3000
-    },
-    "滑动寻找当期活动": {
-        "recognition": "TemplateMatch",
-        "template": "活动期间/每天20次并列演算/活动20次并列演算-进入活动.png",
-        "inverse": true,
-        "action": "Swipe",
-        "begin": [
-            929,
-            408,
-            300,
-            0
-        ],
-        "end": [
-            929,
-            408,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "timeout": 2000,
-        "max_hit": 25
-    },
-    "反向滑动寻找当期活动": {
-        "recognition": "TemplateMatch",
-        "template": "活动期间/每天20次并列演算/活动20次并列演算-进入活动.png",
-        "inverse": true,
-        "action": "Swipe",
-        "begin": [
-            929,
-            408,
-            0,
-            0
-        ],
-        "end": [
-            929,
-            408,
-            300,
-            0
-        ],
-        "post_delay": 3000,
-        "timeout": 2000
     },
     "点击进入当期活动": {
         "recognition": "TemplateMatch",
