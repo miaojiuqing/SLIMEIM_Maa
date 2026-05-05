@@ -210,7 +210,8 @@
             "[JumpBack]检查节点类型",
             "[JumpBack]自动刷关-进去先切换为自动战斗模式",
             "[JumpBack]战斗中",
-            "[JumpBack]黑屏计数"
+            "[JumpBack]黑屏计数",
+            "[JumpBack]空任务"
         ]
     },
     "自动刷关-副本挑战次数已达上限": {
