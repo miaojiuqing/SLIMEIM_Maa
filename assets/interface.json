@@ -24,9 +24,7 @@
             "type": "Win32",
             "win32": {
                 "class_regex": ".*",
-                "window_regex": "Visual Studio",
-                // 截图及控制方式，请根据项目实际情况修改
-                // 文档: https://maafw.xyz/docs/2.4-ControlMethods
+                "window_regex": ".*",
                 "screencap": "PrintWindow", // 截图方式
                 "mouse": "PostMessageWithCursorPos", // 鼠标控制方式
                 "keyboard": "PostMessageWithCursorPos" // 键盘控制方式
@@ -111,7 +109,7 @@
             "cases": [
                 {
                     "name": "点击切换至下一个",
-                    "description": "点右边",
+                    "label": "点右边",
                     "pipeline_override": {
                         "通用-编队切换-点击切换编队": {
                             "recognition": {
@@ -133,7 +131,7 @@
                 },
                 {
                     "name": "点击切换至上一个",
-                    "description": "点左边",
+                    "label": "点左边",
                     "pipeline_override": {
                         "通用-编队切换-点击切换编队": {
                             "recognition": {
