@@ -9,7 +9,7 @@
     "license": "MIT",
     "welcome": "欢迎使用辛西娅小助手~",
     "mirrorchyan_rid": "SLIMEIM_Maa",
-    "mirrorchyan_multiplatform": false,
+    "mirrorchyan_multiplatform": true,
     // 填写项目地址和版本号可实现自动更新功能
     "github": "https://github.com/MaaXYZ/MaaPracticeBoilerplate",
     "version": "1.0.0",
