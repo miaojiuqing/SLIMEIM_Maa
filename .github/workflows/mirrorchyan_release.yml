@@ -1,4 +1,4 @@
-name: mirrorchyan_release_note
+name: mirrorchyan_release
 
 on:
   workflow_dispatch:
@@ -6,20 +6,26 @@ on:
       tag:
         default: ''
         required: false
-  release:
-    types: [edited]
 
 jobs:
   mirrorchyan:
     runs-on: macos-latest
     if: ${{ github.repository_owner == 'miaojiuqing' }}
-
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [win, macos, linux, android]
+        arch: [aarch64, x86_64]
     steps:
-      - id: uploading
-        uses: MirrorChyan/release-note-action@v1
+      - uses: MirrorChyan/uploading-action@v1
         with:
+          filetype: latest-release
+          filename: ${{ format('MaaSLIMEIM-{0}-{1}-*.zip', matrix.os, matrix.arch) }}
           mirrorchyan_rid: SLIMEIM_Maa
-          version_name: ${{ inputs.tag }}
+          tag: ${{ inputs.tag }}
+
+          os: ${{ matrix.os }}
+          arch: ${{ matrix.arch }}
 
           owner: miaojiuqing
           repo: SLIMEIM_Maa
