@@ -1,0 +1,46 @@
+{
+    "单本复刷-连点器-引用层": {
+        "enabled": false,
+        "repeat_delay": 0,
+        "post_delay": 0,
+        "pre_delay": 0,
+        "next": [
+            "[JumpBack]单本复刷-连点器-点就完了-skip"
+        ]
+    },
+    "单本复刷-连点器-点就完了-skip": {
+        "repeat_delay": 0,
+        "post_delay": 0,
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1092,
+                    81,
+                    127,
+                    31
+                ]
+            }
+        },
+        "next": [
+            "单本复刷-连点器-点就完了-再次挑战"
+        ]
+    },
+    "单本复刷-连点器-点就完了-再次挑战": {
+        "repeat_delay": 0,
+        "post_delay": 0,
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    807,
+                    614,
+                    184,
+                    62
+                ]
+            }
+        }
+    }
+}

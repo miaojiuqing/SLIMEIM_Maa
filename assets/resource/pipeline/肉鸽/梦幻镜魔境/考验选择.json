@@ -1,0 +1,439 @@
+{
+    "梦幻镜魔境-考验选择-已选中-火": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/已选中/火.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验选择-已选中-水",
+            "[JumpBack]梦幻镜魔境-考验选择-未选中-水"
+        ]
+    },
+    "梦幻镜魔境-考验选择-未选中-火": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/未选中/火.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-考验选择-已选中-水": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //右半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    779,
+                    255,
+                    117,
+                    316
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/已选中/水.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验选择-已选中-风",
+            "[JumpBack]梦幻镜魔境-考验选择-未选中-风"
+        ]
+    },
+    "梦幻镜魔境-考验选择-未选中-水": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //右半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    779,
+                    255,
+                    117,
+                    316
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/未选中/水.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-考验选择-已选中-风": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/已选中/风.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验选择-已选中-空间",
+            "[JumpBack]梦幻镜魔境-考验选择-未选中-空间"
+        ]
+    },
+    "梦幻镜魔境-考验选择-未选中-风": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/未选中/风.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-考验选择-已选中-空间": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //右半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    779,
+                    255,
+                    117,
+                    316
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/已选中/空间.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验选择-已选中-地",
+            "[JumpBack]梦幻镜魔境-考验选择-未选中-地"
+        ]
+    },
+    "梦幻镜魔境-考验选择-未选中-空间": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //右半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    779,
+                    255,
+                    117,
+                    316
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/未选中/空间.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-考验选择-已选中-地": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/已选中/地.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验选择-已选中-光",
+            "[JumpBack]梦幻镜魔境-考验选择-未选中-光"
+        ]
+    },
+    "梦幻镜魔境-考验选择-未选中-地": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/未选中/地.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-考验选择-已选中-光": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //右半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    779,
+                    255,
+                    117,
+                    316
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/已选中/光.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验选择-已选中-暗",
+            "[JumpBack]梦幻镜魔境-考验选择-未选中-暗",
+            "[JumpBack]梦幻镜魔境-上半buff处理完毕开始处理下半的滑动"
+        ]
+    },
+    "梦幻镜魔境-考验选择-未选中-光": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //右半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    779,
+                    255,
+                    117,
+                    316
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/未选中/光.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    //上半部分
+    "梦幻镜魔境-上半buff处理完毕开始处理下半的滑动": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    128,
+                    151,
+                    76,
+                    70
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1135,
+                    509,
+                    34,
+                    42
+                ],
+                "end": [
+                    1143,
+                    286,
+                    26,
+                    42
+                ]
+            }
+        }
+    },
+    //往下滑，承上启下
+    "梦幻镜魔境-考验选择-已选中-暗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/已选中/暗.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验选择-已选中-物理",
+            "[JumpBack]梦幻镜魔境-考验选择-未选中-物理",
+            "[JumpBack]梦幻镜魔境-上半buff处理完毕开始处理下半的滑动"
+        ]
+    },
+    "梦幻镜魔境-考验选择-未选中-暗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/未选中/暗.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-考验选择-已选中-物理": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //右半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    779,
+                    255,
+                    117,
+                    316
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/已选中/物理.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验选择-已选中-魔法",
+            "[JumpBack]梦幻镜魔境-考验选择-未选中-魔法",
+            "[JumpBack]梦幻镜魔境-上半buff处理完毕开始处理下半的滑动"
+        ]
+    },
+    "梦幻镜魔境-考验选择-未选中-物理": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //右半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    779,
+                    255,
+                    117,
+                    316
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/未选中/物理.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-考验选择-已选中-魔法": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/已选中/魔法.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    673,
+                    591,
+                    200,
+                    56
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验-出击角色确认",
+            "梦幻镜魔境-考验选择-已选中-魔法",
+            "[JumpBack]梦幻镜魔境-加载中"
+        ]
+    },
+    "梦幻镜魔境-考验选择-未选中-魔法": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                //左半边
+                "method": 10001,
+                "threshold": 0.95,
+                "roi": [
+                    286,
+                    281,
+                    104,
+                    304
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/未选中/魔法.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

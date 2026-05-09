@@ -1,0 +1,29 @@
+{
+    "广告-月卡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    432,
+                    146,
+                    409,
+                    348
+                ],
+                "template": [
+                    "繁中/通用/特殊情况特殊处理/广告/月卡.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    607,
+                    206,
+                    69
+                ]
+            }
+        }
+    }
+}

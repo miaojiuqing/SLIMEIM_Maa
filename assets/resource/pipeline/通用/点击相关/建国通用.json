@@ -1,0 +1,154 @@
+{
+    "通用-建国-支援了我的弹窗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    575,
+                    51,
+                    132,
+                    93
+                ],
+                "template": [
+                    "繁中/通用/建国/支援我的弹窗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    536,
+                    596,
+                    210,
+                    56
+                ]
+            }
+        },
+        "post_delay": 500
+    },
+    "通用-建国-兴建": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1096,
+                    537,
+                    114,
+                    106
+                ],
+                "template": [
+                    "繁中/通用/建国/兴建.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "通用-建国-发展目标达成": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    392,
+                    43,
+                    330,
+                    95
+                ],
+                "template": [
+                    "繁中/通用/建国/弹窗处理/发展目标达成.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "发展目标达成,有钻领喽"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    585,
+                    202,
+                    63
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "通用-建国-保管弹窗处理": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    534,
+                    293,
+                    191,
+                    120
+                ],
+                "template": [
+                    "繁中/通用/建国/弹窗处理/空间不足将保管.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "将保管一个新建设施"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    675,
+                    463,
+                    207,
+                    58
+                ]
+            }
+        },
+        "post_delay": 800
+    },
+    "通用-建国-点击筛选升级设施类型": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1127,
+                    70,
+                    96,
+                    92
+                ],
+                "template": [
+                    "繁中/通用/建国/提升/筛选入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "通用-建国-提升完毕弹窗处理": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    565,
+                    58,
+                    264,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/建国/弹窗处理/保管设施提升完毕弹窗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    574,
+                    208,
+                    64
+                ]
+            }
+        },
+        "post_delay": 1000
+    }
+}

@@ -1,0 +1,449 @@
+{
+    "英杰盃-任务开始层": {
+        "next": [
+            "英杰盃-已进入英杰杯界面",
+            "英杰盃-总任务层",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "英杰盃-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-已进入英杰杯界面",
+            "[JumpBack]英杰盃-点击进入英杰盃",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待",
+            "[JumpBack]通用-万代立绘加载中"
+        ]
+    },
+    "英杰盃-已进入英杰杯界面": { //挑战一般/排名接口
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    401,
+                    258,
+                    226,
+                    296
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/三大入口/防守战.png"
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-已进入一般战",
+            "[JumpBack]英杰盃-点击进入一般战",
+            "异常处理-说是预期外错误",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "英杰盃-点击进入一般战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    401,
+                    258,
+                    226,
+                    296
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/三大入口/一般战.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "英杰盃-点击进入排名战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    401,
+                    258,
+                    226,
+                    296
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/三大入口/排名战.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "英杰盃-点击进入英杰盃": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    737,
+                    80,
+                    158,
+                    146
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "英杰盃-已进入一般战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    485,
+                    125,
+                    122,
+                    113
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/已进入一般战.png"
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-已进入编队界面",
+            "[JumpBack]英杰盃-点击选择对手",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "英杰盃-点击选择对手": { //对手挑选接口，更改点击位置
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    558,
+                    216,
+                    75,
+                    315
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/一般战/小奖杯.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                //首位
+                "target": [
+                    496,
+                    240,
+                    571,
+                    69
+                ]
+                //第二位
+                // "target": [496, 353, 571, 79]
+                //第三位
+                // "target": [488, 462, 579, 94]
+            }
+        }
+    },
+    "英杰盃-已进入编队界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    49,
+                    590,
+                    119,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于编队界面.png"
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-成功切换至所选编队",
+            "[JumpBack]通用-编队切换-点击切换编队"
+        ]
+    },
+    "英杰盃-成功切换至所选编队": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    98,
+                    78,
+                    72,
+                    61
+                ],
+                "expected": [
+                    "五.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1014,
+                    618,
+                    176,
+                    48
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "post_delay": 1500,
+        "next": [
+            "英杰盃-挑战卷已耗尽",
+            "英杰盃-已进入战斗",
+            "英杰盃-成功切换至所选编队",
+            "[JumpBack]skip",
+            "[JumpBack]通用-出战队伍有并列演算处理",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]空任务"
+        ]
+    },
+    "英杰盃-已进入战斗": { //战斗方式接口，当前为自动
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    44,
+                    0,
+                    118,
+                    78
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/战斗中.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]skip",
+            "英杰盃-胜利",
+            "英杰盃-失败",
+            "[JumpBack]英杰盃-战斗方式检查-非自动-点击切换",
+            "英杰盃-已进入战斗",
+            "[JumpBack]空任务"
+        ]
+    },
+    "英杰盃-胜利": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    635,
+                    0,
+                    539,
+                    132
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/赢.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1021,
+                    612,
+                    179,
+                    69
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "YOU WIN!"
+        },
+        "next": [
+            "[JumpBack]英杰盃-获得神秘报酬",
+            "英杰盃-胜利",
+            "英杰盃-已进入一般战",
+            "英杰盃-应援团",
+            "英杰盃-升段了",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]英杰盃-应援团好感升级通知"
+        ]
+    },
+    "英杰盃-失败": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    635,
+                    0,
+                    539,
+                    132
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/输.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1021,
+                    612,
+                    179,
+                    69
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "YOU LOSE..."
+        },
+        "next": [
+            "[JumpBack]英杰盃-获得神秘报酬",
+            "英杰盃-失败",
+            "英杰盃-已进入一般战",
+            "英杰盃-升段了",
+            "英杰盃-应援团",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]英杰盃-应援团好感升级通知"
+        ]
+    },
+    "英杰盃-升段了": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    541,
+                    442,
+                    218,
+                    94
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/升段了.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "升段! 晋升!"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1021,
+                    612,
+                    179,
+                    69
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-应援团",
+            "英杰盃-胜利",
+            "英杰盃-失败",
+            "英杰盃-升段了",
+            "[JumpBack]乱点一下"
+        ]
+    },
+    "英杰盃-获得神秘报酬": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    541,
+                    97,
+                    192,
+                    79
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/获得报酬.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "获得了神秘报酬"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    533,
+                    543,
+                    206,
+                    61
+                ]
+            }
+        }
+    },
+    "英杰盃-应援团": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    188,
+                    40,
+                    85,
+                    80
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/应援团.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1021,
+                    612,
+                    179,
+                    69
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-已进入一般战",
+            "英杰盃-升段了",
+            "英杰盃-应援团",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]英杰盃-应援团好感升级通知"
+        ]
+    },
+    "英杰盃-应援团好感升级通知": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    278,
+                    323,
+                    84,
+                    90
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/情谊提升.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "应援团的情谊等级提升了!"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    533,
+                    209,
+                    63
+                ]
+            }
+        }
+    }
+}

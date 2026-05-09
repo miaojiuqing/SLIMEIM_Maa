@@ -1,0 +1,77 @@
+{
+    "点击主线和培养": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1052,
+                    107,
+                    203,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主菜单/主线&培育.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1000,
+        "pre_delay": 200
+    },
+    "点击期间限定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1011,
+                    253,
+                    197,
+                    94
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主菜单/期间限定.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1000,
+        "pre_delay": 200
+    },
+    "点击进入城镇": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    970,
+                    574,
+                    102,
+                    96
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主菜单/首页.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "点击进入建国": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1057,
+                    398,
+                    104,
+                    88
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主菜单/建国.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

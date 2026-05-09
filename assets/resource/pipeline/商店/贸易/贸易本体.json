@@ -1,0 +1,359 @@
+{
+    "贸易-任务开始层": {
+        "next": [
+            "贸易-总任务层",
+            "贸易-已进入贸易界面",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "贸易-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]贸易-上次贸易结果",
+            "贸易-已进入贸易界面",
+            "[JumpBack]贸易-点击进入贸易界面",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "贸易-点击进入贸易界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    17,
+                    603,
+                    87,
+                    85
+                ],
+                "template": [
+                    "繁中/商店/贸易/入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "贸易-上次贸易结果": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    487,
+                    45,
+                    218,
+                    82
+                ],
+                "template": [
+                    "繁中/商店/贸易/上次贸易结果.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    621,
+                    583,
+                    61,
+                    65
+                ]
+            }
+        }
+    },
+    "贸易-已进入贸易界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    580,
+                    140,
+                    151,
+                    407
+                ],
+                "template": [
+                    "繁中/商店/贸易/已进入.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]贸易-上次贸易结果",
+            "贸易-还有贸易次数",
+            "贸易-无可进行贸易次数",
+            "[JumpBack]贸易-只是在加载"
+        ]
+    },
+    "贸易-还有贸易次数": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1124,
+                    629,
+                    75,
+                    77
+                ],
+                "template": [
+                    "繁中/商店/贸易/还能买/3次.png",
+                    "繁中/商店/贸易/还能买/2次.png",
+                    "繁中/商店/贸易/还能买/1次.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1043,
+                    176,
+                    132,
+                    59
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]贸易-上次贸易结果",
+            "贸易-已进入商品交易界面",
+            "贸易-还有贸易次数",
+            "[JumpBack]贸易-只是在加载"
+        ]
+    },
+    "贸易-无可进行贸易次数": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1124,
+                    629,
+                    75,
+                    77
+                ],
+                "template": [
+                    "繁中/商店/贸易/还能买/0次.png"
+                ]
+            }
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]贸易-只是在加载"
+        ]
+    },
+    "贸易-已进入商品交易界面": { //放用户选择的商品
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    154,
+                    405,
+                    148,
+                    138
+                ],
+                "template": [
+                    "繁中/商店/贸易/交易界面.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]贸易-商品-该商品正处于贸易状态-直接下一个",
+            "贸易-无可进行贸易次数",
+            //放所有商品
+            "贸易-商品-心之书-简易蓝",
+            "贸易-商品-心之书-简易绿",
+            "贸易-商品-武器材料-至高魔羽",
+            //全部禁用,用户选了才启用
+            "贸易-已处于最后一个商品",
+            "[JumpBack]贸易-点击切换至下一个商品"
+        ]
+    },
+    "贸易-已处于最后一个商品": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    777,
+                    570,
+                    47,
+                    36
+                ],
+                "upper": [
+                    30,
+                    189,
+                    133
+                ],
+                "lower": [
+                    22,
+                    75,
+                    58
+                ],
+                "count": 75
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    82,
+                    20,
+                    34,
+                    35
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "没遇到满意的商品用光贸易次数呢"
+        },
+        "next": [
+            "成功进入主菜单",
+            "贸易-已处于最后一个商品",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]贸易-只是在加载"
+        ]
+    },
+    "贸易-点击切换至下一个商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1150,
+                    300,
+                    96,
+                    122
+                ],
+                "template": [
+                    "繁中/商店/贸易/切换商品.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 1000
+    },
+    "贸易-该商品已点完MAX": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    579,
+                    441,
+                    176,
+                    91
+                ],
+                "upper": [
+                    127,
+                    101,
+                    33
+                ],
+                "lower": [
+                    90,
+                    67,
+                    15
+                ],
+                "count": 4500
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    539,
+                    618,
+                    208,
+                    58
+                ]
+            }
+        },
+        "next": [
+            "贸易-贸易开始确认",
+            "贸易-该商品已点完MAX"
+        ]
+    },
+    "贸易-贸易开始确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    334,
+                    404,
+                    85,
+                    125
+                ],
+                "template": [
+                    "繁中/商店/贸易/贸易开始确认.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    671,
+                    546,
+                    209,
+                    69
+                ]
+            }
+        },
+        "next": [
+            "贸易-已进入贸易界面",
+            "贸易-贸易开始确认",
+            "[JumpBack]贸易-只是在加载"
+        ]
+    },
+    "贸易-商品-该商品正处于贸易状态-直接下一个": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    82,
+                    57,
+                    173,
+                    87
+                ],
+                "template": [
+                    "繁中/商店/贸易/贸易中.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1180,
+                    324,
+                    42,
+                    71
+                ]
+            }
+        }
+    },
+    "贸易-只是在加载": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    123,
+                    0,
+                    83,
+                    79
+                ],
+                "template": [
+                    "繁中/商店/贸易/加载ing.png"
+                ]
+            }
+        }
+    }
+}

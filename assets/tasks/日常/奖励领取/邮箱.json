@@ -1,0 +1,16 @@
+{
+    "task": [
+        {
+            "name": "日常-奖励领取-邮箱",
+            "label": "邮箱领取",
+            "group": [
+                "奖励领取"
+            ],
+            "default_check": true,
+            "entry": "邮箱-任务开始层",
+            "description": "有不可领取的东西会通知但是不会停止",
+            "option": []
+        }
+    ],
+    "option": {}
+}

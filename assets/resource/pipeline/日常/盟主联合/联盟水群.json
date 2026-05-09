@@ -1,0 +1,127 @@
+{
+    "联盟水群-已进入表情包选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1057,
+                    546,
+                    104,
+                    100
+                ],
+                "template": [
+                    "繁中/日常/联盟/水群/发送表情包.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    255,
+                    104,
+                    141,
+                    134
+                ]
+            }
+        },
+        "next": [
+            "联盟水群-已选中表情包",
+            "联盟水群-已进入表情包选择界面",
+            "[JumpBack]联盟每日-正处于报酬领取界面-退出去"
+        ]
+    },
+    "联盟水群-已选中表情包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    352,
+                    58,
+                    90,
+                    95
+                ],
+                "template": [
+                    "繁中/日常/联盟/水群/已选中表情包.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1082,
+                    568,
+                    62,
+                    59
+                ]
+            }
+        },
+        "next": [
+            "联盟水群-已通过发送表情包回到联盟界面",
+            "联盟水群-已选中表情包",
+            "[JumpBack]联盟水群-点击发送表情包"
+        ]
+    },
+    "联盟水群-点击发送表情包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1057,
+                    546,
+                    104,
+                    100
+                ],
+                "template": [
+                    "繁中/日常/联盟/水群/发送表情包.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "联盟水群-点击进入表情包选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    453,
+                    530,
+                    88,
+                    81
+                ],
+                "threshold": [
+                    0.85
+                ],
+                "template": [
+                    "繁中/日常/联盟/水群/水群入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "联盟水群-已通过发送表情包回到联盟界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    837,
+                    604,
+                    101,
+                    96
+                ],
+                "threshold": [
+                    0.85
+                ],
+                "template": [
+                    "繁中/日常/联盟/已进入联盟.png"
+                ]
+            }
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "英杰盃-战斗方式检查-非自动-点击切换": {
+        // "inverse": true,
+        "max_hit": 10,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    49,
+                    31,
+                    183,
+                    93
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/一般战/现在是手动模式.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1074,
+                    18,
+                    55,
+                    47
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "通用-战斗-资料下载": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    566,
+                    262,
+                    124,
+                    88
+                ],
+                "template": [
+                    "繁中/通用/战斗/弹窗/资料下载.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    667,
+                    432,
+                    213,
+                    64
+                ]
+            }
+        }
+    }
+}

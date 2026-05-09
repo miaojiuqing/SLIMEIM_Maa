@@ -1,0 +1,186 @@
+{
+    "列表刷关-关卡类型检查-捕食类": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    632,
+                    120,
+                    151,
+                    205
+                ],
+                "template": [
+                    "繁中/单线程工具/刷关通用/关卡类型/捕食/捕食关卡.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "检测到捕食类关卡"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    100,
+                    0,
+                    150,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "列表刷关-捕食类-已进入编队界面",
+            "列表刷关-关卡类型检查-捕食类",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "列表刷关-捕食类-已进入编队界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    49,
+                    590,
+                    119,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于编队界面.png"
+                ]
+            }
+        },
+        "next": [
+            "列表刷关-捕食类-已成功切换至所选编队",
+            "[JumpBack]广告-月卡",
+            "[JumpBack]通用-编队切换-点击切换编队"
+        ]
+    },
+    "列表刷关-捕食类-已成功切换至所选编队": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    98,
+                    78,
+                    72,
+                    61
+                ],
+                "expected": [
+                    "八.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    997,
+                    604,
+                    216,
+                    71
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]通用-上次并列演算处理",
+            "[JumpBack]通用-编队-体力消耗确认",
+            "列表刷关-捕食类-已进入战斗",
+            "[JumpBack]通用-演算中断-检查到中断弹窗",
+            "列表刷关-捕食类-已成功切换至所选编队",
+            "[JumpBack]通用-可处理范围加载等待",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-剧情跳过-已进入剧情",
+            "[JumpBack]通用-战斗-资料下载",
+            "[JumpBack]空任务"
+        ]
+    },
+    "列表刷关-捕食类-已进入战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1139,
+                    0,
+                    84,
+                    79
+                ],
+                "template": [
+                    "繁中/通用/战斗/战斗中/设置.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]skip",
+            "列表刷关-捕食类-捕食评价",
+            "列表刷关-捕食类-已进入战斗",
+            "[JumpBack]乱点一下"
+        ]
+    },
+    "列表刷关-捕食类-捕食评价": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    77,
+                    169,
+                    113,
+                    274
+                ],
+                "template": [
+                    "繁中/日常/捕食战/捕食评价.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    921,
+                    549,
+                    193,
+                    50
+                ]
+            }
+        },
+        "next": [
+            "列表刷关-捕食类-战斗结束",
+            "列表刷关-捕食类-捕食评价",
+            "[JumpBack]skip",
+            "[JumpBack]乱点一下"
+        ]
+    },
+    "列表刷关-捕食类-战斗结束": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1084,
+                    95,
+                    95,
+                    101
+                ],
+                "template": [
+                    "繁中/通用/战斗/战斗结束/胜利达成.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1021,
+                    615,
+                    182,
+                    62
+                ]
+            }
+        },
+        "next": [
+            "列表刷关-已进入关卡列表",
+            "列表刷关-捕食类-战斗结束",
+            "[JumpBack]通用-战后角色升级界面的下一步",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-剧情跳过-已进入剧情"
+        ]
+    }
+}

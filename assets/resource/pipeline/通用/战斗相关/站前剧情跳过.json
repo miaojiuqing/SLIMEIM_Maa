@@ -1,0 +1,71 @@
+{
+    "通用-剧情跳过-已进入剧情": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1129,
+                    205,
+                    100,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/剧情/跳过.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "next": [
+            "通用-剧情跳过-跳过确认",
+            "通用-剧情跳过-已进入剧情"
+        ]
+    },
+    "通用-剧情跳过-跳过确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    389,
+                    354,
+                    482,
+                    97
+                ],
+                "template": [
+                    "繁中/通用/剧情/剧情跳过确认.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    672,
+                    496,
+                    201,
+                    60
+                ]
+            }
+        },
+        "next": [
+            "通用-剧情跳过-跳过确认成功",
+            "通用-剧情跳过-跳过确认"
+        ]
+    },
+    "通用-剧情跳过-跳过确认成功": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    389,
+                    354,
+                    482,
+                    97
+                ],
+                "template": [
+                    "繁中/通用/剧情/剧情跳过确认.png"
+                ]
+            }
+        }
+    }
+}

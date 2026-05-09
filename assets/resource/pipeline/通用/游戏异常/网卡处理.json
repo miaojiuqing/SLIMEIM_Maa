@@ -1,0 +1,32 @@
+{
+    "异常处理-网络连接失败-点击重试": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    525,
+                    286,
+                    212,
+                    79
+                ],
+                "template": [
+                    "繁中/通用/特殊情况特殊处理/网卡/网络连接失败.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "嗨呀 网卡了,将点击重试"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    674,
+                    415,
+                    198,
+                    57
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,181 @@
+{
+    "邮箱-任务开始层": {
+        "next": [
+            "邮箱-总任务层",
+            "邮箱-已进入邮箱物品领取界面",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "邮箱-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "邮箱-已进入邮箱物品领取界面",
+            "[JumpBack]邮箱-点击打开邮箱",
+            "[JumpBack]黑屏计数-2.5秒"
+        ]
+    },
+    "邮箱-点击打开邮箱": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "繁中/奖励领取/邮箱/入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "邮箱-已进入邮箱物品领取界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    578,
+                    417,
+                    142
+                ],
+                "template": [
+                    "繁中/奖励领取/邮箱/已进入界面.png"
+                ]
+            }
+        },
+        "next": [
+            "邮箱-领取失败-背包物品已达上限",
+            "邮箱-无可领取邮件",
+            "[JumpBack]邮箱-OK",
+            "[JumpBack]邮箱-有未领取邮件"
+        ]
+    },
+    "邮箱-无可领取邮件": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    984,
+                    595,
+                    242,
+                    104
+                ],
+                "upper": [
+                    15,
+                    70,
+                    69
+                ],
+                "lower": [
+                    2,
+                    35,
+                    33
+                ],
+                "count": 8000
+            }
+        },
+        "next": [
+            "[JumpBack]邮箱-OK",
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单"
+        ]
+    },
+    "邮箱-有未领取邮件": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    985,
+                    594,
+                    242,
+                    99
+                ],
+                "upper": [
+                    21,
+                    130,
+                    139
+                ],
+                "lower": [
+                    4,
+                    73,
+                    64
+                ],
+                "count": 5000
+            }
+        },
+        "action": "Click",
+        "post_delay": 500
+    },
+    "邮箱-领取失败-背包物品已达上限": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    445,
+                    197,
+                    369,
+                    126
+                ],
+                "template": [
+                    "繁中/奖励领取/邮箱/道具已达上限.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "背包有物品已达上限,请及时清理"
+        },
+        "next": [
+            "[JumpBack]邮箱-OK",
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单"
+        ]
+    },
+    "邮箱-领取成功": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    447,
+                    40,
+                    347,
+                    101
+                ],
+                "template": [
+                    "繁中/奖励领取/邮箱/已获得物品.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]邮箱-OK",
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "邮箱-领取失败-背包物品已达上限"
+        ]
+    },
+    "邮箱-OK": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    325,
+                    375,
+                    615,
+                    345
+                ],
+                "template": [
+                    "繁中/奖励领取/邮箱/OK.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

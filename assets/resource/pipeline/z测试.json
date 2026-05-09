@@ -1,0 +1,34 @@
+{
+    "1": {
+        // "recognition": {
+        //     "type": "TemplateMatch",
+        //     "param": {
+        //         "roi": [
+        //             43,
+        //             144,
+        //             1200,
+        //             243
+        //         ],
+        //         "template": [
+        //             "繁中/通用/建国/筛选/地区/已选中/竹林.png"
+        //         ],
+        //         "method": 10001,
+        //         "threshold": 0.85
+        //     }
+        // }
+        "focus": {
+            "Node.Recognition.Succeeded": "吃了一次药"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1092,
+                    81,
+                    127,
+                    31
+                ]
+            }
+        }
+    }
+}

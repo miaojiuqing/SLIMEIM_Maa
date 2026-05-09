@@ -1,0 +1,222 @@
+{
+    "task": [
+        {
+            "name": "并列演算",
+            "entry": "并列演算-任务开始层",
+            "default_check": true,
+            "group": [
+                "日常"
+            ],
+            "description": "请自行解锁,固定点击MAX并列最大次数",
+            "option": [
+                "活动并列演算-编队选择",
+                "活动并列演算-自动编队",
+                "通用-编队切换方式",
+                "通用-有未完成的并列演算"
+                // "并列演算-战斗模式"
+            ]
+        }
+    ],
+    "option": {
+        "活动并列演算-编队选择": {
+            "type": "select",
+            "label": "编队选择",
+            "cases": [
+                {
+                    "name": "不切换",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "recognition": "DirectHit"
+                        }
+                    }
+                },
+                {
+                    "name": "第一编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "一.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第二编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "二.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第三编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "三.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第四编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "四.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第五编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "五.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第六编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "六.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第七编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "七.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第八编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "八.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第九编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "九.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第十编队",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "expected": [
+                                "十.*"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "default_case": "第七编队"
+        },
+        "活动并列演算-自动编队": {
+            "type": "switch",
+            "label": "自动编队",
+            "description": "切换到所选编队后,自动根据最高收集效果进行编队",
+            "default_case": "No",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "target": [
+                                77,
+                                613,
+                                187,
+                                54
+                            ],
+                            "post_delay": 1500,
+                            "next": [
+                                "并列演算-自动编队-已进入自动编队界面",
+                                "并列演算-已成功切换至所选编队"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "并列演算-已成功切换至所选编队": {
+                            "target": [
+                                814,
+                                626,
+                                147,
+                                33
+                            ],
+                            "next": [
+                                "[JumpBack]并列演算-上次并列演算结果",
+                                "并列演算-已打开并列演算界面",
+                                "[JumpBack]OK",
+                                "[JumpBack]下一步",
+                                "[JumpBack]通用-演算中断-检查到中断弹窗",
+                                "并列演算-已成功切换至所选编队"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "通用-有未完成的并列演算": {
+            "type": "select",
+            "label": "若有未完成的演算",
+            "default_case": "返回主菜单",
+            "cases": [
+                {
+                    "name": "中断后继续任务",
+                    "pipeline_override": {
+                        "通用-演算中断-检查到中断弹窗": {
+                            "next": [
+                                "通用-演算中断-上次演算结算",
+                                "[JumpBack]通用-演算中断-点击中断",
+                                "[JumpBack]通用-可处理范围加载等待"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "返回主菜单",
+                    "pipeline_override": {
+                        "通用-演算中断-检查到中断弹窗": {
+                            "next": [
+                                "成功进入主菜单",
+                                "[JumpBack]通用-演算中断-点击取消",
+                                "[JumpBack]叉叉",
+                                "[JumpBack]点击黑色小主菜单",
+                                "[JumpBack]黑屏计数-2.5秒",
+                                "[JumpBack]通用-可处理范围加载等待"
+                            ]
+                        },
+                        "成功进入主菜单": {
+                            "action": "StopTask"
+                        }
+                    }
+                }
+            ]
+        }
+        // "并列演算-不演算纯打完20次模式":{}
+    }
+}

@@ -1,0 +1,465 @@
+{
+    "泡温泉-任务开始层": {
+        "next": [
+            "泡温泉-总任务层",
+            "泡温泉-已进入城镇",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "泡温泉-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "泡温泉-已进入城镇",
+            "[JumpBack]点击进入城镇",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待",
+            "[JumpBack]通用-万代立绘加载中"
+        ]
+    },
+    "泡温泉-已进入城镇": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1119,
+                    584,
+                    116,
+                    111
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主菜单/点击打开伙伴设施一览.png"
+                ]
+            }
+        },
+        "action": "DoNothing",
+        "next": [
+            "泡温泉-城镇可泡温泉检查",
+            "泡温泉-城镇不可泡温泉检查",
+            // "泡温泉-已打开双一览界面",
+            "泡温泉-已进入城镇",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "泡温泉-城镇不可泡温泉检查": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1130,
+                    513,
+                    87,
+                    88
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/城镇检查.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1139,
+                    40,
+                    41,
+                    46
+                ]
+            }
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击绿色大菜单",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "泡温泉-城镇可泡温泉检查": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1130,
+                    513,
+                    87,
+                    88
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/城镇检查.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1153,
+                    625,
+                    43,
+                    41
+                ]
+            }
+        },
+        "next": [
+            "泡温泉-已打开双一览界面",
+            "泡温泉-城镇可泡温泉检查",
+            "泡温泉-已进入城镇",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "泡温泉-已打开双一览界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    396,
+                    13,
+                    600,
+                    108
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/已打开一览界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    705,
+                    47,
+                    245,
+                    31
+                ]
+            }
+        },
+        "next": [
+            "泡温泉-已选择设施一览",
+            "泡温泉-已打开双一览界面"
+        ]
+    },
+    "泡温泉-已选择设施一览": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    751,
+                    19,
+                    161,
+                    84
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/已打开一览界面.png"
+                ]
+            }
+        },
+        "next": [
+            "泡温泉-已传送至温泉门口",
+            "泡温泉-传送至温泉设施弹窗",
+            "[JumpBack]泡温泉-点击移动至泡温泉设施",
+            "泡温泉-已打开双一览界面",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "泡温泉-已传送至温泉门口": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    223,
+                    208,
+                    732,
+                    461
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/到门口了.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "泡温泉-泡前寒暄",
+            "泡温泉-今天泡过了",
+            "泡温泉-已传送至温泉门口"
+        ]
+    },
+    "泡温泉-今天泡过了": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    457,
+                    282,
+                    396,
+                    165
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/泡过了.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    545,
+                    445,
+                    183,
+                    55
+                ]
+            }
+        },
+        "post_delay": 800,
+        "focus": {
+            "Node.Recognition.Succeeded": "今天泡过温泉了"
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击绿色大菜单",
+            "[JumpBack]黑屏计数-2.5秒"
+        ]
+    },
+    "泡温泉-点击移动至泡温泉设施": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    44,
+                    98,
+                    1196,
+                    555
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/点击去泡温泉.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    285,
+                    30,
+                    0,
+                    0
+                ]
+            }
+        }
+    },
+    "泡温泉-传送至温泉设施弹窗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    525,
+                    310,
+                    204,
+                    86
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/传送确认弹窗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    682,
+                    451,
+                    188,
+                    44
+                ]
+            }
+        },
+        "next": [
+            "泡温泉-泡前寒暄",
+            "泡温泉-传送至温泉设施弹窗",
+            "[JumpBack]黑屏计数-2.5秒"
+        ]
+    },
+    "泡温泉-泡前寒暄": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    42,
+                    455,
+                    371,
+                    92
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/泡前寒暄/利姆露.png",
+                    "繁中/琐事/泡温泉/泡前寒暄/朱莱.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    72,
+                    482,
+                    1135,
+                    202
+                ]
+            }
+        },
+        "next": [
+            "泡温泉-收益确认",
+            "[JumpBack]泡温泉-过对话",
+            "[JumpBack]黑屏计数-2.5秒",
+            "成功进入主菜单",
+            "[JumpBack]点击绿色大菜单"
+        ]
+    },
+    "泡温泉-过对话": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    1093,
+                    557,
+                    187,
+                    163
+                ],
+                "upper": [
+                    213,
+                    205,
+                    183
+                ],
+                "lower": [
+                    213,
+                    205,
+                    183
+                ],
+                "count": 1000
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    72,
+                    482,
+                    1135,
+                    202
+                ]
+            }
+        },
+        "post_delay": 500,
+        "repeat": 3,
+        "repeat_delay": 100
+    },
+    "泡温泉-收益确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    436,
+                    246,
+                    442,
+                    201
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/收益弹窗.png"
+                ]
+            }
+        },
+        "next": [
+            "泡温泉-收益-110体力",
+            "泡温泉-收益-90体力",
+            "成功进入主菜单",
+            "[JumpBack]点击绿色大菜单",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]泡温泉-过对话",
+            "[JumpBack]OK"
+        ]
+    },
+    "泡温泉-收益-110体力": { //待补充
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    443,
+                    302,
+                    383,
+                    94
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/收益/110.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "此次温泉收益为110体力"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    559,
+                    449,
+                    162,
+                    48
+                ]
+            }
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击绿色大菜单",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]泡温泉-过对话"
+        ]
+    },
+    "泡温泉-收益-90体力": { //待补充
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    443,
+                    302,
+                    383,
+                    94
+                ],
+                "template": [
+                    "繁中/琐事/泡温泉/收益/90.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "此次温泉收益为90体力"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    559,
+                    449,
+                    162,
+                    48
+                ]
+            }
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击绿色大菜单",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]泡温泉-过对话"
+        ]
+    }
+}

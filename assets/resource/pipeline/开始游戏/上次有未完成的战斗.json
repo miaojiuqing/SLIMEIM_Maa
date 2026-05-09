@@ -1,0 +1,83 @@
+{
+    "未完战-有未完成的战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    442,
+                    153,
+                    398,
+                    146
+                ],
+                "expected": [
+                    "再次進入戰.*"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "有未解决的战斗！"
+        }
+    },
+    "未完战-OK确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    631,
+                    410,
+                    302,
+                    159
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/OK.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "未完战-取消离开": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    369,
+                    425,
+                    277,
+                    141
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/取消.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "未完战-已进入战斗场景": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": []
+            }
+        }
+    },
+    "未完战-捕食结算界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    21,
+                    486,
+                    859,
+                    180
+                ],
+                "template": [
+                    "繁中/通用/特殊情况特殊处理/未完战/捕食评价界面.png"
+                ]
+            }
+        }
+    }
+}

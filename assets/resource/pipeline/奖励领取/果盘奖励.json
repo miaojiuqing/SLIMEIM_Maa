@@ -1,0 +1,260 @@
+{
+    "果盘奖励领取-任务开始层": {
+        "next": [
+            "果盘奖励领取-已进入果盘界面",
+            "果盘奖励领取-当前处于任务界面",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "果盘奖励领取-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "果盘奖励领取-已进入果盘界面",
+            "果盘奖励领取-当前处于任务界面",
+            "[JumpBack]果盘奖励领取-点击进入任务界面",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待",
+            "[JumpBack]叉叉",
+            "[JumpBack]OK"
+        ]
+    },
+    "果盘奖励领取-当前处于任务界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1027,
+                    93,
+                    202,
+                    70
+                ],
+                "template": [
+                    "繁中/奖励领取/任务奖励/已进入领取界面.png"
+                ]
+            }
+        },
+        "next": [
+            "果盘奖励领取-已进入果盘界面",
+            "[JumpBack]果盘奖励领取-点击从任务界面进入果盘界面",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待",
+            "[JumpBack]叉叉",
+            "[JumpBack]OK"
+        ]
+    },
+    "果盘奖励领取-点击进入任务界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    86,
+                    249,
+                    136,
+                    106
+                ],
+                "template": [
+                    "繁中/奖励领取/任务奖励/入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "果盘奖励领取-点击从任务界面进入果盘界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1028,
+                    83,
+                    89,
+                    71
+                ],
+                "template": [
+                    "繁中/奖励领取/果盘奖励/点击进入果盘.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "果盘奖励领取-已进入果盘界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    139,
+                    603,
+                    253,
+                    88
+                ],
+                "template": [
+                    "繁中/奖励领取/果盘奖励/已进入界面.png"
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "果盘奖励领取-奖励领取弹窗",
+            "[JumpBack]果盘奖励领取-点击可领取果盘",
+            "[JumpBack]果盘奖励领取-正在领取奖励",
+            "[JumpBack]果盘奖励领取-点击寻找果盘奖励",
+            "果盘奖励领取-无可领取奖励",
+            "[JumpBack]空任务"
+        ]
+    },
+    "果盘奖励领取-正在领取奖励": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    154,
+                    38,
+                    1026,
+                    107
+                ],
+                "upper": [
+                    122,
+                    119,
+                    113
+                ],
+                "lower": [
+                    121,
+                    119,
+                    112
+                ],
+                "count": 1000
+            }
+        }
+    },
+    "果盘奖励领取-点击可领取果盘": { //变为目的节点，等待奖励获取结算界面
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    182,
+                    30,
+                    917,
+                    51
+                ],
+                "template": [
+                    "繁中/奖励领取/果盘奖励/有可领取果盘.png"
+                ],
+                "green_mask": true,
+                // "connected": true,
+                // "count": 250
+                "method": 10001
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    10,
+                    20,
+                    20,
+                    30
+                ]
+            }
+        }
+    },
+    "果盘奖励领取-奖励领取弹窗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    514,
+                    403,
+                    261,
+                    272
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "next": [
+            "果盘奖励领取-已进入果盘界面",
+            "果盘奖励领取-奖励领取弹窗"
+        ]
+    },
+    "果盘奖励领取-无可领取奖励": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    182,
+                    30,
+                    917,
+                    51
+                ],
+                "template": [
+                    "繁中/奖励领取/果盘奖励/有可领取果盘.png"
+                ],
+                "green_mask": true,
+                // "connected": true,
+                // "count": 250
+                "method": 10001
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "果盘奖励领取完毕"
+        },
+        "next": [
+            "果盘奖励领取-奖励领取弹窗",
+            "[JumpBack]果盘奖励领取-点击寻找果盘奖励",
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]叉叉",
+            "[JumpBack]OK",
+            "[JumpBack]左上角返回"
+        ]
+    },
+    "果盘奖励领取-点击寻找果盘奖励": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    182,
+                    30,
+                    917,
+                    51
+                ],
+                "template": [
+                    "繁中/奖励领取/果盘奖励/有可领取果盘.png"
+                ],
+                "green_mask": true,
+                // "connected": true,
+                // "count": 250
+                "method": 10001
+            }
+        },
+        "max_hit": 10,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1134,
+                    76,
+                    15,
+                    11
+                ]
+            }
+        }
+    },
+    "果盘奖励领取-任务界面显示有未领取果盘": {}
+}

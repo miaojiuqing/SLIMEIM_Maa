@@ -1,0 +1,48 @@
+{
+    "点击切换至期间限定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    997,
+                    49,
+                    275,
+                    123
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主线&培育/点击切换到期间限定.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "点击未选中的故事": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "繁中/通用/入口点击/期间限定/未选中/故事.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "点击未选中的特别": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    667,
+                    590,
+                    107,
+                    90
+                ],
+                "template": [
+                    "繁中/通用/入口点击/期间限定/未选中/特别.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

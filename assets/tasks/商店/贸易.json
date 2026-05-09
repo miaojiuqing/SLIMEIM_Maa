@@ -1,0 +1,94 @@
+{
+    "task": [
+        {
+            "name": "商店-贸易",
+            "label": "贸易",
+            "entry": "贸易-任务开始层",
+            "group": [
+                "日常"
+            ],
+            "default_check": true,
+            "icon": "./resource/image/繁中/商店/贸易/入口.png",
+            "description": "想买什么但选项没有的话提issue或者进群说,不考虑贸易票据不够的情况,这玩意能不够那你是真挥霍",
+            "option": [
+                "商店-贸易-商品选择-心之书-简易蓝",
+                "商店-贸易-商品选择-心之书-简易绿",
+                "商店-贸易-商品选择-武器材料-至高魔羽"
+            ]
+        }
+    ],
+    "option": {
+        "商店-贸易-商品选择-心之书-简易蓝": {
+            "type": "switch",
+            "label": "心之书-简历蓝",
+            "icon": "./resource/image/繁中/商店/贸易/图标/心之书/简易蓝.png",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "贸易-商品-心之书-简易蓝": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "贸易-商品-心之书-简易蓝": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "商店-贸易-商品选择-心之书-简易绿": {
+            "type": "switch",
+            "label": "心之书-简历绿",
+            "icon": "./resource/image/繁中/商店/贸易/图标/心之书/简易绿.png",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "贸易-商品-心之书-简易绿": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "贸易-商品-心之书-简易绿": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "商店-贸易-商品选择-武器材料-至高魔羽": {
+            "type": "switch",
+            "label": "武器材料-至高魔羽",
+            "icon": "./resource/image/繁中/商店/贸易/图标/武器材料/至高魔羽.png",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "贸易-商品-武器材料-至高魔羽": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "贸易-商品-武器材料-至高魔羽": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

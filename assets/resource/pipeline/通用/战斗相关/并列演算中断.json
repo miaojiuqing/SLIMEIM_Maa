@@ -1,0 +1,122 @@
+{
+    "通用-演算中断-检查到中断弹窗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    484,
+                    94,
+                    313,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/特殊情况特殊处理/演算中断/正处于界面.png"
+                ]
+            }
+        },
+        "next": [
+            "通用-演算中断-上次演算结算",
+            "[JumpBack]通用-演算中断-点击中断",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "通用-演算中断-点击中断": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    693,
+                    518,
+                    159,
+                    92
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/YES.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "通用-演算中断-点击取消": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    442,
+                    515,
+                    130,
+                    96
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/NO.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "通用-演算中断-上次演算结算": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    315,
+                    177,
+                    253,
+                    141
+                ],
+                "template": [
+                    "繁中/通用/特殊情况特殊处理/演算中断/上次演算结算.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    561,
+                    585,
+                    170,
+                    56
+                ]
+            }
+        },
+        "next": [
+            "通用-演算中断-已回到并列演算界面",
+            "并列演算-上次并列演算结果",
+            "[JumpBack]通用-演算-队伍经验结算界面的OK"
+        ]
+    },
+    "通用-演算-队伍经验结算界面的OK": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    515,
+                    555,
+                    257,
+                    117
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "通用-演算中断-已回到并列演算界面": { //结束自身进程，继续父级任务
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    153,
+                    233,
+                    162,
+                    221
+                ],
+                "template": [
+                    "繁中/活动那俩/并列演算/并列演算界面.png"
+                ]
+            }
+        }
+    }
+}

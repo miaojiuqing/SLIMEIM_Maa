@@ -1,0 +1,37 @@
+{
+    "异常处理-说是预期外错误": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    558,
+                    272,
+                    145,
+                    157
+                ],
+                "template": [
+                    "繁中/通用/特殊情况特殊处理/预期外错误说是/预期外错误弹窗.png"
+                ]
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    461,
+                    209,
+                    68
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "<font color=\"red\">出现预期外错误弹窗，将重新开始任务</font>"
+        },
+        "next": [
+            //各个任务的各个任务开始层
+            "英杰盃-任务开始层"
+        ]
+    }
+}

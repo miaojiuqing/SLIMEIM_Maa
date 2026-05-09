@@ -1,0 +1,42 @@
+{
+    "task": [
+        {
+            "name": "日常-锻造场升级",
+            "label": "锻造场升级",
+            "entry": "锻造升级-任务开始层",
+            "description": "无法强化时会自动排序,有排序完自动排回来的的需求的话在跟作者说",
+            "option": [
+                "日常-锻造升级-顺便建造活动装备"
+            ],
+            "group": [
+                "日常"
+            ],
+            "default_check": true,
+            "pipeline_override": {
+                "异常处理-日期更新": {
+                    "next": [
+                        "锻造升级-任务开始层"
+                    ]
+                }
+            }
+        }
+    ],
+    "preset": [],
+    "option": {
+        "日常-锻造升级-顺便建造活动装备": {
+            "type": "switch",
+            "label": "顺便制作活动装备",
+            "description": "有活动装备会自动制造",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {}
+                }
+            ]
+        }
+    }
+}

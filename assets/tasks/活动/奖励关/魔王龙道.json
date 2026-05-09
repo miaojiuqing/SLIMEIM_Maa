@@ -1,0 +1,135 @@
+{
+    "task": [
+        {
+            "name": "活动-奖励关-魔王龙道",
+            "label": "魔王龙道",
+            "default_check": true,
+            "group": [
+                "日常"
+            ],
+            "entry": "奖励关-魔王龙道-任务开始层",
+            "description": "不会有人打不过吧(",
+            "option": [
+                "奖励关-魔王龙道-编队选择",
+                "通用-编队切换方式"
+            ]
+        }
+    ],
+    "option": {
+        "奖励关-魔王龙道-编队选择": {
+            "type": "select",
+            "label": "编队选择",
+            "cases": [
+                {
+                    "name": "不切换",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "recognition": "DirectHit"
+                        }
+                    }
+                },
+                {
+                    "name": "第一编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "一.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第二编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "二.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第三编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "三.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第四编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "四.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第五编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "五.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第六编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "六.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第七编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "七.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第八编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "八.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第九编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "九.*"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第十编队",
+                    "pipeline_override": {
+                        "奖励关-魔王龙道-成功切换至所选编队": {
+                            "expected": [
+                                "十.*"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "default_case": "不切换"
+        }
+    }
+}

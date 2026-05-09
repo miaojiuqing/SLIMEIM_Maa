@@ -1,0 +1,20 @@
+{
+    "点击黑色小主菜单": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1100,
+                    0,
+                    180,
+                    122
+                ],
+                "template": [
+                    "繁中/通用/主菜单们/黑色小主菜单.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

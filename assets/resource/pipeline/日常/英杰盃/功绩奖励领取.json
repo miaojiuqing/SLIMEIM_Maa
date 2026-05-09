@@ -1,0 +1,255 @@
+{
+    "英杰盃-功绩领取-已回到一般战界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    485,
+                    125,
+                    122,
+                    113
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/已进入一般战.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    656,
+                    621,
+                    131,
+                    57
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-功绩领取-已进入功绩界面",
+            "英杰盃-功绩领取-已回到一般战界面",
+            "异常处理-说是预期外错误",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "英杰盃-功绩领取-处于编队界面点击左上角返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    49,
+                    590,
+                    119,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于编队界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    79,
+                    20,
+                    37,
+                    36
+                ]
+            }
+        },
+        "post_delay": 800
+    },
+    "英杰盃-功绩领取-已进入功绩界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    597,
+                    68,
+                    121,
+                    84
+                ],
+                "method": 10001,
+                "threshold": 0.85,
+                "template": [
+                    "繁中/日常/英杰盃/功绩领取/已进入功绩界面1.png",
+                    "繁中/日常/英杰盃/功绩领取/已进入功绩界面2.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    593,
+                    89,
+                    133,
+                    38
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-功绩领取-已选中赛季",
+            "英杰盃-功绩领取-已进入功绩界面"
+        ]
+    },
+    "英杰盃-功绩领取-已选中赛季": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    597,
+                    68,
+                    121,
+                    84
+                ],
+                "method": 10001,
+                "threshold": 0.85,
+                "template": [
+                    "繁中/日常/英杰盃/功绩领取/已进入功绩界面1.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    989,
+                    88,
+                    200,
+                    44
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-功绩领取-赛季奖励领取完毕",
+            "[JumpBack]英杰盃-功绩领取-获得奖励专用OK",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "英杰盃-功绩领取-获得奖励专用OK": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    517,
+                    560,
+                    245,
+                    114
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "英杰盃-功绩领取-赛季奖励领取完毕": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    978,
+                    72,
+                    224,
+                    75
+                ],
+                "upper": [
+                    61,
+                    59,
+                    55
+                ],
+                "lower": [
+                    32,
+                    30,
+                    26
+                ],
+                "count": 5000
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    799,
+                    95,
+                    99,
+                    31
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-功绩领取-已选中累计",
+            "英杰盃-功绩领取-赛季奖励领取完毕",
+            "[JumpBack]英杰盃-功绩领取-获得奖励专用OK"
+        ]
+    },
+    "英杰盃-功绩领取-已选中累计": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    784,
+                    66,
+                    127,
+                    86
+                ],
+                "method": 5,
+                "threshold": 0.85,
+                "template": [
+                    "繁中/日常/英杰盃/功绩领取/累计-已选中.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    989,
+                    88,
+                    200,
+                    44
+                ]
+            }
+        },
+        "next": [
+            "英杰盃-功绩领取-累计奖励领取完毕",
+            "[JumpBack]英杰盃-功绩领取-获得奖励专用OK",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "英杰盃-功绩领取-累计奖励领取完毕": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    978,
+                    72,
+                    224,
+                    75
+                ],
+                "upper": [
+                    61,
+                    59,
+                    55
+                ],
+                "lower": [
+                    32,
+                    30,
+                    26
+                ],
+                "count": 5000
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "功绩奖励领取完毕"
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]英杰盃-功绩领取-获得奖励专用OK",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    }
+}

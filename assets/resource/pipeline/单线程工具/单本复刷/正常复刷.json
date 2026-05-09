@@ -1,0 +1,159 @@
+{
+    "单本复刷-正常模式-引用层": {
+        // "enabled": false,
+        "repeat_delay": 0,
+        "post_delay": 0,
+        "pre_delay": 0,
+        "next": [
+            "单本复刷-正常模式-正处于编队界面",
+            "单本复刷-正常模式-已进入战斗",
+            "单本复刷-正常模式-战斗结算",
+            "[JumpBack]单本复刷-正常模式-报酬获取",
+            "[JumpBack]空任务"
+        ]
+    },
+    "单本复刷-正常模式-正处于编队界面": {
+        "repeat_delay": 0,
+        "post_delay": 0,
+        "pre_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    49,
+                    590,
+                    119,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于编队界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    998,
+                    608,
+                    208,
+                    61
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]skip",
+            "日常-城镇对话-战斗事件-已进入战斗",
+            "单本复刷-正常模式-正处于编队界面",
+            "[JumpBack]黑屏计数-0.5秒",
+            "[JumpBack]通用-可处理范围加载等待",
+            "[JumpBack]空任务"
+        ]
+    },
+    "单本复刷-正常模式-已进入战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    41,
+                    0,
+                    124,
+                    83
+                ],
+                "template": [
+                    "繁中/通用/战斗/战斗中/WAVE.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]skip",
+            "单本复刷-正常模式-战斗结算",
+            "单本复刷-正常模式-已进入战斗",
+            "[JumpBack]单本复刷-正常模式-报酬获取",
+            "[JumpBack]异常处理-网络连接失败-点击重试",
+            "[JumpBack]空任务"
+        ]
+    },
+    "单本复刷-正常模式-战斗结算": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    997,
+                    585,
+                    231,
+                    120
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/下一步2.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    810,
+                    617,
+                    178,
+                    55
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]单本复刷-正常模式-再战处体力不足",
+            "[JumpBack]工具-单本复刷-体力不足处理",
+            "单本复刷-正常模式-已进入战斗",
+            "单本复刷-正常模式-战斗结算",
+            "[JumpBack]黑屏计数-0.5秒",
+            "[JumpBack]单本复刷-正常模式-报酬获取",
+            "[JumpBack]空任务"
+        ]
+    },
+    "单本复刷-正常模式-再战处体力不足": {
+        "enabled": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    842,
+                    596,
+                    112,
+                    66
+                ],
+                "template": [
+                    "繁中/单线程工具/单本复刷/体力不足/再战处体力不足.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    810,
+                    617,
+                    178,
+                    55
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "单本复刷-正常模式-报酬获取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    511,
+                    524,
+                    271,
+                    106
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

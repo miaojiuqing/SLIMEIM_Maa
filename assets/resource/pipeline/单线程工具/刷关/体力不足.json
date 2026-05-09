@@ -1,0 +1,151 @@
+{
+    //通用[JumpBack],
+    "通用-体力不足处理": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    521,
+                    284,
+                    182,
+                    124
+                ],
+                "template": [
+                    "繁中/通用/战斗/体力不足/弹窗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    672,
+                    455,
+                    208,
+                    60
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "通用-体力不足处理-已进入体力药服用界面",
+            "[JumpBack]通用-体力不足处理-已进入回复体力方式选择界面",
+            "通用-体力不足处理"
+        ]
+    },
+    "通用-体力不足处理-已进入回复体力方式选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    375,
+                    230,
+                    170,
+                    170
+                ],
+                "template": [
+                    "繁中/通用/战斗/体力不足/已进入回体方式选择界面.png"
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    354,
+                    558,
+                    210,
+                    68
+                ]
+            }
+        }
+    },
+    "通用-体力不足处理-已进入体力药服用界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    470,
+                    163,
+                    95,
+                    85
+                ],
+                "template": [
+                    "繁中/通用/战斗/体力不足/体力药使用界面.png"
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "post_delay": 500,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    673,
+                    556,
+                    202,
+                    39
+                ]
+            }
+        },
+        "next": [
+            "通用-体力不足处理-回体成功",
+            "通用-体力不足处理-已进入体力药服用界面"
+        ]
+    },
+    "通用-体力不足处理-回体成功": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    546,
+                    278,
+                    161,
+                    94
+                ],
+                "template": [
+                    "繁中/通用/战斗/体力不足/回体成功.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "吃了一次药"
+        },
+        "pre_delay": 500,
+        "post_delay": 500,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    673,
+                    556,
+                    202,
+                    39
+                ]
+            }
+        },
+        "next": [
+            "通用-体力不足处理-已回到编队界面",
+            "通用-体力不足处理-回体成功"
+        ]
+    },
+    "通用-体力不足处理-已回到编队界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    49,
+                    590,
+                    119,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于编队界面.png"
+                ]
+            }
+        }
+    }
+}

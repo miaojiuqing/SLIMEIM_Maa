@@ -1,0 +1,83 @@
+{
+    "空任务": {},
+    "黑屏计数-2.5秒": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "count": 800000,
+                "upper": [
+                    0,
+                    0,
+                    0
+                ],
+                "lower": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 2500
+    },
+    "黑屏计数-0.5秒": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "count": 800000,
+                "upper": [
+                    0,
+                    0,
+                    0
+                ],
+                "lower": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 500
+    },
+    "通用-可处理范围加载等待": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    303,
+                    0,
+                    226,
+                    86
+                ],
+                "template": [
+                    "繁中/通用/大概是加载中ing.png"
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "通用-万代立绘加载中": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    35,
+                    571,
+                    390,
+                    126
+                ],
+                "upper": [
+                    255,
+                    250,
+                    236
+                ],
+                "lower": [
+                    255,
+                    249,
+                    235
+                ],
+                "count": 1000
+            }
+        },
+        "post_delay": 1000
+    }
+}

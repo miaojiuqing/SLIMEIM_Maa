@@ -1,0 +1,36 @@
+{
+    "异常处理-日期更新": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    520,
+                    293,
+                    213,
+                    130
+                ],
+                "template": [
+                    "繁中/通用/特殊情况特殊处理/换日/日期更新弹窗.png"
+                ]
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    461,
+                    209,
+                    68
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "换日时间已至,将重新开始任务"
+        },
+        "next": [
+            //各个任务的各个任务开始层
+        ]
+    }
+}

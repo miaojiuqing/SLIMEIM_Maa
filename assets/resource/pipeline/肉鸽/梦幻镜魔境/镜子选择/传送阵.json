@@ -1,0 +1,38 @@
+{
+    "梦幻镜魔境-点击进入镜子-传送阵": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    72,
+                    76,
+                    1145,
+                    121
+                ],
+                "green_mask": true,
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/镜子选择/传送类/传送阵.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    0,
+                    200,
+                    300
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-体力不足",
+            "[JumpBack]梦幻镜魔境-已出现入口",
+            "[JumpBack]skip",
+            "梦幻镜魔境-已进入路线镜子选择界面",
+            "梦幻镜魔境-点击进入镜子-传送阵",
+            "[JumpBack]黑屏计数-2.5秒"
+        ]
+    }
+}

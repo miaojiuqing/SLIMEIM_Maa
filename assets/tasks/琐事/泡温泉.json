@@ -1,0 +1,55 @@
+{
+    "task": [
+        {
+            "name": "琐事-泡温泉",
+            "entry": "泡温泉-任务开始层",
+            "label": "泡温泉领体力",
+            "group": [
+                "日常" //祖宗之法不可变()
+            ],
+            "default_check": true,
+            "description": "会通知这次泡温泉获得多少体力,不会的话请截图发作者,有时候点太快也会没识别到收益",
+            "icon": "./resource/image/繁中/琐事/泡温泉/图标.png",
+            "option": [
+                "琐事-泡温泉-城镇检查"
+            ]
+        }
+    ],
+    "option": {
+        "琐事-泡温泉-城镇检查": {
+            "type": "switch",
+            "label": "进入城镇时检查还能不能泡温泉",
+            "default_case": "Yes",
+            "description": "若无泡温泉标志则直接跳过任务",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "泡温泉-已进入城镇": {
+                            "action": "DoNothing",
+                            "next": [
+                                "泡温泉-城镇可泡温泉检查",
+                                "泡温泉-城镇不可泡温泉检查",
+                                "泡温泉-已进入城镇",
+                                "[JumpBack]通用-可处理范围加载等待"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "泡温泉-已进入城镇": {
+                            "action": "Click",
+                            "next": [
+                                "泡温泉-已打开双一览界面",
+                                "泡温泉-已进入城镇",
+                                "[JumpBack]通用-可处理范围加载等待"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

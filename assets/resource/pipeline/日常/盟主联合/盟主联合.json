@@ -1,0 +1,438 @@
+{
+    "联盟每日-任务开始层": {
+        "next": [
+            "联盟每日-总任务层",
+            "联盟每日-已进入联盟",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "联盟每日-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]联盟每日-skip",
+            "联盟每日-已进入联盟",
+            "[JumpBack]联盟每日-点击进入联盟",
+            "[JumpBack]通用-可处理范围加载等待",
+            "[JumpBack]叉叉"
+        ]
+    },
+    "联盟每日-skip": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1165,
+                    17,
+                    65,
+                    55
+                ],
+                "template": [
+                    "繁中/通用/战斗/skip.png"
+                ]
+            }
+        },
+        "repeat": 3,
+        "action": "Click",
+        "post_delay": 0,
+        "pre_delay": 0,
+        "repeat_delay": 150
+    },
+    "联盟每日-点击进入联盟": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    214,
+                    584,
+                    102,
+                    86
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主菜单/盟主联合.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "联盟每日-已进入联盟": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    837,
+                    604,
+                    101,
+                    96
+                ],
+                "threshold": [
+                    0.85
+                ],
+                "template": [
+                    "繁中/日常/联盟/已进入联盟.png"
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]联盟每日-累计达成奖励领取",
+            "[JumpBack]联盟每日-正处于报酬领取界面-退出去",
+            "联盟每日-有可领取的盟友赞助奖励",
+            "联盟每日-无可领取的盟友赞助奖励"
+        ]
+    },
+    "联盟每日-有可领取的盟友赞助奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    986,
+                    431,
+                    189,
+                    101
+                ],
+                "template": [
+                    "繁中/日常/联盟/有可领取的盟友赞助奖励.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "pre_delay": 200,
+        "next": [
+            "联盟每日-奖励获取成功",
+            "联盟每日-有可领取的盟友赞助奖励"
+        ]
+    },
+    "联盟每日-奖励获取成功": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    447,
+                    26,
+                    175,
+                    113
+                ],
+                "template": [
+                    "繁中/日常/联盟/奖励确认弹窗.png"
+                ]
+            }
+        },
+        "pre_delay": 300,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    540,
+                    590,
+                    200,
+                    53
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "得到了! 来自盟友的神秘奖励"
+        },
+        "next": [
+            "[JumpBack]联盟每日-正处于报酬领取界面-退出去",
+            "联盟每日-已进入联盟",
+            "联盟每日-奖励获取成功"
+        ]
+    },
+    "联盟每日-无可领取的盟友赞助奖励": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    986,
+                    431,
+                    189,
+                    101
+                ],
+                "template": [
+                    "繁中/日常/联盟/有可领取的盟友赞助奖励.png"
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "next": [
+            "[JumpBack]联盟每日-累计达成奖励领取",
+            "[JumpBack]联盟每日-正处于报酬领取界面-退出去",
+            "联盟每日-魔晶报酬get",
+            "联盟水群-已进入表情包选择界面",
+            "[JumpBack]联盟水群-点击进入表情包选择界面"
+            // "成功进入主菜单",
+            // "[JumpBack]点击黑色小主菜单",
+            // "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "联盟每日-水群": {}, //饼
+    "联盟每日-魔晶报酬get": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    495,
+                    12,
+                    120,
+                    76
+                ],
+                "template": [
+                    "繁中/日常/联盟/魔晶get.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "联盟升级了! 有可领取的魔晶报酬哦~"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    521,
+                    9,
+                    68,
+                    29
+                ]
+            }
+        },
+        "next": [
+            "联盟每日-魔晶报酬-已进入报酬领取界面",
+            "联盟每日-魔晶报酬get"
+        ]
+    },
+    "联盟每日-魔晶报酬-已进入报酬领取界面": { //顺便点击领取
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    777,
+                    123,
+                    176,
+                    84
+                ],
+                "template": [
+                    "繁中/日常/联盟/报酬领取界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    251,
+                    573,
+                    209,
+                    63
+                ]
+            }
+        },
+        "next": [
+            "联盟每日-奖励获取成功",
+            "联盟每日-魔晶报酬-已进入报酬领取界面",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "联盟每日-正处于报酬领取界面-退出去": { //点叉叉
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    777,
+                    123,
+                    176,
+                    84
+                ],
+                "template": [
+                    "繁中/日常/联盟/报酬领取界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1162,
+                    66,
+                    43,
+                    14
+                ]
+            }
+        }
+    },
+    "联盟每日-累计达成奖励领取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    513,
+                    589,
+                    258,
+                    96
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1104,
+                    40,
+                    101,
+                    90
+                ]
+            }
+        }
+    },
+    "联盟每日-结界柱过期石头检查开始层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1023,
+                    607,
+                    88,
+                    89
+                ],
+                "template": [
+                    "繁中/日常/联盟/结界石检查/结界柱-未选中.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1040,
+                    631,
+                    127,
+                    44
+                ]
+            }
+        },
+        "next": [
+            "联盟每日-结界石过期检查-已进入结界柱界面",
+            "联盟每日-结界柱过期石头检查开始层",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "联盟每日-结界石过期检查-已进入结界柱界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1126,
+                    454,
+                    79,
+                    96
+                ],
+                "template": [
+                    "繁中/日常/联盟/结界石检查/已进入结界柱.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    186,
+                    301,
+                    28,
+                    32
+                ]
+            }
+        },
+        "next": [
+            "联盟每日-结界石过期检查-已进入获得系结界柱界面",
+            "[JumpBack]联盟每日-结界石过期检查-点击切换至获得系结界柱界面"
+        ]
+    },
+    "联盟每日-结界石过期检查-已进入获得系结界柱界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1026,
+                    259,
+                    85,
+                    117
+                ],
+                "template": [
+                    "繁中/日常/联盟/结界石检查/正处于获得系.png"
+                ]
+            }
+        }
+    },
+    "联盟每日-结界石过期检查-已进入战斗系结界柱界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    160,
+                    257,
+                    86,
+                    121
+                ],
+                "template": [
+                    "繁中/日常/联盟/结界石检查/正处于战斗系.png"
+                ]
+            }
+        }
+    },
+    "联盟每日-结界石过期检查-点击切换至战斗系结界柱界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1026,
+                    259,
+                    85,
+                    117
+                ],
+                "template": [
+                    "繁中/日常/联盟/结界石检查/正处于获得系.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1000
+    },
+    "联盟每日-结界石过期检查-点击切换至获得系结界柱界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    160,
+                    257,
+                    86,
+                    121
+                ],
+                "template": [
+                    "繁中/日常/联盟/结界石检查/正处于战斗系.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1000
+    }
+}

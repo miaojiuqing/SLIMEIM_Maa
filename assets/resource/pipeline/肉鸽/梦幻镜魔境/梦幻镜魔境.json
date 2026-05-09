@@ -1,0 +1,443 @@
+{
+    "梦幻镜魔境-任务开始层": {
+        "next": [
+            "梦幻镜魔境-总任务层",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "梦幻镜魔境-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-已进入路线镜子选择界面",
+            "[JumpBack]梦幻镜魔境-点击入口",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "梦幻镜魔境-加载中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    763,
+                    0,
+                    74,
+                    80
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/加载ing.png"
+                ]
+            }
+        },
+        "post_delay": 500
+    },
+    "梦幻镜魔境-点击入口": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    909,
+                    107,
+                    120,
+                    95
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-已进入路线镜子选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    63,
+                    473,
+                    309,
+                    220
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/已进入镜子挑选界面.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]skip",
+            "梦幻镜魔境-点击进入镜子-奖励",
+            "梦幻镜魔境-点击进入镜子-强化buff",
+            "梦幻镜魔境-点击进入镜子-战斗通用",
+            "梦幻镜魔境-点击进入镜子-传送阵"
+        ]
+    },
+    "梦幻镜魔境-已出现入口": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    685,
+                    602,
+                    78,
+                    69
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/镜子入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-已进入层数选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    767,
+                    605,
+                    95,
+                    86
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/层数选择界面.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-已选中所选层数"
+        ]
+    },
+    "梦幻镜魔境-已选中所选层数": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "action": "DoNothing",
+        "next": [
+            "梦幻镜魔境-有正在讨伐的队伍",
+            "梦幻镜魔境-已进入考验选择界面",
+            "[JumpBack]梦幻镜魔境-已进入层数选择界面-点击讨伐该层",
+            "异常处理-说是预期外错误",
+            "[JumpBack]梦幻镜魔境-加载中"
+        ]
+    },
+    "梦幻镜魔境-有正在讨伐的队伍": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    29,
+                    0,
+                    129,
+                    115
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/返回.png"
+                ]
+            }
+        },
+        "action": "Click",
+        // "action": {
+        //     "type": "Click",
+        //     "param": {
+        //         "target": [
+        //             997,
+        //             619,
+        //             211,
+        //             60
+        //         ]
+        //     }
+        // },
+        "next": [
+            "[JumpBack]skip",
+            "梦幻镜魔境-已进入路线镜子选择界面",
+            "梦幻镜魔境-有正在讨伐的队伍",
+            "[JumpBack]梦幻镜魔境-加载中",
+            "[JumpBack]梦幻镜魔境-BOSS提示",
+            "[JumpBack]空任务"
+            // "梦幻镜魔境-已进入考验选择界面",
+            // "[JumpBack]梦幻镜魔境-重启确认",
+            // "梦幻镜魔境-有正在讨伐的队伍",
+            // "[JumpBack]梦幻镜魔境-加载中"
+        ]
+    },
+    "梦幻镜魔境-已进入层数选择界面-点击讨伐该层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    767,
+                    605,
+                    95,
+                    86
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/层数选择界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1000,
+                    619,
+                    208,
+                    62
+                ]
+            }
+        }
+    },
+    "梦幻镜魔境-重启确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    650,
+                    594,
+                    250,
+                    104
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/重临.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "梦幻镜魔境-已进入考验选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    128,
+                    151,
+                    76,
+                    70
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/界面.png"
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-考验选择-已选中-火",
+            "[JumpBack]梦幻镜魔境-考验选择-未选中-火"
+        ]
+    },
+    "梦幻镜魔境-考验-出击角色确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    531,
+                    0,
+                    242,
+                    330
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/考验/出击确认.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    682,
+                    621,
+                    183,
+                    60
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-已进入层数选择界面-重启成功弹窗",
+            "梦幻镜魔境-考验-出击角色确认",
+            "[JumpBack]梦幻镜魔境-加载中"
+        ]
+    },
+    "梦幻镜魔境-已进入层数选择界面-重启成功弹窗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    523,
+                    307,
+                    218,
+                    95
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/重启成功.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    537,
+                    444,
+                    208,
+                    59
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]skip",
+            "梦幻镜魔境-已进入路线镜子选择界面",
+            "[JumpBack]梦幻镜魔境-BOSS提示",
+            "[JumpBack]梦幻镜魔境-加载中",
+            "[JumpBack]空任务"
+        ]
+    },
+    "梦幻镜魔境-BOSS提示": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    627,
+                    176,
+                    87,
+                    111
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/温馨提示.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    427,
+                    506,
+                    405,
+                    200
+                ]
+            }
+        }
+    },
+    "梦幻镜魔境-需要恢复体力才能前进": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    697,
+                    562,
+                    105,
+                    80
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/体力不足/需要回复.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "next": [
+            // "成功进入主菜单",
+            // "[JumpBack]点击黑色小主菜单",
+            // "[JumpBack]梦幻镜魔境-加载中"
+            "梦幻镜魔境-体力不足-已进入恢复用弹窗",
+            "梦幻镜魔境-需要恢复体力才能前进",
+            "梦幻镜魔境-体力不足"
+        ]
+    },
+    "梦幻镜魔境-体力不足": {
+        // "action": "StopTask",
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    671,
+                    482,
+                    204,
+                    62
+                ]
+            }
+        },
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    392,
+                    330,
+                    75,
+                    121
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/体力不足/弹窗.png"
+                ]
+            }
+        },
+        "next": [
+            // "成功进入主菜单",
+            // "[JumpBack]点击黑色小主菜单",
+            // "[JumpBack]梦幻镜魔境-加载中"
+            "梦幻镜魔境-体力不足-已进入恢复用弹窗",
+            "梦幻镜魔境-体力不足"
+        ]
+    },
+    "梦幻镜魔境-体力不足-已进入恢复用弹窗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    578,
+                    236,
+                    120,
+                    110
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/体力不足/已进入回复界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    669,
+                    558,
+                    210,
+                    60
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-体力不足-已进入恢复用弹窗",
+            "[JumpBack]梦幻镜魔境-体力恢复确认",
+            "梦幻镜魔境-已进入路线镜子选择界面",
+            "[JumpBack]梦幻镜魔境-加载中"
+        ]
+    },
+    "梦幻镜魔境-体力恢复确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    518,
+                    392,
+                    246,
+                    113
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "梦幻镜魔境-点击进入镜子-奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    70,
+                    82,
+                    1154,
+                    70
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/镜子选择/奖励类/奖励.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    0,
+                    200,
+                    300
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-奖励领取确认弹窗",
+            "梦幻镜魔境-体力不足",
+            "[JumpBack]梦幻镜魔境-已出现入口",
+            "[JumpBack]skip",
+            "梦幻镜魔境-点击进入镜子-奖励",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]空任务"
+        ]
+    },
+    "梦幻镜魔境-奖励领取确认弹窗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    573,
+                    92,
+                    135,
+                    89
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/镜子选择/奖励类/报酬获取弹窗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    537,
+                    539,
+                    207,
+                    71
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]skip",
+            "梦幻镜魔境-已进入路线镜子选择界面",
+            "梦幻镜魔境-奖励领取确认弹窗",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]梦幻镜魔境-加载中",
+            "[JumpBack]空任务"
+        ]
+    }
+}

@@ -1,0 +1,206 @@
+{
+    "task": [
+        {
+            "name": "单线程工具-单本复刷",
+            "label": "单本复刷",
+            "entry": "单本复刷-任务开始层",
+            "group": [
+                "单线程工具"
+            ],
+            "default_check": false,
+            "description": "除了连点器模式其他在战斗、编队、战中以外的界面都不会捣乱",
+            "option": [
+                "工具-单本复刷-刷取模式选择",
+                "工具-单本复刷-体力不足时动作"
+            ]
+        }
+    ],
+    "preset": [],
+    "option": {
+        "工具-单本复刷-刷取模式选择": {
+            "type": "select",
+            "label": "模式选择",
+            "default_case": "工具-单本复刷-正常模式",
+            "cases": [
+                {
+                    "name": "工具-单本复刷-正常模式",
+                    "label": "正常模式",
+                    "description": "编队处、战斗中、战斗结算界面启动后自动开始任务,其他地方启动后不会点击或超时",
+                    "pipeline_override": {
+                        "单本复刷-正常模式-引用层": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "工具-单本复刷-连点器模式",
+                    "label": "连点器模式",
+                    "description": "战斗中、战斗结算界面启动,不识别纯点击,理论最快但不可控",
+                    "pipeline_override": {
+                        "单本复刷-连点器-引用层": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "工具-单本复刷-生存战模式",
+                    "label": "生存战模式",
+                    "description": "手动战斗,每回合使用普攻快速过回合,其余和正常模式一样,需自行切换至手动战斗模式",
+                    "pipeline_override": {
+                        "单本复刷-生存战-引用层": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "工具-单本复刷-体力不足时动作": {
+            "type": "select",
+            "label": "体力不足时动作",
+            "cases": [
+                {
+                    "name": "工具-单本复刷-体力不足处理-停止任务",
+                    "label": "停止任务",
+                    "description": "停止在体力不足弹窗界面",
+                    "pipeline_override": {
+                        "工具-单本复刷-体力不足处理": {
+                            "action": "StopTask",
+                            "next": []
+                        }
+                    }
+                },
+                {
+                    "name": "工具-单本复刷-体力不足处理-吃药",
+                    "label": "吃药并继续",
+                    "description": "停止在体力不足弹窗界面",
+                    "pipeline_override": {
+                        "工具-单本复刷-体力不足处理": {
+                            "action": {
+                                "type": "Click",
+                                "param": {
+                                    "target": [
+                                        672,
+                                        455,
+                                        208,
+                                        60
+                                    ]
+                                }
+                            },
+                            "next": [
+                                "工具-单本复刷-已进入体力药服用界面",
+                                "[JumpBack]工具-单本复刷-已进入回复体力方式选择界面",
+                                "工具-单本复刷-体力不足处理"
+                            ]
+                        }
+                    },
+                    "option": [
+                        "工具-单本复刷-再战处体力不足检测"
+                    ]
+                }
+            ]
+        },
+        "工具-单本复刷-再战处体力不足检测": {
+            "type": "switch",
+            "label": "体力不足检测",
+            "default_case": "No",
+            "description": "开启后,战斗结算界面会特地去检查是否体力不足(不会花太多时间),若发现体力不足,则点击后延迟以触发体力不足窗口,正常勿用",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "单本复刷-正常模式-再战处体力不足": {
+                            "enabled": true
+                        },
+                        "单本复刷-正常模式-战斗结算": {
+                            "post_delay": 500
+                        }
+                    },
+                    "option": [
+                        "工具-单本复刷-再战延迟"
+                    ]
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "单本复刷-正常模式-再战处体力不足": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "工具-单本复刷-再战延迟": {
+            "type": "select",
+            "label": "再战延迟",
+            "default_case": "单本复刷-再战延迟-1秒",
+            "description": "每次点击再战的间隔",
+            "cases": [
+                {
+                    "name": "单本复刷-再战延迟-1秒",
+                    "label": "1秒",
+                    "pipeline_override": {
+                        "单本复刷-正常模式-再战处体力不足": {
+                            "post_delay": 500,
+                            "enabled": true
+                        },
+                        "单本复刷-正常模式-战斗结算": {
+                            "post_delay": 500
+                        }
+                    }
+                },
+                {
+                    "name": "单本复刷-再战延迟-1.5秒",
+                    "label": "1.5秒",
+                    "pipeline_override": {
+                        "单本复刷-正常模式-再战处体力不足": {
+                            "post_delay": 1000,
+                            "enabled": true
+                        },
+                        "单本复刷-正常模式-战斗结算": {
+                            "post_delay": 1000
+                        }
+                    }
+                },
+                {
+                    "name": "单本复刷-再战延迟-2秒",
+                    "label": "2秒",
+                    "pipeline_override": {
+                        "单本复刷-正常模式-再战处体力不足": {
+                            "post_delay": 1500,
+                            "enabled": true
+                        },
+                        "单本复刷-正常模式-战斗结算": {
+                            "post_delay": 1500
+                        }
+                    }
+                },
+                {
+                    "name": "单本复刷-再战延迟-2.5秒",
+                    "label": "2.5秒",
+                    "pipeline_override": {
+                        "单本复刷-正常模式-再战处体力不足": {
+                            "post_delay": 2000,
+                            "enabled": true
+                        },
+                        "单本复刷-正常模式-战斗结算": {
+                            "post_delay": 2000
+                        }
+                    }
+                },
+                {
+                    "name": "单本复刷-再战延迟-3秒",
+                    "label": "3秒",
+                    "pipeline_override": {
+                        "单本复刷-正常模式-再战处体力不足": {
+                            "post_delay": 2500,
+                            "enabled": true
+                        },
+                        "单本复刷-正常模式-战斗结算": {
+                            "post_delay": 2500
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

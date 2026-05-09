@@ -1,0 +1,73 @@
+{
+    "梦幻镜魔境-点击进入镜子-强化buff": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    70,
+                    82,
+                    1154,
+                    70
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/镜子选择/强化Buff类/强化.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    0,
+                    200,
+                    300
+                ]
+            }
+        },
+        "next": [
+            "梦幻镜魔境-强化效果发动弹窗",
+            "梦幻镜魔境-体力不足",
+            "[JumpBack]梦幻镜魔境-已出现入口",
+            "[JumpBack]skip",
+            "梦幻镜魔境-点击进入镜子-强化buff",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]空任务"
+        ]
+    },
+    "梦幻镜魔境-强化效果发动弹窗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    423,
+                    132,
+                    117,
+                    97
+                ],
+                "template": [
+                    "繁中/肉鸽/梦幻镜魔境/镜子选择/强化Buff类/强化效果弹窗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    533,
+                    501,
+                    217,
+                    73
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]skip",
+            "梦幻镜魔境-已进入路线镜子选择界面",
+            "梦幻镜魔境-强化效果发动弹窗",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]梦幻镜魔境-加载中",
+            "[JumpBack]空任务"
+        ]
+    }
+}

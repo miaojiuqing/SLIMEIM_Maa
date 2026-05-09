@@ -1,0 +1,479 @@
+{
+    "日常送礼-任务开始层": {
+        "next": [
+            "日常送礼-总任务层",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "日常送礼-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-已进入选人送礼界面",
+            "[JumpBack]日常送礼-点击进入选人送礼界面",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "日常送礼-点击进入选人送礼界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    451,
+                    581,
+                    121,
+                    85
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "日常送礼-已进入选人送礼界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    341,
+                    568,
+                    145,
+                    136
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/礼物图标.png"
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-选人-已选中所需角色",
+            "[JumpBack]日常送礼-点击选中角色",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "日常送礼-误触进入选人送礼界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    690,
+                    105,
+                    83,
+                    85
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/喜好.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    80,
+                    18,
+                    34,
+                    37
+                ]
+            }
+        },
+        "post_delay": 500
+    },
+    "日常送礼-选人-已选中所需角色": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    710,
+                    79,
+                    185,
+                    210
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/有已选择角色.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    370,
+                    605,
+                    226,
+                    55
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-已打开挑选礼物界面",
+            "日常送礼-选人-已选中所需角色",
+            "日常送礼-已进入选人送礼界面",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "日常送礼-点击选中角色": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    710,
+                    79,
+                    185,
+                    210
+                ],
+                "upper": [
+                    243,
+                    239,
+                    225
+                ],
+                "lower": [
+                    229,
+                    224,
+                    210
+                ],
+                "connected": true,
+                "count": 5000
+            }
+        },
+        "action": "Click"
+    },
+    "日常送礼-已打开挑选礼物界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    690,
+                    105,
+                    83,
+                    85
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/喜好.png"
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-找到指定礼物",
+            "日常送礼-情谊已达上限",
+            "[JumpBack]日常送礼-滑动寻找选择礼物"
+        ]
+    },
+    "日常送礼-滑动寻找选择礼物": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    690,
+                    105,
+                    83,
+                    85
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/喜好.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1189,
+                    631,
+                    16,
+                    31
+                ],
+                "end": [
+                    1188,
+                    255,
+                    13,
+                    50
+                ],
+                "duration": 2000
+            }
+        }
+    },
+    "日常送礼-找到指定礼物": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    695,
+                    186,
+                    506,
+                    495
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/礼物/牛鹿串烧.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "repeat": 5,
+        "repeat_delay": 15,
+        "next": [
+            "日常送礼-情谊已达上限",
+            "日常送礼-准备送出界面",
+            "日常送礼-找到指定礼物",
+            "日常送礼-听完了感谢的话",
+            "[JumpBack]日常送礼-可能是在感谢"
+        ]
+    },
+    "日常送礼-准备送出界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    292,
+                    160,
+                    131,
+                    145
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/礼物/牛鹿串烧.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    690,
+                    580,
+                    160,
+                    49
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 15,
+        "next": [
+            "日常送礼-听完了感谢的话",
+            "日常送礼-准备送出界面",
+            "[JumpBack]日常送礼-可能是在感谢"
+        ]
+    },
+    "日常送礼-听完了感谢的话": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    690,
+                    105,
+                    83,
+                    85
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/喜好.png"
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-准备送出界面",
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "日常送礼-可能是在感谢": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    303,
+                    0,
+                    128,
+                    89
+                ],
+                "template": [
+                    "繁中/通用/大概是加载中ing.png"
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 15,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    429,
+                    358,
+                    155,
+                    135
+                ]
+            }
+        }
+    },
+    "日常送礼-情谊已达上限": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    480,
+                    305,
+                    326,
+                    111
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/情谊上限.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "当前角色情谊已达上限,将寻找低好感度角色"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    73,
+                    10,
+                    53,
+                    52
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-情谊上限-回到角色选择界面",
+            "[JumpBack]左上角返回"
+        ]
+    },
+    "日常送礼-情谊上限-回到角色选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    341,
+                    568,
+                    145,
+                    136
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/礼物图标.png"
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-情谊上限-点击未解锁角色的上面一位",
+            "[JumpBack]日常送礼-情谊上限-滑动寻找未解锁角色"
+        ]
+    },
+    "日常送礼-情谊上限-点击未解锁角色的上面一位": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    679,
+                    591,
+                    568,
+                    89
+                ],
+                "upper": [
+                    121,
+                    119,
+                    112
+                ],
+                "lower": [
+                    121,
+                    119,
+                    112
+                ],
+                "connected": true,
+                "count": 5000
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    20,
+                    -200,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-情谊上限-有已被选中角色",
+            "日常送礼-情谊上限-点击未解锁角色的上面一位"
+        ]
+    },
+    "日常送礼-情谊上限-滑动寻找未解锁角色": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    693,
+                    80,
+                    565,
+                    411
+                ],
+                "upper": [
+                    243,
+                    239,
+                    225
+                ],
+                "lower": [
+                    229,
+                    224,
+                    210
+                ],
+                "connected": true,
+                "count": 5000
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1189,
+                    631,
+                    16,
+                    31
+                ],
+                "end": [
+                    1188,
+                    255,
+                    13,
+                    50
+                ],
+                "duration": 2000
+            }
+        }
+    },
+    "日常送礼-情谊上限-有已被选中角色": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    704,
+                    81,
+                    519,
+                    619
+                ],
+                "template": [
+                    "繁中/日常/送上礼物/有已选择角色.png"
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-已打开挑选礼物界面",
+            "日常送礼-已进入选人送礼界面",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    }
+}

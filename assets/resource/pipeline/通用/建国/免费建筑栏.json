@@ -1,0 +1,90 @@
+{
+    "建国-通用-有免费建筑栏氪开启": {
+        "enabled": false,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    898,
+                    29,
+                    115,
+                    52
+                ],
+                "template": [
+                    "繁中/通用/建国/免费建筑栏/有免费建筑栏.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "有可以白嫖的建筑栏"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    995,
+                    14,
+                    20,
+                    19
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "建国-通用-免费栏目-解锁确认",
+            "[JumpBack]建国-通用-免费栏-点击免费解锁",
+            "建国-通用-有免费建筑栏氪开启"
+        ]
+    },
+    "建国-通用-免费栏-点击免费解锁": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    46,
+                    545,
+                    1179,
+                    175
+                ],
+                "template": [
+                    "繁中/通用/建国/免费建筑栏/免费解锁按钮.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "建国-通用-免费栏目-解锁确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    606,
+                    226,
+                    96,
+                    85
+                ],
+                "template": [
+                    "繁中/通用/建国/免费建筑栏/解锁确认.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "白嫖成功~"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    669,
+                    517,
+                    211,
+                    60
+                ]
+            }
+        },
+        "next": [
+            // "设施支援-已进入建国界面",
+            // "建国-通用-免费栏目-解锁确认"
+        ]
+    }
+}

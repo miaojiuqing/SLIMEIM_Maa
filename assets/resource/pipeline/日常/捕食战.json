@@ -1,0 +1,486 @@
+{
+    "日常捕食-任务开始层": {
+        "next": [
+            "日常捕食-总任务层",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "日常捕食-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "日常捕食-已进入主线&培育界面",
+            "[JumpBack]点击主线和培养",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "日常捕食-已进入主线&培育界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1022,
+                    63,
+                    236,
+                    103
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主线&培育/点击切换到期间限定.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    698,
+                    622,
+                    48,
+                    46
+                ]
+            }
+        },
+        "next": [
+            "日常捕食-当前处于故事",
+            "[JumpBack]点击未选中的成长"
+        ]
+    },
+    "日常捕食-当前处于故事": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    671,
+                    595,
+                    102,
+                    88
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主线&培育/已选中/成长.png"
+                ]
+            }
+        },
+        "next": [
+            "日常捕食-今日捕食次数已耗尽",
+            "日常捕食-点击进入捕食类型选择界面",
+            "[JumpBack]日常捕食-滑动寻找入口",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "日常捕食-滑动寻找入口": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    662,
+                    566,
+                    224,
+                    139
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主线&培育/已选中/成长.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    935,
+                    552,
+                    16,
+                    16
+                ],
+                "end": [
+                    663,
+                    552,
+                    18,
+                    14
+                ],
+                "duration": 2000
+            }
+        }
+    },
+    "日常捕食-点击进入捕食类型选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    393,
+                    122,
+                    832,
+                    465
+                ],
+                "template": [
+                    "繁中/日常/捕食战/成长处入口.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "日常捕食-当前选中难度为上级",
+            "日常捕食-点击进入捕食类型选择界面",
+            "[JumpBack]日常捕食-点击选择上级难度"
+        ]
+    },
+    "日常捕食-今日捕食次数已耗尽": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    393,
+                    122,
+                    832,
+                    465
+                ],
+                "template": [
+                    "繁中/日常/捕食战/挑战次数已上限.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "挑战次数已耗尽"
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]黑屏计数-2.5秒"
+        ]
+    },
+    "日常捕食-点击选择上级难度": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    180,
+                    188,
+                    344,
+                    302
+                ],
+                "template": [
+                    "繁中/日常/捕食战/已处于类型选择界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1034,
+                    143,
+                    111,
+                    36
+                ]
+            }
+        }
+    },
+    "日常捕食-当前选中难度为上级": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    940,
+                    251,
+                    69,
+                    76
+                ],
+                "template": [
+                    "繁中/日常/捕食战/当前为上级.png"
+                ]
+            }
+        },
+        "next": [
+            "日常捕食-正处于捕食类型选择界面"
+        ]
+    },
+    "日常捕食-正处于捕食类型选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    180,
+                    188,
+                    344,
+                    302
+                ],
+                "template": [
+                    "繁中/日常/捕食战/已处于类型选择界面.png"
+                ]
+            }
+        },
+        "next": [
+            "日常捕食-已进入编队界面",
+            "[JumpBack]日常捕食-点击进入关卡",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "日常捕食-已进入编队界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    49,
+                    590,
+                    119,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于编队界面.png"
+                ]
+            }
+        },
+        "next": [
+            "日常捕食-成功切换至所选编队",
+            "[JumpBack]通用-编队切换-点击切换编队"
+        ]
+    },
+    "日常捕食-点击进入关卡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1070,
+                    192,
+                    143,
+                    495
+                ],
+                "template": [
+                    "繁中/日常/捕食战/捕食类型-转魂.png"
+                    // "繁中/日常/捕食战/捕食类型-心体.png",
+                    // "繁中/日常/捕食战/捕食类型-坚守.png",
+                    // "繁中/日常/捕食战/捕食类型-猛攻.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -150,
+                    0,
+                    50,
+                    15
+                ]
+            }
+        }
+    },
+    "日常捕食-成功切换至所选编队": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    98,
+                    78,
+                    72,
+                    61
+                ],
+                "expected": [
+                    "九.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1014,
+                    618,
+                    176,
+                    48
+                ]
+            }
+        },
+        "next": [
+            "日常捕食-已进入战斗",
+            "日常捕食-成功切换至所选编队",
+            "[JumpBack]skip",
+            "[JumpBack]日常捕食-上次并列演算处理",
+            "[JumpBack]黑屏计数-2.5秒"
+        ]
+    },
+    "日常捕食-上次并列演算处理": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    497,
+                    557,
+                    302,
+                    120
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/下一步1.png",
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 500
+    },
+    "日常捕食-已进入战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    41,
+                    0,
+                    124,
+                    83
+                ],
+                "template": [
+                    "繁中/日常/捕食战/战斗中.png"
+                ]
+            }
+        },
+        "next": [
+            "日常捕食-捕食评价",
+            "[JumpBack]skip",
+            "日常捕食-已进入战斗",
+            "[JumpBack]乱点一下"
+        ]
+    },
+    "日常捕食-捕食评价": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    77,
+                    169,
+                    113,
+                    274
+                ],
+                "template": [
+                    "繁中/日常/捕食战/捕食评价.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    921,
+                    549,
+                    193,
+                    50
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 15,
+        "next": [
+            "日常捕食-战斗结算",
+            "日常捕食-捕食评价",
+            "[JumpBack]乱点一下"
+        ]
+    },
+    "日常捕食-战斗结算": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    575,
+                    4,
+                    96,
+                    91
+                ],
+                "template": [
+                    "繁中/日常/捕食战/战斗结束界面.png"
+                ]
+            }
+        },
+        "post_delay": 450,
+        "next": [
+            "日常捕食-还能再来一次",
+            "日常捕食-无剩余次数",
+            "[JumpBack]乱点一下"
+        ]
+    },
+    "日常捕食-还能再来一次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    875,
+                    572,
+                    64,
+                    71
+                ],
+                "template": [
+                    "繁中/日常/捕食战/剩余1次.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "点击再次挑战"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    811,
+                    618,
+                    174,
+                    56
+                ]
+            }
+        },
+        "post_delay": 200,
+        "next": [
+            "日常捕食-已进入战斗",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]空任务"
+        ]
+    },
+    "日常捕食-无剩余次数": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    875,
+                    572,
+                    64,
+                    71
+                ],
+                "template": [
+                    "繁中/日常/捕食战/剩余0次.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "挑战次数已耗尽"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1036,
+                    623,
+                    159,
+                    45
+                ]
+            }
+        },
+        "post_delay": 200,
+        "next": [
+            "成功进入主菜单",
+            "日常捕食-无剩余次数",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    }
+}

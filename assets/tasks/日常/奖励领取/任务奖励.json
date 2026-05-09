@@ -1,0 +1,55 @@
+{
+    "task": [
+        {
+            "name": "日常-奖励领取-任务奖励",
+            "label": "任务奖励领取",
+            "group": [
+                "奖励领取"
+            ],
+            "default_check": true,
+            "entry": "任务奖励-任务开始层",
+            "description": "三个挨个检查过去",
+            "option": [
+                "日常-奖励领取-果盘奖励领取"
+            ]
+        }
+    ],
+    "option": {
+        "日常-奖励领取-果盘奖励领取": {
+            "type": "switch",
+            "label": "果盘奖励领取",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "任务奖励-期间限定-无可领取奖励": {
+                            "next": [
+                                "[JumpBack]任务奖励-通用-奖励确认弹窗",
+                                "果盘奖励领取-当前处于任务界面",
+                                "[JumpBack]OK",
+                                "[JumpBack]YES",
+                                "[JumpBack]叉叉",
+                                "[JumpBack]果盘奖励领取-点击从任务界面进入果盘界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "任务奖励-期间限定-无可领取奖励": {
+                            "next": [
+                                "成功进入主菜单",
+                                "[JumpBack]叉叉",
+                                "[JumpBack]黑屏计数-2.5秒",
+                                "[JumpBack]点击黑色小主菜单",
+                                "[JumpBack]通用-可处理范围加载等待"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

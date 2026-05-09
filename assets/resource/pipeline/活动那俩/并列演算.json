@@ -1,0 +1,654 @@
+{
+    "并列演算-任务开始层": {
+        "next": [
+            "并列演算-总任务层",
+            "并列演算-已处于入口选择界面-双入口模版",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "并列演算-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "并列演算-已处于期间限定",
+            "[JumpBack]点击期间限定",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]点击切换至期间限定",
+            "[JumpBack]YES",
+            "[JumpBack]叉叉",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "并列演算-已处于期间限定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    997,
+                    49,
+                    275,
+                    123
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主线&培育/点击切换到主线和培育.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]点击未选中的故事",
+            "并列演算-已处于入口选择界面-双入口模版",
+            "[JumpBack]双活通用-点击故事处入口-双入口模版",
+            "[JumpBack]双活通用-滑动寻找大入口",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "双活通用-滑动寻找大入口": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    771,
+                    582,
+                    117,
+                    122
+                ],
+                "template": [
+                    "繁中/通用/入口点击/期间限定/已选中/故事.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    935,
+                    552,
+                    16,
+                    16
+                ],
+                "end": [
+                    663,
+                    552,
+                    18,
+                    14
+                ],
+                "duration": 2000
+            }
+        }
+    },
+    "双活通用-点击故事处入口-双入口模版": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    368,
+                    130,
+                    885,
+                    454
+                ],
+                "template": [
+                    "繁中/活动那俩/故事处活动入口.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "并列演算-已处于入口选择界面-双入口模版": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    782,
+                    95,
+                    286,
+                    178
+                ],
+                "template": [
+                    "繁中/活动那俩/已进入入口选择界面.png"
+                ]
+            }
+        },
+        "next": [
+            "并列演算-已处于关卡列表",
+            "[JumpBack]并列演算-点击小入口-双入口模版",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "并列演算-点击小入口-双入口模版": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    899,
+                    92,
+                    347,
+                    297
+                ],
+                "template": [
+                    "繁中/活动那俩/并列演算/小入口.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "并列演算-已处于关卡列表": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    729,
+                    196,
+                    73,
+                    191
+                ],
+                "template": [
+                    "繁中/活动那俩/并列演算/已进入关卡列表.png"
+                ]
+            }
+        },
+        "next": [
+            "并列演算-本日并列次数已达上限",
+            "并列演算-可进行演算"
+        ]
+    },
+    "并列演算-本日并列次数已达上限": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    796,
+                    169,
+                    250,
+                    72
+                ],
+                "template": [
+                    "繁中/活动那俩/并列演算/次数已达上限.png"
+                ]
+            }
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]叉叉",
+            // "[JumpBack]YES",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "并列演算-可进行演算": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    796,
+                    169,
+                    250,
+                    72
+                ],
+                "template": [
+                    "繁中/活动那俩/并列演算/可进行演算.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "并列演算-已进入队伍选择界面",
+            "并列演算-可进行演算",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "并列演算-已进入队伍选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    49,
+                    590,
+                    119,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于编队界面.png"
+                ]
+            }
+        },
+        "next": [
+            "并列演算-已成功切换至所选编队",
+            "[JumpBack]广告-月卡",
+            "[JumpBack]通用-编队切换-点击切换编队"
+        ]
+    },
+    "并列演算-已成功切换至所选编队": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    98,
+                    78,
+                    72,
+                    61
+                ],
+                "expected": [
+                    "七.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                // "target": [
+                //     814,
+                //     626,
+                //     147,
+                //     33
+                // ]
+                "target": [
+                    77,
+                    613,
+                    187,
+                    54
+                ]
+            }
+        },
+        "next": [
+            // "[JumpBack]并列演算-上次并列演算结果",
+            // "并列演算-已打开并列演算界面",
+            // "[JumpBack]OK",
+            // "[JumpBack]下一步",
+            // "[JumpBack]通用-演算中断-检查到中断弹窗",
+            // "并列演算-已成功切换至所选编队"
+            "并列演算-自动编队-已进入自动编队界面",
+            "并列演算-已成功切换至所选编队"
+        ]
+    },
+    /////////////////////////////////////////////////////
+    "并列演算-自动编队-已进入自动编队界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    361,
+                    599,
+                    117,
+                    103
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于自动编队界面.png"
+                ]
+            }
+        },
+        "next": [
+            "并列演算-自动编队-已打开推荐编组界面",
+            "[JumpBack]误触-心之书编辑界面",
+            "[JumpBack]通用-自动编队-点击变更"
+        ]
+    },
+    "并列演算-自动编队-已打开推荐编组界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    527,
+                    42,
+                    223,
+                    101
+                ],
+                "template": [
+                    "繁中/通用/战斗/自动编队/已进入推荐编组.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1035,
+                    346,
+                    100,
+                    45
+                ],
+                "end": [
+                    1028,
+                    136,
+                    107,
+                    46
+                ],
+                "duration": 1000
+            }
+        },
+        "next": [
+            "并列演算-自动编队-已滑动至最底下",
+            "并列演算-自动编队-已打开推荐编组界面"
+        ]
+    },
+    "并列演算-自动编队-已滑动至最底下": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    56,
+                    284,
+                    181,
+                    185
+                ],
+                "template": [
+                    "繁中/通用/战斗/自动编队/滑动至最底.png"
+                ]
+            }
+        },
+        "next": [
+            "并列演算-自动编队-已选中最高收集效果",
+            "[JumpBack]并列演算-自动编队-点击选中最高收集效果"
+        ]
+    },
+    "并列演算-自动编队-已选中最高收集效果": { //忘记执行了
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "method": 10001,
+                "threshold": [
+                    0.85
+                ],
+                "roi": [
+                    59,
+                    129,
+                    1157,
+                    420
+                ],
+                "template": [
+                    "繁中/通用/战斗/自动编队/已选中/收集特殊效果.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    688,
+                    590,
+                    171,
+                    47
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "并列演算-自动编队-成功通过点击执行回到自动编队界面",
+            "并列演算-自动编队-已选中最高收集效果"
+        ]
+    },
+    "并列演算-自动编队-成功通过点击执行回到自动编队界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    361,
+                    599,
+                    117,
+                    103
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于自动编队界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1018,
+                    627,
+                    178,
+                    47
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "并列演算-自动编队-已回到出击界面-继续任务",
+            "[JumpBack]并列演算-自动编队-已回到自动编队界面",
+            "并列演算-自动编队-已选中最高收集效果",
+            "[JumpBack]空任务"
+        ]
+    },
+    "并列演算-自动编队-已回到自动编队界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    361,
+                    599,
+                    117,
+                    103
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于自动编队界面.png"
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1021,
+                    623,
+                    179,
+                    54
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "并列演算-自动编队-已回到出击界面-继续任务": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    49,
+                    590,
+                    119,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于编队界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    814,
+                    626,
+                    147,
+                    33
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "自动编队成功,继续任务"
+        },
+        "next": [
+            "[JumpBack]并列演算-上次并列演算结果",
+            "并列演算-已打开并列演算界面",
+            "[JumpBack]OK",
+            "[JumpBack]下一步",
+            "[JumpBack]通用-演算中断-检查到中断弹窗",
+            "并列演算-自动编队-已回到出击界面-继续任务"
+        ]
+    },
+    "并列演算-自动编队-点击选中最高收集效果": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    59,
+                    129,
+                    1157,
+                    420
+                ],
+                "template": [
+                    "繁中/通用/战斗/自动编队/未选中/收集特殊效果.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    ///////////////////////////////////////////
+    "并列演算-上次并列演算结果": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    93,
+                    173,
+                    483,
+                    137
+                ],
+                "template": [
+                    "繁中/活动那俩/并列演算/上次并列演算弹窗处理.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "上次并列演算奖励已自动结算"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    571,
+                    590,
+                    137,
+                    51
+                ]
+            }
+        },
+        "post_delay": 500
+    },
+    "并列演算-已打开并列演算界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    153,
+                    233,
+                    162,
+                    221
+                ],
+                "template": [
+                    "繁中/活动那俩/并列演算/并列演算界面.png"
+                ]
+            }
+        },
+        "next": [
+            "并列演算-已成功点击MAX",
+            "[JumpBack]并列演算-点击MAX"
+        ]
+    },
+    "并列演算-点击MAX": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    994,
+                    369,
+                    151,
+                    86
+                ],
+                "template": [
+                    "繁中/活动那俩/并列演算/MAX按钮.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "并列演算-已成功点击MAX": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    988,
+                    378,
+                    159,
+                    71
+                ],
+                "upper": [
+                    112,
+                    88,
+                    23
+                ],
+                "lower": [
+                    76,
+                    55,
+                    5
+                ],
+                "count": 5500
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    701,
+                    564,
+                    159,
+                    42
+                ]
+            }
+        },
+        "next": [
+            "并列演算-确认",
+            "并列演算-已成功点击MAX"
+        ]
+    },
+    "并列演算-确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    338,
+                    348,
+                    161,
+                    163
+                ],
+                "template": [
+                    "繁中/活动那俩/并列演算/确认.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    698,
+                    555,
+                    144,
+                    42
+                ]
+            }
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    }
+}

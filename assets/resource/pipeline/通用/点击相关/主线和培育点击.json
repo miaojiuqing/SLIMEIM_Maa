@@ -1,0 +1,54 @@
+{
+    "点击切换至主线&培育": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    997,
+                    49,
+                    275,
+                    123
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主线&培育/点击切换到主线和培育.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "点击未选中的成长": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    671,
+                    595,
+                    102,
+                    88
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主线&培育/未选中/成长.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "主线&培育-点击未选中的故事": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    552,
+                    580,
+                    128,
+                    124
+                ],
+                "template": [
+                    "繁中/通用/入口点击/主线&培育/未选中/故事.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

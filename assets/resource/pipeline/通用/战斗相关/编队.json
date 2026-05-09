@@ -1,0 +1,144 @@
+{
+    "通用-编队切换-点击切换编队": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1127,
+                    298,
+                    128,
+                    128
+                ],
+                // "roi": [17, 305, 129, 114],
+                "template": [
+                    "繁中/通用/战斗/切换编队-右.png"
+                    // "繁中/通用/战斗/切换编队-左.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "误触-心之书编辑界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    121,
+                    0,
+                    187,
+                    100
+                ],
+                "template": [
+                    "繁中/通用/战斗/误触/心之书.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    79,
+                    20,
+                    35,
+                    32
+                ]
+            }
+        },
+        "post_delay": 2000
+    },
+    "通用-自动编队-退出编队界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    361,
+                    599,
+                    117,
+                    103
+                ],
+                "template": [
+                    "繁中/通用/战斗/已处于自动编队界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    75,
+                    14,
+                    48,
+                    52
+                ]
+            }
+        },
+        "post_delay": 1500
+    },
+    "通用-上次并列演算处理": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    497,
+                    557,
+                    302,
+                    120
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/下一步1.png",
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 500
+    },
+    "通用-自动编队-点击变更": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    873,
+                    608,
+                    132,
+                    85
+                ],
+                "template": [
+                    "繁中/通用/战斗/自动编队/点击变更.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "通用-编队-体力消耗确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    531,
+                    269,
+                    186,
+                    103
+                ],
+                "template": [
+                    "繁中/通用/战斗/弹窗/体力消耗确认.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    670,
+                    431,
+                    212,
+                    72
+                ]
+            }
+        }
+    }
+}

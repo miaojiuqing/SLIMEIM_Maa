@@ -1,0 +1,31 @@
+{
+    "task": [
+        {
+            "name": "进入游戏",
+            "entry": "启动游戏并进入菜单",
+            "group": [
+                "日常"
+            ],
+            "default_check": true,
+            "description": "启动游戏并打开主菜单",
+            "pipeline_override": {
+                "启动游戏并进入菜单": {
+                    "next": [
+                        "成功进入主菜单",
+                        "[JumpBack]点击绿色大菜单",
+                        "[JumpBack]skip",
+                        "[JumpBack]启动游戏专用叉叉",
+                        "[JumpBack]OK",
+                        "[JumpBack]YES",
+                        "[JumpBack]黑屏计数-2.5秒",
+                        "[JumpBack]乱点一下"
+                    ]
+                }
+            },
+            "option": [
+                // "活动并列演算-编队选择"
+            ]
+        }
+    ],
+    "option": {}
+}
