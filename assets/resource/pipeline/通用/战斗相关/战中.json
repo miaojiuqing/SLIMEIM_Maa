@@ -56,5 +56,22 @@
             }
         },
         "action": "Click"
+    },
+    "通用-战斗结算报酬获取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    511,
+                    524,
+                    271,
+                    106
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click"
     }
 }
