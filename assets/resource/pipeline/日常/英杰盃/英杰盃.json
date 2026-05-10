@@ -230,11 +230,33 @@
         },
         "next": [
             "[JumpBack]skip",
-            "英杰盃-胜利",
-            "英杰盃-失败",
+            "英杰盃-胜利-通知层",
+            "英杰盃-失败-通知层",
             "[JumpBack]英杰盃-战斗方式检查-非自动-点击切换",
             "英杰盃-已进入战斗",
             "[JumpBack]空任务"
+        ]
+    },
+    "英杰盃-胜利-通知层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    635,
+                    0,
+                    539,
+                    132
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/赢.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "YOU WIN!"
+        },
+        "next": [
+            "英杰盃-胜利"
         ]
     },
     "英杰盃-胜利": {
@@ -262,9 +284,6 @@
                     69
                 ]
             }
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "YOU WIN!"
         },
         "next": [
             "[JumpBack]英杰盃-获得神秘报酬",
@@ -302,9 +321,6 @@
                 ]
             }
         },
-        "focus": {
-            "Node.Recognition.Succeeded": "YOU LOSE..."
-        },
         "next": [
             "[JumpBack]英杰盃-获得神秘报酬",
             "英杰盃-失败",
@@ -313,6 +329,28 @@
             "英杰盃-应援团",
             "[JumpBack]黑屏计数-2.5秒",
             "[JumpBack]英杰盃-应援团好感升级通知"
+        ]
+    },
+    "英杰盃-失败-通知层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    635,
+                    0,
+                    539,
+                    132
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/输.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "YOU LOSE..."
+        },
+        "next": [
+            "英杰盃-失败"
         ]
     },
     "英杰盃-升段了": {
