@@ -75,29 +75,35 @@
     ],
     "import": [
         "tasks/启动游戏.json",
+        //日常：
         "tasks/日常/锻造升级.json",
         "tasks/日常/日常送礼.json",
         "tasks/日常/设施支援申请.json",
         "tasks/日常/城镇对话.json", //可优化，分两阶段，第二阶段的一览检查不加点击动作专门处理特殊事件
         "tasks/日常/捕食战.json",
+        "tasks/日常/联盟.json",
+        //琐事
         "tasks/商店/贸易.json", //待补充商品
         "tasks/琐事/泡温泉.json",
-        "tasks/日常/联盟.json",
         "tasks/琐事/设施产出收取.json",
         "tasks/琐事/好友设施支援.json",
+        //活动
         "tasks/活动/奖励关/魔王龙道.json",
         "tasks/活动/固定活动/活动捕食战.json",
         "tasks/活动/固定活动/并列演算.json",
         "tasks/活动/复刻活动/魔国祭典.json", //饼
+        //奖励领取
         "tasks/日常/奖励领取/任务奖励.json",
         "tasks/日常/奖励领取/果盘奖励领取.json",
         "tasks/日常/奖励领取/邮箱.json",
+        //特殊日常
         "tasks/日常/英杰盃.json",
+        "tasks/日常/梦幻境魔境.json",
+        //单线程工具
         "tasks/单独运行工具/盖德监工.json", //饼
         "tasks/单独运行工具/单本复刷.json",
         "tasks/单独运行工具/列表关卡自动刷.json",
         "tasks/单独运行工具/商店清空.json", //饼
-        "tasks/日常/梦幻境魔境.json",
         "tasks/关闭游戏.json"
     ],
     "preset": [],
