@@ -57,16 +57,16 @@
     },
     "列表刷关-捕食类-已成功切换至所选编队": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    98,
-                    78,
-                    72,
-                    61
+                    106,
+                    65,
+                    76,
+                    81
                 ],
-                "expected": [
-                    "八.*"
+                "template": [
+                    "繁中/通用/战斗/编队序列/八.png"
                 ]
             }
         },
