@@ -140,5 +140,32 @@
                 ]
             }
         }
+    },
+    "通用-编队-误触进入角色编辑界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    373,
+                    168,
+                    119,
+                    123
+                ],
+                "template": [
+                    "繁中/通用/战斗/误触/角色切换.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    80,
+                    22,
+                    36,
+                    31
+                ]
+            }
+        }
     }
 }
