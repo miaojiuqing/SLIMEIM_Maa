@@ -1,0 +1,185 @@
+{
+    "列表刷关-多关卡模式-任务开始层": {
+        "next": [
+            "列表刷关-多关卡模式-已进入关卡列表",
+            "[JumpBack]列表刷关-自动切换至主线模式-缓冲层",
+            // "章节选择-任务开始层",
+            "[JumpBack]空任务"
+        ]
+    },
+    "列表刷关-多关卡模式-已进入关卡列表": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    632,
+                    120,
+                    151,
+                    205
+                ],
+                "template": [
+                    "繁中/单线程工具/刷关通用/关卡类型/剧情/剧情关卡.png",
+                    "繁中/单线程工具/刷关通用/关卡类型/捕食/捕食关卡.png",
+                    "繁中/单线程工具/刷关通用/关卡类型/战斗/战斗关卡.png"
+                ]
+            }
+        },
+        "next": [
+            "列表刷关-多关卡模式-有未挑战关卡",
+            "列表刷关-多关卡模式-所有关卡挑战完毕-第一次检查",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "列表刷关-多关卡模式-有未挑战关卡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "threshold": [
+                    0.9
+                ],
+                "roi": [
+                    629,
+                    80,
+                    152,
+                    606
+                ],
+                "template": [
+                    "繁中/单线程工具/列表刷关/多关卡模式/未挑战关卡.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    250,
+                    20,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "列表刷关-多关卡模式-进入了编队界面",
+            "列表刷关-多关卡模式-有未挑战关卡",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "列表刷关-多关卡模式-所有关卡挑战完毕-第一次检查": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "method": 10001,
+                "threshold": [
+                    0.95
+                ],
+                "roi": [
+                    629,
+                    80,
+                    152,
+                    606
+                ],
+                "template": [
+                    "繁中/单线程工具/列表刷关/多关卡模式/未挑战关卡.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "列表结束检查第一次"
+        },
+        "post_delay": 1500,
+        "next": [
+            "列表刷关-多关卡模式-所有关卡挑战完毕-第二次检查",
+            "列表刷关-多关卡模式-有未挑战关卡",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "列表刷关-多关卡模式-所有关卡挑战完毕-第二次检查": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "method": 10001,
+                "threshold": [
+                    0.95
+                ],
+                "roi": [
+                    629,
+                    80,
+                    152,
+                    606
+                ],
+                "template": [
+                    "繁中/单线程工具/列表刷关/多关卡模式/未挑战关卡.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "列表结束检查第二次"
+        },
+        "post_delay": 1500,
+        "next": [
+            "列表刷关-多关卡模式-所有关卡挑战完毕-第三次检查",
+            "列表刷关-多关卡模式-有未挑战关卡",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "列表刷关-多关卡模式-所有关卡挑战完毕-第三次检查": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "method": 10001,
+                "threshold": [
+                    0.95
+                ],
+                "roi": [
+                    629,
+                    80,
+                    152,
+                    606
+                ],
+                "template": [
+                    "繁中/单线程工具/列表刷关/多关卡模式/未挑战关卡.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "列表结束检查第三次"
+        },
+        "post_delay": 1500,
+        "next": [
+            "列表刷关-多关卡模式-所有关卡挑战完毕",
+            "列表刷关-多关卡模式-有未挑战关卡",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "列表刷关-多关卡模式-所有关卡挑战完毕": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "method": 10001,
+                "threshold": [
+                    0.95
+                ],
+                "roi": [
+                    629,
+                    80,
+                    152,
+                    606
+                ],
+                "template": [
+                    "繁中/单线程工具/列表刷关/多关卡模式/未挑战关卡.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "所有关卡挑战完毕"
+        },
+        "post_delay": 1500,
+        "next": []
+    }
+}
