@@ -1,0 +1,19 @@
+{
+    "建国-通用-解锁新建筑": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    505,
+                    563,
+                    291,
+                    114
+                ],
+                "template": [
+                    "繁中/通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}
