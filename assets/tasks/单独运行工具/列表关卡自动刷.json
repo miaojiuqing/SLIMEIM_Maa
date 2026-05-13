@@ -95,6 +95,33 @@
                                 "[JumpBack]空任务"
                             ]
                         }
+                    },
+                    "option": [
+                        "列表刷关-正常刷完查缺补漏"
+                    ]
+                }
+            ]
+        },
+        "列表刷关-正常刷完查缺补漏": {
+            "label": "刷完后启动多关卡模式",
+            "description": "启动多关卡模式检查有没有未挑战关卡,查缺补漏,主要对付那种打完了出现两关的情况,不过没满星可能会一直打",
+            "default_case": "No",
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "列表刷关-多关卡模式-任务开始层": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "列表刷关-多关卡模式-任务开始层": {
+                            "enabled": true
+                        }
                     }
                 }
             ]
