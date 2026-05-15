@@ -25,6 +25,18 @@
                     "name": "魔国祭典-用掉体力打折机会",
                     "label": "打折体力用完就停",
                     "pipeline_override": {}
+                },
+                {
+                    "name": "魔国祭典-举办策略-无限开庆典",
+                    "label": "无限开庆典",
+                    "pipeline_override": {
+                        "活动-魔国祭典-尚有体力减轻": {
+                            "recognition": "DirectHit"
+                        },
+                        "活动-魔国祭典-体力减轻次数已消耗殆尽": {
+                            "enabled": false
+                        }
+                    }
                 }
             ]
         },

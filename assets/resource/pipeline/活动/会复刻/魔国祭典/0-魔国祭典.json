@@ -154,6 +154,7 @@
         ]
     },
     "活动-魔国祭典-体力减轻次数已消耗殆尽": {
+        "enabled": false,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
