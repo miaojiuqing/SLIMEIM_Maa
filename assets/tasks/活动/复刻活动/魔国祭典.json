@@ -31,7 +31,7 @@
         "活动-魔国祭典-任命设置": {
             "label": "任命设置",
             "default_case": "Yes",
-            "description": "关闭后采用默认设置,想要不设置也行明天做",
+            "description": "关闭后不再选择任命条件",
             "type": "switch",
             "cases": [
                 {
@@ -45,7 +45,14 @@
                 },
                 {
                     "name": "No",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "活动-魔国祭典-已进入任命详细界面": {
+                            "next": [
+                                "活动-魔国祭典-举办一次庆典",
+                                "活动-魔国祭典-任命设置-任命完了准备庆祝吧"
+                            ]
+                        }
+                    }
                 }
             ]
         },
