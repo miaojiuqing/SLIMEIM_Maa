@@ -1,0 +1,207 @@
+{
+    "活动-魔国祭典-任务开始层": {
+        "next": [
+            "活动-魔国祭典-总任务层",
+            "活动-魔国祭典-已进入庆典界面",
+            "[JumpBack]启动游戏并进入菜单"
+        ]
+    },
+    "活动-魔国祭典-加载中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    146,
+                    0,
+                    84,
+                    75
+                ],
+                "template": [
+                    "繁中/活动/会复刻/魔国祭典/加载中.png"
+                ]
+            }
+        },
+        "post_delay": 500
+    },
+    "活动-魔国祭典-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    103,
+                    342,
+                    103,
+                    97
+                ],
+                "template": [
+                    "繁中/开始游戏/正处于主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "活动-魔国祭典-已进入庆典界面",
+            "[JumpBack]活动-魔国祭典-点击进入祭典",
+            "[JumpBack]黑屏计数-2.5秒",
+            "[JumpBack]通用-可处理范围加载等待",
+            "[JumpBack]通用-万代立绘加载中"
+        ]
+    },
+    "活动-魔国祭典-点击进入祭典": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    774,
+                    396,
+                    128,
+                    85
+                ],
+                "template": [
+                    "繁中/活动/会复刻/魔国祭典/入口.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "活动-魔国祭典-已进入庆典界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    599,
+                    562,
+                    123,
+                    113
+                ],
+                "template": [
+                    "繁中/活动/会复刻/魔国祭典/已进入庆典界面.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]活动-魔国祭典-已更新最高分",
+            "活动-魔国祭典-尚有体力减轻",
+            "[JumpBack]活动-魔国祭典-庆祝完毕回到设置了点击退出",
+            "[JumpBack]活动-魔国祭典-缓冲层",
+            "活动-魔国祭典-体力减轻次数已消耗殆尽"
+        ]
+    },
+    "活动-魔国祭典-缓冲层": {
+        "max_hit": 10
+    },
+    "活动-魔国祭典-庆祝完毕回到设置了点击退出": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    72,
+                    78,
+                    114,
+                    83
+                ],
+                "template": [
+                    "繁中/活动/会复刻/魔国祭典/设施设置处/已进入.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    80,
+                    17,
+                    35,
+                    41
+                ]
+            }
+        }
+    },
+    "活动-魔国祭典-尚有体力减轻": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    638,
+                    511,
+                    108,
+                    75
+                ],
+                "template": [
+                    "繁中/活动/会复刻/魔国祭典/体力消耗减轻中.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "尚有体力减轻次数"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1101,
+                    569,
+                    89,
+                    76
+                ]
+            }
+        },
+        "next": [
+            "活动-魔国祭典-已进入设施设置界面",
+            "活动-魔国祭典-尚有体力减轻",
+            "[JumpBack]活动-魔国祭典-点击进入设施设置",
+            "[JumpBack]活动-魔国祭典-已更新最高分",
+            "[JumpBack]活动-魔国祭典-加载中"
+        ]
+    },
+    "活动-魔国祭典-体力减轻次数已消耗殆尽": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    789,
+                    560,
+                    76,
+                    73
+                ],
+                "template": [
+                    "繁中/活动/会复刻/魔国祭典/减耗次数无了.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "已无体力减轻次数"
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]活动-魔国祭典-加载中"
+        ]
+    },
+    "活动-魔国祭典-已更新最高分": { //纯弹窗处理
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    491,
+                    214,
+                    273,
+                    133
+                ],
+                "template": [
+                    "繁中/活动/会复刻/魔国祭典/已更新最高分.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    539,
+                    558,
+                    206,
+                    56
+                ]
+            }
+        }
+    }
+}
