@@ -30,10 +30,30 @@
             "[JumpBack]魔国祭典-体力不足处理",
             "活动-魔国祭典-体力消耗确认",
             "活动-魔国祭典-举办一次庆典",
-            "[JumpBack]skip",
+            "[JumpBack]魔国祭典专用-skip",
             "活动-魔国祭典-庆典结束最高分更新",
             "活动-魔国祭典-庆典已结束"
         ]
+    },
+    "魔国祭典专用-skip": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1165,
+                    67,
+                    67,
+                    54
+                ],
+                "template": [
+                    "繁中/通用/战斗/skip.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 500,
+        "pre_delay": 0
     },
     "活动-魔国祭典-体力消耗确认": {
         "recognition": {
@@ -64,7 +84,7 @@
         "post_delay": 500,
         "next": [
             "[JumpBack]魔国祭典-体力不足处理",
-            "[JumpBack]skip",
+            "[JumpBack]魔国祭典专用-skip",
             "活动-魔国祭典-庆典结束最高分更新",
             "活动-魔国祭典-庆典已结束",
             "活动-魔国祭典-体力消耗确认",
