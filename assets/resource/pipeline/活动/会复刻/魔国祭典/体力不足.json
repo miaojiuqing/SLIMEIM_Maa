@@ -15,6 +15,9 @@
                 ]
             }
         },
+        "focus": {
+            "Node.Recognition.Succeeded": "体力不足！"
+        },
         "action": {
             "type": "Click",
             "param": {
