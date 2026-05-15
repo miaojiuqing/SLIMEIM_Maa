@@ -41,10 +41,10 @@
             "param": {
                 "green_mask": true,
                 "roi": [
-                    1165,
-                    67,
-                    67,
-                    54
+                    1161,
+                    0,
+                    75,
+                    69
                 ],
                 "template": [
                     "繁中/通用/战斗/skip.png"
