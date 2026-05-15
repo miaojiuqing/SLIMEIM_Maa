@@ -1,0 +1,151 @@
+{
+    //魔国祭典[JumpBack],
+    "魔国祭典-体力不足处理": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    521,
+                    284,
+                    182,
+                    124
+                ],
+                "template": [
+                    "繁中/通用/战斗/体力不足/弹窗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    672,
+                    455,
+                    208,
+                    60
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "魔国祭典-体力不足处理-已进入体力药服用界面",
+            "[JumpBack]魔国祭典-体力不足处理-已进入回复体力方式选择界面",
+            "魔国祭典-体力不足处理"
+        ]
+    },
+    "魔国祭典-体力不足处理-已进入回复体力方式选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    375,
+                    230,
+                    170,
+                    170
+                ],
+                "template": [
+                    "繁中/通用/战斗/体力不足/已进入回体方式选择界面.png"
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    354,
+                    558,
+                    210,
+                    68
+                ]
+            }
+        }
+    },
+    "魔国祭典-体力不足处理-已进入体力药服用界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    470,
+                    163,
+                    95,
+                    85
+                ],
+                "template": [
+                    "繁中/通用/战斗/体力不足/体力药使用界面.png"
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "post_delay": 500,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    673,
+                    556,
+                    202,
+                    39
+                ]
+            }
+        },
+        "next": [
+            "魔国祭典-体力不足处理-回体成功",
+            "魔国祭典-体力不足处理-已进入体力药服用界面"
+        ]
+    },
+    "魔国祭典-体力不足处理-回体成功": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    546,
+                    278,
+                    161,
+                    94
+                ],
+                "template": [
+                    "繁中/通用/战斗/体力不足/回体成功.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "吃了一次药"
+        },
+        "pre_delay": 500,
+        "post_delay": 500,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    673,
+                    556,
+                    202,
+                    39
+                ]
+            }
+        },
+        "next": [
+            "魔国祭典-体力不足处理-已回到祭典首页",
+            "魔国祭典-体力不足处理-回体成功"
+        ]
+    },
+    "魔国祭典-体力不足处理-已回到祭典首页": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    599,
+                    562,
+                    123,
+                    113
+                ],
+                "template": [
+                    "繁中/活动/会复刻/魔国祭典/已进入庆典界面.png"
+                ]
+            }
+        }
+    }
+}
