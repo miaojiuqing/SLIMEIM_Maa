@@ -75,6 +75,37 @@
         },
         "post_delay": 1000
     },
+    "通用-建国-居民人数达成解锁": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    420,
+                    52,
+                    441,
+                    79
+                ],
+                "template": [
+                    "繁中/通用/建国/弹窗处理/居民人数达成解锁.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "居民人数达成解锁,解锁新建筑喽"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    585,
+                    202,
+                    63
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
     "通用-建国-保管弹窗处理": {
         "recognition": {
             "type": "TemplateMatch",
@@ -150,5 +181,32 @@
             }
         },
         "post_delay": 1000
+    },
+    "通用-建国-误触进入素材详细界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    542,
+                    568,
+                    193,
+                    98
+                ],
+                "template": [
+                    "繁中/通用/建国/弹窗处理/误触素材详细.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1170,
+                    67,
+                    27,
+                    21
+                ]
+            }
+        }
     }
 }
