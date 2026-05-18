@@ -489,7 +489,8 @@
                 ]
             }
         },
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 500
     },
     "设施支援-没有设施处于建设-已切换至设施升级界面-确认提升弹窗": {
         "recognition": {
