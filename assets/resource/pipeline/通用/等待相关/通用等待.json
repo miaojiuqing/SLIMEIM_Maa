@@ -53,7 +53,7 @@
                 ]
             }
         },
-        "post_delay": 1000
+        "post_delay": 500
     },
     "通用-万代立绘加载中": {
         "recognition": {

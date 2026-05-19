@@ -1,0 +1,16 @@
+{
+    "task": [
+        {
+            "name": "工具-商店清空",
+            "label": "商店清空",
+            "default_check": false,
+            "group": [
+                "单线程工具"
+            ],
+            "entry": "商店清空-任务开始层",
+            "description": "请在打开了商店的情况下运行本工具",
+            "option": []
+        }
+    ],
+    "option": {}
+}
