@@ -11,7 +11,7 @@
             "description": "好歹自己打一遍,新设备也一样不然全是新手教程,同设备上期祭典做过不会跳",
             "option": [
                 "活动-魔国祭典-举办策略",
-                // "活动-魔国祭典-奖励上限即停"
+                "活动-魔国祭典-奖励上限即停",
                 "活动-魔国祭典-体力不足处理",
                 "活动-魔国祭典-任命设置"
             ]
@@ -36,6 +36,30 @@
                             "recognition": "DirectHit"
                         },
                         "活动-魔国祭典-体力减轻次数已消耗殆尽": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "活动-魔国祭典-奖励上限即停": {
+            "label": "奖励刷满不刷了",
+            "type": "switch",
+            "default_case": "Yes",
+            "description": "无限刷取模式也生效",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "活动-魔国祭典-奖励达上限": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "活动-魔国祭典-奖励达上限": {
                             "enabled": false
                         }
                     }
