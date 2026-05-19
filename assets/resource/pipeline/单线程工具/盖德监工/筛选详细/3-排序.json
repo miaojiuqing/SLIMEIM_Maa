@@ -1,0 +1,158 @@
+{
+    "盖德监工-筛选-开始筛选所需时间排序": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    17,
+                    333,
+                    367,
+                    169
+                ],
+                "template": [
+                    "繁中/通用/建国/筛选/排序/已处于建造时间排序.png"
+                ],
+                "method": 10001,
+                "threshold": 0.85
+            }
+        },
+        "next": [
+            "盖德监工-筛选-时序筛选-已选中",
+            "[JumpBack]盖德监工-筛选-时序筛选-点击选中",
+            "[JumpBack]盖德监工-筛选-滑动到筛选所需时间排序位置-没显示出来"
+        ]
+    },
+    "盖德监工-筛选-滑动到筛选所需时间排序位置": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    17,
+                    333,
+                    367,
+                    169
+                ],
+                "template": [
+                    "繁中/通用/建国/筛选/排序/已处于建造时间排序.png"
+                ],
+                "method": 10001,
+                "threshold": 0.85
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    622,
+                    482,
+                    27,
+                    50
+                ],
+                "end": [
+                    628,
+                    415,
+                    16,
+                    50
+                ],
+                "duration": 1000,
+                "end_hold": 250
+            }
+        },
+        "post_delay": 700
+    },
+    "盖德监工-筛选-滑动到筛选所需时间排序位置-没显示出来": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    37,
+                    441,
+                    963,
+                    141
+                ],
+                "template": [
+                    "繁中/通用/建国/筛选/排序/未选中/由低至高.png",
+                    "繁中/通用/建国/筛选/排序/未选中/由高至低.png",
+                    "繁中/通用/建国/筛选/排序/未选中/OFF.png"
+                ],
+                "method": 10001,
+                "threshold": 0.85
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    622,
+                    482,
+                    27,
+                    50
+                ],
+                "end": [
+                    628,
+                    415,
+                    16,
+                    50
+                ],
+                "duration": 1000,
+                "end_hold": 250
+            }
+        },
+        "post_delay": 700
+    },
+    "盖德监工-筛选-时序筛选-已选中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    37,
+                    441,
+                    963,
+                    141
+                ],
+                "template": [
+                    "繁中/通用/建国/筛选/排序/已选中/由低至高.png"
+                ],
+                "method": 10001,
+                "threshold": 0.85
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    674,
+                    589,
+                    199,
+                    54
+                ]
+            }
+        },
+        "next": [
+            "盖德监工-筛选-筛选完了",
+            "盖德监工-筛选-时序筛选-已选中"
+        ]
+    },
+    "盖德监工-筛选-时序筛选-点击选中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    37,
+                    441,
+                    963,
+                    141
+                ],
+                "template": [
+                    "繁中/通用/建国/筛选/排序/未选中/由低至高.png"
+                ],
+                "method": 10001,
+                "threshold": 0.85
+            }
+        },
+        "action": "Click",
+        "post_delay": 1300
+    }
+}
