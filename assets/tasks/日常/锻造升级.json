@@ -26,15 +26,23 @@
         "日常-锻造升级-顺便建造活动装备": {
             "type": "switch",
             "label": "顺便制作活动装备",
-            "description": "有活动装备会自动制造",
+            "description": "查看是否有限时装备，有符合条件的装备会自动制造，检查到最顶层是英桀手环就会停",
             "cases": [
                 {
                     "name": "Yes",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "锻造升级-活动新装备锻造接口层": {
+                            "enabled": true
+                        }
+                    }
                 },
                 {
                     "name": "No",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "锻造升级-活动新装备锻造接口层": {
+                            "enabled": false
+                        }
+                    }
                 }
             ]
         }

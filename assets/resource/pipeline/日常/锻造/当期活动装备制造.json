@@ -1,1 +1,271 @@
-{}
+{
+    "锻造升级-活动新装备锻造接口层": {
+        "max_hit": 1,
+        "enabled": true,
+        "focus": {
+            "Node.Recognition.Succeeded": "开始寻找可锻造的限时装备"
+        },
+        "next": [
+            "活动新装锻造-任务开始层"
+        ]
+    },
+    "活动新装锻造-任务开始层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    981,
+                    49,
+                    166,
+                    101
+                ],
+                "template": [
+                    "繁中/日常/锻造/已进入锻造场.png"
+                ]
+            }
+        },
+        "next": [
+            "活动新装锻造-已进入锻造界面",
+            "[JumpBack]活动新装锻造-点击进入锻造",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "活动新装锻造-点击进入锻造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    931,
+                    196,
+                    124,
+                    109
+                ],
+                "template": [
+                    "繁中/日常/锻造/活动限时装备/点击进入制造.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "活动新装锻造-已进入锻造界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    584,
+                    76,
+                    93,
+                    85
+                ],
+                "template": [
+                    "繁中/日常/锻造/活动限时装备/ALL-已选中.png",
+                    "繁中/日常/锻造/活动限时装备/ALL-未选中.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    607,
+                    104,
+                    47,
+                    29
+                ]
+            }
+        },
+        "next": [
+            "活动新装锻造-已选中ALL",
+            "活动新装锻造-已进入锻造界面"
+        ]
+    },
+    "活动新装锻造-已选中ALL": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    584,
+                    76,
+                    93,
+                    85
+                ],
+                "template": [
+                    "繁中/日常/锻造/活动限时装备/ALL-已选中.png"
+                ]
+            }
+        },
+        "next": [
+            "活动新装锻造-有限时装备可造",
+            "活动新装锻造-无限时装备可造"
+        ]
+    },
+    "活动新装锻造-有限时装备可造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1022,
+                    180,
+                    166,
+                    270
+                ],
+                "template": [
+                    "繁中/日常/锻造/活动限时装备/有限时装备可锻造.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "next": [
+            "活动新装锻造-锻造新装-已唤出制造界面",
+            "活动新装锻造-有限时装备可造"
+        ]
+    },
+    "活动新装锻造-锻造新装-已唤出制造界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    242,
+                    383,
+                    138,
+                    80
+                ],
+                "template": [
+                    "繁中/日常/锻造/活动限时装备/准备制造.png"
+                ]
+            }
+        },
+        //可能会出现素材不足情况，待添加
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    209,
+                    597,
+                    206,
+                    61
+                ]
+            }
+        },
+        "next": [
+            "活动新装锻造-锻造新装-锻造确认",
+            "活动新装锻造-锻造新装-已唤出制造界面",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "活动新装锻造-锻造新装-锻造确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    533,
+                    90,
+                    214,
+                    92
+                ],
+                "template": [
+                    "繁中/日常/锻造/活动限时装备/锻造确认.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    668,
+                    550,
+                    39,
+                    62
+                ]
+            }
+        },
+        "next": [
+            "活动新装锻造-锻造成功！",
+            "活动新装锻造-锻造新装-锻造确认",
+            "[JumpBack]活动新装锻造-锻造中"
+        ]
+    },
+    "活动新装锻造-锻造成功！": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    521,
+                    94,
+                    173,
+                    97
+                ],
+                "template": [
+                    "繁中/日常/锻造/活动限时装备/锻造成功.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    537,
+                    520,
+                    68,
+                    61
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "锻造了一个限时装备"
+        },
+        "next": [
+            "活动新装锻造-锻造成功！",
+            "活动新装锻造-已选中ALL"
+        ]
+    },
+    "活动新装锻造-锻造中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    556,
+                    349,
+                    153,
+                    200
+                ],
+                "template": [
+                    "繁中/日常/锻造/锻造ing.png"
+                ]
+            }
+        }
+    },
+    "活动新装锻造-无限时装备可造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    609,
+                    199,
+                    104,
+                    101
+                ],
+                "template": [
+                    "繁中/日常/锻造/活动限时装备/没限时装备了.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    77,
+                    20,
+                    39,
+                    39
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "锻造升级-成功进入锻造场界面",
+            "活动新装锻造-无限时装备可造",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    }
+}
