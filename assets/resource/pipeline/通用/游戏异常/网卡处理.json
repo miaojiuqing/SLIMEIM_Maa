@@ -28,5 +28,36 @@
                 ]
             }
         }
+    },
+    "异常处理-网络连接失败将回到主界面": { //重新开始任务
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    546,
+                    289,
+                    165,
+                    124
+                ],
+                "template": [
+                    "繁中/通用/特殊情况特殊处理/网卡/网太差重进游戏.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "嚯呀 网太卡了,将重新开始任务"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    467,
+                    203,
+                    55
+                ]
+            }
+        },
+        "next": []
     }
 }
