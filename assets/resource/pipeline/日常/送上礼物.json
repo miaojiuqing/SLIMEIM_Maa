@@ -44,7 +44,7 @@
         },
         "action": "Click"
     },
-    "日常送礼-已进入选人送礼界面": {
+    "日常送礼-已进入选人送礼界面": { //option分流
         "recognition": {
             "type": "TemplateMatch",
             "param": {
