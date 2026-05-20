@@ -103,7 +103,7 @@
         "tasks/单独运行工具/盖德监工.json",
         "tasks/单独运行工具/单本复刷.json",
         "tasks/单独运行工具/列表关卡自动刷.json",
-        "tasks/单独运行工具/商店清空.json", //饼
+        "tasks/单独运行工具/商店清空.json",
         "tasks/关闭游戏.json"
     ],
     "preset": [],
