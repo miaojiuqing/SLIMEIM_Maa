@@ -31,11 +31,43 @@
         "next": [
             "列表刷关-剧情类-已进入剧情",
             "列表刷关-关卡类型检查-剧情类",
+            "[JumpBack]列表刷关-剧情类-有需下载的资料",
             "[JumpBack]黑屏计数-2.5秒",
             "[JumpBack]通用-可处理范围加载等待",
             "列表刷关-已进入关卡列表",
             "[JumpBack]乱点一下" //可能是教程
         ]
+    },
+    "列表刷关-剧情类-有需下载的资料": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    566,
+                    262,
+                    124,
+                    88
+                ],
+                "template": [
+                    "繁中/通用/战斗/弹窗/资料下载.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "正在下载所需资料ing..."
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    667,
+                    432,
+                    213,
+                    64
+                ]
+            }
+        },
+        "post_delay": 500
     },
     "列表刷关-剧情类-已进入剧情": {
         "recognition": {
