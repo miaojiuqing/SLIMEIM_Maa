@@ -82,6 +82,8 @@
                 ]
             }
         },
+        "pre_delay": 200,
+        "post_delay": 1000,
         "next": [
             "[JumpBack]通用-体力不足处理",
             "[JumpBack]skip",
