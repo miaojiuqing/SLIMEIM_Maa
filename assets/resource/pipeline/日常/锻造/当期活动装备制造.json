@@ -114,6 +114,9 @@
                 ]
             }
         },
+        "focus": {
+            "Node.Recognition.Succeeded": "找到了可锻造的限时装备"
+        },
         "action": "Click",
         "next": [
             "活动新装锻造-锻造新装-已唤出制造界面",
@@ -249,6 +252,9 @@
                     "繁中/日常/锻造/活动限时装备/没限时装备了.png"
                 ]
             }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "没找到可锻造的限时装备"
         },
         "action": {
             "type": "Click",
