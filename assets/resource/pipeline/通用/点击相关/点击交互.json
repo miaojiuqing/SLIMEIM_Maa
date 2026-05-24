@@ -79,5 +79,43 @@
             }
         },
         "action": "Click"
+    },
+    "通用-过对话": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    1093,
+                    557,
+                    187,
+                    163
+                ],
+                "upper": [
+                    213,
+                    205,
+                    183
+                ],
+                "lower": [
+                    213,
+                    205,
+                    183
+                ],
+                "count": 1000
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    183,
+                    211,
+                    327,
+                    220
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 250,
+        "post_delay": 500
     }
 }
