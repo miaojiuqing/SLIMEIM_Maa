@@ -6,6 +6,7 @@
         "next": [
             // "[JumpBack]发包启动游戏",
             "成功进入主菜单",
+            "[JumpBack]左上角返回",
             "[JumpBack]点击绿色大菜单",
             "[JumpBack]点击黑色小主菜单",
             "[JumpBack]下一步",
