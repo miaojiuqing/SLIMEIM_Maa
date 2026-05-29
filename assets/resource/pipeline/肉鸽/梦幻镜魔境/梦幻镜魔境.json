@@ -79,6 +79,7 @@
         "focus": {
             "Node.Recognition.Succeeded": "路线检测第一次"
         },
+        "post_delay": 1000,
         "next": [
             "[JumpBack]skip",
             "梦幻镜魔境-点击进入镜子-奖励",
@@ -107,6 +108,7 @@
         "focus": {
             "Node.Recognition.Succeeded": "路线检测第二次"
         },
+        "post_delay": 1500,
         "next": [
             "[JumpBack]skip",
             "梦幻镜魔境-点击进入镜子-奖励",
@@ -135,6 +137,7 @@
         "focus": {
             "Node.Recognition.Succeeded": "路线检测第三次"
         },
+        "post_delay": 2000,
         "next": [
             "[JumpBack]skip",
             "梦幻镜魔境-点击进入镜子-奖励",
