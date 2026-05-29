@@ -88,9 +88,9 @@
         "tasks/琐事/设施产出收取.json",
         "tasks/琐事/好友设施支援.json",
         //活动
-        "tasks/活动/奖励关/魔王龙道.json",
         "tasks/活动/固定活动/活动捕食战.json",
         "tasks/活动/固定活动/并列演算.json",
+        "tasks/活动/奖励关/魔王龙道.json",
         "tasks/活动/复刻活动/魔国祭典.json",
         //奖励领取
         "tasks/日常/奖励领取/任务奖励.json",
