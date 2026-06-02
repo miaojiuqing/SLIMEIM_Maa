@@ -1,6 +1,6 @@
 {
     "列表刷关-主线模式-章节难度检查": {
-        // "enabled": false,
+        "enabled": false,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
