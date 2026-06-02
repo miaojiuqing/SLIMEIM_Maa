@@ -482,6 +482,7 @@
                 ]
             }
         },
+        "pre_delay": 500,
         "focus": {
             "Node.Recognition.Succeeded": "自动编队成功,继续任务"
         },
