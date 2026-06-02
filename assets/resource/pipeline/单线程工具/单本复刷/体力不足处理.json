@@ -79,21 +79,55 @@
         },
         "pre_delay": 500,
         "post_delay": 500,
+        "repeat": 0,
+        "repeat_delay": 500,
         "action": {
             "type": "Click",
             "param": {
                 "target": [
-                    673,
-                    556,
-                    202,
-                    39
+                    724,
+                    373,
+                    57,
+                    54
                 ]
             }
         },
         "next": [
             "工具-单本复刷-回体成功",
+            "[JumpBack]工具-单本复刷-已进入体力药服用界面-点击Yes",
             "工具-单本复刷-已进入体力药服用界面"
         ]
+    },
+    "工具-单本复刷-已进入体力药服用界面-点击Yes": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    470,
+                    163,
+                    95,
+                    85
+                ],
+                "template": [
+                    "繁中/单线程工具/单本复刷/体力不足/体力药使用界面.png"
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "post_delay": 500,
+        "repeat": 1,
+        "repeat_delay": 500,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    670,
+                    552,
+                    209,
+                    32
+                ]
+            }
+        }
     },
     "工具-单本复刷-回体成功": {
         "recognition": {
