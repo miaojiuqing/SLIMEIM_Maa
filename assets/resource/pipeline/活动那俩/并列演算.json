@@ -267,7 +267,7 @@
         },
         "post_delay": 200,
         "next": [
-            // "[JumpBack]并列演算-上次并列演算结果",
+            "[JumpBack]并列演算-上次并列演算结果",
             // "并列演算-已打开并列演算界面",
             // "[JumpBack]OK",
             // "[JumpBack]下一步",
