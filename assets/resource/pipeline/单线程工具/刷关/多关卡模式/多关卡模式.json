@@ -92,6 +92,25 @@
                 ]
             }
         },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1202,
+                    232,
+                    1,
+                    1
+                ],
+                "end": [
+                    1202,
+                    332,
+                    1,
+                    1
+                ],
+                "duration": 1500,
+                "end_hold": 1000
+            }
+        },
         "focus": {
             "Node.Recognition.Succeeded": "列表结束检查第一次"
         },
@@ -104,6 +123,7 @@
     },
     "列表刷关-多关卡模式-所有关卡挑战完毕-第二次检查": {
         "inverse": true,
+        "action": "DoNothing",
         "recognition": {
             "type": "TemplateMatch",
             "param": {
