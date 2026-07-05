@@ -48,6 +48,7 @@
                     152,
                     606
                 ],
+                "green_mask": true,
                 "template": [
                     "繁中/单线程工具/列表刷关/多关卡模式/未挑战关卡-三灰.png",
                     "繁中/单线程工具/列表刷关/多关卡模式/NEW.png"
@@ -123,7 +124,6 @@
     },
     "列表刷关-多关卡模式-所有关卡挑战完毕-第二次检查": {
         "inverse": true,
-        "action": "DoNothing",
         "recognition": {
             "type": "TemplateMatch",
             "param": {
