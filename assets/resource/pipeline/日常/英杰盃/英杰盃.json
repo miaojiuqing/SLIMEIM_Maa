@@ -148,8 +148,37 @@
         "next": [
             "英杰盃-已进入编队界面",
             "[JumpBack]英杰盃-点击选择对手",
-            "[JumpBack]通用-可处理范围加载等待"
+            "[JumpBack]通用-可处理范围加载等待",
+            "[JumpBack]叉叉"
         ]
+    },
+    "英杰盃-误触进入对手详细": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    996,
+                    281,
+                    145,
+                    87
+                ],
+                "template": [
+                    "繁中/日常/英杰盃/误触进入对手详细.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1169,
+                    47,
+                    28,
+                    20
+                ]
+            }
+        },
+        "post_delay": 500
     },
     "英杰盃-点击选择对手": { //对手挑选接口，更改点击位置
         "recognition": {
