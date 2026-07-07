@@ -1,4 +1,32 @@
 {
+    "通用-演算相关-演算结果确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    504,
+                    62,
+                    190,
+                    77
+                ],
+                "template": [
+                    "繁中/通用/特殊情况特殊处理/并列演算/并列演算结果.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    555,
+                    598,
+                    168,
+                    40
+                ]
+            }
+        },
+        "post_delay": 500
+    },
     "通用-演算中断-检查到中断弹窗": {
         "recognition": {
             "type": "TemplateMatch",
