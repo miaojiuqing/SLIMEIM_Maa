@@ -654,13 +654,52 @@
                     "name": "不切换",
                     "pipeline_override": {
                         "列表刷关-捕食类-已成功切换至所选编队": {
-                            "recognition": "DirectHit"
+                            "recognition": {
+                                "type": "TemplateMatch",
+                                "param": {
+                                    "roi": [
+                                        49,
+                                        590,
+                                        119,
+                                        100
+                                    ],
+                                    "template": [
+                                        "繁中/通用/战斗/已处于编队界面.png"
+                                    ]
+                                }
+                            }
                         },
                         "列表刷关-战斗类-已成功切换至所选编队": {
-                            "recognition": "DirectHit"
+                            "recognition": {
+                                "type": "TemplateMatch",
+                                "param": {
+                                    "roi": [
+                                        49,
+                                        590,
+                                        119,
+                                        100
+                                    ],
+                                    "template": [
+                                        "繁中/通用/战斗/已处于编队界面.png"
+                                    ]
+                                }
+                            }
                         },
                         "列表刷关-多关卡模式-战斗类-已成功切换至所选编队": {
-                            "recognition": "DirectHit"
+                            "recognition": {
+                                "type": "TemplateMatch",
+                                "param": {
+                                    "roi": [
+                                        49,
+                                        590,
+                                        119,
+                                        100
+                                    ],
+                                    "template": [
+                                        "繁中/通用/战斗/已处于编队界面.png"
+                                    ]
+                                }
+                            }
                         }
                     }
                 },

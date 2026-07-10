@@ -27,7 +27,20 @@
                     "name": "不切换",
                     "pipeline_override": {
                         "并列演算-已成功切换至所选编队": {
-                            "recognition": "DirectHit"
+                            "recognition": {
+                                "type": "TemplateMatch",
+                                "param": {
+                                    "roi": [
+                                        49,
+                                        590,
+                                        119,
+                                        100
+                                    ],
+                                    "template": [
+                                        "繁中/通用/战斗/已处于编队界面.png"
+                                    ]
+                                }
+                            }
                         }
                     }
                 },
