@@ -63,6 +63,38 @@
             "贸易-商品-心之书-简易蓝"
         ]
     },
+    "贸易-商品-心之书-简易橙": {
+        "enabled": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    253,
+                    176,
+                    209,
+                    172
+                ],
+                "template": [
+                    "繁中/商店/贸易/商品/心之书/橙-简易.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    602,
+                    463,
+                    129,
+                    46
+                ]
+            }
+        },
+        "next": [
+            "贸易-该商品已点完MAX",
+            "贸易-商品-心之书-简易蓝"
+        ]
+    },
     "贸易-商品-武器材料-至高魔羽": {
         "enabled": true,
         "recognition": {
