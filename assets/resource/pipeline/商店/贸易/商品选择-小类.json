@@ -10,10 +10,15 @@
                     209,
                     172
                 ],
+                "threshold": 0.9,
+                "method": 10001,
                 "template": [
                     "繁中/商店/贸易/商品/心之书/蓝-简易.png"
                 ]
             }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到 心之书-简易蓝"
         },
         "action": {
             "type": "Click",
@@ -42,10 +47,15 @@
                     209,
                     172
                 ],
+                "threshold": 0.9,
+                "method": 10001,
                 "template": [
                     "繁中/商店/贸易/商品/心之书/绿-简易.png"
                 ]
             }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到 心之书-简易绿"
         },
         "action": {
             "type": "Click",
@@ -74,10 +84,15 @@
                     209,
                     172
                 ],
+                "threshold": 0.9,
+                "method": 10001,
                 "template": [
                     "繁中/商店/贸易/商品/心之书/橙-简易.png"
                 ]
             }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到 心之书-简易橙"
         },
         "action": {
             "type": "Click",
@@ -110,6 +125,9 @@
                     "繁中/商店/贸易/商品/武器材料/至高魔羽.png"
                 ]
             }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到 武器材料-至高魔羽"
         },
         "action": {
             "type": "Click",
