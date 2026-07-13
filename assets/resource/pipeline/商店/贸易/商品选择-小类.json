@@ -10,7 +10,7 @@
                     209,
                     172
                 ],
-                "threshold": 0.9,
+                "threshold": 0.95,
                 "method": 10001,
                 "template": [
                     "繁中/商店/贸易/商品/心之书/蓝-简易.png"
@@ -47,7 +47,7 @@
                     209,
                     172
                 ],
-                "threshold": 0.9,
+                "threshold": 0.95,
                 "method": 10001,
                 "template": [
                     "繁中/商店/贸易/商品/心之书/绿-简易.png"
@@ -84,7 +84,7 @@
                     209,
                     172
                 ],
-                "threshold": 0.9,
+                "threshold": 0.95,
                 "method": 10001,
                 "template": [
                     "繁中/商店/贸易/商品/心之书/橙-简易.png"
