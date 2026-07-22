@@ -18,6 +18,12 @@
             "[JumpBack]乱点一下"
         ]
     },
+    // "启动游戏-需自行更新": {
+    //     "recognition": {
+    //         "type": "TemplateMatch",
+    //         "param": {}
+    //     }
+    // },
     "启动游戏专用叉叉": {
         "recognition": {
             "type": "TemplateMatch",
