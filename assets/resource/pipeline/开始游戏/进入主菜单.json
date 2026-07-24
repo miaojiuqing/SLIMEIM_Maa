@@ -18,12 +18,28 @@
             "[JumpBack]乱点一下"
         ]
     },
-    // "启动游戏-需自行更新": {
-    //     "recognition": {
-    //         "type": "TemplateMatch",
-    //         "param": {}
-    //     }
-    // },
+    "启动游戏-需自行更新": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    542,
+                    284,
+                    179,
+                    148
+                ],
+                "template": [
+                    "繁中/开始游戏/需要自行更新.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "需自行手动更新游戏"
+        },
+        "next": [
+            "启动游戏-需自行更新"
+        ]
+    },
     "启动游戏专用叉叉": {
         "recognition": {
             "type": "TemplateMatch",
