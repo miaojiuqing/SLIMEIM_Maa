@@ -36,6 +36,7 @@
         "focus": {
             "Node.Recognition.Succeeded": "需自行手动更新游戏"
         },
+        "post_delay": 50000,
         "next": [
             "启动游戏-需自行更新"
         ]
