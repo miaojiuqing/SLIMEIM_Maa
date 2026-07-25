@@ -1,4 +1,47 @@
 {
+    "1识别测试": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    629,
+                    80,
+                    152,
+                    606
+                ],
+                "green_mask": true,
+                "template": [
+                    "繁中/单线程工具/列表刷关/多关卡模式/未挑战关卡-三灰.png",
+                    "繁中/单线程工具/列表刷关/多关卡模式/NEW.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "已进入命运选择界面"
+        },
+        "next": [
+            "1位置测试"
+        ]
+    },
+    "1位置测试": {
+        "max_hit": 1,
+        "focus": {
+            "Node.Recognition.Succeeded": ""
+        },
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": "1识别测试",
+                "roi_offset": [
+                    130,
+                    25,
+                    250,
+                    50
+                ],
+                "expected": []
+            }
+        }
+    },
     "1": {
         "recognition": {
             "type": "TemplateMatch",
