@@ -387,30 +387,32 @@
     },
     "设施支援-有可申请支援的设施": {
         "recognition": {
-            "type": "ColorMatch",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    1053,
-                    233,
-                    140,
-                    69
+                    245,
+                    60,
+                    72,
+                    76
                 ],
-                "upper": [
-                    29,
-                    139,
-                    138
-                ],
-                "lower": [
-                    12,
-                    82,
-                    70
-                ],
-                "count": 2500
+                "template": [
+                    "繁中/日常/建筑支援申请/当日支援次数未尽.png"
+                ]
             }
         },
-        "action": "Click",
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    830,
+                    623,
+                    120,
+                    33
+                ]
+            }
+        },
         "focus": {
-            "Node.Recognition.Succeeded": "我将申请设施支援"
+            "Node.Recognition.Succeeded": "我将点击推荐然后申请设施支援申请"
         },
         "next": [
             "设施支援-有可申请支援的设施-支援申请界面",
