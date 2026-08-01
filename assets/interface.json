@@ -84,7 +84,7 @@
         "tasks/商店/贸易.json", //待补充商品
         "tasks/琐事/泡温泉.json",
         "tasks/琐事/设施产出收取.json",
-        "tasks/琐事/好友设施支援.json",
+        // "tasks/琐事/好友设施支援.json",//这功能好像他妈被删了
         //活动
         "tasks/活动/固定活动/活动捕食战.json",
         "tasks/活动/固定活动/并列演算.json",
