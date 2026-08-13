@@ -26,7 +26,7 @@
         "日常-城镇对话-自动处理战斗事件": {
             "type": "switch",
             "label": "自动处理战斗事件",
-            "icon": "./resource/image/繁中/日常/城镇对话/特殊事件/双一览界面/战斗.png",
+            "icon": "./resource/image/日常/城镇对话/特殊事件/双一览界面/战斗.png",
             "default_case": "Yes",
             "cases": [
                 {
@@ -60,7 +60,7 @@
         "日常-城镇对话-自动处理交货事件": {
             "type": "switch",
             "label": "自动处理交货事件",
-            "icon": "./resource/image/繁中/日常/城镇对话/特殊事件/双一览界面/交货.png",
+            "icon": "./resource/image/日常/城镇对话/特殊事件/双一览界面/交货.png",
             "default_case": "Yes",
             "cases": [
                 {

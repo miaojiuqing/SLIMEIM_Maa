@@ -291,7 +291,7 @@
                 },
                 {
                     "name": "日常送礼-生鱼片",
-                    "icon": "./resource/image/繁中/日常/送上礼物/礼物/生鱼片.png",
+                    "icon": "./resource/image/日常/送上礼物/礼物/生鱼片.png",
                     "label": "生鱼片",
                     "pipeline_override": {
                         "日常送礼-找到指定礼物": {
@@ -308,7 +308,7 @@
                 },
                 {
                     "name": "日常送礼-饭团",
-                    "icon": "./resource/image/繁中/日常/送上礼物/礼物/饭团.png",
+                    "icon": "./resource/image/日常/送上礼物/礼物/饭团.png",
                     "label": "饭团",
                     "pipeline_override": {
                         "日常送礼-找到指定礼物": {
@@ -325,7 +325,7 @@
                 },
                 {
                     "name": "日常送礼-牛鹿串烧",
-                    "icon": "./resource/image/繁中/日常/送上礼物/礼物/牛鹿串烧.png",
+                    "icon": "./resource/image/日常/送上礼物/礼物/牛鹿串烧.png",
                     "label": "牛鹿串烧",
                     "pipeline_override": {
                         "日常送礼-找到指定礼物": {
@@ -342,7 +342,7 @@
                 },
                 {
                     "name": "日常送礼-沙拉棒",
-                    "icon": "./resource/image/繁中/日常/送上礼物/礼物/沙拉棒.png",
+                    "icon": "./resource/image/日常/送上礼物/礼物/沙拉棒.png",
                     "label": "沙拉棒",
                     "pipeline_override": {
                         "日常送礼-找到指定礼物": {
@@ -359,7 +359,7 @@
                 },
                 {
                     "name": "日常送礼-新鲜水果",
-                    "icon": "./resource/image/繁中/日常/送上礼物/礼物/新鲜水果.png",
+                    "icon": "./resource/image/日常/送上礼物/礼物/新鲜水果.png",
                     "label": "新鲜水果",
                     "pipeline_override": {
                         "日常送礼-找到指定礼物": {
@@ -376,7 +376,7 @@
                 },
                 {
                     "name": "日常送礼-紫色坦派斯特",
-                    "icon": "./resource/image/繁中/日常/送上礼物/礼物/紫色坦派斯特.png",
+                    "icon": "./resource/image/日常/送上礼物/礼物/紫色坦派斯特.png",
                     "label": "紫色坦派斯特",
                     "pipeline_override": {
                         "日常送礼-找到指定礼物": {

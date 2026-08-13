@@ -8,7 +8,7 @@
                 "日常"
             ],
             "default_check": true,
-            "icon": "./resource/image/繁中/日常/英杰盃/一般战/小奖杯.png",
+            "icon": "./resource/image/日常/英杰盃/一般战/小奖杯.png",
             "description": "固定进入建国才去点,不然菜单点会飘到不知道哪里去",
             "option": [
                 "英杰盃-编队选择",

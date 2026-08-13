@@ -9,7 +9,7 @@
             ],
             "default_check": true,
             "description": "会通知这次泡温泉获得多少体力,不会的话请截图发作者,有时候点太快也会没识别到收益",
-            "icon": "./resource/image/繁中/琐事/泡温泉/图标.png",
+            "icon": "./resource/image/琐事/泡温泉/图标.png",
             "option": [
                 "琐事-泡温泉-城镇检查"
             ]
