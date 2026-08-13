@@ -24,6 +24,7 @@
         },
         "next": [
             "梦幻镜魔境-已进入路线镜子选择界面-第一次",
+            "梦幻镜魔境-上次打到一半",
             "[JumpBack]梦幻镜魔境-点击入口",
             "[JumpBack]黑屏计数-2.5秒",
             "梦幻镜魔境-已进入层数选择界面",
@@ -63,6 +64,41 @@
             }
         },
         "action": "Click"
+    },
+    "梦幻镜魔境-上次打到一半": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    41,
+                    0,
+                    124,
+                    83
+                ],
+                "template": [
+                    "繁中/通用/战斗/战斗中/WAVE.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "上次打一半喵"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1000,
+                    620,
+                    208,
+                    58
+                ]
+            }
+        },
+        "next": [
+            "梦幻境魔境-已进入编队选择界面",
+            "梦幻镜魔境-上次打到一半",
+            "[JumpBack]空任务"
+        ]
     },
     "梦幻镜魔境-已进入路线镜子选择界面-第一次": {
         "recognition": {
