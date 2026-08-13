@@ -1,0 +1,76 @@
+{
+    "通用-建国相关-进来是魔国祭典-切换到中央地区": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    599,
+                    562,
+                    123,
+                    113
+                ],
+                "template": [
+                    "繁中/活动/会复刻/魔国祭典/已进入庆典界面.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "当前处于魔国祭典地区,将自行切换"
+        },
+        "next": [
+            "通用-建国相关-进来是魔国祭典-成功切换到正常地区",
+            "[JumpBack]通用-建国相关-进来是魔国祭典-点击切换到其他地区",
+            "[JumpBack]黑屏计数-2.5秒"
+        ]
+    },
+    "通用-建国相关-进来是魔国祭典-点击切换到其他地区": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1038,
+                    143,
+                    77,
+                    79
+                ],
+                "template": [
+                    "繁中/通用/建国/地区切换/魔国图标.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "点击尝试切换至非活动地区"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    -3,
+                    100,
+                    13
+                ]
+            }
+        }
+    },
+    "通用-建国相关-进来是魔国祭典-成功切换到正常地区": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    51,
+                    69,
+                    85,
+                    76
+                ],
+                "template": [
+                    "繁中/通用/建国/已进入建国.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "已成功切换至非活动地区"
+        }
+    }
+}
