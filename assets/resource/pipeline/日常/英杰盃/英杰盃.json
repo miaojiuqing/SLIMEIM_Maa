@@ -57,6 +57,27 @@
             }
         }
     },
+    "英杰盃-解除属性限制弹窗处理": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    488,
+                    403,
+                    304,
+                    144
+                ],
+                "template": [
+                    "奖励领取/邮箱/OK.png",
+                    "通用/交互按钮/OK.png",
+                    "通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
     "英杰盃-已进入英杰杯界面": { //挑战一般/排名接口
         "recognition": {
             "type": "TemplateMatch",
@@ -76,6 +97,7 @@
             "英杰盃-已进入一般战",
             "[JumpBack]英杰盃-点击进入一般战",
             "异常处理-说是预期外错误",
+            "[JumpBack]英杰盃-解除属性限制弹窗处理",
             "[JumpBack]通用-可处理范围加载等待"
         ]
     },
