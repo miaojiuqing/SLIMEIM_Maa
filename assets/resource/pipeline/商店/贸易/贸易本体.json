@@ -176,7 +176,8 @@
             "贸易-商品-武器材料-至高魔羽",
             //全部禁用,用户选了才启用
             "贸易-已处于最后一个商品",
-            "[JumpBack]贸易-点击切换至下一个商品"
+            "[JumpBack]贸易-点击切换至下一个商品",
+            "贸易-切换了50次仍没有切换到最后一组商品"
         ]
     },
     "贸易-已处于最后一个商品": {
@@ -225,6 +226,7 @@
         ]
     },
     "贸易-点击切换至下一个商品": {
+        "max_hit": 50,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -243,6 +245,33 @@
         "action": "Click",
         "pre_delay": 500,
         "post_delay": 1000
+    },
+    "贸易-切换了50次仍没有切换到最后一组商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1150,
+                    300,
+                    96,
+                    122
+                ],
+                "template": [
+                    "商店/贸易/切换商品.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "切换了50次仍没有切换到最后一组商品,应该是商品数量太少,将结束任务"
+        },
+        "next": [
+            "成功进入主菜单",
+            "贸易-已处于最后一个商品",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]贸易-只是在加载",
+            "[JumpBack]黑屏计数-2.5秒"
+        ]
     },
     "贸易-该商品已点完MAX": {
         "recognition": {
