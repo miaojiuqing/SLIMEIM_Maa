@@ -40,13 +40,62 @@
         },
         "next": [
             "活动-魔国祭典-已进入庆典界面",
-            "[JumpBack]活动-魔国祭典-点击进入祭典",
             "[JumpBack]黑屏计数-2.5秒",
-            "[JumpBack]通用-可处理范围加载等待",
-            "[JumpBack]通用-万代立绘加载中"
+            "[JumpBack]活动-魔国祭典-点击进入祭典",
+            "[JumpBack]魔国祭典-次数限定版可处理范围加载等待",
+            "[JumpBack]魔国祭典-次数限定版万代立绘加载中",
+            "[JumpBack]魔国祭典-次数限定-空任务"
         ]
     },
+    "魔国祭典-次数限定版可处理范围加载等待": {
+        "max_hit": 1000,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    303,
+                    0,
+                    226,
+                    86
+                ],
+                "template": [
+                    "通用/大概是加载中ing.png"
+                ]
+            }
+        },
+        "post_delay": 1500
+    },
+    "魔国祭典-次数限定版万代立绘加载中": {
+        "max_hit": 1000,
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    35,
+                    571,
+                    390,
+                    126
+                ],
+                "upper": [
+                    255,
+                    250,
+                    236
+                ],
+                "lower": [
+                    255,
+                    249,
+                    235
+                ],
+                "count": 1000
+            }
+        },
+        "post_delay": 1000
+    },
+    "魔国祭典-次数限定-空任务": {
+        "max_hit": 10
+    },
     "活动-魔国祭典-点击进入祭典": {
+        "max_hit": 100,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -62,6 +111,17 @@
             }
         },
         "action": "Click"
+    },
+    "活动-魔国祭典-应该是没开": {
+        "focus": {
+            "Node.Recognition.Succeeded": "多次尝试寻找魔国祭典入口无果,应该是没开.将结束任务"
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]叉叉",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
     },
     "活动-魔国祭典-已进入庆典界面": {
         "recognition": {
