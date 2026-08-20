@@ -26,7 +26,8 @@
             "[JumpBack]点击进入城镇",
             "[JumpBack]黑屏计数-2.5秒",
             "[JumpBack]通用-可处理范围加载等待",
-            "[JumpBack]通用-万代立绘加载中"
+            "[JumpBack]通用-万代立绘加载中",
+            "[JumpBack]skip"
         ]
     },
     "泡温泉-已进入城镇": {
