@@ -1,5 +1,5 @@
 {
-    "列表刷关-关卡类型检查-剧情类": {
+    "列表刷关-关卡类型检查-剧情类-通知层": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -16,6 +16,25 @@
         },
         "focus": {
             "Node.Recognition.Succeeded": "检测到剧情类关卡"
+        },
+        "next": [
+            "列表刷关-关卡类型检查-剧情类"
+        ]
+    },
+    "列表刷关-关卡类型检查-剧情类": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    632,
+                    120,
+                    151,
+                    205
+                ],
+                "template": [
+                    "单线程工具/刷关通用/关卡类型/剧情/剧情关卡.png"
+                ]
+            }
         },
         "action": {
             "type": "Click",

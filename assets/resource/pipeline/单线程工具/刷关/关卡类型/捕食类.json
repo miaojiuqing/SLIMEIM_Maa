@@ -1,5 +1,5 @@
 {
-    "列表刷关-关卡类型检查-捕食类": {
+    "列表刷关-关卡类型检查-捕食类-通知层": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -16,6 +16,25 @@
         },
         "focus": {
             "Node.Recognition.Succeeded": "检测到捕食类关卡"
+        },
+        "next": [
+            "列表刷关-关卡类型检查-捕食类"
+        ]
+    },
+    "列表刷关-关卡类型检查-捕食类": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    632,
+                    120,
+                    151,
+                    205
+                ],
+                "template": [
+                    "单线程工具/刷关通用/关卡类型/捕食/捕食关卡.png"
+                ]
+            }
         },
         "action": {
             "type": "Click",
