@@ -61,5 +61,22 @@
             }
         },
         "action": "Click"
+    },
+    "点击未选中的特别_期间限定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1101,
+                    585,
+                    103,
+                    122
+                ],
+                "template": [
+                    "通用/入口点击/期间限定/未选中/特别.png"
+                ]
+            }
+        },
+        "action": "Click"
     }
 }
