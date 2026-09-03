@@ -75,7 +75,7 @@
         },
         "post_delay": 1000
     },
-    "通用-建国-居民人数达成解锁": {
+    "通用-建国-居民人数达成解锁_通知层": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -104,7 +104,59 @@
                 ]
             }
         },
-        "post_delay": 1000
+        "post_delay": 1000,
+        "next": [
+            "通用-建国-居民人数达成解锁弹窗_已关闭",
+            "[JumpBack]通用-建国-居民人数达成解锁_点击关闭"
+        ]
+    },
+    "通用-建国-居民人数达成解锁_点击关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    420,
+                    52,
+                    441,
+                    79
+                ],
+                "template": [
+                    "通用/建国/弹窗处理/居民人数达成解锁.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    585,
+                    202,
+                    63
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": []
+    },
+    "通用-建国-居民人数达成解锁弹窗_已关闭": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    420,
+                    52,
+                    441,
+                    79
+                ],
+                "template": [
+                    "通用/建国/弹窗处理/居民人数达成解锁.png"
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": []
     },
     "通用-建国-保管弹窗处理": {
         "recognition": {
