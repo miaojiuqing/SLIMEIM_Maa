@@ -27,8 +27,41 @@
             "[JumpBack]黑屏计数-2.5秒",
             "[JumpBack]通用-可处理范围加载等待",
             "[JumpBack]通用-万代立绘加载中",
-            "[JumpBack]英杰盃-赛季已过几分之几弹窗处理"
+            "[JumpBack]英杰盃-赛季已过几分之几弹窗处理",
+            "[JumpBack]英杰盃-解除属性限制弹窗处理",
+            "[JumpBack]英杰盃-弹窗处理-排名战解锁"
         ]
+    },
+    "英杰盃-弹窗处理-排名战解锁": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    530,
+                    303,
+                    205,
+                    113
+                ],
+                "template": [
+                    "日常/英杰盃/排名战解锁.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "排名战已解锁"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    444,
+                    200,
+                    55
+                ]
+            }
+        },
+        "post_delay": 500
     },
     "英杰盃-赛季已过几分之几弹窗处理": {
         "recognition": {
