@@ -1,11 +1,9 @@
 {
     "interface_version": 2,
     "name": "辛西娅小助手·魔王与龙的建国谭",
-    "description": "更强,更快,逻辑更加清晰的辛西娅小助手",
     "icon": "./resource/image/logo.png",
     "contact": "QQ群: 855795905",
     "license": "MIT",
-    "welcome": "欢迎使用辛西娅小助手~",
     "mirrorchyan_rid": "SLIMEIM_Maa",
     "mirrorchyan_multiplatform": true,
     // 测一下
