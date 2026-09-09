@@ -1,5 +1,8 @@
 {
     "列表刷关-关卡类型检查-捕食类-通知层": {
+        "post_delay": 0,
+        "post_wait_freezes": 0,
+        "pre_delay": 0,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

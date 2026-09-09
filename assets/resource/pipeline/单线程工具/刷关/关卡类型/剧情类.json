@@ -1,5 +1,8 @@
 {
     "列表刷关-关卡类型检查-剧情类-通知层": {
+        "post_delay": 0,
+        "post_wait_freezes": 0,
+        "pre_delay": 0,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -143,6 +146,7 @@
             "[JumpBack]skip",
             "列表刷关-剧情类-剧情跳过确认",
             "[JumpBack]黑屏计数-2.5秒",
+            "列表刷关-通用-点击未达成-通知层",
             "[JumpBack]通用-可处理范围加载等待"
         ]
     }
