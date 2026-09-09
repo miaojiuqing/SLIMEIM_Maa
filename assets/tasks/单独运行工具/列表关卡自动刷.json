@@ -11,6 +11,7 @@
             "default_check": false,
             "option": [
                 "列表刷关-主线模式",
+                "列表刷关-自动寻找未挑战标志",
                 "通用-体力不足处理",
                 "列表刷关-战斗类编队选择",
                 "通用-编队切换方式"
@@ -19,6 +20,30 @@
     ],
     "preset": [],
     "option": {
+        "列表刷关-自动寻找未挑战标志": {
+            "label": "自动寻找未挑战标志",
+            "type": "switch",
+            "default_case": "No",
+            "description": "自动寻找\"未达成\"的图标,比如联动活动小地图",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "列表刷关-通用-点击未达成-通知层": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "列表刷关-通用-点击未达成-通知层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
         "列表刷关-主线模式": {
             "type": "switch",
             "label": "主线模式",

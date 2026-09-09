@@ -1,0 +1,64 @@
+{
+    "列表刷关-通用-点击未达成-通知层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    150,
+                    62,
+                    1127,
+                    542
+                ],
+                "template": [
+                    "单线程工具/列表刷关/未达成.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "检测到自动离开了关卡列表且发现可进攻地点，将尝试进入关卡列表"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    1,
+                    60,
+                    25,
+                    75
+                ]
+            }
+        },
+        "next": [
+            "列表刷关-已进入关卡列表",
+            "[JumpBack]列表刷关-通用-点击未达成-点击动作",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "列表刷关-通用-点击未达成-点击动作": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    150,
+                    62,
+                    1127,
+                    542
+                ],
+                "template": [
+                    "单线程工具/列表刷关/未达成.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    1,
+                    60,
+                    25,
+                    75
+                ]
+            }
+        }
+    }
+}
