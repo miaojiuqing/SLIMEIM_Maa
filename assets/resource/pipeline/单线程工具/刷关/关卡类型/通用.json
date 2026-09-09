@@ -3,6 +3,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
+                "order_by": "Vertical",
                 "roi": [
                     150,
                     62,
