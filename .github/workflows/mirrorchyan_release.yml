@@ -14,7 +14,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [win, macos, linux, android]
+        # android 不走这里：APK 由 install.yml 的 android_mirrorchyan 任务上传到独立的安卓 rid
+        os: [win, macos, linux]
         arch: [aarch64, x86_64]
     steps:
       - uses: MirrorChyan/uploading-action@v1

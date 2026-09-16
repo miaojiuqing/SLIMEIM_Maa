@@ -14,6 +14,13 @@ except ModuleNotFoundError as e:
 
 from configure import configure_ocr_model
 
+# Windows 控制台默认常为 cp1252/GBK，脚本里的中文（含降级提示）会抛 UnicodeEncodeError，
+# 必须在任何 print 之前切到 UTF-8，否则“优雅降级”本身就会把打包炸掉
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 working_dir = Path(__file__).parent.parent.resolve()
 install_path = working_dir / Path("install")
 version = len(sys.argv) > 1 and sys.argv[1] or "v0.0.1"
@@ -151,5 +158,18 @@ if __name__ == "__main__":
     install_resource()
     install_chores()
     install_agent()
+
+    # 在当前构建平台上生成 hash（跨平台字节/换行差异会导致不一致）
+    # hash 是 interface.json 的可选字段，不是打包的必需品：算不出来（例如环境里没有 maa
+    # 或它的 native 依赖）就警告跳过，不该让整个打包失败
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent / "ci"))
+        from gen_resource_hash import apply_resource_hashes
+
+        comment = apply_resource_hashes(install_path / "interface.json", root=install_path)
+    except Exception as error:
+        print(f"⚠️ 跳过 resource.hash 生成（{type(error).__name__}: {error}）；本产物不带 hash 校验")
+    else:
+        print(comment)
 
     print(f"Install to {install_path} successfully.")
