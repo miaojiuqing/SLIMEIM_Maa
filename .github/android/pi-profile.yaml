@@ -34,7 +34,7 @@ agent:
         MAAFW_BINARY_PATH: "{nativeLibs}"
 
 app:
-  id: slm
+  id: cynthia
   label: 辛西娅小助手
   # 相对本文件所在目录（.github/android）；本仓库没有根目录 logo.png，用资源里的图标
   icon: ../../assets/resource/image/logo.png

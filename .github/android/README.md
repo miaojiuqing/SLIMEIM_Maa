@@ -12,7 +12,7 @@
 | workflow job | `install.yml` → `android`（名称 `Build Android APK`） |
 | artifact | `MaaSLIMEIM-android` |
 | 文件名 | `MaaSLIMEIM-android-<tag>.apk`（没有签名 secrets 时是 `-debug.apk`） |
-| 包名 | `com.maafw.mq.slm`（`patch_maafwapp.py` 的 base + `pi-profile.yaml` 的 `app.id`） |
+| 包名 | `com.maafw.mq.cynthia`（`patch_maafwapp.py` 的 base `com.maafw.mq` + `pi-profile.yaml` 的 `app.id: cynthia`） |
 | 版本 | 由 `meta` job 算出的 tag，写进 APK 内 `interface.json` 的 `version` |
 
 只有 `refs/tags/v*` 触发的正式版才会进 Release；分支/PR 只产出 artifact。

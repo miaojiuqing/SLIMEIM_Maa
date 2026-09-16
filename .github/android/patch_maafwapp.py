@@ -2,7 +2,7 @@
 """将 MaaFwApp 的 applicationId 基础包名改为 SLIMEIM_Maa 使用的命名空间。
 
 最终包名 = BASE_APPLICATION_ID + "." + pi-profile.yaml 里的 app.id
-         = com.maafw.mq.slm
+         = com.maafw.mq.cynthia
 """
 
 from __future__ import annotations
