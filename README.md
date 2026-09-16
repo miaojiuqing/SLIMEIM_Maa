@@ -179,6 +179,16 @@
 
 都用Linux了一定是大佬，大佬会自己改的（确信
 
+### Android(安卓)
+
+没看文档禁止提问
+<details>
+<summary>安卓版使用教程参考</summary>
+
+  ![安卓版教程.jpg](https://image.989464244.xyz/file/BQACAgUAAyEGAATrAAHMTwADEGqqVoBHRZQjPMkxxjiIRcf4dCmCAAJ1IAAC_uNQVeJCEKEic1NVPQQ.jpg)
+
+</details>
+
 ## 图形化界面
 
 - <span style="font-size:25px;">[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/)</span>  
