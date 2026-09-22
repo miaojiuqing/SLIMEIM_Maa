@@ -4,7 +4,6 @@
         "action": "StartApp",
         // 带 Activity 时 MaaFramework 用 am start -n 启动（不依赖 monkey，部分模拟器没有该命令）
         "package": "com.bandainamcoent.tensuramrkww/com.google.firebase.MessagingUnityPlayerActivity",
-        // "package": "com.bandainamcoent.tensuramrkww",
         "next": [
             // "[JumpBack]发包启动游戏",
             "成功进入主菜单",
