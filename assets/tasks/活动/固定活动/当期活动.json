@@ -1,18 +1,18 @@
 {
     "task": [
         {
-            "name": "当期活动-日常活动捕食",
-            "entry": "当期活动-日常活动捕食-任务开始层",
+            "name": "当期活动",
+            "entry": "活动-当期活动-管理层",
             "default_check": true,
             "group": [
                 "日常"
             ],
-            "description": "请自行解锁,又不是没有关卡列表自动刷给你用.jpg",
+            "description": "就是当期活动,没啥难理解的",
             "option": [
-                "活动当期活动-日常活动捕食-编队选择",
-                // "活动当期活动-日常活动捕食-自动编队",
+                "当期活动_活动捕食战",
+                "当期活动_活动打折战",
                 "通用-编队切换方式",
-                "活动日常捕食战-结束后并列演算"
+                "通用-有未完成的并列演算"
             ],
             "pipeline_override": {
                 "当期活动-并列演算-任务开始层": {
@@ -42,14 +42,46 @@
         "当期活动_活动捕食战": {
             "label": "捕食战",
             "type": "switch",
+            "default_case": "Yes",
             "cases": [
                 {
                     "name": "Yes",
-                    "pipeline_override": {}
+                    "option": [
+                        "活动当期活动-日常活动捕食-编队选择"
+                        // "活动当期活动-日常活动捕食-自动编队",
+                    ]
                 },
                 {
                     "name": "No",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "活动-当期活动-捕食战启用层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "当期活动_活动打折战": {
+            "label": "打折战",
+            "type": "switch",
+            "description": "就是一天只让你打20次的那个,任务原名叫活动并列演算",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "option": [
+                        "活动并列演算-月卡模式",
+                        "活动并列演算-编队选择",
+                        "活动并列演算-自动编队"
+                    ]
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "活动-当期活动-并列演算启用层": {
+                            "enabled": false
+                        }
+                    }
                 }
             ]
         }

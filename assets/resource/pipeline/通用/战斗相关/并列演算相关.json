@@ -110,9 +110,40 @@
         },
         "next": [
             "通用-演算中断-已回到并列演算界面",
-            "当期活动-并列演算-上次并列演算结果",
+            "通用-上次并列演算结果",
             "[JumpBack]通用-演算-队伍经验结算界面的OK"
         ]
+    },
+    "通用-上次并列演算结果": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    93,
+                    173,
+                    483,
+                    137
+                ],
+                "template": [
+                    "活动那俩/并列演算/上次并列演算弹窗处理.png" //左边的
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "上次并列演算奖励已自动结算"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    571,
+                    590,
+                    137,
+                    51
+                ]
+            }
+        },
+        "post_delay": 500
     },
     "通用-演算-队伍经验结算界面的OK": {
         "recognition": {
