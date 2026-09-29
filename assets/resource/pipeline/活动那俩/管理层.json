@@ -9,6 +9,9 @@
     "活动-当期活动-捕食战启用层": {
         "enabled": true,
         "max_hit": 1,
+        "focus": {
+            "Node.Recognition.Succeeded": "您已开启捕食战"
+        },
         "next": [
             "当期活动-日常活动捕食-任务开始层"
         ]
@@ -16,6 +19,9 @@
     "活动-当期活动-并列演算启用层": {
         "enabled": true,
         "max_hit": 1,
+        "focus": {
+            "Node.Recognition.Succeeded": "您已开启并列演算"
+        },
         "next": [
             "当期活动-并列演算-任务开始层"
         ]
