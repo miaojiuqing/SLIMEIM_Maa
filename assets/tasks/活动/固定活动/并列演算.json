@@ -202,6 +202,7 @@
         "活动并列演算-月卡模式": {
             "type": "switch",
             "label": "月卡模式",
+            "default_case": "No",
             "description": "开了月卡导致有两个并列演算按钮的话再选",
             "cases": [
                 {
