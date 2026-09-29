@@ -6,7 +6,10 @@
             "当期活动-日常活动捕食-本日捕食次数已达上限",
             "[JumpBack]通用-可处理范围加载等待",
             "[JumpBack]启动游戏并进入菜单"
-        ]
+        ],
+        "focus": {
+            "Node.Recognition.Succeeded": "开始每日20次并列演算"
+        }
     },
     "当期活动-并列演算-总任务层": {
         "recognition": {
