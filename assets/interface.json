@@ -102,7 +102,6 @@
         "tasks/单独运行工具/商店清空.json",
         "tasks/关闭游戏.json"
     ],
-    "preset": [],
     "option": {
         "通用-编队切换方式": {
             "type": "select",
@@ -209,5 +208,191 @@
                 }
             ]
         }
-    }
+    },
+    "preset": [
+        {
+            "name": "日常-完整",
+            "label": "日常-完整版",
+            "description": "一个合格的建国谭玩家每日必做,可能会少官方临时加的每日特殊活动",
+            "task": [
+                {
+                    "name": "进入游戏",
+                    "enabled": true
+                },
+                {
+                    "name": "日常-锻造场升级",
+                    "enabled": true
+                },
+                {
+                    "name": "日常-送礼",
+                    "enabled": true,
+                    "option": {
+                        "日常送礼-送礼角色选择": "日常送礼-自动寻找低好感度角色"
+                    }
+                },
+                {
+                    "name": "日常-城镇对话",
+                    "enabled": true,
+                    "option": {
+                        "日常-城镇对话-自动处理交货事件": "Yes",
+                        "日常-城镇对话-自动处理战斗事件": "Yes"
+                    }
+                },
+                {
+                    "name": "工具-盖德监工",
+                    "enabled": true
+                },
+                {
+                    "name": "日常-设施支援",
+                    "enabled": true
+                },
+                {
+                    "name": "琐事-设施产出领取",
+                    "enabled": true
+                },
+                {
+                    "name": "琐事-泡温泉",
+                    "enabled": false
+                },
+                {
+                    "name": "日常-捕食战",
+                    "enabled": true
+                },
+                {
+                    "name": "固定活动-当期活动",
+                    "enabled": true
+                },
+                {
+                    "name": "日常-盟主联合",
+                    "enabled": true
+                },
+                {
+                    "name": "商店-贸易",
+                    "enabled": true
+                },
+                {
+                    "name": "日常-英杰盃",
+                    "enabled": true
+                },
+                {
+                    "name": "肉鸽-梦幻镜魔境",
+                    "enabled": true
+                },
+                {
+                    "name": "活动-稳定复刻-魔国祭典",
+                    "enabled": false
+                },
+                {
+                    "name": "日常-奖励领取-管理层",
+                    "enabled": true
+                },
+                {
+                    "name": "关闭游戏",
+                    "enabled": false
+                }
+            ]
+        },
+        {
+            "name": "日常-仅完成日活",
+            "label": "日常-只清日活",
+            "description": "速通每日任务,尽可能精简,不打活动 \n\n 不过每日任务中的体力消耗任务就完不成了,虽然不给魔晶,而且要18点后登录才算完成5个任务 \n\n 总之就是不推荐啦除非每日快刷新了",
+            "task": [
+                {
+                    "name": "进入游戏",
+                    "enabled": true
+                },
+                {
+                    "name": "日常-锻造场升级",
+                    "enabled": true,
+                    "option": {
+                        "日常-锻造升级-顺便建造活动装备": "No"
+                    }
+                },
+                {
+                    "name": "日常-送礼",
+                    "enabled": true,
+                    "option": {
+                        "日常送礼-送礼礼品选择": "日常送礼-随便"
+                    }
+                },
+                {
+                    "name": "日常-城镇对话",
+                    "enabled": true,
+                    "option": {
+                        "日常-城镇对话-自动处理交货事件": "No",
+                        "日常-城镇对话-自动处理战斗事件": "No"
+                    }
+                },
+                {
+                    "name": "工具-盖德监工",
+                    "enabled": true,
+                    "option": {
+                        "盖德监工-筛选": "No"
+                    }
+                },
+                {
+                    "name": "日常-设施支援",
+                    "enabled": true,
+                    "option": {
+                        "日常-设施支援-选择设施升级时是否筛选": "No",
+                        "日常-设施支援-是否顺便收取设施产出奖励": "Yes",
+                        "日常-设施支援-申请支援方式": "日常-设施支援申请方式-智能推荐",
+                        "日常-设施支援-申请时全选还是单选": "全选"
+                    }
+                },
+                {
+                    "name": "琐事-泡温泉",
+                    "enabled": false
+                },
+                {
+                    "name": "日常-捕食战",
+                    "enabled": true
+                },
+                {
+                    "name": "日常-奖励领取-管理层",
+                    "enabled": true
+                },
+                {
+                    "name": "关闭游戏",
+                    "enabled": false
+                }
+            ]
+        },
+        {
+            "name": "工具-单独运行",
+            "label": "单独运行工具",
+            "description": "右键任务右边的齿轮单独运行",
+            "task": [
+                {
+                    "name": "工具-盖德监工",
+                    "enabled": false,
+                    "option": {
+                        "盖德监工-无限模式": "Yes"
+                    }
+                },
+                {
+                    "name": "单线程工具-单本复刷",
+                    "enabled": false
+                },
+                {
+                    "name": "单线程工具-刷关",
+                    "enabled": false,
+                    "option": {
+                        "列表刷关-主线模式": "No"
+                    }
+                },
+                {
+                    "name": "工具-商店清空",
+                    "enabled": false
+                },
+                {
+                    "name": "活动-稳定复刻-魔国祭典",
+                    "enabled": false,
+                    "option": {
+                        "活动-魔国祭典-举办策略": "魔国祭典-举办策略-无限开庆典"
+                    }
+                }
+            ]
+        }
+    ]
 }
