@@ -57,12 +57,6 @@
             "description": "这些功能一般在做日常时会顺手做了"
         },
         {
-            "name": "奖励领取",
-            "default_expand": true,
-            "label": "奖励",
-            "description": "为什么要把奖励单独开一栏?辛西娅不知道哦"
-        },
-        {
             "name": "单线程工具",
             "default_expand": false,
             "label": "工具",
