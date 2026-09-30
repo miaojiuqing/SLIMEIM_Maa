@@ -1,8 +1,9 @@
 {
     "task": [
         {
-            "name": "当期活动",
+            "name": "固定活动-当期活动",
             "entry": "活动-当期活动-管理层",
+            "label": "🔥当期活动",
             "default_check": true,
             "group": [
                 "日常"
