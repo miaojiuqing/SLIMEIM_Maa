@@ -606,14 +606,10 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "期间限定奖励领取完毕"
+            "Node.Recognition.Succeeded": "期间限定奖励领取完毕 \n\n 所有任务奖励已领取完毕"
         },
         "next": [
-            "[JumpBack]任务奖励-大贤者升级弹窗",
-            "果盘奖励领取-当前处于任务界面",
-            "[JumpBack]OK",
-            "[JumpBack]YES",
-            "[JumpBack]叉叉"
+            "奖励领取-管理层"
         ]
     }
 }

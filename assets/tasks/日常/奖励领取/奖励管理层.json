@@ -1,0 +1,90 @@
+{
+    "task": [
+        {
+            "name": "日常-奖励领取-管理层",
+            "label": "奖励领取",
+            "group": [
+                "日常"
+            ],
+            "default_check": true,
+            "entry": "奖励领取-管理层",
+            "description": "任务奖励领取：三个挨个检查过去 \n\n 果盘奖励领取：就是果盘领取 \n\n 邮箱奖励领取：物品上限会自行跳过",
+            "option": [
+                "奖励领取-任务奖励",
+                "奖励领取-果盘奖励",
+                "奖励领取-邮箱奖励"
+            ]
+        }
+    ],
+    "option": {
+        "奖励领取-任务奖励": {
+            "type": "switch",
+            "label": "任务奖励领取",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "任务奖励-引用层": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "任务奖励-引用层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "奖励领取-果盘奖励": {
+            "type": "switch",
+            "label": "果盘奖励领取",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "果盘奖励领取-引用层": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "果盘奖励领取-引用层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "奖励领取-邮箱奖励": {
+            "type": "switch",
+            "label": "邮箱奖励领取",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "邮箱-引用层": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "邮箱-引用层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

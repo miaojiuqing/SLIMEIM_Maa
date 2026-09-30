@@ -1,0 +1,43 @@
+{
+    "奖励领取-管理层": {
+        "next": [
+            "任务奖励-引用层",
+            "果盘奖励领取-引用层",
+            "邮箱-引用层",
+            "启动游戏并进入菜单"
+        ]
+    },
+    "任务奖励-引用层": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "max_hit": 1,
+        "focus": {
+            "Node.Recognition.Succeeded": "开始领取任务奖励"
+        },
+        "next": [
+            "任务奖励-任务开始层"
+        ]
+    },
+    "果盘奖励领取-引用层": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "max_hit": 1,
+        "focus": {
+            "Node.Recognition.Succeeded": "开始领取果盘奖励"
+        },
+        "next": [
+            "果盘奖励领取-任务开始层"
+        ]
+    },
+    "邮箱-引用层": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "max_hit": 1,
+        "focus": {
+            "Node.Recognition.Succeeded": "开始领取邮箱奖励"
+        },
+        "next": [
+            "邮箱-任务开始层"
+        ]
+    }
+}
