@@ -100,7 +100,9 @@
         "focus": {
             "Node.Recognition.Succeeded": "当前版本活动捕食战未开启,跳过此进程"
         },
-        "next": []
+        "next": [
+            "活动-当期活动-管理层"
+        ]
     },
     "当期活动-日常活动捕食-已无挑战次数": {
         "recognition": {
