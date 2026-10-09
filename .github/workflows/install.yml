@@ -104,6 +104,8 @@ jobs:
           tag: ${{ env.MAAFW_VERSION }}
           out-file-path: "deps"
           extract: true
+          # 带 token 才走认证请求：runner 共享出口 IP 的未认证配额只有 60/h，容易 403
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download MFAAvalonia
         id: download_mfa
@@ -115,6 +117,7 @@ jobs:
           tag: ${{ env.MFAA_VERSION }}
           out-file-path: "MFA"
           extract: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Clean up MFAAvalonia archive
         shell: bash
@@ -165,6 +168,10 @@ jobs:
       MAAFWAPP_REF: f20ff4ba0b53e83132da1015c7635ef16e8b5736
       MAAFRAMEWORK_TAG: v5.12.3
       PI_PROFILE: ${{ github.workspace }}/.github/android/pi-profile.yaml
+      # MaaFwApp 的 setup_maa_framework.py 走 GitHub API 拉 MaaFramework 产物；
+      # 不带 token 时是未认证请求（runner 共享出口 IP，配额只有 60/h），很容易
+      # 直接 403 rate limit exceeded —— 由它自己读取这个环境变量来认证
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       ANDROID_RID: ${{ needs.meta.outputs.android_rid }}
       ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
       ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
