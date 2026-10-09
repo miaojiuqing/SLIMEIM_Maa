@@ -134,7 +134,7 @@
                 },
                 {
                     "name": "镜塔优先级-传送阵",
-                    "label": "传送阵类型",
+                    "label": "🔯传送阵类型",
                     "pipeline_override": {
                         "梦幻镜魔境-入口优先级-1": {
                             "template": [
@@ -199,7 +199,7 @@
                 },
                 {
                     "name": "镜塔优先级-传送阵",
-                    "label": "传送阵类型",
+                    "label": "🔯传送阵类型",
                     "pipeline_override": {
                         "梦幻镜魔境-入口优先级-2": {
                             "template": [
@@ -264,7 +264,7 @@
                 },
                 {
                     "name": "镜塔优先级-传送阵",
-                    "label": "传送阵类型",
+                    "label": "🔯传送阵类型",
                     "pipeline_override": {
                         "梦幻镜魔境-入口优先级-3": {
                             "template": [
@@ -329,7 +329,7 @@
                 },
                 {
                     "name": "镜塔优先级-传送阵",
-                    "label": "传送阵类型",
+                    "label": "🔯传送阵类型",
                     "pipeline_override": {
                         "梦幻镜魔境-入口优先级-4": {
                             "template": [
