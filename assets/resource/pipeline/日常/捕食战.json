@@ -352,10 +352,65 @@
         "next": [
             "日常捕食-捕食评价",
             "[JumpBack]skip",
+            "[JumpBack]日常捕食-切换为自动战斗",
             "日常捕食-已进入战斗",
             "异常处理-说是预期外错误",
             "[JumpBack]乱点一下"
         ]
+    },
+    "日常捕食-切换为自动战斗": {
+        "max_hit": 5,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1084,
+                    396,
+                    133,
+                    95
+                ],
+                "template": [
+                    "日常/捕食战/正处于手动战斗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1074,
+                    18,
+                    49,
+                    42
+                ]
+            }
+        },
+        "pre_delay": 250,
+        "post_delay": 1000,
+        "next": [
+            "日常捕食-正处于自动战斗",
+            "日常捕食-切换为自动战斗"
+        ]
+    },
+    "日常捕食-正处于自动战斗": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1084,
+                    396,
+                    133,
+                    95
+                ],
+                "template": [
+                    "日常/捕食战/正处于手动战斗.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "已切换至自动战斗模式"
+        }
     },
     "日常捕食-捕食评价": {
         "recognition": {
