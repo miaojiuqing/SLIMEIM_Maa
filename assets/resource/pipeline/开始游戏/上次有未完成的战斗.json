@@ -1,21 +1,68 @@
 {
-    "未完战-有未完成的战斗": { //待更为图片
+    "未完战-有未完成的战斗": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    442,
-                    153,
-                    398,
-                    146
+                    537,
+                    285,
+                    180,
+                    136
                 ],
-                "expected": [
-                    "再次進入戰.*"
+                "template": [
+                    "开始游戏/未完成的战斗/有未完成的战斗.png"
                 ]
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "有未解决的战斗！"
+            "Node.Recognition.Succeeded": "有未解决的战斗⚔️"
+        },
+        "next": [
+            // "未完战-有未完成的战斗-已关闭此弹窗",
+            // "[JumpBack]未完战-取消离开"
+            "未完战-已进入战斗",
+            "[JumpBack]skip",
+            "[JumpBack]黑屏计数-0.5秒",
+            "[JumpBack]未完战-OK确认"
+        ]
+    },
+    "未完战-取消离开": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    369,
+                    425,
+                    277,
+                    141
+                ],
+                "template": [
+                    "通用/交互按钮/取消.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "未完战-有未完成的战斗-已关闭此弹窗": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    537,
+                    285,
+                    180,
+                    136
+                ],
+                "template": [
+                    "开始游戏/未完成的战斗/有未完成的战斗.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "已取消上次未完成的战斗"
         }
     },
     "未完战-OK确认": {
@@ -37,30 +84,44 @@
             "type": "Click"
         }
     },
-    "未完战-取消离开": {
+    "未完战-已进入战斗": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    369,
-                    425,
-                    277,
-                    141
+                    41,
+                    0,
+                    124,
+                    83
                 ],
                 "template": [
-                    "通用/交互按钮/取消.png"
+                    "通用/战斗/战斗中/WAVE.png"
                 ]
             }
         },
-        "action": {
-            "type": "Click"
-        }
+        "next": [
+            "未完战-战斗已经结束",
+            "[JumpBack]skip",
+            "[JumpBack]捕食通用-切换为自动战斗",
+            "未完战-已进入战斗",
+            "[JumpBack]黑屏计数-0.5秒",
+            "[JumpBack]下一步",
+            "[JumpBack]乱点一下"
+        ]
     },
-    "未完战-已进入战斗场景": {
+    "未完战-战斗已经结束": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": []
+                "roi": [
+                    1084,
+                    95,
+                    95,
+                    101
+                ],
+                "template": [
+                    "通用/战斗/战斗结束/胜利达成.png"
+                ]
             }
         }
     },

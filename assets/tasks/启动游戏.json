@@ -19,6 +19,7 @@
                         "[JumpBack]点击黑色小主菜单",
                         "[JumpBack]skip",
                         "[JumpBack]启动游戏专用叉叉",
+                        "[JumpBack]未完战-有未完成的战斗",
                         "[JumpBack]OK",
                         "[JumpBack]YES",
                         "[JumpBack]下一步",
@@ -33,5 +34,41 @@
             ]
         }
     ],
-    "option": {}
+    "option": {
+        "进入游戏-有未完成的战斗": {
+            "label": "若有未完成的战斗",
+            "type": "select",
+            "default_case": "启动游戏时有未完成战斗-战斗",
+            "cases": [
+                {
+                    "name": "启动游戏时有未完成战斗-取消",
+                    "label": "直接取消",
+                    "description": "不是我喜欢的战斗 直接取消",
+                    "pipeline_override": {
+                        "未完战-有未完成的战斗": {
+                            "next": [
+                                "未完战-有未完成的战斗-已关闭此弹窗",
+                                "[JumpBack]未完战-取消离开"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "启动游戏时有未完成战斗-战斗",
+                    "label": "⚔️战斗",
+                    "description": "战士应视死如归",
+                    "pipeline_override": {
+                        "未完战-有未完成的战斗": {
+                            "next": [
+                                "未完战-已进入战斗",
+                                "[JumpBack]skip",
+                                "[JumpBack]黑屏计数-0.5秒",
+                                "[JumpBack]未完战-OK确认"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }
