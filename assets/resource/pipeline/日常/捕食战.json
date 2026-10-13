@@ -352,13 +352,13 @@
         "next": [
             "日常捕食-捕食评价",
             "[JumpBack]skip",
-            "[JumpBack]日常捕食-切换为自动战斗",
+            "[JumpBack]捕食通用-切换为自动战斗",
             "日常捕食-已进入战斗",
             "异常处理-说是预期外错误",
             "[JumpBack]乱点一下"
         ]
     },
-    "日常捕食-切换为自动战斗": {
+    "捕食通用-切换为自动战斗": {
         "max_hit": 5,
         "recognition": {
             "type": "TemplateMatch",
@@ -388,11 +388,12 @@
         "pre_delay": 250,
         "post_delay": 1000,
         "next": [
-            "日常捕食-正处于自动战斗",
-            "日常捕食-切换为自动战斗"
+            "[JumpBack]skip",
+            "捕食通用-正处于自动战斗",
+            "捕食通用-切换为自动战斗"
         ]
     },
-    "日常捕食-正处于自动战斗": {
+    "捕食通用-正处于自动战斗": {
         "inverse": true,
         "recognition": {
             "type": "TemplateMatch",
