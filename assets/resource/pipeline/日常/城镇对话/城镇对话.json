@@ -135,7 +135,8 @@
                 ],
                 "template": [
                     "日常/城镇对话/可进行对话.png"
-                ]
+                ],
+                "threshold": 0.85
             }
         },
         "action": "Click",
@@ -167,7 +168,8 @@
                 ],
                 "template": [
                     "日常/城镇对话/可进行对话.png"
-                ]
+                ],
+                "threshold": 0.85
             }
         },
         "action": "Click",
