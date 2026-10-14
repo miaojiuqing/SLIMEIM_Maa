@@ -8,7 +8,7 @@
                 "日常"
             ],
             "default_check": true,
-            "icon": "./resource/image/商店/贸易/入口.png",
+            // "icon": "./resource/image/商店/贸易/入口.png",
             "description": "想买什么但选项没有的话提issue或者进群说,不考虑贸易票据不够的情况,这玩意能不够那你是真挥霍",
             "option": [
                 "商店-贸易-商品选择-心之书-简易蓝",
