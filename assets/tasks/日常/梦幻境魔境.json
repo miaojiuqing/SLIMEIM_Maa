@@ -433,7 +433,7 @@
                 {
                     "name": "镜塔根据奖励-六面魔晶-小型觉火",
                     "label": "小型觉火",
-                    "icon": "./resource/image/肉鸽/梦幻镜魔境/镜子选择/战斗类/根据奖励/六面魔晶-小型觉火.png",
+                    "icon": "./resource/image/肉鸽/梦幻镜魔境/镜子选择/战斗类/根据奖励/小型觉火.png",
                     "pipeline_override": {
                         "梦幻镜魔境-点击进入镜子-根据战后奖励选择": {
                             "template": [
@@ -516,6 +516,7 @@
             ]
         },
         "肉鸽-梦幻镜魔境-编队选择": {
+            "type": "select",
             "label": "挑战编队切换",
             "default_case": "不切换",
             "cases": [
