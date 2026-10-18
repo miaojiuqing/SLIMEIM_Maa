@@ -208,6 +208,87 @@
         "post_delay": 1000,
         "next": []
     },
+    "通用-建国-增加可兴建建筑-通知层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    392,
+                    43,
+                    330,
+                    95
+                ],
+                "template": [
+                    "通用/建国/弹窗处理/增加可兴建建筑.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "增加可兴建建筑"
+        },
+        "next": [
+            "通用-建国-增加可兴建建筑-通知层_已关闭",
+            "[JumpBack]通用-建国-增加可兴建建筑-点击层"
+        ],
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    585,
+                    202,
+                    63
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "通用-建国-增加可兴建建筑-通知层_已关闭": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    392,
+                    43,
+                    330,
+                    95
+                ],
+                "template": [
+                    "通用/建国/弹窗处理/增加可兴建建筑.png"
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "通用-建国-增加可兴建建筑-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    392,
+                    43,
+                    330,
+                    95
+                ],
+                "template": [
+                    "通用/建国/弹窗处理/增加可兴建建筑.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    585,
+                    202,
+                    63
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
     "通用-建国-保管弹窗处理": {
         "recognition": {
             "type": "TemplateMatch",
