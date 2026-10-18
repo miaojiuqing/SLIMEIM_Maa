@@ -44,7 +44,7 @@
         },
         "action": "Click"
     },
-    "通用-建国-发展目标达成": {
+    "通用-建国-发展目标达成-通知层": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -61,6 +61,56 @@
         },
         "focus": {
             "Node.Recognition.Succeeded": "发展目标达成,有钻领喽"
+        },
+        "next": [
+            "通用-建国-发展目标达成-通知层_已关闭",
+            "[JumpBack]通用-建国-发展目标达成-点击层"
+        ],
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    585,
+                    202,
+                    63
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "通用-建国-发展目标达成-通知层_已关闭": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    392,
+                    43,
+                    330,
+                    95
+                ],
+                "template": [
+                    "通用/建国/弹窗处理/发展目标达成.png"
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "通用-建国-发展目标达成-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    392,
+                    43,
+                    330,
+                    95
+                ],
+                "template": [
+                    "通用/建国/弹窗处理/发展目标达成.png"
+                ]
+            }
         },
         "action": {
             "type": "Click",
