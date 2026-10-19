@@ -104,6 +104,7 @@
         "tasks/关闭游戏.json"
     ],
     "option": {
+        //通用选项-编队
         "通用-编队切换方式": {
             "type": "select",
             "label": "编队切换方式",
@@ -155,6 +156,7 @@
                 }
             ]
         },
+        //通用选项-体力不足处理
         "通用-体力不足处理": {
             "type": "select",
             "label": "体力不足时动作",
@@ -204,6 +206,438 @@
                             "next": [
                                 "启动游戏并进入菜单"
                             ]
+                        }
+                    }
+                }
+            ]
+        },
+        //建国-通用选项-筛选
+        "建国-通用-筛选-是否启用": {
+            "type": "switch",
+            "label": "是否启用筛选",
+            "default_case": "Yes",
+            "description": "打开设施升级界面后，是否先对设施列表做一次筛选。关闭则整条筛选链跳过。",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "option": [
+                        "建国-通用-筛选-地区筛选",
+                        "建国-通用-筛选-类别筛选",
+                        "建国-通用-筛选-时序筛选"
+                    ]
+                },
+                {
+                    "name": "No",
+                    "description": "不筛选，直接继续后续任务。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-入口层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-地区筛选": {
+            "type": "switch",
+            "label": "地区筛选",
+            "default_case": "Yes",
+            "description": "只保留勾选地区的设施。没解锁的地区别乱勾。",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "option": [
+                        "建国-通用-筛选-地区筛选-竹林",
+                        "建国-通用-筛选-地区筛选-观光",
+                        "建国-通用-筛选-地区筛选-结晶",
+                        "建国-通用-筛选-地区筛选-猶拉瑟尼亞",
+                        "建国-通用-筛选-地区筛选-海渊"
+                    ]
+                },
+                {
+                    "name": "No",
+                    "description": "不限制地区，相当于全部地区。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-地区筛选-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-地区筛选-竹林": {
+            "type": "switch",
+            "label": "竹林地区",
+            "default_case": "No",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该地区，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-地区筛选-竹林-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-地区筛选-观光": {
+            "type": "switch",
+            "label": "观光地区",
+            "default_case": "No",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该地区，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-地区筛选-观光-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-地区筛选-结晶": {
+            "type": "switch",
+            "label": "结晶地区",
+            "default_case": "No",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该地区，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-地区筛选-结晶-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-地区筛选-猶拉瑟尼亞": {
+            "type": "switch",
+            "label": "猶拉瑟尼亞",
+            "default_case": "No",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该地区，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-地区筛选-猶拉瑟尼亞-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-地区筛选-海渊": {
+            "type": "switch",
+            "label": "海渊地区",
+            "default_case": "No",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该地区，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-地区筛选-海渊-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选": {
+            "type": "switch",
+            "label": "设施类别筛选",
+            "default_case": "Yes",
+            "description": "只保留勾选类别的设施。全部不勾选等于不限制类别。",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "option": [
+                        "建国-通用-筛选-类别筛选-活动限定设施",
+                        "建国-通用-筛选-类别筛选-金币生成设施",
+                        "建国-通用-筛选-类别筛选-粮食生产设施",
+                        "建国-通用-筛选-类别筛选-能力值强化设施",
+                        "建国-通用-筛选-类别筛选-魔石&魔结晶生产设施",
+                        "建国-通用-筛选-类别筛选-道具生产设施",
+                        "建国-通用-筛选-类别筛选-居民数增加用设施",
+                        "建国-通用-筛选-类别筛选-装饰用设施",
+                        "建国-通用-筛选-类别筛选-地区发展度增加用设施",
+                        "建国-通用-筛选-类别筛选-其他设施"
+                    ]
+                },
+                {
+                    "name": "No",
+                    "description": "不限制类别，相当于勾了 ALL。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-活动限定设施": {
+            "type": "switch",
+            "label": "活动限定设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-活动限定设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-金币生成设施": {
+            "type": "switch",
+            "label": "金币生成设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-金币生成设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-粮食生产设施": {
+            "type": "switch",
+            "label": "粮食生产设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-粮食生产设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-能力值强化设施": {
+            "type": "switch",
+            "label": "能力值强化设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-能力值强化设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-魔石&魔结晶生产设施": {
+            "type": "switch",
+            "label": "魔石&魔结晶生产设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-魔石&魔结晶生产设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-道具生产设施": {
+            "type": "switch",
+            "label": "道具生产设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-道具生产设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-居民数增加用设施": {
+            "type": "switch",
+            "label": "居民数增加用设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-居民数增加用设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-装饰用设施": {
+            "type": "switch",
+            "label": "装饰用设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-装饰用设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-地区发展度增加用设施": {
+            "type": "switch",
+            "label": "地区发展度增加用设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-地区发展度增加用设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-类别筛选-其他设施": {
+            "type": "switch",
+            "label": "其他设施",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "description": "跳过该类别，不勾选。",
+                    "pipeline_override": {
+                        "建国-通用-筛选-类别筛选-其他设施-开始层": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "建国-通用-筛选-时序筛选": {
+            "type": "select",
+            "label": "所需时间排序",
+            "default_case": "建国-通用-筛选-时序筛选-由低至高",
+            "description": "筛选完成后，把设施按建造时间排序。",
+            "cases": [
+                {
+                    "name": "建国-通用-筛选-时序筛选-由低至高",
+                    "label": "由低至高"
+                },
+                {
+                    "name": "建国-通用-筛选-时序筛选-由高至低",
+                    "label": "由高至低",
+                    "pipeline_override": {
+                        "建国-通用-筛选-时序筛选-目标排序-扫描层": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "通用/建国/筛选/排序/已选中/由高至低.png",
+                                        "通用/建国/筛选/排序/未选中/由高至低.png"
+                                    ]
+                                }
+                            }
+                        },
+                        "建国-通用-筛选-时序筛选-目标排序-未选中-点击层": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "通用/建国/筛选/排序/未选中/由高至低.png"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "建国-通用-筛选-时序筛选-OFF",
+                    "label": "不排序 (OFF)",
+                    "pipeline_override": {
+                        "建国-通用-筛选-时序筛选-目标排序-扫描层": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "通用/建国/筛选/排序/已选中/OFF.png",
+                                        "通用/建国/筛选/排序/未选中/OFF.png"
+                                    ]
+                                }
+                            }
+                        },
+                        "建国-通用-筛选-时序筛选-目标排序-未选中-点击层": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "通用/建国/筛选/排序/未选中/OFF.png"
+                                    ]
+                                }
+                            }
                         }
                     }
                 }
@@ -328,14 +762,14 @@
                     "name": "工具-盖德监工",
                     "enabled": true,
                     "option": {
-                        "盖德监工-筛选": "No"
+                        "建国-通用-筛选-是否启用": "No"
                     }
                 },
                 {
                     "name": "日常-设施支援",
                     "enabled": true,
                     "option": {
-                        "日常-设施支援-选择设施升级时是否筛选": "No",
+                        "建国-通用-筛选-是否启用": "No",
                         "日常-设施支援-是否顺便收取设施产出奖励": "Yes",
                         "日常-设施支援-申请支援方式": "日常-设施支援申请方式-智能推荐",
                         "日常-设施支援-申请时全选还是单选": "全选"

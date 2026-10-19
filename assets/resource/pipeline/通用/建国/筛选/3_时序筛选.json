@@ -1,0 +1,166 @@
+{
+    // ===== 时序段骨架 =====
+    // 开始层 → 排序标题露出来（=滑到最底）→ 目标排序子项 → 筛选完了
+    // 排序只有一套节点，具体勾哪一项由 option 覆盖「扫描层」「未选中-点击层」的 template 决定。
+    "建国-通用-筛选-时序筛选-开始层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "max_hit": 1,
+        "focus": {
+            "Node.Recognition.Succeeded": "开始时序筛选"
+        },
+        "next": [
+            "建国-通用-筛选-时序筛选",
+            "[JumpBack]建国-通用-筛选-时序筛选-滑动动作"
+        ]
+    },
+    // 「建造時間順」标题出现在 [17,333,367,169] = 已经滑到最底部。
+    "建国-通用-筛选-时序筛选": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    17,
+                    333,
+                    367,
+                    169
+                ],
+                "template": [
+                    "通用/建国/筛选/排序/已处于建造时间排序.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "next": [
+            "建国-通用-筛选-时序筛选-目标排序-开始层",
+            "建国-通用-筛选-时序筛选-筛选完了"
+        ]
+    },
+    // 向上滑到底：动作本身不对位置做判断，只靠「面板还在」防空滑。
+    "建国-通用-筛选-时序筛选-滑动动作": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    556,
+                    54,
+                    162,
+                    83
+                ],
+                "template": [
+                    "通用/建国/兴建/筛选界面.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    622,
+                    482,
+                    27,
+                    50
+                ],
+                "end": [
+                    628,
+                    415,
+                    16,
+                    50
+                ],
+                "duration": 1000,
+                "end_hold": 250
+            }
+        },
+        "post_delay": 700
+    },
+    // 三段共用一个出口：筛完回大类管理层，那里统一决定关面板。
+    "建国-通用-筛选-时序筛选-筛选完了": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "focus": "时序筛选完成",
+        "next": [
+            "建国-通用-筛选-筛选大类管理层"
+        ]
+    },
+    // ===== 目标排序（默认「由低至高」，由 option 覆盖 template 切换） =====
+    "建国-通用-筛选-时序筛选-目标排序-开始层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "max_hit": 1,
+        "focus": "开始尝试获取所需时序位置",
+        "next": [
+            "建国-通用-筛选-时序筛选-目标排序-扫描层"
+        ]
+    },
+    "建国-通用-筛选-时序筛选-目标排序-扫描层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        //假设这里用户选了「由低至高」,option要改的就是这里
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    37,
+                    441,
+                    963,
+                    141
+                ],
+                "template": [
+                    "通用/建国/筛选/排序/已选中/由低至高.png",
+                    "通用/建国/筛选/排序/未选中/由低至高.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "获取到目标排序位置,将尝试勾选",
+        "next": [
+            "建国-通用-筛选-时序筛选-目标排序-已选中",
+            "[JumpBack]建国-通用-筛选-时序筛选-目标排序-未选中-点击层"
+        ]
+    },
+    "建国-通用-筛选-时序筛选-目标排序-已选中": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-时序筛选-目标排序-扫描层",
+                "roi_offset": [
+                    -90,
+                    -20,
+                    20,
+                    30
+                ],
+                "template": [
+                    "通用/建国/筛选/排序/已选中.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "勾选成功,准备关闭筛选面板",
+        "next": [
+            "建国-通用-筛选-时序筛选"
+        ]
+    },
+    "建国-通用-筛选-时序筛选-目标排序-未选中-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-时序筛选-目标排序-扫描层",
+                "template": [
+                    "通用/建国/筛选/排序/未选中/由低至高.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "action": "Click",
+        "pre_delay": 150,
+        "post_delay": 500
+    }
+}

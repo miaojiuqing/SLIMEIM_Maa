@@ -1,0 +1,469 @@
+{
+    // ===== 地区段骨架 =====
+    // 开始层 → 「地區」标题可见（=滑到最上）→ 5 个地区子项 → 筛选完了
+    // 判据不成立时才轮到滑动动作，滑完 [JumpBack] 回开始层重判。
+    "建国-通用-筛选-地区筛选-开始层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "max_hit": 1,
+        "focus": {
+            "Node.Recognition.Succeeded": "开始地区筛选"
+        },
+        "next": [
+            "建国-通用-筛选-地区筛选",
+            "[JumpBack]建国-通用-筛选-地区筛选-滑动动作"
+        ]
+    },
+    // 「地區限定」标题：面板滑到最上时才出现在 [65,142,174,67]。
+    // 不再用 ALL 判断，因为地区多起来以后 ALL 会被顶到屏幕外。
+    "建国-通用-筛选-地区筛选": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    65,
+                    142,
+                    174,
+                    67
+                ],
+                "template": [
+                    "通用/建国/筛选/地区/已处于地区限定.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "next": [
+            "建国-通用-筛选-地区筛选-竹林-开始层",
+            "建国-通用-筛选-地区筛选-观光-开始层",
+            "建国-通用-筛选-地区筛选-结晶-开始层",
+            "建国-通用-筛选-地区筛选-猶拉瑟尼亞-开始层",
+            "建国-通用-筛选-地区筛选-海渊-开始层",
+            "建国-通用-筛选-地区筛选-筛选完了"
+        ]
+    },
+    // 滑动动作本身不做判断，靠「面板还在」保证不会在界面外乱滑。
+    "建国-通用-筛选-地区筛选-滑动动作": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    556,
+                    54,
+                    162,
+                    83
+                ],
+                "template": [
+                    "通用/建国/兴建/筛选界面.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    628,
+                    415,
+                    16,
+                    50
+                ],
+                "end": [
+                    622,
+                    582,
+                    27,
+                    50
+                ],
+                "duration": 1000,
+                "end_hold": 250
+            }
+        },
+        "post_delay": 700
+    },
+    "建国-通用-筛选-地区筛选-筛选完了": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "focus": "地区筛选完成",
+        "next": [
+            "建国-通用-筛选-筛选大类管理层"
+        ]
+    },
+    // ===== 竹林 =====
+    "建国-通用-筛选-地区筛选-竹林-开始层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "max_hit": 1,
+        "focus": "开始尝试获取'竹林'位置",
+        "next": [
+            "建国-通用-筛选-地区筛选-竹林-扫描层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-竹林-扫描层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    46,
+                    140,
+                    1192,
+                    434
+                ],
+                "template": [
+                    "通用/建国/筛选/地区/已选中/竹林.png",
+                    "通用/建国/筛选/地区/未选中/竹林.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "获取到'竹林'位置,将尝试勾选",
+        "next": [
+            "建国-通用-筛选-地区筛选-竹林-已选中",
+            "[JumpBack]建国-通用-筛选-地区筛选-竹林-未选中-点击层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-竹林-已选中": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-竹林-扫描层",
+                "roi_offset": [
+                    -70,
+                    -20,
+                    1,
+                    30
+                ],
+                "template": [
+                    "通用/建国/筛选/已选中.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "勾选成功,准备进行下一个筛选",
+        "next": [
+            "建国-通用-筛选-地区筛选"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-竹林-未选中-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-竹林-扫描层",
+                "template": [
+                    "通用/建国/筛选/地区/未选中/竹林.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "action": "Click",
+        "pre_delay": 150,
+        "post_delay": 500
+    },
+    // ===== 观光 =====
+    "建国-通用-筛选-地区筛选-观光-开始层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "max_hit": 1,
+        "focus": "开始尝试获取'观光'位置",
+        "next": [
+            "建国-通用-筛选-地区筛选-观光-扫描层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-观光-扫描层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    46,
+                    140,
+                    1192,
+                    434
+                ],
+                "template": [
+                    "通用/建国/筛选/地区/已选中/观光.png",
+                    "通用/建国/筛选/地区/未选中/观光.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "获取到'观光'位置,将尝试勾选",
+        "next": [
+            "建国-通用-筛选-地区筛选-观光-已选中",
+            "[JumpBack]建国-通用-筛选-地区筛选-观光-未选中-点击层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-观光-已选中": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-观光-扫描层",
+                "roi_offset": [
+                    -70,
+                    -20,
+                    1,
+                    30
+                ],
+                "template": [
+                    "通用/建国/筛选/已选中.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "勾选成功,准备进行下一个筛选",
+        "next": [
+            "建国-通用-筛选-地区筛选"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-观光-未选中-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-观光-扫描层",
+                "template": [
+                    "通用/建国/筛选/地区/未选中/观光.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "action": "Click",
+        "pre_delay": 150,
+        "post_delay": 500
+    },
+    // ===== 结晶 =====
+    "建国-通用-筛选-地区筛选-结晶-开始层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "max_hit": 1,
+        "focus": "开始尝试获取'结晶'位置",
+        "next": [
+            "建国-通用-筛选-地区筛选-结晶-扫描层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-结晶-扫描层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    46,
+                    140,
+                    1192,
+                    434
+                ],
+                "template": [
+                    "通用/建国/筛选/地区/已选中/结晶.png",
+                    "通用/建国/筛选/地区/未选中/结晶.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "获取到'结晶'位置,将尝试勾选",
+        "next": [
+            "建国-通用-筛选-地区筛选-结晶-已选中",
+            "[JumpBack]建国-通用-筛选-地区筛选-结晶-未选中-点击层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-结晶-已选中": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-结晶-扫描层",
+                "roi_offset": [
+                    -70,
+                    -20,
+                    1,
+                    30
+                ],
+                "template": [
+                    "通用/建国/筛选/已选中.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "勾选成功,准备进行下一个筛选",
+        "next": [
+            "建国-通用-筛选-地区筛选"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-结晶-未选中-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-结晶-扫描层",
+                "template": [
+                    "通用/建国/筛选/地区/未选中/结晶.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "action": "Click",
+        "pre_delay": 150,
+        "post_delay": 500
+    },
+    // ===== 猶拉瑟尼亞 =====
+    "建国-通用-筛选-地区筛选-猶拉瑟尼亞-开始层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "max_hit": 1,
+        "focus": "开始尝试获取'猶拉瑟尼亞'位置",
+        "next": [
+            "建国-通用-筛选-地区筛选-猶拉瑟尼亞-扫描层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-猶拉瑟尼亞-扫描层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    46,
+                    140,
+                    1192,
+                    434
+                ],
+                "template": [
+                    "通用/建国/筛选/地区/已选中/猶拉瑟尼亞.png",
+                    "通用/建国/筛选/地区/未选中/猶拉瑟尼亞.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "获取到'猶拉瑟尼亞'位置,将尝试勾选",
+        "next": [
+            "建国-通用-筛选-地区筛选-猶拉瑟尼亞-已选中",
+            "[JumpBack]建国-通用-筛选-地区筛选-猶拉瑟尼亞-未选中-点击层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-猶拉瑟尼亞-已选中": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-猶拉瑟尼亞-扫描层",
+                "roi_offset": [
+                    -70,
+                    -20,
+                    1,
+                    30
+                ],
+                "template": [
+                    "通用/建国/筛选/已选中.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "勾选成功,准备进行下一个筛选",
+        "next": [
+            "建国-通用-筛选-地区筛选"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-猶拉瑟尼亞-未选中-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-猶拉瑟尼亞-扫描层",
+                "template": [
+                    "通用/建国/筛选/地区/未选中/猶拉瑟尼亞.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "action": "Click",
+        "pre_delay": 150,
+        "post_delay": 500
+    },
+    // ===== 海渊 =====
+    "建国-通用-筛选-地区筛选-海渊-开始层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": "DirectHit",
+        "max_hit": 1,
+        "focus": "开始尝试获取'海渊'位置",
+        "next": [
+            "建国-通用-筛选-地区筛选-海渊-扫描层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-海渊-扫描层": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    46,
+                    140,
+                    1192,
+                    434
+                ],
+                "template": [
+                    "通用/建国/筛选/地区/已选中/海渊.png",
+                    "通用/建国/筛选/地区/未选中/海渊.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "获取到'海渊'位置,将尝试勾选",
+        "next": [
+            "建国-通用-筛选-地区筛选-海渊-已选中",
+            "[JumpBack]建国-通用-筛选-地区筛选-海渊-未选中-点击层"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-海渊-已选中": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-海渊-扫描层",
+                "roi_offset": [
+                    -70,
+                    -20,
+                    1,
+                    30
+                ],
+                "template": [
+                    "通用/建国/筛选/已选中.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "focus": "勾选成功,准备进行下一个筛选",
+        "next": [
+            "建国-通用-筛选-地区筛选"
+        ]
+    },
+    "建国-通用-筛选-地区筛选-海渊-未选中-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "建国-通用-筛选-地区筛选-海渊-扫描层",
+                "template": [
+                    "通用/建国/筛选/地区/未选中/海渊.png"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "action": "Click",
+        "pre_delay": 150,
+        "post_delay": 500
+    }
+}

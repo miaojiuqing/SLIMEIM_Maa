@@ -1,21 +1,89 @@
 {
+    "按下测试": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    71,
+                    568,
+                    255,
+                    94
+                ],
+                "upper": [
+                    165,
+                    39,
+                    72
+                ],
+                "lower": [
+                    75,
+                    8,
+                    40
+                ],
+                "connected": true,
+                "count": 9000
+            }
+        },
+        "action": {
+            "type": "TouchDown",
+            "param": {
+                "target": [
+                    94,
+                    592,
+                    197,
+                    50
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "松开测试"
+        ]
+    },
+    "松开测试": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    71,
+                    568,
+                    255,
+                    94
+                ],
+                "upper": [
+                    255,
+                    255,
+                    255
+                ],
+                "lower": [
+                    241,
+                    237,
+                    227
+                ],
+                "connected": true,
+                "count": 9000
+            }
+        },
+        "action": {
+            "type": "TouchUp",
+            "param": {}
+        }
+    },
     "1识别测试": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    150,
-                    62,
-                    1127,
-                    542
+                    37,
+                    441,
+                    963,
+                    141
                 ],
                 "template": [
-                    "单线程工具/列表刷关/未达成.png"
-                ]
+                    "通用/建国/筛选/排序/已选中/由低至高.png",
+                    "通用/建国/筛选/排序/未选中/由低至高.png"
+                ],
+                "threshold": 0.85
             }
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "已进入命运选择界面"
         },
         "next": [
             "1位置测试"
@@ -31,10 +99,10 @@
             "param": {
                 "roi": "1识别测试",
                 "roi_offset": [
+                    -100,
+                    -20,
                     1,
-                    60,
-                    25,
-                    75
+                    30
                 ],
                 "expected": []
             }

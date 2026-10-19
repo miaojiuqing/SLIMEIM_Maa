@@ -391,23 +391,5 @@
                 ]
             }
         }
-    },
-    "通用-建国-点击筛选": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1118,
-                    65,
-                    126,
-                    111
-                ],
-                "template": [
-                    "通用/建国/提升/筛选入口.png",
-                    "通用/建国/提升/已筛选.png"
-                ]
-            }
-        },
-        "action": "Click"
     }
 }
