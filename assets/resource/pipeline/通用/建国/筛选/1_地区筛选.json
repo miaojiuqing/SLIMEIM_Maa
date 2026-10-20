@@ -230,7 +230,12 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "roi": "建国-通用-筛选-地区筛选-观光-扫描层",
+                "roi": [
+                    46,
+                    140,
+                    1192,
+                    434
+                ],
                 "template": [
                     "通用/建国/筛选/地区/未选中/观光.png"
                 ],
@@ -305,7 +310,12 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "roi": "建国-通用-筛选-地区筛选-结晶-扫描层",
+                "roi": [
+                    46,
+                    140,
+                    1192,
+                    434
+                ],
                 "template": [
                     "通用/建国/筛选/地区/未选中/结晶.png"
                 ],
@@ -380,7 +390,12 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "roi": "建国-通用-筛选-地区筛选-猶拉瑟尼亞-扫描层",
+                "roi": [
+                    46,
+                    140,
+                    1192,
+                    434
+                ],
                 "template": [
                     "通用/建国/筛选/地区/未选中/猶拉瑟尼亞.png"
                 ],
@@ -455,7 +470,12 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "roi": "建国-通用-筛选-地区筛选-海渊-扫描层",
+                "roi": [
+                    46,
+                    140,
+                    1192,
+                    434
+                ],
                 "template": [
                     "通用/建国/筛选/地区/未选中/海渊.png"
                 ],
