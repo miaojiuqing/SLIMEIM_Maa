@@ -3,12 +3,12 @@
         {
             "name": "日常-英杰盃",
             "entry": "英杰盃-任务开始层",
-            "label": "英杰盃",
+            "label": "🎖️英杰盃",
             "group": [
                 "日常"
             ],
             "default_check": true,
-            "icon": "./resource/image/日常/英杰盃/一般战/小奖杯.png",
+            // "icon": "./resource/image/日常/英杰盃/一般战/小奖杯.png",
             "description": "固定进入建国才去点,不然菜单点会飘到不知道哪里去",
             "option": [
                 "英杰盃-编队选择",

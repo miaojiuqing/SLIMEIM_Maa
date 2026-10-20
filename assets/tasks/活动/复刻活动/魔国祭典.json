@@ -2,7 +2,7 @@
     "task": [
         {
             "name": "活动-稳定复刻-魔国祭典",
-            "label": "魔国祭典",
+            "label": "🍶魔国祭典",
             "default_check": true,
             "group": [
                 "日常"
