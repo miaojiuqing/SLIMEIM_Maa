@@ -437,5 +437,86 @@
                 ]
             }
         }
+    },
+    "通用-建国-地区任务解锁_通知层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    72,
+                    210,
+                    189,
+                    197
+                ],
+                "template": [
+                    "通用/建国/提升/地区任务解锁.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "地区任务解锁,新任务来啦"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    561,
+                    525,
+                    166,
+                    48
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "通用-建国-地区任务解锁_已关闭",
+            "[JumpBack]通用-建国-地区任务解锁_点击层"
+        ]
+    },
+    "通用-建国-地区任务解锁_点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    72,
+                    210,
+                    189,
+                    197
+                ],
+                "template": [
+                    "通用/建国/提升/地区任务解锁.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    561,
+                    525,
+                    166,
+                    48
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "通用-建国-地区任务解锁_已关闭": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    72,
+                    210,
+                    189,
+                    197
+                ],
+                "template": [
+                    "通用/建国/提升/地区任务解锁.png"
+                ]
+            }
+        },
+        "post_delay": 1000
     }
 }
