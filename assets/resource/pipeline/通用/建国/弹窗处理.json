@@ -454,7 +454,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "地区任务解锁,新任务来啦"
+            "Node.Recognition.Succeeded": "地区任务解锁,请及时处理以便解锁新地区"
         },
         "action": {
             "type": "Click",
