@@ -391,5 +391,49 @@
                 ]
             }
         }
+    },
+    "建国-通用-解锁新建筑": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    505,
+                    563,
+                    291,
+                    114
+                ],
+                "template": [
+                    "通用/交互按钮/OK_2.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "建国-通用-提升界面-最前设施无法执行升级": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    883,
+                    272,
+                    339,
+                    174
+                ],
+                "template": [
+                    "通用/建国/提升/最前设施无法提升.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    407,
+                    575,
+                    173,
+                    44
+                ]
+            }
+        }
     }
 }
