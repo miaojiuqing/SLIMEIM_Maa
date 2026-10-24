@@ -424,6 +424,8 @@
                 ]
             }
         },
+        "repeat": 2,
+        "repeat_delay": 250,
         "action": {
             "type": "Click",
             "param": {
