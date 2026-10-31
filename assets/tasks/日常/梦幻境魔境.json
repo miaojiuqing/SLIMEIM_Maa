@@ -104,7 +104,7 @@
                 },
                 {
                     "name": "镜塔优先级-buff",
-                    "label": "buff类关卡",
+                    "label": "⬆️buff类关卡",
                     "pipeline_override": {
                         "梦幻镜魔境-入口优先级-1": {
                             "template": [
@@ -169,7 +169,7 @@
                 },
                 {
                     "name": "镜塔优先级-buff",
-                    "label": "buff类关卡",
+                    "label": "⬆️buff类关卡",
                     "pipeline_override": {
                         "梦幻镜魔境-入口优先级-2": {
                             "template": [
@@ -234,7 +234,7 @@
                 },
                 {
                     "name": "镜塔优先级-buff",
-                    "label": "buff类关卡",
+                    "label": "⬆️buff类关卡",
                     "pipeline_override": {
                         "梦幻镜魔境-入口优先级-3": {
                             "template": [
@@ -299,7 +299,7 @@
                 },
                 {
                     "name": "镜塔优先级-buff",
-                    "label": "buff类关卡",
+                    "label": "⬆️buff类关卡",
                     "pipeline_override": {
                         "梦幻镜魔境-入口优先级-4": {
                             "template": [
