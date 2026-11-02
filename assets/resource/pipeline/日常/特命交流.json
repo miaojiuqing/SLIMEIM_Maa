@@ -26,6 +26,24 @@
             "[JumpBack]黑屏计数-0.5秒"
         ]
     },
+    "日常-特命交流-点击进入特命交流界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    417,
+                    422,
+                    173,
+                    108
+                ],
+                "template": [
+                    "日常/特命交流/入口.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 500
+    },
     "日常-特命交流-已进入特命交流界面": {
         "recognition": {
             "type": "TemplateMatch",
@@ -41,22 +59,266 @@
                 ]
             }
         },
-        "next": []
+        "next": [
+            "日常-特命交流-已打开委托界面",
+            "[JumpBack]日常-特命交流-点击进入委托界面"
+        ]
     },
-    "日常-特命交流-点击进入特命交流界面": {
+    "日常-特命交流-点击进入委托界面": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    417,
-                    422,
-                    173,
-                    108
+                    571,
+                    514,
+                    139,
+                    112
                 ],
                 "template": [
-                    "日常/特命交流/入口.png"
+                    "日常/特命交流/已进入特命交流.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "日常-特命交流-已打开委托界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    583,
+                    616,
+                    113,
+                    93
+                ],
+                "template": [
+                    "日常/特命交流/已进入委托.png"
+                ]
+            }
+        },
+        "next": [
+            "日常-特命交流-委托-开始委托确认",
+            "[JumpBack]日常-特命交流-委托-点击选择委托类型"
+        ]
+    },
+    "日常-特命交流-今日委托次数已达上限": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    910,
+                    530,
+                    69,
+                    67
+                ],
+                "template": [
+                    "日常/特命交流/今日次数已达上限.png"
+                ]
+            }
+        },
+        "next": [
+            "成功进入主菜单",
+            "[JumpBack]点击黑色小主菜单",
+            "[JumpBack]日常-特命交流-弹窗处理-特命委托交流阶级提升弹窗-通知层"
+        ]
+    },
+    "日常-特命交流-委托-开始委托确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    569,
+                    296,
+                    168,
+                    91
+                ],
+                "template": [
+                    "日常/特命交流/委托/委托执行确认.png"
+                ]
+            }
+        },
+        "next": [
+            "日常-特命交流-委托-委托成功-成功",
+            "[JumpBack]日常-特命交流-委托-开始委托确认-点击确认",
+            "日常-特命交流-委托-奖励领取确认",
+            "[JumpBack]通用-可处理范围加载等待"
+        ]
+    },
+    "日常-特命交流-委托-委托成功-成功": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    210,
+                    125,
+                    850,
+                    461
+                ],
+                "template": [
+                    "日常/特命交流/成功/成功.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    486,
+                    286,
+                    280,
+                    135
+                ]
+            }
+        },
+        "next": [
+            "日常-特命交流-已打开委托界面",
+            "日常-特命交流-委托-奖励领取确认"
+        ]
+    },
+    "日常-特命交流-委托-奖励领取确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    376,
+                    16,
+                    505,
+                    135
+                ],
+                "template": [
+                    "日常/特命交流/成功/奖励确认.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    542,
+                    591,
+                    198,
+                    48
+                ]
+            }
+        },
+        "next": [
+            "日常-特命交流-已打开委托界面",
+            "日常-特命交流-委托-奖励领取确认"
+        ]
+    },
+    "日常-特命交流-委托-开始委托确认-点击确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    569,
+                    296,
+                    168,
+                    91
+                ],
+                "template": [
+                    "日常/特命交流/委托/委托执行确认.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    683,
+                    438,
+                    185,
+                    49
+                ]
+            }
+        },
+        "post_delay": 1000
+    },
+    "日常-特命交流-委托-点击选择委托类型": {
+        //option点
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    112,
+                    433,
+                    960,
+                    247
+                ],
+                "template": [
+                    "日常/特命交流/委托入口/魔素回收.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 1000
+    },
+    "日常-特命交流-弹窗处理-特命委托交流阶级提升弹窗-通知层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    546,
+                    46,
+                    152,
+                    86
+                ],
+                "template": [
+                    "日常/特命交流/交流阶级提升弹窗.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "特命交流阶级已提升"
+        },
+        "next": [
+            "日常-特命交流-弹窗处理-特命委托交流阶级提升弹窗-关闭层",
+            "[JumpBack]日常-特命交流-弹窗处理-特命委托交流阶级提升弹窗-点击层"
+        ]
+    },
+    "日常-特命交流-弹窗处理-特命委托交流阶级提升弹窗-关闭层": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    546,
+                    46,
+                    152,
+                    86
+                ],
+                "template": [
+                    "日常/特命交流/交流阶级提升弹窗.png"
                 ]
             }
         }
+    },
+    "日常-特命交流-弹窗处理-特命委托交流阶级提升弹窗-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    546,
+                    46,
+                    152,
+                    86
+                ],
+                "template": [
+                    "日常/特命交流/交流阶级提升弹窗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    573,
+                    596,
+                    147,
+                    41
+                ]
+            }
+        },
+        "post_delay": 1000
     }
 }

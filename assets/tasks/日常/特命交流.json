@@ -1,0 +1,78 @@
+{
+    "task": [
+        {
+            "name": "日常-特命交流",
+            "label": "🫧特命交流",
+            "entry": "日常-特命交流-任务开始层",
+            "group": [
+                "日常"
+            ],
+            "default_check": true,
+            "description": "不会有人没解锁上级特命交流吧(",
+            "option": [
+                "日常-特命交流-委托类型选择"
+            ],
+            "pipeline_override": {
+                "异常处理-日期更新": {
+                    "next": [
+                        "日常-特命交流-任务开始层"
+                    ]
+                },
+                "异常处理-说是预期外错误": {
+                    "next": [
+                        "日常-特命交流-任务开始层"
+                    ]
+                },
+                "异常处理-网络连接失败将回到主界面": {
+                    "next": [
+                        "日常-特命交流-任务开始层"
+                    ]
+                }
+            }
+        }
+    ],
+    "preset": [],
+    "option": {
+        "日常-特命交流-委托类型选择": {
+            "label": "委托类型选择",
+            "type": "select",
+            "default_case": "日常-特命交流-委托类型选择-魔素回收",
+            "cases": [
+                {
+                    "name": "日常-特命交流-委托类型选择-金币获取",
+                    "label": "金币获取",
+                    "pipeline_override": {
+                        "日常-特命交流-委托-点击选择委托类型": {
+                            //option点
+                            "recognition": {
+                                "type": "TemplateMatch",
+                                "param": {
+                                    "template": [
+                                        "日常/特命交流/委托入口/金币获得.png"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "日常-特命交流-委托类型选择-魔素回收",
+                    "label": "魔素回收",
+                    "pipeline_override": {
+                        "日常-特命交流-委托-点击选择委托类型": {
+                            //option点
+                            "recognition": {
+                                "type": "TemplateMatch",
+                                "param": {
+                                    "template": [
+                                        "日常/特命交流/委托入口/魔素回收.png"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
