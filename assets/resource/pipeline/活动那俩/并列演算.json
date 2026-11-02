@@ -204,17 +204,27 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    620,
-                    124,
-                    600,
-                    128
+                    1077,
+                    119,
+                    86,
+                    68
                 ],
                 "template": [
-                    "活动那俩/并列演算/可进行演算.png" //改
+                    "活动那俩/并列演算/可进行演算.png"
                 ]
             }
         },
-        "action": "Click",
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -281,
+                    35,
+                    207,
+                    32
+                ]
+            }
+        },
         "post_delay": 1500,
         "next": [
             "当期活动-并列演算-已进入队伍选择界面",
