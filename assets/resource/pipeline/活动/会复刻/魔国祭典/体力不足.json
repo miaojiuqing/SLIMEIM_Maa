@@ -115,7 +115,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "吃了一次药"
+            "Node.Recognition.Succeeded": "💊吃了一次药"
         },
         "pre_delay": 500,
         "post_delay": 500,

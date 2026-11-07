@@ -125,7 +125,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "吃了一次药"
+            "Node.Recognition.Succeeded": "💊吃了一次药"
         }
         // "action": {
         //     "type": "Click",

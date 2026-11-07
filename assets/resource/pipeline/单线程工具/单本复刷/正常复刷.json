@@ -144,7 +144,7 @@
         "post_delay": 0,
         "pre_delay": 0,
         "focus": {
-            "Node.Recognition.Succeeded": "计入一次战斗"
+            "Node.Recognition.Succeeded": "✍计入一次战斗"
         },
         "next": [
             "单本复刷-正常模式-战斗结算-转接层"
