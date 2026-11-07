@@ -266,9 +266,87 @@
         "next": [
             "日常送礼-听完了感谢的话",
             "日常送礼-准备送出界面",
-            //需要一个情谊升级界面处理
+            "[JumpBack]日常送礼-情谊等级提升-通知层",
             "[JumpBack]日常送礼-可能是在感谢"
         ]
+    },
+    "日常送礼-情谊等级提升-通知层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    245,
+                    282,
+                    163,
+                    248
+                ],
+                "template": [
+                    "日常/城镇对话/情谊等级提升.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "❤️情谊等级提升了"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    545,
+                    539,
+                    193,
+                    54
+                ]
+            }
+        },
+        "next": [
+            "日常送礼-情谊等级提升-关闭层",
+            "[JumpBack]日常送礼-情谊等级提升-点击层"
+        ]
+    },
+    "日常送礼-情谊等级提升-关闭层": {
+        "inverse": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    245,
+                    282,
+                    163,
+                    248
+                ],
+                "template": [
+                    "日常/城镇对话/情谊等级提升.png"
+                ]
+            }
+        }
+    },
+    "日常送礼-情谊等级提升-点击层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    245,
+                    282,
+                    163,
+                    248
+                ],
+                "template": [
+                    "日常/城镇对话/情谊等级提升.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    545,
+                    539,
+                    193,
+                    54
+                ]
+            }
+        }
     },
     "日常送礼-听完了感谢的话": {
         "recognition": {
