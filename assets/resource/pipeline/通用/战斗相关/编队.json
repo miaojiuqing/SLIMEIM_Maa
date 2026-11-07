@@ -20,6 +20,26 @@
         "action": "Click",
         "post_delay": 1500
     },
+    "通用-编队-出战限制": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    473,
+                    101,
+                    117,
+                    91
+                ],
+                "template": [
+                    "通用/战斗/编队/出击限制.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "当前编队被出击限制了，将提前结束任务"
+        },
+        "action": "StopTask"
+    },
     "误触-心之书编辑界面": {
         "recognition": {
             "type": "TemplateMatch",
