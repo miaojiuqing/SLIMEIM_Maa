@@ -49,9 +49,9 @@
                 {
                     "name": "日常-特命交流-委托类型选择-金币获取",
                     "label": "金币获取",
+                    "icon": "D:/vscode/SLIMEIM_Maa/assets/resource/image/图标/通用素材/金币.png",
                     "pipeline_override": {
                         "日常-特命交流-委托-点击选择委托类型": {
-                            //option点
                             "recognition": {
                                 "type": "TemplateMatch",
                                 "param": {
@@ -66,9 +66,9 @@
                 {
                     "name": "日常-特命交流-委托类型选择-魔素回收",
                     "label": "魔素回收",
+                    "icon": "D:/vscode/SLIMEIM_Maa/assets/resource/image/图标/角色养成素材/魔素.png",
                     "pipeline_override": {
                         "日常-特命交流-委托-点击选择委托类型": {
-                            //option点
                             "recognition": {
                                 "type": "TemplateMatch",
                                 "param": {
