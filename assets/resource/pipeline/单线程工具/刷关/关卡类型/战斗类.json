@@ -18,7 +18,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "检测到战斗类关卡"
+            "Node.Recognition.Succeeded": "⚔️检测到战斗类关卡"
         },
         "next": [
             "列表刷关-关卡类型检查-战斗类"

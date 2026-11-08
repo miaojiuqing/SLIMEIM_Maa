@@ -18,7 +18,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "检测到捕食类关卡"
+            "Node.Recognition.Succeeded": "🍽️检测到捕食类关卡"
         },
         "next": [
             "列表刷关-关卡类型检查-捕食类"

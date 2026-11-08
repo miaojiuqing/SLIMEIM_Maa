@@ -213,7 +213,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "该章节的初级难度已通关"
+            "Node.Recognition.Succeeded": "⭐该章节的初级难度已通关"
         },
         "next": [
             "列表刷关-主线模式-当前难度为-中级",
@@ -300,7 +300,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "该章节的中级难度已通关"
+            "Node.Recognition.Succeeded": "⭐该章节的中级难度已通关"
         },
         "next": [
             "列表刷关-主线模式-当前难度为-上级",
@@ -406,7 +406,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "该章节的上级难度已通关,该章节所有关卡已全部通关"
+            "Node.Recognition.Succeeded": "⭐该章节的上级难度已通关,⭐该章节所有关卡已全部通关"
         },
         "next": [
             "列表刷关-主线模式-已回到主线章节选择界面",
