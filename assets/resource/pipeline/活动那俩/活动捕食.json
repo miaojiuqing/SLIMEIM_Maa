@@ -278,7 +278,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "发现懒人一枚~"
+            "Node.Recognition.Succeeded": "😴发现懒人一枚~"
         },
         "action": {
             "type": "Click",

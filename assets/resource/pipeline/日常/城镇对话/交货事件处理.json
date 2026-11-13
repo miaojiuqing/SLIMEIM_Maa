@@ -15,7 +15,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "发现交货事件"
+            "Node.Recognition.Succeeded": "📦发现交货事件"
         },
         "action": "Click",
         "post_delay": 1000,
@@ -46,7 +46,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "发现交货事件"
+            "Node.Recognition.Succeeded": "📦发现交货事件"
         },
         "action": "Click",
         "post_delay": 1000,
