@@ -2,7 +2,7 @@
     "task": [
         {
             "name": "工具-商店清空",
-            "label": "商店清空",
+            "label": "🏪商店清空",
             "default_check": false,
             "group": [
                 "单线程工具"
