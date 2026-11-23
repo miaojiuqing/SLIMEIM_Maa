@@ -14,7 +14,10 @@
                 "商店-贸易-商品选择-心之书-简易蓝",
                 "商店-贸易-商品选择-心之书-简易绿",
                 "商店-贸易-商品选择-心之书-简易橙",
-                "商店-贸易-商品选择-武器材料-至高魔羽"
+                "商店-贸易-商品选择-武器材料-至高魔羽",
+                "商店-贸易-商品选择-武器材料-黑虹结晶锤",
+                "商店-贸易-商品选择-武器材料-虹结晶锤",
+                "商店-贸易-商品选择-武器材料-白金锤"
             ]
         }
     ],
@@ -109,6 +112,78 @@
                     "name": "No",
                     "pipeline_override": {
                         "贸易-商品-武器材料-至高魔羽": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "商店-贸易-商品选择-武器材料-黑虹结晶锤": {
+            "type": "switch",
+            "label": "黑虹结晶锤",
+            "icon": "./resource/image/商店/贸易/图标/锤子/黑虹结晶锤.png",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "贸易-商品-武器材料-黑虹结晶锤": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "贸易-商品-武器材料-黑虹结晶锤": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "商店-贸易-商品选择-武器材料-虹结晶锤": {
+            "type": "switch",
+            "label": "虹结晶锤",
+            "icon": "./resource/image/商店/贸易/图标/锤子/虹结晶锤.png",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "贸易-商品-武器材料-虹结晶锤": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "贸易-商品-武器材料-虹结晶锤": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "商店-贸易-商品选择-武器材料-白金锤": {
+            "type": "switch",
+            "label": "白金锤",
+            "icon": "./resource/image/商店/贸易/图标/锤子/白金锤.png",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "贸易-商品-武器材料-白金锤": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "贸易-商品-武器材料-白金锤": {
                             "enabled": false
                         }
                     }

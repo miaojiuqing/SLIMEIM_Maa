@@ -1,0 +1,37 @@
+{
+    "贸易-商品-武器材料-至高魔羽": {
+        "enabled": true,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    253,
+                    176,
+                    209,
+                    172
+                ],
+                "template": [
+                    "商店/贸易/商品/武器材料/至高魔羽.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到 武器材料-至高魔羽"
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    602,
+                    463,
+                    129,
+                    46
+                ]
+            }
+        },
+        "next": [
+            "贸易-该商品已点完MAX",
+            "贸易-商品-武器材料-至高魔羽"
+        ]
+    }
+}
