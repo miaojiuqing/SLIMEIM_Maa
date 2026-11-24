@@ -17,6 +17,23 @@
         "action": "Click",
         "post_delay": 1500
     },
+    "点击未选中的特别_主线&培育": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1101,
+                    585,
+                    103,
+                    122
+                ],
+                "template": [
+                    "通用/入口点击/期间限定/未选中/特别.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
     "点击未选中的成长": {
         "recognition": {
             "type": "TemplateMatch",
